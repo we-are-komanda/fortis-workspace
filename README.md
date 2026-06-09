@@ -19,4 +19,4 @@ Open this directory as the workspace when working across the Fortis ecosystem.
 
 Before making durable product, architecture, UX, or domain decisions, read the knowledge base index and relevant notes. Record durable decisions back into the knowledge base.
 
-Backend setup is pending the exact repository remote URL. The current `backend/` directory is only a placeholder.
+Backend setup is pending implementation. The current `backend/` directory is the reserved in-repository location for backend/API code unless a future ADR chooses a separate backend repository.

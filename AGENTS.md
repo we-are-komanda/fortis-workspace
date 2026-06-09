@@ -7,7 +7,7 @@ The parent repository owns the frontend application and knowledge base directly,
 ## Repository Map
 
 - `frontend/` - frontend application tracked directly in this repository.
-- `backend/` - reserved backend/API repository path; replace the placeholder with a submodule after the exact backend remote URL is known.
+- `backend/` - reserved backend/API path. Prefer implementing the backend directly here unless the team explicitly decides to split it into a separate repository.
 - `knowledge-base/` - Obsidian-compatible knowledge base tracked directly in this repository.
 - `Fortis/` - legacy local Obsidian vault copy kept outside the parent Git history.
 
@@ -17,9 +17,9 @@ The parent repository owns the frontend application and knowledge base directly,
 - Frontend changes happen in `frontend/` and are committed in the parent repository.
 - Backend changes happen in `backend/`.
 - Durable context lives in `knowledge-base/` and is committed in the parent repository.
-- Keep backend history separate if `backend/` is replaced by an independent repository.
-- Commit independent child repository changes inside the child repo first, then update the parent pointer if a future child repository is added.
-- Do not copy child repository source files into the parent repo outside submodules.
+- Keep backend history in this repository unless a future ADR chooses a separate backend repository.
+- If a future child repository is added, document the repository boundary and workflow in the knowledge base first.
+- Do not copy external repository source files into this repo without a recorded ownership decision.
 - Do not store secrets, credentials, private keys, or production tokens in any repository.
 
 ## Context First

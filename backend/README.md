@@ -1,6 +1,7 @@
 # Fortis Backend
 
-Reserved path for the Fortis backend repository.
+Reserved path for the Fortis backend/API implementation.
 
-Replace this placeholder with a Git submodule after the backend repository remote URL is known.
+Default team workflow: implement backend code directly in this directory and commit it to the Fortis workspace repository.
 
+If the team later chooses a separate backend repository, record that decision in `knowledge-base/` before changing the repository layout.
