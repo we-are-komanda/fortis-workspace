@@ -1,0 +1,9 @@
+[submodule "frontend"]
+	path = frontend
+	url = git@github.com:Ramilko37/fortis-front.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:Ramilko37/fortis-back.git
+[submodule "knowledge-base"]
+	path = knowledge-base
+	url = git@github.com:Ramilko37/fortis-knowledge-base.git

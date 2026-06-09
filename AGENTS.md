@@ -2,24 +2,24 @@
 
 This is the workspace for the Fortis ecosystem.
 
-The parent repository owns the frontend application and knowledge base directly, and keeps workspace-level instructions in the parent repo.
+The parent repository is a coordination layer for the Fortis ecosystem. It uses Git submodules for the frontend, backend, and knowledge-base repositories, and keeps workspace-level instructions in the parent repo.
 
 ## Repository Map
 
-- `frontend/` - frontend application tracked directly in this repository.
-- `backend/` - reserved backend/API path. Prefer implementing the backend directly here unless the team explicitly decides to split it into a separate repository.
-- `knowledge-base/` - Obsidian-compatible knowledge base tracked directly in this repository.
+- `frontend/` - frontend application repository from `Ramilko37/fortis-front`.
+- `backend/` - backend/API repository from `Ramilko37/fortis-back`.
+- `knowledge-base/` - Obsidian-compatible knowledge base repository from `Ramilko37/fortis-knowledge-base`.
 - `Fortis/` - legacy local Obsidian vault copy kept outside the parent Git history.
 
 ## Repository Boundaries
 
-- Parent repo stores the frontend, knowledge base, workspace-level instructions, scripts, and coordination docs.
-- Frontend changes happen in `frontend/` and are committed in the parent repository.
-- Backend changes happen in `backend/`.
-- Durable context lives in `knowledge-base/` and is committed in the parent repository.
-- Keep backend history in this repository unless a future ADR chooses a separate backend repository.
-- If a future child repository is added, document the repository boundary and workflow in the knowledge base first.
-- Do not copy external repository source files into this repo without a recorded ownership decision.
+- Parent repo stores workspace-level instructions, scripts, coordination docs, and submodule pointers.
+- Frontend changes happen in `frontend/` and are committed in the frontend repository first.
+- Backend changes happen in `backend/` and are committed in the backend repository first.
+- Durable context lives in `knowledge-base/` and is committed in the knowledge-base repository first.
+- After child repository changes are committed, update and commit the parent submodule pointer.
+- Keep frontend, backend, and knowledge-base Git histories separate.
+- Do not copy child repository source files into the parent repo outside submodules.
 - Do not store secrets, credentials, private keys, or production tokens in any repository.
 
 ## Context First
