@@ -4,10 +4,10 @@ This is the umbrella workspace for the Fortis ecosystem.
 
 ## Repository Map
 
-- `frontend/` - frontend application repository.
-- `backend/` - backend/API repository.
-- `knowledge-base/` - preferred path for the Obsidian-compatible knowledge base repository.
-- `Fortis/` - current local Obsidian vault path, if `knowledge-base/` has not been created or renamed yet.
+- `frontend/` - frontend application repository cloned from `Ramilko37/awesome-project`.
+- `backend/` - reserved backend/API repository path; set it up after the exact backend remote URL is known.
+- `knowledge-base/` - Obsidian-compatible knowledge base repository cloned from `Ramilko37/fortis-knowledge-base`.
+- `Fortis/` - legacy local Obsidian vault copy kept outside the parent Git history.
 
 ## Rules
 
@@ -32,7 +32,7 @@ Prefer durable notes over chat-only memory:
 - meeting summaries
 - open questions
 
-When the knowledge base has an index, start from `00_Index.md`.
+Start from `knowledge-base/00_Index.md`.
 
 ## Backend/Frontend Boundary
 
@@ -45,4 +45,3 @@ Frontend and backend details should be linked through explicit contracts:
 - integration risks
 
 If a decision affects more than one repository, record it in the knowledge base and implement code changes in each owning repository separately.
-
