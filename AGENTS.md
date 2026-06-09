@@ -2,6 +2,8 @@
 
 This is the umbrella workspace for the Fortis ecosystem.
 
+The parent repository is a coordination layer, not an application monorepo. Keep it small, boring, and useful for orientation.
+
 ## Repository Map
 
 - `frontend/` - frontend application repository cloned from `Ramilko37/awesome-project`.
@@ -9,30 +11,55 @@ This is the umbrella workspace for the Fortis ecosystem.
 - `knowledge-base/` - Obsidian-compatible knowledge base repository cloned from `Ramilko37/fortis-knowledge-base`.
 - `Fortis/` - legacy local Obsidian vault copy kept outside the parent Git history.
 
-## Rules
+## Repository Boundaries
 
+- Parent repo stores only workspace-level instructions, scripts, and coordination docs.
+- Frontend changes happen in `frontend/`.
+- Backend changes happen in `backend/`.
+- Durable context lives in `knowledge-base/`.
 - Keep frontend, backend, and knowledge-base Git histories separate.
-- The parent repository stores only workspace-level instructions, scripts, and coordination docs.
-- Code changes happen inside the owning child repository.
-- Durable product, domain, architecture, UX, and integration decisions are recorded in the knowledge base.
-- Before major decisions, read the knowledge base index and relevant notes.
-- Do not store secrets in any repository.
+- Do not commit child repository contents into the parent repo.
+- Do not store secrets, credentials, private keys, or production tokens in any repository.
 
-## Knowledge Base Usage
+## Context First
 
-Use Markdown compatible with Obsidian.
+Before making durable product, UX, architecture, domain, or integration decisions:
 
-Prefer durable notes over chat-only memory:
+1. Read `knowledge-base/00_Index.md`.
+2. Check relevant notes in `knowledge-base/`.
+3. If the decision changes project direction, update the knowledge base.
 
-- product decisions
-- architecture decisions
-- domain vocabulary
-- backend/frontend contracts
-- UX principles
-- meeting summaries
-- open questions
+Prefer durable notes over chat-only memory.
 
-Start from `knowledge-base/00_Index.md`.
+## Knowledge Base Update Triggers
+
+Update `knowledge-base/` when the conversation or implementation produces:
+
+- a new requirement
+- a changed assumption
+- a rejected approach
+- a chosen architecture
+- a backend/frontend contract
+- a deployment or environment rule
+- a security, privacy, or data-retention constraint
+- an unresolved open question
+
+Use Markdown compatible with Obsidian. Prefer Obsidian links where useful, for example `[[Glossary]]` or `[[Architecture Overview]]`.
+
+## Decision Logging
+
+Record durable decisions in the knowledge base when they affect:
+
+- product scope
+- domain model
+- API contracts
+- frontend/backend boundaries
+- security
+- deployment
+- data model
+- AI/model integrations
+
+Use ADR-style notes for architecture decisions.
 
 ## Backend/Frontend Boundary
 
@@ -45,3 +72,42 @@ Frontend and backend details should be linked through explicit contracts:
 - integration risks
 
 If a decision affects more than one repository, record it in the knowledge base and implement code changes in each owning repository separately.
+
+## Engineering Guards
+
+- Prefer existing project patterns over new abstractions.
+- Keep changes scoped to the owning repository.
+- Do not refactor unrelated code.
+- Do not introduce new dependencies without a clear reason.
+- Run relevant tests/checks before claiming work is complete.
+- Never overwrite user changes.
+- Never use destructive Git commands unless the user explicitly asks for that operation.
+
+## Next.js Guard
+
+The frontend may use a Next.js version with breaking changes.
+
+Before changing Next.js APIs, routing, config, server/client boundaries, caching, build behavior, or file conventions, read the relevant guide in:
+
+`frontend/node_modules/next/dist/docs/`
+
+Heed deprecation notices.
+
+## Agent Skills To Prefer
+
+- Use systematic debugging when investigating bugs, failed tests, broken UI, or unclear runtime behavior.
+- Use test-driven development for bug fixes and behavior changes when the expected behavior can be specified.
+- Use frontend design and responsive UI guidelines when changing user-facing screens.
+- Use official/local Next.js docs before changing framework behavior.
+- Use verification-before-completion before reporting that implementation is complete.
+
+## Model/API Guards
+
+For integrations routed through `neuraldeep.api`:
+
+- Target no more than 4 requests per minute.
+- Do not poll more often than every 30 seconds.
+- Reuse sessions/context instead of starting new runs.
+- Serialize requests per credential.
+- On `429`, honor `Retry-After` and use exponential backoff.
+
