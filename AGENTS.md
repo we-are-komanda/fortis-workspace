@@ -28,7 +28,8 @@ Before making durable product, UX, architecture, domain, or integration decision
 
 1. Read `knowledge-base/00_Index.md`.
 2. Check relevant notes in `knowledge-base/`.
-3. If the decision changes project direction, update the knowledge base.
+3. Read the current product roadmap in `knowledge-base/Продуктовый_план_Fortis.md` before starting any task.
+4. If the decision changes project direction, update the knowledge base.
 
 Prefer durable notes over chat-only memory.
 
