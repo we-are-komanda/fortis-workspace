@@ -1,10 +1,4 @@
 .DS_Store
 
-# Child repositories / local worktrees.
-/frontend/
-/backend/
-/knowledge-base/
-
-# Current local Obsidian vault path.
+# Legacy local Obsidian vault path.
 /Fortis/
-

@@ -2,23 +2,24 @@
 
 This is the umbrella workspace for the Fortis ecosystem.
 
-The parent repository is a coordination layer, not an application monorepo. Keep it small, boring, and useful for orientation.
+The parent repository is a coordination layer, not an application monorepo. It uses Git submodules for child repositories and keeps workspace-level instructions in the parent repo.
 
 ## Repository Map
 
 - `frontend/` - frontend application repository cloned from `Ramilko37/awesome-project`.
-- `backend/` - reserved backend/API repository path; set it up after the exact backend remote URL is known.
+- `backend/` - reserved backend/API repository path; replace the placeholder with a submodule after the exact backend remote URL is known.
 - `knowledge-base/` - Obsidian-compatible knowledge base repository cloned from `Ramilko37/fortis-knowledge-base`.
 - `Fortis/` - legacy local Obsidian vault copy kept outside the parent Git history.
 
 ## Repository Boundaries
 
-- Parent repo stores only workspace-level instructions, scripts, and coordination docs.
+- Parent repo stores workspace-level instructions, scripts, coordination docs, and submodule pointers.
 - Frontend changes happen in `frontend/`.
 - Backend changes happen in `backend/`.
 - Durable context lives in `knowledge-base/`.
 - Keep frontend, backend, and knowledge-base Git histories separate.
-- Do not commit child repository contents into the parent repo.
+- Commit child repository changes inside the child repo first, then update the parent submodule pointer.
+- Do not copy child repository source files into the parent repo outside submodules.
 - Do not store secrets, credentials, private keys, or production tokens in any repository.
 
 ## Context First

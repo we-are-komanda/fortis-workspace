@@ -25,6 +25,10 @@ Current state:
 
 ## Subrepo Strategy
 
-Start with nested repositories ignored by the parent repository. This keeps day-to-day work simple while preserving separate Git histories.
+The workspace uses Git submodules for child repositories so GitHub shows the ecosystem shape and the parent repository pins exact child commits.
 
-Move to Git submodules only if the team needs the parent repository to pin exact commits of frontend, backend, and knowledge-base.
+When a child repository changes:
+
+1. Commit and push inside the child repository.
+2. Return to the parent repository.
+3. Commit the updated submodule pointer.
