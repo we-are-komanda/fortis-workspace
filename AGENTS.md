@@ -1,24 +1,24 @@
 # Fortis Workspace Instructions
 
-This is the umbrella workspace for the Fortis ecosystem.
+This is the workspace for the Fortis ecosystem.
 
-The parent repository is a coordination layer, not an application monorepo. It uses Git submodules for child repositories and keeps workspace-level instructions in the parent repo.
+The parent repository owns the frontend application and knowledge base directly, and keeps workspace-level instructions in the parent repo.
 
 ## Repository Map
 
-- `frontend/` - frontend application repository cloned from `Ramilko37/awesome-project`.
+- `frontend/` - frontend application tracked directly in this repository.
 - `backend/` - reserved backend/API repository path; replace the placeholder with a submodule after the exact backend remote URL is known.
-- `knowledge-base/` - Obsidian-compatible knowledge base repository cloned from `Ramilko37/fortis-knowledge-base`.
+- `knowledge-base/` - Obsidian-compatible knowledge base tracked directly in this repository.
 - `Fortis/` - legacy local Obsidian vault copy kept outside the parent Git history.
 
 ## Repository Boundaries
 
-- Parent repo stores workspace-level instructions, scripts, coordination docs, and submodule pointers.
-- Frontend changes happen in `frontend/`.
+- Parent repo stores the frontend, knowledge base, workspace-level instructions, scripts, and coordination docs.
+- Frontend changes happen in `frontend/` and are committed in the parent repository.
 - Backend changes happen in `backend/`.
-- Durable context lives in `knowledge-base/`.
-- Keep frontend, backend, and knowledge-base Git histories separate.
-- Commit child repository changes inside the child repo first, then update the parent submodule pointer.
+- Durable context lives in `knowledge-base/` and is committed in the parent repository.
+- Keep backend history separate if `backend/` is replaced by an independent repository.
+- Commit independent child repository changes inside the child repo first, then update the parent pointer if a future child repository is added.
 - Do not copy child repository source files into the parent repo outside submodules.
 - Do not store secrets, credentials, private keys, or production tokens in any repository.
 

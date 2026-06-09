@@ -2,16 +2,16 @@
 
 Umbrella workspace for the Fortis ecosystem.
 
-This repository stores workspace-level context only: how the Fortis repositories fit together, how agents should navigate them, and which repository owns each kind of change.
+This repository stores the Fortis frontend application, project knowledge base, and workspace-level context: how the Fortis repositories fit together, how agents should navigate them, and which repository owns each kind of change.
 
 ## Repositories
 
-- `frontend/` - Fortis frontend application, cloned from `Ramilko37/awesome-project`.
+- `frontend/` - Fortis frontend application, tracked directly in this repository.
 - `backend/` - reserved path for the Fortis backend repository.
-- `knowledge-base/` - Obsidian-compatible project knowledge base, cloned from `Ramilko37/fortis-knowledge-base`.
+- `knowledge-base/` - Obsidian-compatible project knowledge base, tracked directly in this repository.
 - `Fortis/` - legacy local Obsidian vault copy kept outside the parent Git history.
 
-Frontend and knowledge base are tracked as Git submodules. Each child project keeps its own Git history while the parent repository pins the currently selected child commits.
+The frontend and knowledge base are owned directly by this repository.
 
 ## Agent Workflow
 
