@@ -3,7 +3,7 @@
 	url = git@github.com:Ramilko37/fortis-front.git
 [submodule "backend"]
 	path = backend
-	url = git@github.com:Ramilko37/fortis-back.git
+	url = git@github.com:we-are-komanda/fortis-back.git
 [submodule "knowledge-base"]
 	path = knowledge-base
 	url = git@github.com:Ramilko37/fortis-knowledge-base.git
