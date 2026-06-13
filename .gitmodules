@@ -1,6 +1,7 @@
 [submodule "frontend"]
 	path = frontend
 	url = git@github.com:Ramilko37/fortis-front.git
+	branch = develop
 [submodule "backend"]
 	path = backend
 	url = git@github.com:we-are-komanda/fortis-back.git
@@ -8,3 +9,4 @@
 [submodule "knowledge-base"]
 	path = knowledge-base
 	url = git@github.com:we-are-komanda/fortis-knowledge-base.git
+	branch = develop
