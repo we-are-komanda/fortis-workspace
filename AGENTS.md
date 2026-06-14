@@ -1,104 +1,105 @@
-# Fortis Workspace Instructions
+# Инструкции workspace Fortis
 
-This is the workspace for the Fortis ecosystem.
+Это рабочая среда экосистемы Fortis.
 
-The parent repository is a coordination layer for the Fortis ecosystem. It uses Git submodules for the frontend, backend, and knowledge-base repositories, and keeps workspace-level instructions in the parent repo.
+Родительский репозиторий — это слой координации Fortis. Он использует submodule-зависимости для репозиториев frontend, backend и knowledge-base и хранит на уровне parent-репозитория инструкции, скрипты и документы координации.
 
-## Repository Map
+## Карта репозиториев
 
-- `frontend/` - frontend application repository from `Ramilko37/fortis-front`.
-- `backend/` - backend/API repository from `Ramilko37/fortis-back`.
-- `knowledge-base/` - Obsidian-compatible knowledge base repository from `Ramilko37/fortis-knowledge-base`.
-- `Fortis/` - legacy local Obsidian vault copy kept outside the parent Git history.
+- `frontend/` — репозиторий фронтенда из `Ramilko37/fortis-front`.
+- `backend/` — репозиторий API из `Ramilko37/fortis-back`.
+- `knowledge-base/` — репозиторий базы знаний (Obsidian-совместимый) из `Ramilko37/fortis-knowledge-base`.
+- `Fortis/` — локальная legacy-копия Obsidian-«vault», хранящаяся вне истории Git родительского репозитория.
 
-## Repository Boundaries
+## Границы репозиториев
 
-- Parent repo stores workspace-level instructions, scripts, coordination docs, and submodule pointers.
-- Frontend changes happen in `frontend/` and are committed in the frontend repository first.
-- Backend changes happen in `backend/` and are committed in the backend repository first.
-- Durable context lives in `knowledge-base/` and is committed in the knowledge-base repository first.
-- After child repository changes are committed, update and commit the parent submodule pointer.
-- Keep frontend, backend, and knowledge-base Git histories separate.
-- Do not copy child repository source files into the parent repo outside submodules.
-- Do not store secrets, credentials, private keys, or production tokens in any repository.
+- Parent-репозиторий хранит инструкции уровня workspace, скрипты, координационные документы и указатели на submodule.
+- Изменения фронтенда выполняются в `frontend/` и коммитятся прежде всего в репозитории frontend.
+- Изменения backend выполняются в `backend/` и коммитятся прежде всего в репозитории backend.
+- Долговременный контекст проекта живёт в `knowledge-base/` и коммитится прежде всего в knowledge-base репозитории.
+- После коммитов в дочерних репозиториях обновите и закоммитьте указатель submodule в parent.
+- Сохраняйте историю frontend, backend и knowledge-base раздельно.
+- Не переносите исходники дочерних репозиториев в parent вне submodule-границ.
+- Не храните secrets, учётные данные, приватные ключи или production-токены в репозиториях.
 
 ## Context First
 
-Before making durable product, UX, architecture, domain, or integration decisions:
+Перед принятием решений по долговременной продуктовой логике, UX, архитектуре, доменной или интеграционной части:
 
-1. Read `knowledge-base/00_Index.md`.
-2. Check relevant notes in `knowledge-base/`.
-3. Read the current product roadmap in `knowledge-base/Продуктовый_план_Fortis.md` before starting any task.
-4. If the decision changes project direction, update the knowledge base.
+1. **ВСЕГДА ОБЯЗАТЕЛЬНО перед началом работы:** синхронизируй все репозитории с удалённым `origin` (parent, `frontend`, `backend`, `knowledge-base`), проверь статус, и только после этого сверись с актуальной `knowledge-base` (`00_Index.md`, релевантные notes/ADR, продуктовый план).
+2. Прочти `knowledge-base/00_Index.md`.
+3. Проверь релевантные заметки в `knowledge-base/`.
+4. Прочти текущий роадмап в `knowledge-base/Продуктовый_план_Fortis.md` перед началом любой задачи.
+5. Если решение меняет направление проекта, обнови knowledge-base.
 
-Prefer durable notes over chat-only memory.
+Отдавай приоритет устойчивой памяти (knowledge-base) над чатом.
 
-## Knowledge Base Update Triggers
+## Триггеры обновления knowledge-base
 
-Update `knowledge-base/` when the conversation or implementation produces:
+Обновляй `knowledge-base/` при появлении новых или изменённых:
 
-- a new requirement
-- a changed assumption
-- a rejected approach
-- a chosen architecture
-- a backend/frontend contract
-- a deployment or environment rule
-- a security, privacy, or data-retention constraint
-- an unresolved open question
+- требования,
+- новых допущений,
+- отклонённых подходов,
+- архитектурных решений,
+- backend/frontend контрактов,
+- правил деплоя/среды,
+- ограничений по безопасности, приватности или хранению данных,
+- открытых вопросов без завершённого ответа.
 
-Use Markdown compatible with Obsidian. Prefer Obsidian links where useful, for example `[[Glossary]]` or `[[Architecture Overview]]`.
+Используй Markdown в формате Obsidian. При возможности применяй внутренние ссылки (например, `[[Glossary]]` или `[[Architecture Overview]]`).
 
-## Decision Logging
+## Логирование решений
 
-Record durable decisions in the knowledge base when they affect:
+Фиксируй долговременные решения в knowledge-base, если они касаются:
 
-- product scope
-- domain model
-- API contracts
-- frontend/backend boundaries
-- security
-- deployment
-- data model
-- AI/model integrations
+- продуктового скоупа,
+- доменной модели,
+- API-контрактов,
+- границ frontend/backend,
+- безопасности,
+- деплоя,
+- модели данных,
+- AI/model интеграций.
 
-Use ADR-style notes for architecture decisions.
+Для архитектурных решений используй ADR-заметки.
 
-## Backend/Frontend Boundary
+## Граница frontend/backend
 
-Frontend and backend details should be linked through explicit contracts:
+Связь между frontend и backend должна быть оформлена явными контрактами:
 
-- API routes and schemas
-- auth/session assumptions
-- environment variables
-- deployment notes
-- integration risks
+- API routes и схемы,
+- предположения о сессии/авторизации,
+- переменные окружения,
+- заметки по деплою,
+- риски интеграции.
 
-If a decision affects more than one repository, record it in the knowledge base and implement code changes in each owning repository separately.
+Если решение затрагивает больше одного репозитория, зафиксируй его в knowledge-base и внеси изменения в каждом репозитории-владельце отдельно.
 
-## Engineering Guards
+## Защитные правила разработки
 
-- Prefer existing project patterns over new abstractions.
-- Keep changes scoped to the owning repository.
-- Do not refactor unrelated code.
-- Do not introduce new dependencies without a clear reason.
-- Run relevant tests/checks before claiming work is complete.
-- Never overwrite user changes.
-- Never use destructive Git commands unless the user explicitly asks for that operation.
+- Предпочитай существующие шаблоны и паттерны проекта новым абстракциям.
+- Держи изменения в границах собственного репозитория.
+- Не делай рефакторинг несвязанных участков кода.
+- Не вводи новые зависимости без чёткой причины.
+- Перед фиксацией выполненных работ запускай релевантные проверки.
+- Никогда не перезаписывай пользовательские изменения.
+- Не выполняй destructive Git-операции, если не запрошено явно пользователем.
 
 ## Next.js Guard
 
-The frontend may use a Next.js version with breaking changes.
+Frontend может использовать версию Next.js с breaking changes.
 
-Before changing Next.js APIs, routing, config, server/client boundaries, caching, build behavior, or file conventions, read the relevant guide in:
+Перед изменением Next.js API, маршрутизации, конфигурации, границ server/client, кэширования, поведения билда или конвенций файлов, прочти соответствующий гайд:
 
 `frontend/node_modules/next/dist/docs/`
 
-Heed deprecation notices.
+Учитывай deprecation notices.
 
-## Agent Skills To Prefer
+## Предпочтения по навыкам
 
-- Use systematic debugging when investigating bugs, failed tests, broken UI, or unclear runtime behavior.
-- Use test-driven development for bug fixes and behavior changes when the expected behavior can be specified.
-- Use frontend design and responsive UI guidelines when changing user-facing screens.
-- Use official/local Next.js docs before changing framework behavior.
-- Use verification-before-completion before reporting that implementation is complete.
+- Использовать систематическую отладку при разборе багов, падений тестов, проблемного UI или неясного runtime поведения.
+- Использовать test-driven development для исправлений и изменений, если поведение можно формализовать.
+- При изменениях пользовательского интерфейса использовать рекомендации по дизайну и responsive UI.
+- Перед изменением поведения Next.js использовать официальную локальную документацию.
+- Применять `verification-before-completion` до финального сообщения о завершении работы.
