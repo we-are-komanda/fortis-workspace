@@ -1,5 +1,12 @@
 .DS_Store
+
+# Editor / tooling working dirs
+.vscode/
+.superpowers/
 .playwright-mcp/
 
 # Legacy local Obsidian vault path.
 /Fortis/
+
+# Landing review artifacts (local screenshots, not for the repo).
+/landing/previews/

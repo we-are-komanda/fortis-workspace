@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fortis — собрано из модулей · аналитическая платформа защиты объектов</title>
+<meta name="description" content="Fortis — модульная финансово-аналитическая ГИС-платформа: соберите защиту объекта из модулей на карте, посчитайте стоимость до рубля, сравните варианты и выгрузите отчёт." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="flow.css" />
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem("fortis-v2-theme");
+    if (t !== "dark" && t !== "light") {
+      t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+    }
+    document.documentElement.setAttribute("data-theme", t);
+  } catch (e) { document.documentElement.setAttribute("data-theme", "light"); }
+})();
+</script>
+</head>
+<body>
+
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-blob bg-blob--1" aria-hidden="true"></div>
+<div class="bg-blob bg-blob--2" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand">
+    <span class="brand__mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+    </span>
+    <span class="brand__name">FORTIS</span>
+  </a>
+  <nav class="nav__links">
+    <a href="#modules">Модули</a>
+    <a href="#how">Маршрут</a>
+    <a href="#modularity">Модульность</a>
+    <a href="#compliance">Соответствие&nbsp;ТЗ</a>
+    <a href="#team">Команда</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" type="button" aria-label="Переключить тёмную тему">
+    <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+    <svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+  </button>
+  <a href="#cta" class="btn btn--primary" style="padding:10px 18px">Запросить демо</a>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <div class="tag-row reveal">
+        <span class="tag"><i></i>Мирная B2B-аналитика</span>
+        <span class="tag">Финансово-аналитическая ГИС</span>
+      </div>
+      <h1 class="reveal" style="--d:.06s">Защита, собранная из&nbsp;модулей. <span class="accent">Посчитанная до&nbsp;рубля.</span></h1>
+      <p class="hero__lead reveal" style="--d:.14s">
+        Fortis собирает цифровую модель защиты объекта на&nbsp;карте из&nbsp;готовых модулей:
+        карта, эшелоны, библиотека средств, калькулятор, отчёт. Передвинули установку&nbsp;—
+        мгновенно пересчитались покрытие, стоимость и&nbsp;остаток бюджета.
+      </p>
+      <div class="hero__actions reveal" style="--d:.22s">
+        <a href="#cta" class="btn btn--primary btn--lg">Смотреть демо</a>
+        <a href="#modules" class="btn btn--ghost btn--lg">Обзор модулей →</a>
+      </div>
+      <div class="hero__ledger reveal" style="--d:.3s">
+        <div class="led">
+          <div class="led__n tnum"><span data-count="7">0</span></div>
+          <div class="led__l">модулей в&nbsp;единой модели проекта</div>
+        </div>
+        <div class="led">
+          <div class="led__n tnum"><span data-count="100" data-suffix="%">0</span></div>
+          <div class="led__l">синхронизация карты, расчёта и&nbsp;отчёта</div>
+        </div>
+        <div class="led">
+          <div class="led__n tnum"><span data-prefix="<" data-count="1" data-suffix=" сек">0</span></div>
+          <div class="led__l">пересчёт стоимости при&nbsp;каждом изменении</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__panel reveal" style="--d:.18s">
+      <div class="win">
+        <div class="win__bar">
+          <span class="d"></span><span class="d"></span><span class="d"></span>
+          <span class="win__url">fortis · конструктор защиты — /prototype</span>
+        </div>
+        <div class="win__body">
+          <div class="lmap">
+            <span class="lsweep" aria-hidden="true"></span>
+            <span class="lring lring--4"></span>
+            <span class="lring lring--3"></span>
+            <span class="lring lring--2"></span>
+            <span class="lring lring--1"></span>
+            <span class="lcore"></span>
+            <span class="lpin" style="top:30%;left:64%"><i style="background:var(--e3)"></i>МОГ</span>
+            <span class="lpin" style="top:62%;left:28%"><i style="background:var(--e1)"></i>РЛС</span>
+            <span class="lpin" style="top:26%;left:36%"><i style="background:var(--e2)"></i>РЭБ</span>
+          </div>
+          <div class="win__chips">
+            <span class="wchip">Эшелон L3 · активен</span>
+            <span class="wchip">Слой покрытия · вкл</span>
+          </div>
+          <div class="win__budget">
+            <div class="bl"><span>Использовано</span><span class="bn"><span data-count="8350000" data-money>0</span>&nbsp;₽</span></div>
+            <div class="bbar"><span style="width:84%"></span></div>
+            <div class="bl"><span style="font-size:11px;color:var(--ink-3)">Лимит 9,9 млн</span><span class="brest">остаток 1,55 млн</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fmod">
+        <div class="fmod__h">
+          <span class="fmod__badge">Составной модуль</span>
+          <span class="fmod__price"><span data-count="1240000" data-money>0</span>&nbsp;₽</span>
+        </div>
+        <div class="fmod__t">Мобильная группа — пост №3</div>
+        <div class="fmod__g">
+          <div><b class="tnum">6</b><span>чел. состав</span></div>
+          <div><b class="tnum">320°</b><span>сектор</span></div>
+          <div><b class="tnum">1.8</b><span>км дальн.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="strip reveal">
+  <div class="strip__in">
+    <span class="strip__lead">Уровень хорошего fintech / BI&nbsp;— в&nbsp;предметной области безопасности.</span>
+    <div class="strip__chips">
+      <span class="schip">Аналитика и&nbsp;финансы в&nbsp;центре</span>
+      <span class="schip">Модульная архитектура</span>
+      <span class="schip">Быстрые интеграции</span>
+      <span class="schip">Современная команда</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="fl-section fl-section--problem" id="problem">
+  <div class="fl-head fl-reveal">
+    <div class="fl-eyebrow fl-eyebrow--warn">Как это устроено сейчас</div>
+    <h2 class="fl-h2">Защиту считают на&nbsp;инструментах, <span class="fl-warn-accent">которые для&nbsp;этого не&nbsp;созданы</span></h2>
+    <p class="fl-lead">Обычные карты и&nbsp;офисные таблицы не&nbsp;знают про&nbsp;эшелоны, зоны покрытия и&nbsp;стоимость средств. Поэтому всё держится на&nbsp;ручной работе, разрозненных файлах и&nbsp;длинной цепочке пересчётов&nbsp;— и&nbsp;только в&nbsp;самом конце становится понятно, сколько это стоит и&nbsp;насколько эффективно.</p>
+  </div>
+
+  <div class="fl-chain fl-reveal">
+    <div class="fl-stage" style="--i:0">
+      <div class="fl-stage__cap"><b>1</b>Обычная карта</div>
+      <div class="fl-stage__viz">
+        <div class="fl-vmap"></div>
+        <span class="fl-vmap__pin" style="top:30%;left:32%"></span>
+        <span class="fl-vmap__pin" style="top:58%;left:60%"></span>
+        <span class="fl-vmap__pin" style="top:42%;left:78%"></span>
+        <svg class="fl-vmap__scrawl" viewBox="0 0 100 88" preserveAspectRatio="none" style="inset:0;width:100%;height:100%"><path d="M20 60 Q44 30 70 50"/></svg>
+      </div>
+      <div class="fl-stage__title">Расставили «на&nbsp;глаз»</div>
+      <div class="fl-stage__sub">без зон и&nbsp;эшелонов</div>
+    </div>
+
+    <div class="fl-link"><span class="fl-link__line"></span><span class="fl-frict"><i></i>вручную</span><span class="fl-link__hand">✋</span></div>
+
+    <div class="fl-stage" style="--i:1">
+      <div class="fl-stage__cap"><b>2</b>Перенос в&nbsp;таблицу</div>
+      <div class="fl-stage__viz">
+        <div class="fl-vsheet"><i><span></span><span></span><span></span></i><i><span></span><span></span><span></span></i><i><span></span><span></span><span></span></i><i><span></span><span></span><span></span></i></div>
+      </div>
+      <div class="fl-stage__title">Excel вручную</div>
+      <div class="fl-stage__sub">строка за&nbsp;строкой</div>
+    </div>
+
+    <div class="fl-link"><span class="fl-link__line"></span><span class="fl-frict"><i></i>риск ошибки</span><span class="fl-link__hand">✋</span></div>
+
+    <div class="fl-stage" style="--i:2">
+      <div class="fl-stage__cap"><b>3</b>Расчёт по&nbsp;формулам</div>
+      <div class="fl-stage__viz">
+        <div class="fl-vform">Σ&nbsp;= цена&nbsp;×&nbsp;n<br><b>покрытие&nbsp;=&nbsp;?</b></div>
+      </div>
+      <div class="fl-stage__title">Считаем сами</div>
+      <div class="fl-stage__sub">цена и&nbsp;эффективность</div>
+    </div>
+
+    <div class="fl-link"><span class="fl-link__line"></span><span class="fl-frict"><i></i>дни работы</span><span class="fl-link__hand">✋</span></div>
+
+    <div class="fl-stage fl-stage--end" style="--i:3">
+      <div class="fl-stage__cap"><b>4</b>Только теперь результат</div>
+      <div class="fl-stage__viz"><div class="fl-vresult"><span>?</span></div></div>
+      <div class="fl-stage__title">Понятны цена и&nbsp;эффект</div>
+      <div class="fl-stage__sub">после всей цепочки</div>
+    </div>
+  </div>
+
+  <div class="fl-pains fl-reveal">
+    <article class="fl-pain">
+      <span class="fl-pain__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></span>
+      <h4>Нет нужных инструментов</h4>
+      <p>Обычные карты не&nbsp;знают про&nbsp;эшелоны, зоны покрытия и&nbsp;средства защиты.</p>
+    </article>
+    <article class="fl-pain">
+      <span class="fl-pain__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/></svg></span>
+      <h4>Все расчёты руками</h4>
+      <p>Стоимость и&nbsp;эффективность считают вручную по&nbsp;формулам в&nbsp;таблицах.</p>
+    </article>
+    <article class="fl-pain">
+      <span class="fl-pain__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h13l-3-3M20 17H7l3 3"/></svg></span>
+      <h4>Перенос с&nbsp;карты — вручную</h4>
+      <p>Данные с&nbsp;карты переносят в&nbsp;таблицы по&nbsp;одному&nbsp;— медленно и&nbsp;с&nbsp;ошибками.</p>
+    </article>
+    <article class="fl-pain">
+      <span class="fl-pain__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+      <h4>Нельзя гибко доработать</h4>
+      <p>Готовые продукты не&nbsp;адаптируются под&nbsp;новые типы средств и&nbsp;требования.</p>
+    </article>
+    <article class="fl-pain">
+      <span class="fl-pain__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M6 9l-3 3 3 3M18 9l3 3-3 3"/></svg></span>
+      <h4>Сложно сравнивать варианты</h4>
+      <p>Нет способа поставить рядом два&nbsp;варианта защиты и&nbsp;увидеть разницу.</p>
+    </article>
+    <article class="fl-pain">
+      <span class="fl-pain__ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8l4 4v12H8z"/><path d="M16 4v4h4M4 8v12h10"/></svg></span>
+      <h4>Знания живут в&nbsp;файлах</h4>
+      <p>Конфигурации и&nbsp;опыт хранятся в&nbsp;личных файлах, передаются долго и&nbsp;теряются.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SOLUTION ============ -->
+<section class="fl-section fl-section--solution" id="solution">
+  <div class="fl-head fl-reveal">
+    <div class="fl-eyebrow">Как решает Fortis</div>
+    <h2 class="fl-h2">Одна живая модель <span class="fl-accent">вместо цепочки из&nbsp;костылей</span></h2>
+    <p class="fl-lead">Карта, расчёт и&nbsp;отчёт связаны в&nbsp;единую модель проекта. Изменили что-то на&nbsp;карте&nbsp;— всё пересчиталось мгновенно. Дальше&nbsp;— подбор под&nbsp;бюджет, сравнение вариантов, версии и&nbsp;совместная работа.</p>
+  </div>
+
+  <div class="fl-merge fl-reveal">
+    <div class="fl-merge__grid" aria-hidden="true"></div>
+    <div class="fl-triad">
+      <svg class="fl-wires" viewBox="0 0 640 280" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M320 140 L115 62" vector-effect="non-scaling-stroke"/>
+        <path d="M320 140 L525 62" vector-effect="non-scaling-stroke"/>
+        <path d="M320 140 L320 235" vector-effect="non-scaling-stroke"/>
+      </svg>
+      <span class="fl-node fl-node--map" style="--i:0"><i></i>Карта</span>
+      <span class="fl-node fl-node--calc" style="--i:1"><i></i>Калькулятор</span>
+      <span class="fl-node fl-node--report" style="--i:2"><i></i>Отчёт</span>
+      <span class="fl-node fl-node--core" style="--i:3"><b>Единая модель</b><span>всё связано</span></span>
+    </div>
+  </div>
+
+  <div class="fl-features">
+    <!-- F1 -->
+    <div class="fl-feat fl-reveal">
+      <div class="fl-feat__copy">
+        <div class="fl-feat__num">01 · Связь</div>
+        <h3>Карта и&nbsp;расчёт — это&nbsp;одно целое</h3>
+        <p>Поставили средство на&nbsp;карту&nbsp;— стоимость, покрытие и&nbsp;остаток бюджета пересчитались сразу. Никакого переноса в&nbsp;таблицы и&nbsp;ручных формул.</p>
+        <ul class="fl-fb">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Любое изменение на&nbsp;карте сразу в&nbsp;цене</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Зоны покрытия считаются из&nbsp;состава</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Остаток бюджета виден в&nbsp;реальном времени</li>
+        </ul>
+      </div>
+      <div class="fl-demo" data-fl-demo="live">
+        <div class="fl-demo__bar"><i></i><i></i><i></i><span>конструктор · live</span></div>
+        <div class="fl-demo__body">
+          <div class="fl-d1">
+            <div class="fl-d-map">
+              <div class="fl-d-map__grid"></div>
+              <span class="fl-d-ring r3"></span><span class="fl-d-ring r2"></span><span class="fl-d-ring r1"></span>
+              <span class="fl-d-core"></span>
+              <span class="fl-unit"><span class="fl-unit__halo"></span></span>
+            </div>
+            <div class="fl-d-calc">
+              <span class="fl-d-calc__lab">Стоимость · пересчёт</span>
+              <div class="fl-d-calc__num">12,74 <small>млн ₽</small></div>
+              <div class="fl-d-bar"><span></span></div>
+              <span class="fl-d-tag"><i></i>обновляется на&nbsp;лету</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- F2 -->
+    <div class="fl-feat fl-reveal">
+      <div class="fl-feat__copy">
+        <div class="fl-feat__num">02 · Бюджет</div>
+        <h3>Подбор под&nbsp;бюджет за&nbsp;секунды</h3>
+        <p>Задайте лимит&nbsp;— система соберёт оптимальный набор средств по&nbsp;приоритету и&nbsp;покажет, что укладывается, а&nbsp;что выходит за&nbsp;рамки.</p>
+        <ul class="fl-fb">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Лимит и&nbsp;остаток всегда на&nbsp;виду</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Приоритеты средств учитываются сами</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Готовый набор без&nbsp;ручного перебора</li>
+        </ul>
+      </div>
+      <div class="fl-demo" data-fl-demo="budget" data-fit="3">
+        <div class="fl-demo__bar"><i></i><i></i><i></i><span>подбор под&nbsp;бюджет</span></div>
+        <div class="fl-demo__body">
+          <div class="fl-d2">
+            <div class="fl-d2__head"><span class="fl-d2__limit">Лимит: <b>9,9 млн&nbsp;₽</b></span><span class="fl-d2__ok">в рамках бюджета</span></div>
+            <div class="fl-pick" data-price="3900000"><span class="fl-pick__box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg></span><span class="fl-pick__name">РЛС обнаружения</span><span class="fl-pick__price">3,9 млн</span></div>
+            <div class="fl-pick" data-price="2400000"><span class="fl-pick__box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg></span><span class="fl-pick__name">Комплекс РЭБ</span><span class="fl-pick__price">2,4 млн</span></div>
+            <div class="fl-pick" data-price="2900000"><span class="fl-pick__box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg></span><span class="fl-pick__name">Мобильная группа</span><span class="fl-pick__price">2,9 млн</span></div>
+            <div class="fl-pick" data-price="1800000"><span class="fl-pick__box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg></span><span class="fl-pick__name">Доп. огневая точка</span><span class="fl-pick__price">1,8 млн</span></div>
+            <div class="fl-pick" data-price="1200000"><span class="fl-pick__box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg></span><span class="fl-pick__name">Резервный модуль</span><span class="fl-pick__price">1,2 млн</span></div>
+            <div class="fl-d2__sum"><span style="font-size:12px;color:var(--fl-ink-3)">Подобрано</span><b>0</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- F3 -->
+    <div class="fl-feat fl-reveal">
+      <div class="fl-feat__copy">
+        <div class="fl-feat__num">03 · Сравнение</div>
+        <h3>Сравнение конфигураций рядом</h3>
+        <p>Поставьте два&nbsp;варианта защиты бок&nbsp;о&nbsp;бок и&nbsp;сразу увидьте разницу в&nbsp;цене, покрытии и&nbsp;эшелонах. Решение принимается на&nbsp;фактах, а&nbsp;не&nbsp;на&nbsp;ощущениях.</p>
+        <ul class="fl-fb">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Цена, покрытие и&nbsp;состав&nbsp;— наглядно</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Видно, где экономия без&nbsp;потери защиты</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Обоснованный выбор для&nbsp;заказчика</li>
+        </ul>
+      </div>
+      <div class="fl-demo" data-fl-demo="compare">
+        <div class="fl-demo__bar"><i></i><i></i><i></i><span>сравнение конфигураций</span></div>
+        <div class="fl-demo__body">
+          <div class="fl-d3">
+            <div class="fl-cc">
+              <div class="fl-cc__t">Вариант A</div>
+              <div class="fl-cc__num"><span data-val="15.6">15,60</span> <small>млн&nbsp;₽</small></div>
+              <div class="fl-cc__rows"><span>Покрытие <b>92%</b></span><span>Эшелонов <b>3</b></span><span>Средств <b>11</b></span></div>
+            </div>
+            <div class="fl-cc fl-cc--win">
+              <span class="fl-cc__badge">−18%</span>
+              <div class="fl-cc__t">Вариант B</div>
+              <div class="fl-cc__num"><span data-val="12.74">12,74</span> <small>млн&nbsp;₽</small></div>
+              <div class="fl-cc__rows"><span>Покрытие <b>94%</b></span><span>Эшелонов <b>4</b></span><span>Средств <b>9</b></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- F4 -->
+    <div class="fl-feat fl-reveal">
+      <div class="fl-feat__copy">
+        <div class="fl-feat__num">04 · Команда</div>
+        <h3>Сохранение, версии и&nbsp;совместная работа</h3>
+        <p>Конфигурации хранятся в&nbsp;системе, а&nbsp;не&nbsp;в&nbsp;личных файлах. Несколько человек работают над&nbsp;одной картой, каждая версия сохранена и&nbsp;доступна для&nbsp;возврата.</p>
+        <ul class="fl-fb">
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Одна карта&nbsp;— вся команда</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>История версий, возврат к&nbsp;любой</li>
+          <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Передача проекта без&nbsp;файлов и&nbsp;потерь</li>
+        </ul>
+      </div>
+      <div class="fl-demo" data-fl-demo="collab">
+        <div class="fl-demo__bar"><i></i><i></i><i></i><span>совместная работа · версии</span></div>
+        <div class="fl-demo__body">
+          <div class="fl-d4">
+            <div class="fl-d4__map">
+              <div class="fl-d-map__grid"></div>
+              <span class="fl-d-ring r2"></span><span class="fl-d-ring r1"></span>
+              <span class="fl-d-core"></span>
+              <span class="fl-cursor fl-cursor--a"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 2.5l13 6.5-5.4 1.8L10.8 18z"/></svg><span>Анна</span></span>
+              <span class="fl-cursor fl-cursor--b"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 2.5l13 6.5-5.4 1.8L10.8 18z"/></svg><span>Марк</span></span>
+            </div>
+            <div class="fl-vers">
+              <div class="fl-vers__row now"><span class="fl-vers__dot"></span><div class="fl-vers__t">Сейчас · v8<span>Марк · 2&nbsp;мин назад</span></div></div>
+              <div class="fl-vers__row"><span class="fl-vers__dot"></span><div class="fl-vers__t">v7<span>Анна · сегодня</span></div></div>
+              <div class="fl-vers__row"><span class="fl-vers__dot"></span><div class="fl-vers__t">v6<span>вчера</span></div></div>
+              <div class="fl-vers__row"><span class="fl-vers__dot"></span><div class="fl-vers__t">v5<span>2&nbsp;дня назад</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ BENTO MODULES ============ -->
+<section class="section" id="modules">
+  <div class="section__head reveal">
+    <div class="eyebrow">Модули платформы</div>
+    <h2>Один проект — <span class="accent">набор подключаемых модулей</span></h2>
+    <p>Каждая поверхность Fortis&nbsp;— самостоятельный модуль над&nbsp;единым источником правды. Что на&nbsp;карте&nbsp;— то&nbsp;в&nbsp;калькуляторе и&nbsp;в&nbsp;отчёте. Модули добавляются без&nbsp;переписывания ядра.</p>
+  </div>
+
+  <div class="bento">
+    <article class="bx bx--a reveal" style="--d:.03s">
+      <span class="bx__tag bx__tag--live">В продукте</span>
+      <h3>ГИС-конструктор</h3>
+      <p>Карта, эшелоны, размещение средств, зоны покрытия и&nbsp;видимость слоёв.</p>
+      <div class="gmini" aria-hidden="true">
+        <span class="lring lring--4"></span><span class="lring lring--3"></span>
+        <span class="lring lring--2"></span><span class="lring lring--1"></span>
+        <span class="lcore"></span>
+        <span class="gmini-dot" style="top:38%;left:60%;background:var(--e3);color:var(--e3)"></span>
+        <span class="gmini-dot" style="top:64%;left:40%;background:var(--e1);color:var(--e1)"></span>
+        <span class="gmini-dot" style="top:30%;left:34%;background:var(--e2);color:var(--e2)"></span>
+      </div>
+    </article>
+
+    <article class="bx bx--b reveal" style="--d:.07s">
+      <span class="bx__tag bx__tag--live">В продукте</span>
+      <h3>Калькулятор</h3>
+      <div class="bx__art">
+        <div class="calc-n tnum">12,74&nbsp;<small>млн ₽</small></div>
+        <div class="calc-sub"><span class="pill-ok">в рамках бюджета</span><span style="font-size:12.5px;color:var(--ink-3)">по объектам · эшелонам · типам</span></div>
+        <div class="minibars"><i></i><i></i><i></i><i></i></div>
+      </div>
+    </article>
+
+    <article class="bx bx--c reveal" style="--d:.1s">
+      <span class="bx__tag bx__tag--live">В продукте</span>
+      <h3>Эшелоны</h3>
+      <div class="bx__art emini" aria-hidden="true">
+        <span class="lring lring--4"></span><span class="lring lring--3"></span>
+        <span class="lring lring--2"></span><span class="lring lring--1"></span>
+        <span class="lcore"></span>
+      </div>
+    </article>
+
+    <article class="bx bx--d reveal" style="--d:.13s">
+      <span class="bx__tag bx__tag--live">В продукте</span>
+      <h3>Библиотека средств</h3>
+      <div class="bx__art libstack" aria-hidden="true">
+        <span class="libcard"><i></i></span>
+        <span class="libcard"><i></i></span>
+        <span class="libcard"><i></i></span>
+      </div>
+    </article>
+
+    <article class="bx bx--e reveal" style="--d:.05s">
+      <span class="bx__tag bx__tag--live">В продукте</span>
+      <h3>Отчёт</h3>
+      <p>Карта, перечень по&nbsp;типу и&nbsp;эшелону, ТТХ и&nbsp;суммы. Режим скрытия цен.</p>
+      <div class="rep">
+        <div class="rep__doc"><span></span><span></span><span></span><span></span><span></span></div>
+        <div class="rep__list">
+          <b>Обнаружение <em>3,9 М</em></b>
+          <b>Подавление <em>2,4 М</em></b>
+          <b>Противодействие <em>5,1 М</em></b>
+          <b style="color:var(--ink);border-top:1px solid var(--line);padding-top:8px">Итого <em>12,74 М</em></b>
+        </div>
+      </div>
+    </article>
+
+    <article class="bx bx--f reveal" style="--d:.09s">
+      <span class="bx__tag bx__tag--live">В продукте</span>
+      <h3>Совместная работа</h3>
+      <div class="bx__art avs" aria-hidden="true">
+        <span>А</span><span>М</span><span>К</span><span>+5</span>
+      </div>
+    </article>
+
+    <article class="bx bx--g reveal" style="--d:.12s">
+      <span class="bx__tag bx__tag--soon">На подходе</span>
+      <h3>3D-модель</h3>
+      <div class="cube" aria-hidden="true"><span></span><span></span><span></span></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SWEEP / FLOW ============ -->
+<section class="section" id="how" style="padding-top:40px">
+  <div class="section__head reveal">
+    <div class="eyebrow">Маршрут пользователя</div>
+    <h2>От&nbsp;пустой карты — <span class="accent">до выгружаемого отчёта</span></h2>
+  </div>
+  <div class="sweep">
+    <div class="sweep__line" aria-hidden="true"></div>
+    <div class="step reveal" style="--d:.03s"><div class="step__n">01</div><h4>Объект и&nbsp;карта</h4><p>Центр объекта&nbsp;— точка отсчёта эшелонов.</p></div>
+    <div class="step reveal" style="--d:.08s"><div class="step__n">02</div><h4>Эшелоны и&nbsp;средства</h4><p>Перетаскиваете средства из&nbsp;библиотеки на&nbsp;слой.</p></div>
+    <div class="step reveal" style="--d:.13s"><div class="step__n">03</div><h4>Покрытие</h4><p>Зоны действия, конфликты, жилые зоны, рельеф.</p></div>
+    <div class="step reveal" style="--d:.18s"><div class="step__n">04</div><h4>Стоимость</h4><p>Мгновенный пересчёт цены и&nbsp;остатка лимита.</p></div>
+    <div class="step reveal" style="--d:.23s"><div class="step__n">05</div><h4>Сравнение и&nbsp;отчёт</h4><p>Сравниваете варианты, выгружаете отчёт.</p></div>
+  </div>
+</section>
+
+<!-- ============ MODULARITY — core + plug-ins ============ -->
+<section class="section section--mod" id="modularity">
+  <div class="modwrap">
+    <div class="mod-copy reveal">
+      <div class="eyebrow">Модульность</div>
+      <h2>Добавить модуль — <span class="accent">не переписать ядро</span></h2>
+      <p>Платформа собрана из&nbsp;самостоятельных модулей вокруг единой модели проекта. Появилась новая задача&nbsp;— её&nbsp;добавляют отдельным модулем, не&nbsp;трогая то, что уже работает. Поэтому доработки выходят быстро и&nbsp;без&nbsp;риска сломать остальное.</p>
+      <ul class="mod-ticks">
+        <li>Новый тип средства, поле в&nbsp;карточке или&nbsp;категория&nbsp;— без&nbsp;переделки всей системы</li>
+        <li>Новый отчёт, источник данных или&nbsp;интеграция&nbsp;— подключаются отдельно и&nbsp;в&nbsp;свои сроки</li>
+        <li>Доработки безопасны: сохранённые конфигурации никуда не&nbsp;пропадают</li>
+      </ul>
+    </div>
+
+    <div class="hub reveal" style="--d:.12s">
+      <span class="hub__ring" aria-hidden="true"></span>
+      <div class="hub__core">
+        <b>Единая модель проекта</b>
+        <span>карта · расчёт · отчёт</span>
+      </div>
+      <span class="hub__node p1"><i style="background:var(--e1)"></i>Карта</span>
+      <span class="hub__node p2"><i style="background:var(--accent)"></i>Калькулятор</span>
+      <span class="hub__node p3"><i style="background:var(--e3)"></i>Отчёт</span>
+      <span class="hub__node p4"><i style="background:var(--e2)"></i>Библиотека</span>
+      <span class="hub__node hub__node--soon p5"><i style="background:var(--ink-3)"></i>3D-модель</span>
+      <span class="hub__node hub__node--add p6">+ новый модуль</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPLIANCE ============ -->
+<section class="section" id="compliance" style="padding-top:40px">
+  <div class="section__head reveal">
+    <div class="eyebrow">Соответствие ТЗ</div>
+    <h2>Каждый пункт ТЗ — <span class="accent">учтён в продукте и&nbsp;на&nbsp;дорожной карте</span></h2>
+    <p>Платформа спроектирована точно под&nbsp;техническое задание заказчика. Модуль ГИС&nbsp;— ядро текущего MVP; ретроспектива, сценарное моделирование и&nbsp;база угроз заложены в&nbsp;модель данных.</p>
+  </div>
+
+  <div class="ctable reveal">
+    <div class="crow">
+      <span class="crow__id">I.1</span>
+      <span class="crow__t">Модуль ГИС и&nbsp;цифровая модель</span>
+      <span class="crow__d">Размещение, покрытие, слои, библиотека, стоимость, бюджет, отчёт</span>
+      <span class="cstat cstat--live">Ядро MVP</span>
+    </div>
+    <div class="crow">
+      <span class="crow__id">I.1</span>
+      <span class="crow__t">Движок ограничений</span>
+      <span class="crow__d">ЭМ-совместимость, жилые зоны, рельеф, подсветка конфликтов</span>
+      <span class="cstat cstat--dev">В разработке</span>
+    </div>
+    <div class="crow">
+      <span class="crow__id">I.2</span>
+      <span class="crow__t">Ретроспективный анализ</span>
+      <span class="crow__d">Визуализация атак, траектории, корреляции, анализ «прорывов»</span>
+      <span class="cstat cstat--road">Дорожная карта</span>
+    </div>
+    <div class="crow">
+      <span class="crow__id">I.3</span>
+      <span class="crow__t">Сценарное моделирование</span>
+      <span class="crow__d">Сценарии атак, метрики поражения, «точка невозврата», healthbar</span>
+      <span class="cstat cstat--road">Дорожная карта</span>
+    </div>
+    <div class="crow">
+      <span class="crow__id">II</span>
+      <span class="crow__t">Наполнение системы</span>
+      <span class="crow__d">Профили средств и&nbsp;оружия, детальные карточки, документы; база угроз БПЛА</span>
+      <span class="cstat cstat--live">В продукте</span>
+    </div>
+    <div class="crow">
+      <span class="crow__id">III</span>
+      <span class="crow__t">Доступ к&nbsp;системе</span>
+      <span class="crow__d">Права на&nbsp;предприятия, совместное редактирование, версии конфигураций</span>
+      <span class="cstat cstat--live">В продукте</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCREENS ============ -->
+<section class="section" style="padding-top:40px">
+  <div class="section__head reveal">
+    <div class="eyebrow">Система в работе</div>
+    <h2>Не&nbsp;концепт. <span class="accent">Это уже работает.</span></h2>
+    <p>Реальные экраны Fortis: конфигурация защиты на&nbsp;карте и&nbsp;живой финансовый расчёт по&nbsp;ней&nbsp;— один проект, один источник правды.</p>
+  </div>
+  <div class="shots">
+    <figure class="shot shot--wide reveal">
+      <div class="shot__frame"><img src="../shared/screens/prototype-map-echelons.png" alt="ГИС-конструктор: карта объекта с эшелонами и размещёнными средствами" loading="lazy" /></div>
+      <figcaption><b>ГИС-конструктор.</b> Объект в&nbsp;центре, концентрические эшелоны защиты, средства размещены по&nbsp;слоям.</figcaption>
+    </figure>
+    <figure class="shot reveal" style="--d:.08s">
+      <div class="shot__frame"><img src="../shared/screens/calculator-estimate.png" alt="Калькулятор: смета по эшелонам, итог по конфигурации" loading="lazy" /></div>
+      <figcaption><b>Смета по&nbsp;эшелонам.</b> Стоимость каждого средства и&nbsp;итог, построенный из&nbsp;карты.</figcaption>
+    </figure>
+    <figure class="shot reveal" style="--d:.12s">
+      <div class="shot__frame"><img src="../shared/screens/calculator-budget-fit.png" alt="Подбор под бюджет: отбор средств по приоритету в рамках лимита" loading="lazy" /></div>
+      <figcaption><b>Подбор под&nbsp;бюджет.</b> Задайте лимит&nbsp;— система соберёт набор по&nbsp;приоритету и&nbsp;остатку.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ TEAM / PROCESS ============ -->
+<section class="section" id="team">
+  <div class="section__head reveal">
+    <div class="eyebrow">Команда и процессы</div>
+    <h2>Современная команда. <span class="accent">Зрелые инженерные практики.</span></h2>
+    <p>Мы&nbsp;строим Fortis на&nbsp;тех&nbsp;же проверенных решениях, на&nbsp;которых работают крупные мировые продукты. Это&nbsp;даёт надёжность, привычный отклик и&nbsp;высокую скорость развития&nbsp;— продукт ощущается зрелым, а&nbsp;не&nbsp;прототипом.</p>
+  </div>
+  <div class="team">
+    <div class="tgrid reveal">
+      <article class="tcard">
+        <span class="tcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6.5v13.5l6-2.5 6 2.5 6-2.5V3.5L15 6 9 4Z"/><path d="M9 4v13.5M15 6v13.5"/></svg></span>
+        <h4>Карты мирового уровня</h4>
+        <p>Такая&nbsp;же плавная и&nbsp;точная карта, как в&nbsp;привычных навигационных и&nbsp;геосервисах.</p>
+        <span class="tcard__std"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Мировой стандарт электронных карт</span>
+      </article>
+      <article class="tcard">
+        <span class="tcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"/><path d="m7 14 3-3 3 2 5-6"/></svg></span>
+        <h4>Мгновенные расчёты</h4>
+        <p>Стоимость и&nbsp;покрытие пересчитываются сразу при&nbsp;любом изменении&nbsp;— как в&nbsp;современных системах аналитики.</p>
+        <span class="tcard__std"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Подход бизнес-аналитики (BI)</span>
+      </article>
+      <article class="tcard">
+        <span class="tcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 21 7v10l-9 4.5L3 17V7l9-4.5Z"/><path d="M12 2.5v19M21 7l-9 4.5L3 7"/></svg></span>
+        <h4>Объёмная визуализация</h4>
+        <p>Местность и&nbsp;объекты в&nbsp;3D на&nbsp;признанных мировых технологиях трёхмерной графики.</p>
+        <span class="tcard__std"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Графика реального времени</span>
+      </article>
+      <article class="tcard">
+        <span class="tcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 5.8v5.4c0 4 2.9 6.9 7 8.8 4.1-1.9 7-4.8 7-8.8V5.8L12 3Z"/><path d="m9 11.8 2 2 4-4.2"/></svg></span>
+        <h4>Надёжность и&nbsp;сохранность</h4>
+        <p>Каждое изменение сохраняется. Данные не&nbsp;теряются, к&nbsp;любому состоянию можно вернуться.</p>
+        <span class="tcard__std"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Версии и&nbsp;резервные копии</span>
+      </article>
+    </div>
+    <div class="proc reveal" style="--d:.1s">
+      <h4>Как мы подключаем новый модуль</h4>
+      <div class="proc__step"><b>01</b><span><em>Договариваемся о&nbsp;задаче.</em> Заранее описываем, за&nbsp;что отвечает модуль и&nbsp;как связан с&nbsp;остальными.</span></div>
+      <div class="proc__step"><b>02</b><span><em>Подключаем к&nbsp;модели.</em> Новые данные попадают в&nbsp;проект без&nbsp;переделки того, что уже работает.</span></div>
+      <div class="proc__step"><b>03</b><span><em>Проверяем.</em> Тестируем модуль на&nbsp;стыке с&nbsp;системой, чтобы ничто не&nbsp;сломалось.</span></div>
+      <div class="proc__step"><b>04</b><span><em>Включаем в&nbsp;работу.</em> Модуль виден на&nbsp;карте, в&nbsp;расчёте и&nbsp;в&nbsp;отчёте без&nbsp;расхождений.</span></div>
+    </div>
+  </div>
+
+  <div class="proof reveal" style="--d:.06s">
+    <div class="proof__lead">
+      <div class="eyebrow">Признанные мировые технологии</div>
+      <p>Fortis построен на&nbsp;решениях, которые уже доказали себя в&nbsp;глобальных продуктах-лидерах&nbsp;— никаких экспериментов и&nbsp;самодельных обходных решений.</p>
+    </div>
+    <ul class="proof__chips">
+      <li><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Электронные карты мирового класса</li>
+      <li><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Аналитика в&nbsp;реальном времени</li>
+      <li><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Трёхмерная графика</li>
+      <li><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Облачные базы данных</li>
+      <li><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Версии и&nbsp;резервные копии</li>
+      <li><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></svg>Совместная работа онлайн</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section cta" id="cta">
+  <div class="cta__card reveal">
+    <div class="bg-grid" aria-hidden="true"></div>
+    <h2>Покажем Fortis на&nbsp;вашем сценарии</h2>
+    <p>Живое демо: соберём конфигурацию защиты вашего объекта из&nbsp;модулей, посчитаем стоимость и&nbsp;покажем готовый отчёт.</p>
+    <div class="cta__actions">
+      <a href="mailto:hello@fortis.example?subject=Запрос%20демо%20Fortis" class="btn btn--primary btn--lg">Запросить демо</a>
+      <a href="#top" class="btn btn--ghost btn--lg">Наверх ↑</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__b">
+    <span class="brand__name">FORTIS</span>
+    <span class="footer__tag">Модульная финансово-аналитическая ГИС-платформа планирования защиты объектов</span>
+  </div>
+  <div class="footer__meta">© 2026 Fortis · Мирная аналитическая B2B-платформа</div>
+</footer>
+
+<script src="script.js"></script>
+<script src="flow.js"></script>
+</body>
+</html>
