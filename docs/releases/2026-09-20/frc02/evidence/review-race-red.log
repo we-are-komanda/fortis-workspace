@@ -1,0 +1,128 @@
+(node:90125) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ workspace recovery cannot cross authenticated identities (0.582666ms)
+✔ account switch resets all stores and drops an in-flight A list (7.66775ms)
+✔ 401 invalidates identity; 403/404 block saving without retries or false saved state (0.509459ms)
+▶ late project access failures cannot invalidate another current project
+  ✖ load (1.284042ms)
+  ✖ overwrite (0.637708ms)
+  ✖ create (0.281125ms)
+  ✖ delete (0.248291ms)
+  ✖ list (0.222ms)
+✖ late project access failures cannot invalidate another current project (2.998625ms)
+✔ logout clears active memory but preserves only the owner recovery key (0.249ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 4
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 162.012833
+
+✖ failing tests:
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:6434
+✖ load (1.284042ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'unverified'
+  - 'saved'
+  
+      at TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:93:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:79:4)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unverified',
+    expected: 'saved',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:6434
+✖ overwrite (0.637708ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'unverified'
+  - 'saved'
+  
+      at TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:93:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:79:4)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unverified',
+    expected: 'saved',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:6434
+✖ create (0.281125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'unverified'
+  - 'saved'
+  
+      at TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:93:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:79:4)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unverified',
+    expected: 'saved',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:6434
+✖ delete (0.248291ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'unverified'
+  - 'saved'
+  
+      at TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:93:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:79:4)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unverified',
+    expected: 'saved',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:6434
+✖ list (0.222ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'unverified'
+  - 'saved'
+  
+      at TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:93:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:79:4)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'unverified',
+    expected: 'saved',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

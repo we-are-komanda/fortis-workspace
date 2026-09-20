@@ -1,0 +1,8 @@
+=== RUN   TestFRC02Postgres
+=== RUN   TestFRC02Postgres/A
+=== RUN   TestFRC02Postgres/B
+--- PASS: TestFRC02Postgres (0.16s)
+    --- PASS: TestFRC02Postgres/A (0.01s)
+    --- PASS: TestFRC02Postgres/B (0.01s)
+PASS
+ok  	github.com/fortis/backend/cmd/app	7.569s

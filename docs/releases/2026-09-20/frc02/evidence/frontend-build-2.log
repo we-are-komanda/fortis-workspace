@@ -1,0 +1,73 @@
+
+> fortis-frontend@0.1.0 build <workspace>/frontend
+> next build
+
+▲ Next.js 16.2.11 (Turbopack)
+
+  Creating an optimized production build ...
+(node:80275) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:80292) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✓ Compiled successfully in 5.3s
+  Running TypeScript ...
+
+  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+  	- include was updated to add '.next/frc02-build/types/**/*.ts'
+  	- include was updated to add '.next/frc02-build/dev/types/**/*.ts'
+
+  Finished TypeScript in 5.6s ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/24) ...
+  Generating static pages using 9 workers (6/24) 
+  Generating static pages using 9 workers (12/24) 
+  Generating static pages using 9 workers (18/24) 
+✓ Generating static pages using 9 workers (24/24) in 273ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/auth/login
+├ ƒ /api/auth/logout
+├ ƒ /api/auth/me
+├ ƒ /api/auth/register
+├ ƒ /api/defense/catalog
+├ ƒ /api/defense/evaluate
+├ ƒ /api/defense/facilities
+├ ƒ /api/defense/layers
+├ ƒ /api/defense/projects
+├ ƒ /api/defense/projects/[id]
+├ ƒ /api/defense/recommend
+├ ƒ /api/health/live
+├ ƒ /api/health/ready
+├ ƒ /api/runtime
+├ ƒ /api/v1/[...path]
+├ ○ /calculator
+├ ○ /dashboard
+├ ○ /dashboard/alert
+├ ○ /dashboard/incidents
+├ ○ /dashboard/reports
+├ ○ /dashboard/settings
+├ ○ /dashboard/sites
+├ ● /dashboard/sites/[id]
+│ ├ /dashboard/sites/site-alpha
+│ ├ /dashboard/sites/site-beta
+│ ├ /dashboard/sites/site-gamma
+│ └ /dashboard/sites/site-delta
+├ ○ /dashboard/team
+├ ○ /login
+├ ○ /prototype
+├ ○ /register
+├ ○ /retrospective-analysis
+└ ○ /workspace
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

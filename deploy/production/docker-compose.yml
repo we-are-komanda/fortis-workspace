@@ -45,16 +45,13 @@ services:
     build:
       context: ../../frontend
       dockerfile: ../deploy/production/frontend.Dockerfile
-      args:
-        FORTIS_API_BASE_URL: http://backend:8090
-        BACKEND_URL: http://backend:8090/api/v1
-        NEXT_PUBLIC_DEFENSE_RUNTIME: api
     restart: unless-stopped
     environment:
       NODE_ENV: production
       FORTIS_API_BASE_URL: http://backend:8090
       BACKEND_URL: http://backend:8090/api/v1
-      NEXT_PUBLIC_DEFENSE_RUNTIME: api
+      FORTIS_RUNTIME_MODE: workspace
+      FORTIS_BACKEND_PRIVATE_HTTP: "true"
       FORTIS_AUTH_ENABLED: ${FORTIS_AUTH_ENABLED:-false}
     ports:
       - "127.0.0.1:${FRONTEND_HOST_PORT:-3000}:3000"
@@ -62,7 +59,7 @@ services:
       backend:
         condition: service_healthy
     healthcheck:
-      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3000/ >/dev/null || exit 1"]
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3000/api/health/live >/dev/null || exit 1"]
       interval: 10s
       timeout: 5s
       retries: 10

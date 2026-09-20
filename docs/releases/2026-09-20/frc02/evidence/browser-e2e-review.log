@@ -1,0 +1,15 @@
+(node:92440) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:92441) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:92441) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(node:92441) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 test/playwright/frc02.spec.ts:12:5 › H: real login A → project A → logout → B; recovery and UI stay isolated (4.3s)
+  ✓  2 test/playwright/frc02.spec.ts:36:5 › I: same browser cookie loses resource access immediately after fixture revocation (4.5s)
+  ✓  3 test/playwright/frc02.spec.ts:54:5 › protected workspace stays usable at mobile and desktop widths (577ms)
+
+  3 passed (9.9s)

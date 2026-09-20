@@ -1,0 +1,47 @@
+(node:45226) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ workspace recovery cannot cross authenticated identities (0.550041ms)
+✖ account switch resets all stores and drops an in-flight A list (8.2385ms)
+✖ 401 invalidates identity; 403/404 block saving without retries or false saved state (0.373917ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 125.915667
+
+✖ failing tests:
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:2500
+✖ account switch resets all stores and drops an in-flight A list (8.2385ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to:
+  
+  'private-A'
+      at TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:37:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'private-A',
+    expected: 'private-A',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:4407
+✖ 401 invalidates identity; 403/404 block saving without retries or false saved state (0.373917ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to:
+  
+  'saved'
+      at TestContext.<anonymous> (<workspace>/frontend/src/shared/lib/identity-isolation.release.test.ts:57:11)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'saved',
+    expected: 'saved',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }

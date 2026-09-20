@@ -1,0 +1,36 @@
+--- FAIL: TestFRC02TenantIsolation (0.10s)
+    --- FAIL: TestFRC02TenantIsolation/A (0.00s)
+        --- FAIL: TestFRC02TenantIsolation/A/A_enterprises (0.00s)
+            frc02_access_test.go:221: GET /enterprises?id=043c672c-c909-4cac-9786-0699c34bceb0: want 404 got 200 body={"id":"043c672c-c909-4cac-9786-0699c34bceb0","name":"Enterprise B","address":"","status":"active","latitude":0,"longitude":0,"createdAt":"2026-09-20T11:16:25Z","updatedAt":"2026-09-20T11:16:25Z"}
+        --- FAIL: TestFRC02TenantIsolation/A/B_C_projects (0.00s)
+            frc02_access_test.go:230: GET /projects/get?id=07f08f95-3b7c-4634-a645-ff36a1766b20: want 404 got 200 body={"projectId":"07f08f95-3b7c-4634-a645-ff36a1766b20","name":"Config B","enterpriseId":"043c672c-c909-4cac-9786-0699c34bceb0","projectName":"Project B","version":1,"updatedAt":"2026-09-20T11:16:25.876Z"}
+        --- FAIL: TestFRC02TenantIsolation/A/D_E_financial_compare (0.00s)
+            frc02_access_test.go:245: GET /projects/budget?id=07f08f95-3b7c-4634-a645-ff36a1766b20: want 404 got 200 body={"budgetMode":"unlimited","budgetAmountMln":0,"projectId":"07f08f95-3b7c-4634-a645-ff36a1766b20","createdAt":"2026-09-20T11:16:25.876045Z","updatedAt":"2026-09-20T11:16:25.876045Z"}
+        --- FAIL: TestFRC02TenantIsolation/A/F_G_private_assets_documents (0.00s)
+            frc02_access_test.go:252: 
+                	Error Trace:	<workspace>/backend/cmd/app/frc02_access_test.go:252
+                	Error:      	"{\"items\":[{\"id\":\"387d3e37-e0f0-4962-8f7b-4a9bafeb6ba9\",\"name\":\"Private A\",\"category\":\"radar\",\"currency\":\"RUB\",\"coverageType\":\"circle\",\"deploymentType\":\"static\",\"placementType\":\"map-object\",\"enterpriseId\":\"48c6fdb0-b3ab-403b-94bb-207f9fc45f33\",\"isPublic\":false,\"createdAt\":\"2026-09-20T11:16:25Z\",\"updatedAt\":\"2026-09-20T11:16:25Z\"},{\"id\":\"77e692f0-e814-424e-8c8d-4ef230256c1a\",\"name\":\"Private B\",\"category\":\"radar\",\"currency\":\"RUB\",\"coverageType\":\"circle\",\"deploymentType\":\"static\",\"placementType\":\"map-object\",\"enterpriseId\":\"043c672c-c909-4cac-9786-0699c34bceb0\",\"isPublic\":false,\"createdAt\":\"2026-09-20T11:16:25Z\",\"updatedAt\":\"2026-09-20T11:16:25Z\"},{\"id\":\"5940a81e-d08b-401c-bd9f-f9874c923f4a\",\"name\":\"Public reference\",\"category\":\"radar\",\"currency\":\"RUB\",\"coverageType\":\"circle\",\"deploymentType\":\"static\",\"placementType\":\"map-object\",\"enterpriseId\":\"48c6fdb0-b3ab-403b-94bb-207f9fc45f33\",\"isPublic\":true,\"createdAt\":\"2026-09-20T11:16:25Z\",\"updatedAt\":\"2026-09-20T11:16:25Z\"}],\"totalItems\":3}" should not contain "77e692f0-e814-424e-8c8d-4ef230256c1a"
+                	Test:       	TestFRC02TenantIsolation/A/F_G_private_assets_documents
+        --- FAIL: TestFRC02TenantIsolation/A/J_public_catalog (0.00s)
+            frc02_access_test.go:267: POST /assets: want 403 got 201 body={"id":"8c43fb4c-0ef1-4290-bec3-b3a77a5e6513","name":"global","category":"radar","currency":"RUB","coverageType":"circle","deploymentType":"static","placementType":"map-object","isPublic":true,"createdAt":"2026-09-20T11:16:25Z","updatedAt":"2026-09-20T11:16:25Z"}
+    --- FAIL: TestFRC02TenantIsolation/B (0.00s)
+        --- FAIL: TestFRC02TenantIsolation/B/A_enterprises (0.00s)
+            frc02_access_test.go:221: GET /enterprises?id=48c6fdb0-b3ab-403b-94bb-207f9fc45f33: want 404 got 200 body={"id":"48c6fdb0-b3ab-403b-94bb-207f9fc45f33","name":"Enterprise A","address":"","status":"active","latitude":0,"longitude":0,"createdAt":"2026-09-20T11:16:25Z","updatedAt":"2026-09-20T11:16:25Z"}
+        --- FAIL: TestFRC02TenantIsolation/B/B_C_projects (0.00s)
+            frc02_access_test.go:230: GET /projects/get?id=cf4b9a1b-6958-4dad-bab9-7385bd0083f9: want 404 got 200 body={"projectId":"cf4b9a1b-6958-4dad-bab9-7385bd0083f9","name":"Config A","enterpriseId":"48c6fdb0-b3ab-403b-94bb-207f9fc45f33","projectName":"Project A","version":1,"updatedAt":"2026-09-20T11:16:25.825Z"}
+        --- FAIL: TestFRC02TenantIsolation/B/D_E_financial_compare (0.00s)
+            frc02_access_test.go:245: GET /projects/budget?id=cf4b9a1b-6958-4dad-bab9-7385bd0083f9: want 404 got 200 body={"budgetMode":"unlimited","budgetAmountMln":0,"projectId":"cf4b9a1b-6958-4dad-bab9-7385bd0083f9","createdAt":"2026-09-20T11:16:25.825845Z","updatedAt":"2026-09-20T11:16:25.825845Z"}
+        --- FAIL: TestFRC02TenantIsolation/B/F_G_private_assets_documents (0.00s)
+            frc02_access_test.go:252: 
+                	Error Trace:	<workspace>/backend/cmd/app/frc02_access_test.go:252
+                	Error:      	"{\"items\":[{\"id\":\"387d3e37-e0f0-4962-8f7b-4a9bafeb6ba9\",\"name\":\"Private A\",\"category\":\"radar\",\"currency\":\"RUB\",\"coverageType\":\"circle\",\"deploymentType\":\"static\",\"placementType\":\"map-object\",\"enterpriseId\":\"48c6fdb0-b3ab-403b-94bb-207f9fc45f33\",\"isPublic\":false,\"createdAt\":\"2026-09-20T11:16:25Z\",\"updatedAt\":\"2026-09-20T11:16:25Z\"},{\"id\":\"77e692f0-e814-424e-8c8d-4ef230256c1a\",\"name\":\"Private B\",\"category\":\"radar\",\"currency\":\"RUB\",\"coverageType\":\"circle\",\"deploymentType\":\"static\",\"placementType\":\"map-object\",\"enterpriseId\":\"043c672c-c909-4cac-9786-0699c34bceb0\",\"isPublic\":false,\"createdAt\":\"2026-09-20T11:16:25Z\",\"updatedAt\":\"2026-09-20T11:16:25Z\"},{\"id\":\"5940a81e-d08b-401c-bd9f-f9874c923f4a\",\"name\":\"Public reference\",\"category\":\"radar\",\"currency\":\"RUB\",\"coverageType\":\"circle\",\"deploymentType\":\"static\",\"placementType\":\"map-object\",\"enterpriseId\":\"48c6fdb0-b3ab-403b-94bb-207f9fc45f33\",\"isPublic\":true,\"createdAt\":\"2026-09-20T11:16:25Z\",\"updatedAt\":\"2026-09-20T11:16:25Z\"},{\"id\":\"8c43fb4c-0ef1-4290-bec3-b3a77a5e6513\",\"name\":\"global\",\"category\":\"radar\",\"currency\":\"RUB\",\"coverageType\":\"circle\",\"deploymentType\":\"static\",\"placementType\":\"map-object\",\"isPublic\":true,\"createdAt\":\"2026-09-20T11:16:25Z\",\"updatedAt\":\"2026-09-20T11:16:25Z\"}],\"totalItems\":4}" should not contain "387d3e37-e0f0-4962-8f7b-4a9bafeb6ba9"
+                	Test:       	TestFRC02TenantIsolation/B/F_G_private_assets_documents
+        --- FAIL: TestFRC02TenantIsolation/B/J_public_catalog (0.00s)
+            frc02_access_test.go:267: POST /assets: want 403 got 201 body={"id":"5c9b53ea-182d-4f12-88db-d80af034937c","name":"global","category":"radar","currency":"RUB","coverageType":"circle","deploymentType":"static","placementType":"map-object","isPublic":true,"createdAt":"2026-09-20T11:16:25Z","updatedAt":"2026-09-20T11:16:25Z"}
+--- FAIL: TestFRC02RevocationSameJWT (0.10s)
+    frc02_access_test.go:279: GET /enterprises?id=d6cf98fd-19f1-4498-8bb7-5109fca3ba97: want 404 got 200 body={"id":"d6cf98fd-19f1-4498-8bb7-5109fca3ba97","name":"Enterprise A","address":"","status":"active","latitude":0,"longitude":0,"createdAt":"2026-09-20T11:16:25Z","updatedAt":"2026-09-20T11:16:25Z"}
+--- FAIL: TestFRC02OrphansAndMissing (0.10s)
+    frc02_access_test.go:292: GET /projects/get?id=acc58a56-f2c1-40df-af13-d8bd83952081: want 404 got 200 body={"projectId":"acc58a56-f2c1-40df-af13-d8bd83952081","name":"Config B","projectName":"Project B","version":1,"updatedAt":"2026-09-20T11:16:26.078Z"}
+FAIL
+FAIL	github.com/fortis/backend/cmd/app	0.768s
+FAIL

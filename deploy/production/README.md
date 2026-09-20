@@ -1,5 +1,11 @@
 # Fortis production deploy
 
+Release provenance: see [FRC-00](../../docs/releases/2026-09-20/acceptance-matrix.md).
+`write-deploy-info.sh` records the actual checkout SHA and dirty flag for parent,
+frontend, backend and knowledge-base. It does not inspect running containers or
+prove their image digest, deployment ID or applied migrations. Do not use
+`.deploy-info` as runtime evidence or include `.env` values in release artifacts.
+
 Target VM for the first dev deployment:
 
 - public IP: `85.208.87.187`
@@ -91,3 +97,26 @@ http://85.208.87.187/
 
 HTTPS on the raw IP uses the self-signed certificate above until a real domain
 and certificate are attached.
+
+
+## FRC-01 runtime configuration and probes
+
+The frontend reads configuration at process runtime. Build arguments no longer choose
+backend or demo mode. Set `FORTIS_RUNTIME_MODE=workspace`, `BACKEND_URL=http://backend:8090`
+and `FORTIS_BACKEND_PRIVATE_HTTP=true` in the private Compose network. Optional URL
+aliases must normalize to the same target; missing/conflicting workspace configuration
+returns 503, without a remote fallback. External traffic must use HTTPS. This code
+change does not verify the VM certificate or network isolation.
+
+`FORTIS_API_TIMEOUT_MS` defaults to 10000, `FORTIS_DOCUMENT_TIMEOUT_MS` to 30000
+(valid range 1–120000). Explicit local development may use
+`FORTIS_LOCAL_DEVELOPMENT=true` with `NODE_ENV=development` for localhost fallback.
+Do not use that fallback for production. `FORTIS_RUNTIME_MODE=demo` explicitly enables
+marked demo routes and disables canonical backend operations; URL queries cannot do so.
+
+- Backend `/_/liveness`: process only; `/_/readiness`: database ping, deadline 2 seconds.
+- Frontend `/api/health/live`: process only; `/api/health/ready`: runtime config and backend readiness in workspace.
+- Frontend Compose healthcheck uses **live**, so a backend outage does not mark the frontend process dead. Backend healthcheck and startup dependency use backend readiness.
+- A successful Compose/deploy healthcheck alone is no longer proof of frontend dependency readiness. Check `/api/health/ready` separately for traffic admission; do not wire it to frontend restart policy.
+
+Deployment was not executed for FRC-01. See [implementation evidence](../../docs/releases/2026-09-20/frc01/implementation-report.md) and [ADR-0016](../../knowledge-base/03_Architecture/ADR-0016-runtime-backend-boundary.md).

@@ -1,0 +1,18 @@
+✔ production login and registration issue Secure cookies (21.828458ms)
+✔ invalid cookie does not admit protected pages (9.62625ms)
+✔ login next permits only internal paths (0.411084ms)
+✔ cookie clearing keeps production flags; local HTTP development remains usable (9.287541ms)
+(node:72928) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ workspace recovery cannot cross authenticated identities (1.243416ms)
+✔ account switch resets all stores and drops an in-flight A list (22.228875ms)
+✔ 401 invalidates identity; 403/404 block saving without retries or false saved state (1.869667ms)
+✔ logout clears active memory but preserves only the owner recovery key (0.659209ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 504.321875

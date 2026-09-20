@@ -1,0 +1,283 @@
+page-hero-copy.test.ts: landing hero copy and configurator CTA match expected behavior
+✔ src/app/page-hero-copy.test.ts (173.186125ms)
+OK НАК: 2454.1 млн ≈ 2454.1 млн (2.45 млрд)
+OK НЕВ: 1987 млн ≈ 1987 млн (1.99 млрд)
+OK ФОСФОРИТ: 3446.6 млн ≈ 3446.6 млн (3.45 млрд)
+OK БМУ: 1819.7 млн ≈ 1819.7 млн (1.82 млрд)
+costing.test.ts: all configuration totals reconcile ✓
+✔ src/modules/defense-calculator/domain/costing.test.ts (180.80775ms)
+project-asset-adapter.test.ts: calculator reads canonical project asset library
+✔ src/modules/defense-calculator/domain/project-asset-adapter.test.ts (234.277959ms)
+project-report-lines: OK
+✔ src/modules/defense-calculator/domain/project-report-lines.test.ts (212.763792ms)
+OK Мобильный РЛС: 79 → green
+OK Дроны-перехватчики: 74 → green
+OK Ствольная ПВО 30 мм (цитадель или аналог): 60 → orange
+OK Лазер: 40 → red
+scoring.test.ts: all scores and colours match PDF/Excel anchors ✓
+✔ src/modules/defense-calculator/domain/scoring.test.ts (180.915708ms)
+structural-profile: OK
+✔ src/modules/defense-calculator/domain/structural-profile.test.ts (239.037125ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Catalog sidebar must animate a fluid desktop width instead of unmounting
+    at file://<workspace>/frontend/src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs:22:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
+✖ src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs (100.392ms)
+compact-asset-cards-contract.test.mjs: compact draggable asset cards contract passed
+✔ src/modules/drone-defense/domain/compact-asset-cards-contract.test.mjs (96.747083ms)
+defense-project-source-contract.test.ts: prototype source contract passed
+✔ src/modules/drone-defense/domain/defense-project-source-contract.test.ts (186.953ms)
+✔ src/modules/drone-defense/domain/defense-studio-contract.test.ts (171.837583ms)
+✔ src/modules/drone-defense/domain/echelon-build-assets-contract.test.ts (193.861292ms)
+✔ src/modules/drone-defense/domain/echelon-catalog-contract.test.ts (141.868ms)
+✔ src/modules/drone-defense/domain/echelon-map-model-contract.test.ts (171.515042ms)
+✔ src/modules/drone-defense/domain/echelon-slot-contract.test.ts (162.500916ms)
+✔ src/modules/drone-defense/domain/layer-distance-contract.test.ts (141.160667ms)
+layer-manager-polish-contract.test.mjs: layer manager polish contract wired
+✔ src/modules/drone-defense/domain/layer-manager-polish-contract.test.mjs (122.545458ms)
+map-marker-double-click-focus-contract.test.mjs: marker double-click smoothly focuses placement
+✔ src/modules/drone-defense/domain/map-marker-double-click-focus-contract.test.mjs (118.533292ms)
+map-placement-icons-contract.test.mjs: dropped objects render as icons on the active echelon
+✔ src/modules/drone-defense/domain/map-placement-icons-contract.test.mjs (112.202459ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: GisBoard must expose clickable map zoom controls
+    at file://<workspace>/frontend/src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs:6:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
+✖ src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs (179.006667ms)
+mog-azimuth-dial-contract.test.mjs: visual МОГ azimuth dial contract passed
+✔ src/modules/drone-defense/domain/mog-azimuth-dial-contract.test.mjs (129.10825ms)
+mog-editor domain helpers: ok
+✔ src/modules/drone-defense/domain/mog-editor.test.ts (186.758667ms)
+mog-sector-dial-contract.test.mjs: visual МОГ sector dial contract passed
+✔ src/modules/drone-defense/domain/mog-sector-dial-contract.test.mjs (118.084583ms)
+placement-focus-view-state.test.ts: placement double-click focus zooms in and stays centered
+✔ src/modules/drone-defense/domain/placement-focus-view-state.test.ts (173.67375ms)
+✔ src/modules/drone-defense/domain/placement-helpers-contract.test.ts (185.321ms)
+project-map-adapter.test.ts: placed objects map adapter passed
+✔ src/modules/drone-defense/domain/project-map-adapter.test.ts (204.846708ms)
+protected-object-map-contract.test.ts: protected object first viewport contract passed
+✔ src/modules/drone-defense/domain/protected-object-map-contract.test.ts (198.798ms)
+file://<workspace>/frontend/src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs:6
+  if (!condition) throw new Error(message);
+                        ^
+
+Error: Scenario modeling navigation must open a dedicated prototype state
+    at assert (file://<workspace>/frontend/src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs:6:25)
+    at file://<workspace>/frontend/src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs:16:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v26.4.0
+✖ src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs (98.375292ms)
+prototype-workflow-contract: OK
+✔ src/modules/drone-defense/domain/prototype-workflow-contract.test.ts (218.5025ms)
+retrospective-analysis-contract.test.ts: OK
+✔ src/modules/drone-defense/domain/retrospective-analysis-contract.test.ts (205.979791ms)
+file://<workspace>/frontend/src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs:4
+  if (!condition) throw new Error(message);
+                        ^
+
+Error: DefenseStudioShell must expose the new WIP route in desktop rail and compact navigation drawer
+    at assert (file://<workspace>/frontend/src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs:4:25)
+    at file://<workspace>/frontend/src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs:21:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v26.4.0
+✖ src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs (101.346208ms)
+scene-contract.test.mjs: no eager /models/*.glb preloads in scene module
+✔ src/modules/drone-defense/domain/scene-contract.test.mjs (101.755625ms)
+tactical-map-markers-contract.test.mjs: tactical map marker contract passed
+✔ src/modules/drone-defense/domain/tactical-map-markers-contract.test.mjs (90.997333ms)
+unrestricted-placement-contract.test.mjs: all defense assets can be placed without conflicts
+✔ src/modules/drone-defense/domain/unrestricted-placement-contract.test.mjs (97.33525ms)
+fetchVariants: OK
+saveAsNewVariant: OK
+loadVariant: OK
+deleteVariant: OK
+saveAsNewVariant failure: OK
+overwriteActiveVariant version: OK
+overwriteActiveVariant conflict: OK
+use-defense-variants-store.test.ts: variants store contracts passed
+✔ src/modules/drone-defense/domain/use-defense-variants-store.test.ts (372.775709ms)
+<workspace>/frontend/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:119
+  throw new Error("GIS runtime must read workspace and compact-card copy from prototypeRu");
+        ^
+
+Error: GIS runtime must read workspace and compact-card copy from prototypeRu
+    at <anonymous> (<workspace>/frontend/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:119:9)
+    at Object.<anonymous> (<workspace>/frontend/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:154:99)
+    at Module._compile (node:internal/modules/cjs/loader:1944:14)
+    at Object.transformer (<workspace>/frontend/node_modules/.pnpm/tsx@4.22.4/node_modules/tsx/dist/register-BOkp8V6j.cjs:9:3176)
+    at Module.load (node:internal/modules/cjs/loader:1666:32)
+    at Module._load (node:internal/modules/cjs/loader:1447:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:260:19)
+    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:373:15)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:245:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+
+Node.js v26.4.0
+✖ src/modules/drone-defense/domain/user-facing-copy-contract.test.ts (181.76125ms)
+✔ draft remains a draft instead of claiming that it is saved (1.329166ms)
+✔ saving and a persisted variant expose independent save and version states (0.139458ms)
+✔ a version conflict wins over the generic save error (0.109292ms)
+asset-api-proxy-contract.test.ts: shared route boundary passed
+✔ src/modules/drone-defense/infra/asset-api-proxy-contract.test.ts (223.844ms)
+asset-library-api.test.ts: asset library API contracts passed
+✔ src/modules/drone-defense/infra/asset-library-api.test.ts (157.855875ms)
+backend-integration-contract.test.ts: contracts passed
+✔ src/modules/drone-defense/infra/backend-integration-contract.test.ts (220.847167ms)
+✔ BFF preserves upstream error status and body, including HTML and empty bodies (211.963209ms)
+✔ projects rejects an empty successful body instead of returning 200 null (60.331209ms)
+✔ BFF and API v1 share target, query and auth; legitimate empty stays empty (40.440791ms)
+✔ binary documents preserve bytes/status/content type and mutation method/body (47.391209ms)
+✔ missing configuration fails without network fallback; conflicts fail (0.491875ms)
+✔ connection refused is 502; deadline is 504 with request id (28.251083ms)
+✔ workspace ignores query demo; demo route is explicit and marked (17.331875ms)
+✔ JSON helper rejects malformed success and wrong list shape (10.558ms)
+✔ JSON adaptation deadline includes the response body, not only headers (28.348208ms)
+enterprise-api.test.ts: enterprise API contracts passed
+✔ src/modules/drone-defense/infra/enterprise-api.test.ts (184.585167ms)
+✔ frontend liveness is independent of config/dependencies; readiness checks both (94.382708ms)
+seed-backend-asset-library.test.ts: seed payload contracts passed
+✔ src/modules/drone-defense/infra/seed-backend-asset-library.test.ts (180.57275ms)
+=== defense-tool-icon feature invariants ===
+
+[✓] All invariants hold: size=32, radius=4, offset=16
+
+=== placeObject integration (via domain helpers) ===
+
+[✓] Center point validation: success — ok
+[✓] Object placed at center: placed-1789905653670-e0hg8od
+[✓] No placement diagnostics: 0
+
+[✓] Far point placed; diagnostics: 0
+
+=== all tests passed ===
+✔ src/modules/drone-defense/ui/defense-tool-icon.test.ts (186.608958ms)
+✔ src/shared/config/base-map-sources.test.ts (148.295083ms)
+defense-asset-library.test.ts: mock TTX contracts passed
+✔ src/shared/config/defense-asset-library.test.ts (198.282125ms)
+api-client.test.ts: shared /api/v1 client contracts passed
+✔ src/shared/lib/api-client.test.ts (201.370375ms)
+✔ production login and registration issue Secure cookies (22.417333ms)
+✔ invalid cookie does not admit protected pages (13.392625ms)
+✔ login next permits only internal paths (0.333042ms)
+✔ cookie clearing keeps production flags; local HTTP development remains usable (63.220916ms)
+defense-configuration.test.ts: shared configuration contracts passed
+✔ src/shared/lib/defense-configuration.test.ts (153.807125ms)
+defense-layer-geometry.test.ts: OK
+✔ src/shared/lib/defense-layer-geometry.test.ts (138.110916ms)
+defense-project-base-object.test.ts: base object contracts passed
+✔ src/shared/lib/defense-project-base-object.test.ts (160.074542ms)
+✔ project import preserves explicit diagnostic conflict snapshots and backfills absent flags (5.718084ms)
+defense-project-polygon-geometry.test.ts: OK
+✔ src/shared/lib/defense-project-polygon-geometry.test.ts (194.82525ms)
+<workspace>/frontend/src/shared/lib/defense-project.test.ts:42
+  if (!condition) throw new Error(message);
+                        ^
+
+Error: shared asset catalog must not expose user-facing recommendation or compatibility labels
+    at assert (<workspace>/frontend/src/shared/lib/defense-project.test.ts:42:25)
+    at <anonymous> (<workspace>/frontend/src/shared/lib/defense-project.test.ts:69:1)
+    at Object.<anonymous> (<workspace>/frontend/src/shared/lib/defense-project.test.ts:413:71)
+    at Module._compile (node:internal/modules/cjs/loader:1944:14)
+    at Object.transformer (<workspace>/frontend/node_modules/.pnpm/tsx@4.22.4/node_modules/tsx/dist/register-BOkp8V6j.cjs:9:3176)
+    at Module.load (node:internal/modules/cjs/loader:1666:32)
+    at Module._load (node:internal/modules/cjs/loader:1447:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:260:19)
+    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:373:15)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:245:9)
+
+Node.js v26.4.0
+✖ src/shared/lib/defense-project.test.ts (231.366792ms)
+(node:87222) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ workspace recovery cannot cross authenticated identities (0.644375ms)
+✔ account switch resets all stores and drops an in-flight A list (25.558625ms)
+✔ 401 invalidates identity; 403/404 block saving without retries or false saved state (0.667ms)
+✔ logout clears active memory but preserves only the owner recovery key (0.3205ms)
+✔ failed and empty library refresh never inject bundled data into a backend project (0.610916ms)
+✔ empty enterprises stays empty instead of adding a local object (0.364834ms)
+(node:87223) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ failed load and save preserve current project; no automatic retry after any error (217.128166ms)
+✔ recovery does not overwrite an open project and is not server verification (1.062ms)
+✔ recovery preserves empty catalogs and user asset values without bundled expansion (0.139041ms)
+✔ workspace creation is empty; remount does not reload a hydrated dirty project (0.105375ms)
+✔ pending load cannot replace newer user edits or a cancelled navigation (46.519125ms)
+use-defense-configuration-store.test.ts: shared store contracts passed
+✔ src/shared/lib/use-defense-configuration-store.test.ts (159.897792ms)
+replaceProject: fully replaces project state with no leftover placed objects: OK
+use-defense-project-store.replace.test.ts: replaceProject contracts passed
+✔ src/shared/lib/use-defense-project-store.replace.test.ts (183.831917ms)
+budgetApplied flag: OK
+use-defense-project-store.test.ts: project store contracts passed
+✔ src/shared/lib/use-defense-project-store.test.ts (196.659625ms)
+✔ src/shared/lib/use-map-view-store.test.ts (152.170208ms)
+✔ Fortis public UI exposes semantic actions required by the GIS runtime (4.314333ms)
+✔ GIS domain components accept real project states instead of Storybook-only L1-L4 data (0.648084ms)
+ℹ tests 84
+ℹ suites 0
+ℹ pass 78
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1505.839667
+
+✖ failing tests:
+
+test at src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs:1:1
+✖ src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs (100.392ms)
+  'test failed'
+
+test at src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs:1:1
+✖ src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs (179.006667ms)
+  'test failed'
+
+test at src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs:1:1
+✖ src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs (98.375292ms)
+  'test failed'
+
+test at src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs:1:1
+✖ src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs (101.346208ms)
+  'test failed'
+
+test at src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:1:1
+✖ src/modules/drone-defense/domain/user-facing-copy-contract.test.ts (181.76125ms)
+  'test failed'
+
+test at src/shared/lib/defense-project.test.ts:1:1
+✖ src/shared/lib/defense-project.test.ts (231.366792ms)
+  'test failed'

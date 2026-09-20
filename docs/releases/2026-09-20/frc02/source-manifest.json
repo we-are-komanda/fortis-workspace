@@ -1,0 +1,394 @@
+{
+  ".": {
+    "docs/releases/2026-09-20/acceptance-matrix.md": {
+      "status": "modified",
+      "sha256": "3380ac49d8eca40a0a96ff0fc2ab4779a2c2e708c386c784b35169343ee31ff4"
+    },
+    "docs/releases/2026-09-20/frc02/authorization-matrix.md": {
+      "status": "added",
+      "sha256": "067b86e377f02e3f7f59099e1bf058cab368a95c6962ff554dca3b949474d1c0"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/backend-access-extended.log": {
+      "status": "added",
+      "sha256": "e35f4c88609638b053374a4436967330bbb1eb7e92a9f1aab22c3c9812b7dd12"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/backend-build-final.log": {
+      "status": "added",
+      "sha256": "f9414ba03a2abadd9c14d90c77e9d6e31bc321dad388a7ef0496187d566fba66"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/backend-di.log": {
+      "status": "added",
+      "sha256": "45f8ceea45ddbad11cb96b4f5c3f7b256777ea8968e5d23d7f28bc20f6d2e068"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/backend-final.log": {
+      "status": "added",
+      "sha256": "154516fd91f62ea49025240b11753f8163e165e455f01ec13bb1c4d2fc483d09"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/backend-format-final.log": {
+      "status": "added",
+      "sha256": "2e288214d2340ef3080adeb43b74e7af0774c865317b820192c7b3d29dfb4660"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/backend-red.log": {
+      "status": "added",
+      "sha256": "282c5493e9885fc041646b2d29dc1050c97ca7ec4e62985cc811a4f82eec43dc"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/backend-unit-final.log": {
+      "status": "added",
+      "sha256": "0c27ed421b4483e94fc13671d54870777eb2d3e66b0452873e0122192efec4f1"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/browser-e2e-final2.log": {
+      "status": "added",
+      "sha256": "f6e62258d38ccd3944938778446a8a211a5a1df949ade242395a1462e390fee4"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/browser-e2e-review.log": {
+      "status": "added",
+      "sha256": "1685fe9c8e7c348dfdafee8a809d57e8f9012246fa7c03ee71ec665600c20ddb"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/failure-signatures-after.json": {
+      "status": "added",
+      "sha256": "13fa950c5b23978885dc34433caf19018cd054ef95f849df8cdb19bf22ee286e"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-auth-red.log": {
+      "status": "added",
+      "sha256": "381385b3d2f5e4d4b5ccd7f43ca8261c3ebc51e25df126924b5a7c1a712a7bf6"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-build-2.log": {
+      "status": "added",
+      "sha256": "b72fd15b32f62a467a2c3e7af4ce3f25c84c592ab563f72cea0e0e55f77371b5"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-build-review.log": {
+      "status": "added",
+      "sha256": "429584203e80ae623035be7f7cc8a4959bc7207c841a1ab0f2578e59640719c2"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-full-final.log": {
+      "status": "added",
+      "sha256": "017404c19c744707214e8852c282516cd6aea51b6fcc6fab4b43a3616a4cd81e"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-full-review.log": {
+      "status": "added",
+      "sha256": "d50de9997ed2e2eb60c7b85585f880a0e8450dfdd24d5084b14851ba52866148"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-identity-red.log": {
+      "status": "added",
+      "sha256": "49b6e5ea8f3661505106ac519dd28d009c38f5e00519743b8fe756c1d8df146f"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-lint-final.log": {
+      "status": "added",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-lint-review.log": {
+      "status": "added",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-security-extended.log": {
+      "status": "added",
+      "sha256": "f5ea06ff54cef9946690e0712cc56c2d6a29dd447732e7e64b39fbfd6719220f"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-switch-red.log": {
+      "status": "added",
+      "sha256": "f0ae6743a3d9a16b23bb05ad62dfdac230570ef3bdb28a2037cfee5ac85522df"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-types-clean.log": {
+      "status": "added",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/frontend-types-final.log": {
+      "status": "added",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/postgres-final.log": {
+      "status": "added",
+      "sha256": "9f74267c4468d2c8b4c7471b956fb718bdae5a18d4c1c7c7eb63f50d13fa6936"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/review-race-green.log": {
+      "status": "added",
+      "sha256": "5e3e906c1efc3c51648507b424456578fff60eb1adf0c1627b63ac285e702d5e"
+    },
+    "docs/releases/2026-09-20/frc02/evidence/review-race-red.log": {
+      "status": "added",
+      "sha256": "6ffb092a7a1609d935923477e17a2523d0b755613790bd108209df5af5cf32e5"
+    },
+    "docs/releases/2026-09-20/frc02/implementation-report.md": {
+      "status": "added",
+      "sha256": "992879be5e2cf09ae7d4b0f6b8d720c3b77fe6a62167148fb18d34a072b58119"
+    },
+    "docs/releases/2026-09-20/frc02/orphan-inventory.md": {
+      "status": "added",
+      "sha256": "b73b70052c5fe83033912383426621d8259ad9ff12d1a6e476f70bdd9e46dd42"
+    },
+    "docs/releases/2026-09-20/frc02/orphan-inventory.sql": {
+      "status": "added",
+      "sha256": "b1b97335928cfe3c9f735cfdaff479324d0d2ef3351808d5515ade2d86e2f679"
+    },
+    "docs/releases/2026-09-20/frc02/pre-frc02-failure-signatures.txt": {
+      "status": "added",
+      "sha256": "1ce1d5a23aa2ade67ab043368d1ef08c6f909a8ac9c175e8d922533829f9a065"
+    },
+    "docs/releases/2026-09-20/frc02/test-evidence.md": {
+      "status": "added",
+      "sha256": "1158fde4fe058e57a6b815c4d955f5dc4f1f4e004f2fbdfbfc36e59c54e41a57"
+    }
+  },
+  "frontend": {
+    "src/app/api/auth/login/route.ts": {
+      "status": "modified",
+      "sha256": "8d233c3175184d9b3264ec6880c3b92e00e168baea8811dd06f0ce5bd912377f"
+    },
+    "src/app/api/auth/logout/route.ts": {
+      "status": "modified",
+      "sha256": "96ca4bf8c6aa65e85b0de6effc072c4ec2474a3b77a6717ba6ab699e8508ee60"
+    },
+    "src/app/api/auth/register/route.ts": {
+      "status": "modified",
+      "sha256": "bd124b09eff9d30cbf05490d22953b2e59fea10a1346a36f6b0082264f1bbb18"
+    },
+    "src/app/layout.tsx": {
+      "status": "modified",
+      "sha256": "a8830f87e915a5f77c1bff9f0a8f7a02c60b84bff624fa465250e47b7dddeff1"
+    },
+    "src/modules/auth/ui/login-page.tsx": {
+      "status": "modified",
+      "sha256": "1a283e61bd3029e7a567b67fddf4df628016721db59ce91520acd92922c3843a"
+    },
+    "src/modules/auth/ui/register-page.tsx": {
+      "status": "modified",
+      "sha256": "97f9c71de8ebb3be4c0a474b8a81ac1bc87252e0fa0e25d183c1b58cf0d029aa"
+    },
+    "src/modules/drone-defense/domain/use-defense-variants-store.ts": {
+      "status": "modified",
+      "sha256": "dfe16e24f0f2c3cfcfb6c9106f7acbfeb904b279a7021970ef2481f1f16737cc"
+    },
+    "src/modules/drone-defense/infra/backend-integration-contract.test.ts": {
+      "status": "modified",
+      "sha256": "48425392f429024bf2d8428b4f107a5d0f6787d827252198d8c293d51c3f80c1"
+    },
+    "src/modules/drone-defense/ui/variant-selector.tsx": {
+      "status": "modified",
+      "sha256": "e5a003f06ced707255409d0802c6e07681139a2a8038694f86f24a70726c143e"
+    },
+    "src/proxy.ts": {
+      "status": "modified",
+      "sha256": "88229e2f26553ef7eb325ea48c976e6df0907f368cd4f3aa284a7d45b65140d6"
+    },
+    "src/shared/lib/api-client.ts": {
+      "status": "modified",
+      "sha256": "daaf180859e9a7f6efa0e842f63f189c34a9dae5af9aa2cf7e836d1e8d1c8f94"
+    },
+    "src/shared/lib/auth-boundary.release.test.ts": {
+      "status": "added",
+      "sha256": "8e5ca96be2a0964f3101cc29c97eb6053271cbfa3c83110b090d7aa11952e1af"
+    },
+    "src/shared/lib/identity-isolation.release.test.ts": {
+      "status": "added",
+      "sha256": "e096d95a5155ea4978578d9fae965079fdba5e372684a1542c0b210e195d0763"
+    },
+    "src/shared/lib/identity.ts": {
+      "status": "added",
+      "sha256": "f20d6360de0281ca076b576dbce644f9ff82929f5e16565c0ef09c06c13123a8"
+    },
+    "src/shared/lib/project-runtime.release.test.ts": {
+      "status": "modified",
+      "sha256": "f5c657ddaa82ae9d57ecae5fb4a967c1207e80d7abff266db3a047227b196fe2"
+    },
+    "src/shared/lib/safe-next.ts": {
+      "status": "added",
+      "sha256": "96b2f0bed1cd9630b23e0ef8d1170b59dd133e017bd27310faa70193e7994124"
+    },
+    "src/shared/lib/session-state.ts": {
+      "status": "added",
+      "sha256": "de9e7998dde2cd1df113f0a7df1ff2b35e2d6c998798731e0802fdc061614d87"
+    },
+    "src/shared/lib/use-defense-project-store.test.ts": {
+      "status": "modified",
+      "sha256": "690ca8e84e7952dc49319f3c5136a7d2f338e248f11caeea1d90e784b1482cac"
+    },
+    "src/shared/lib/use-defense-project-store.ts": {
+      "status": "modified",
+      "sha256": "d80b303e6b492ed3b646446a41d7c928dd5060819a47e05493802b87cd1652f5"
+    },
+    "src/shared/server/auth-cookie.ts": {
+      "status": "added",
+      "sha256": "3a8943705fd5241c31f6e1a2a908437c9ec774e948b28e3d04d379fba145e74a"
+    },
+    "src/shared/ui/identity-boundary.tsx": {
+      "status": "added",
+      "sha256": "115b5061fe3969fded3a2f6431405d51fd11c3b8bc4e435d280c4e9cea0bdc12"
+    },
+    "test/playwright/frc02.config.ts": {
+      "status": "added",
+      "sha256": "cbb2d05e24c55f7675bff0b2026501253b619596e709e276172a746a35bbec62"
+    },
+    "test/playwright/frc02.spec.ts": {
+      "status": "added",
+      "sha256": "298c3b5dbece732da6fae1512638940d08ecefb414fa005826b773368f4f3a5f"
+    }
+  },
+  "backend": {
+    "cmd/app/dependencies.go": {
+      "status": "modified",
+      "sha256": "0f655cc8ec8b9ab9d6a11f33066906f6a652667fb661cb10a63c472a68487c2a"
+    },
+    "cmd/app/frc02_access_test.go": {
+      "status": "added",
+      "sha256": "38cb0671a11a8a83ac83699ebb978ee9442a7145ed51893240b912e58a3cc7a4"
+    },
+    "cmd/app/frc02_postgres_test.go": {
+      "status": "added",
+      "sha256": "9ba1e2a808eda94c41530538e69542e308234232262604a52796022d42456dc2"
+    },
+    "internal/auth/access.go": {
+      "status": "added",
+      "sha256": "54901abc575eb86bda55bb22a67573ac41259971ab2b2b37f979cccebe63482d"
+    },
+    "internal/middleware/auth.go": {
+      "status": "modified",
+      "sha256": "6661b13266e51d287e7221c8d249485f263eb9b0e53467f7dbd71411a5093812"
+    },
+    "internal/modules/budget/application/budget_service.go": {
+      "status": "modified",
+      "sha256": "c956905dcf96ddf8df3dd0afb71976c136d2ef76cd8fcbb3ae2ed1d620d6b6e8"
+    },
+    "internal/modules/budget/application/budget_service_test.go": {
+      "status": "modified",
+      "sha256": "68b713c823f26d0309fdf01e76722889800dd11f5b95b31cd9fe9eadb3eb4c6d"
+    },
+    "internal/modules/budget/ui/controller.go": {
+      "status": "modified",
+      "sha256": "5e6e4848f93b8f90db264aaeab76f61968c6e55c2d9d6946421a305caba1577f"
+    },
+    "internal/modules/budget/ui/controller_test.go": {
+      "status": "modified",
+      "sha256": "175c785b682ec41de8cfd9e7b9e2589647cdfb34c9f53c2a8de6de4ea074d0aa"
+    },
+    "internal/modules/defense_asset/application/defense_asset_service.go": {
+      "status": "modified",
+      "sha256": "f8f5205eba53457bb366a01b336697e2eabcb9f2e9ec9fc786ccd8f5c554d497"
+    },
+    "internal/modules/defense_asset/application/defense_asset_service_test.go": {
+      "status": "modified",
+      "sha256": "08e576f106a93617a01ecf96564e952b64633dc8e779cb8ca42b3ea19721a6e5"
+    },
+    "internal/modules/defense_asset/application/document_service.go": {
+      "status": "modified",
+      "sha256": "39bc78dfb5ab40d5f1bb530505d5723b9584f54fbdff4d7a659e811d06c82e70"
+    },
+    "internal/modules/defense_asset/application/document_service_test.go": {
+      "status": "modified",
+      "sha256": "4f140a1af6e08ec7e8213a1dfd727aee0e0a8316530a90231f878a606e6d38b1"
+    },
+    "internal/modules/defense_asset/domain/defense_asset_repository_interface.go": {
+      "status": "modified",
+      "sha256": "7833b07e89ed4cb072ddaa2561a106c24df6221f3b4dfbe557d30b729cdbb5d2"
+    },
+    "internal/modules/defense_asset/infrastructure/defense_asset_repository.go": {
+      "status": "modified",
+      "sha256": "518f244a79ca3848baca5266bd17c794960df5fb026b574d93ab32d6fcdbddab"
+    },
+    "internal/modules/defense_asset/ui/controller.go": {
+      "status": "modified",
+      "sha256": "bc1dbd442bfa28e9cf9ef2c6585eb7d1504f6d981bcf3e88485807753fa25897"
+    },
+    "internal/modules/defense_asset/ui/controller_test.go": {
+      "status": "modified",
+      "sha256": "c430427df89c37cdf500a7c68bc2c5ca42a896d1299d46b95356ab19da334be3"
+    },
+    "internal/modules/defense_asset/ui/document_controller.go": {
+      "status": "modified",
+      "sha256": "19b80d9ee64789d25faccf7d4dd36dd6eabeaaa98032bc88c49141ecfba71619"
+    },
+    "internal/modules/defense_asset/ui/document_controller_test.go": {
+      "status": "modified",
+      "sha256": "a7621ed2586345a18d1ee08bed667ac41b47332f5b69d5faead09908e1cd43e6"
+    },
+    "internal/modules/defense_project/application/defense_project_service.go": {
+      "status": "modified",
+      "sha256": "330194a59be1d555af020d9963d60db3d02493f6e3dc6b2a14036bd72eb36c89"
+    },
+    "internal/modules/defense_project/application/defense_project_service_test.go": {
+      "status": "modified",
+      "sha256": "65f4167f0a31ffcd3b1c0c7637357a0367a8ebd83bf41c719cc55b3b44f06a12"
+    },
+    "internal/modules/defense_project/application/defense_project_service_update_test.go": {
+      "status": "modified",
+      "sha256": "26bbb59d9c694f58adeb39af9425f6d52e97874baa782e632f859a3c03f70f18"
+    },
+    "internal/modules/defense_project/domain/defense_project_errors.go": {
+      "status": "modified",
+      "sha256": "13e2257c4b6db3eea7b32baa5b617f67059de578dc918d69163738b280e6b3bd"
+    },
+    "internal/modules/defense_project/domain/defense_project_repository_interface.go": {
+      "status": "modified",
+      "sha256": "18baf75ee33bdcf5f18e98497d407d26222df113b8d19989b6617f9b4a353a4b"
+    },
+    "internal/modules/defense_project/infrastructure/defense_project_repository.go": {
+      "status": "modified",
+      "sha256": "e4a5e74328e73494f85645abef18f0aa8c25263b8c3c5eab486418ca084043c8"
+    },
+    "internal/modules/defense_project/ui/controller.go": {
+      "status": "modified",
+      "sha256": "7c5024792db3a3b9d805440371f3c8de914d90d387dd02967c4db4af193734b9"
+    },
+    "internal/modules/defense_project/ui/controller_test.go": {
+      "status": "modified",
+      "sha256": "30809e00f1ff33813ac7af9d267315437bc984122dbea6873e3f70983d44380e"
+    },
+    "internal/modules/defense_project/ui/dto.go": {
+      "status": "modified",
+      "sha256": "d2cce948212750ec9caac1cf2fcf75049010ece3824dea293f3b697cd0c801cf"
+    },
+    "internal/modules/enterprise/application/enterprise_service.go": {
+      "status": "modified",
+      "sha256": "bf10078c2093a3c8ce4e3da2ed9805035db94e69ba17458e1d86cae2c4bc6c08"
+    },
+    "internal/modules/enterprise/application/enterprise_service_test.go": {
+      "status": "modified",
+      "sha256": "69ac5752d787414e1db6cb9225daa440333dc88a3e789fa32d807a00bfb36876"
+    },
+    "internal/modules/enterprise/ui/controller.go": {
+      "status": "modified",
+      "sha256": "e61d7544da51465f1f0bd454380dc9b68fc64b5b224abc09495eaa1b169a4922"
+    },
+    "internal/modules/enterprise/ui/controller_test.go": {
+      "status": "modified",
+      "sha256": "ff92422a735a67ae321c9e7c8f1733cca0e97763affbdde388d123691ce198ae"
+    },
+    "internal/modules/report/application/report_service.go": {
+      "status": "modified",
+      "sha256": "3166283cbc3ccdd0d0d3663f1dfa2c93f45a72a74811d84aad73ea6a415b8868"
+    },
+    "internal/modules/report/application/report_service_test.go": {
+      "status": "modified",
+      "sha256": "fe98f26e659363abcc17f878a918283c7889bb1816f07655ae86f1c6a1251907"
+    },
+    "internal/modules/report/ui/controller.go": {
+      "status": "modified",
+      "sha256": "b7e083d63d342df6fe6617dc1626f2cacdac51cd790aed2d7f928710d74e7168"
+    },
+    "internal/modules/report/ui/controller_test.go": {
+      "status": "modified",
+      "sha256": "a65aa16b4b83f91281ce8f4f9534c3722f8546f5347dcad34d40a8aa13e5c0a1"
+    },
+    "pkg/handlers/authorization.go": {
+      "status": "added",
+      "sha256": "01923b4af6676f9e6ac8d62000b5ce22908ecc1cc61193aa34ac174fecf39037"
+    }
+  },
+  "knowledge-base": {
+    "00_Index.md": {
+      "status": "modified",
+      "sha256": "9423e9f8e9d7296de18d31c9f65280742feee63e7ff72a85b11a9e42af52f9e6"
+    },
+    "01_Requirements/Release_2026_09_20_Index.md": {
+      "status": "modified",
+      "sha256": "ce759de2e5746f59f5a09e1709bd9d279e0b9c2a04b02d92c8be779abf285d9b"
+    },
+    "03_Architecture/ADR-0017-enterprise-access-boundary.md": {
+      "status": "added",
+      "sha256": "5a987d6a4fdce60a488a3ecbea2e47feeab4d9544668446feaebf180f58f4552"
+    },
+    "Продуктовый_план_Fortis.md": {
+      "status": "modified",
+      "sha256": "44952c8ba5c08650a4206931806fbe1593cf7ddaab95200179b21560aae8b572"
+    }
+  }
+}

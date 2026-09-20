@@ -13,6 +13,13 @@ This repository stores workspace-level context for the Fortis ecosystem: how the
 
 Frontend, backend, and knowledge base keep separate Git histories. The parent repository pins the selected commit for each submodule.
 
+## Release baseline
+
+The [2026-09-20 release manifest](docs/releases/2026-09-20/release-manifest.json)
+pins the agreed FRC-00 source baseline. See the
+[acceptance matrix and verification instructions](docs/releases/2026-09-20/acceptance-matrix.md)
+for evidence and unresolved runtime blockers. Source verification is not release acceptance.
+
 ## Agent Workflow
 
 Open this directory as the workspace when working across the Fortis ecosystem.

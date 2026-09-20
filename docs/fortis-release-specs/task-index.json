@@ -1,0 +1,213 @@
+{
+  "date": "2026-09-20",
+  "status": "specifications_only",
+  "tasks": [
+    {
+      "id": "FRC-00",
+      "num": 0,
+      "file": "specs/FRC-00_release_baseline.md",
+      "title": "Закрепить проверяемый комплект релиза",
+      "owner": "Tech Lead / infrastructure / knowledge-base",
+      "deps": [],
+      "goal": "Получить одну воспроизводимую исходную точку для всех исполнителей и отделить новые задачи от уже выполненных."
+    },
+    {
+      "id": "FRC-01",
+      "num": 1,
+      "file": "specs/FRC-01_api_runtime.md",
+      "title": "Надёжная граница frontend–backend и явный demo-режим",
+      "owner": "Frontend infra + backend + infrastructure",
+      "deps": [
+        "FRC-00"
+      ],
+      "goal": "Рабочие API возвращают настоящие данные или понятную ошибку; демонстрационные данные никогда не маскируют отказ."
+    },
+    {
+      "id": "FRC-02",
+      "num": 2,
+      "file": "specs/FRC-02_access_control.md",
+      "title": "Сессии, доступ к предприятиям и изоляция данных",
+      "owner": "Backend + frontend auth + QA",
+      "deps": [
+        "FRC-00",
+        "FRC-01"
+      ],
+      "goal": "Пользователь получает только разрешённые ему данные и действия, включая API, snapshots, документы и экспорт."
+    },
+    {
+      "id": "FRC-03",
+      "num": 3,
+      "file": "specs/FRC-03_workspace.md",
+      "title": "Первый рабочий проект и корректный контекст предприятия",
+      "owner": "Frontend workspace + backend enterprise/project",
+      "deps": [
+        "FRC-00",
+        "FRC-01",
+        "FRC-02",
+        "FRC-04",
+        "FRC-06"
+      ],
+      "goal": "Новый подключённый пользователь открывает правильное предприятие и создаёт первую конфигурацию без демо-объектов и чужих вариантов."
+    },
+    {
+      "id": "FRC-04",
+      "num": 4,
+      "file": "specs/FRC-04_project_revisions.md",
+      "title": "Lossless save/load и неизменяемые серверные ревизии",
+      "owner": "Backend project persistence + frontend DTO",
+      "deps": [
+        "FRC-00",
+        "FRC-01",
+        "FRC-02"
+      ],
+      "goal": "Любое успешно сохранённое состояние можно открыть без потери полей и однозначно использовать для расчёта, сравнения и отчёта."
+    },
+    {
+      "id": "FRC-05",
+      "num": 5,
+      "file": "specs/FRC-05_canonical_cost.md",
+      "title": "Единый расчёт стоимости по реальным размещениям",
+      "owner": "Backend budget/cost + frontend calculator",
+      "deps": [
+        "FRC-00",
+        "FRC-04"
+      ],
+      "goal": "У карты, калькулятора и отчёта одна арифметика, одни строки и одна версия исходных цен."
+    },
+    {
+      "id": "FRC-06",
+      "num": 6,
+      "file": "specs/FRC-06_save_recovery.md",
+      "title": "Сохранение, локальный черновик и конфликт версий без потери данных",
+      "owner": "Frontend project/variants state + QA",
+      "deps": [
+        "FRC-00",
+        "FRC-02",
+        "FRC-04",
+        "FRC-05"
+      ],
+      "goal": "Пользователь понимает, что сохранено, и не теряет работу при сетевом сбое, конфликте или переходе между экранами."
+    },
+    {
+      "id": "FRC-07",
+      "num": 7,
+      "file": "specs/FRC-07_budget_gate.md",
+      "title": "Бюджет проекта и атомарный запрет превышения",
+      "owner": "Backend budget/project + frontend calculator/GIS",
+      "deps": [
+        "FRC-00",
+        "FRC-04",
+        "FRC-05",
+        "FRC-06"
+      ],
+      "goal": "Ни один сохраняемый путь изменения конфигурации не обходит установленный бюджет."
+    },
+    {
+      "id": "FRC-08",
+      "num": 8,
+      "file": "specs/FRC-08_compare_revisions.md",
+      "title": "Сравнение фиксированных вариантов одного предприятия",
+      "owner": "Backend compare + frontend workspace/calculator",
+      "deps": [
+        "FRC-00",
+        "FRC-03",
+        "FRC-04",
+        "FRC-05",
+        "FRC-07"
+      ],
+      "goal": "Пользователь сравнивает две сохранённые версии по составу и бюджету, не принимая неизвестную эффективность за рассчитанную."
+    },
+    {
+      "id": "FRC-09",
+      "num": 9,
+      "file": "specs/FRC-09_catalog_documents.md",
+      "title": "Происхождение данных и безопасные документы библиотеки",
+      "owner": "Backend assets/documents + frontend library + product data owner",
+      "deps": [
+        "FRC-00",
+        "FRC-02",
+        "FRC-04"
+      ],
+      "goal": "Каждая используемая карточка и цена имеют понятный источник; документы сохраняются и выдаются с корректными правами."
+    },
+    {
+      "id": "FRC-10",
+      "num": 10,
+      "file": "specs/FRC-10_versioned_report.md",
+      "title": "Отчёт из одной версии: карта, состав, цены и ограничения",
+      "owner": "Backend report + frontend print/export + QA",
+      "deps": [
+        "FRC-00",
+        "FRC-04",
+        "FRC-05",
+        "FRC-06",
+        "FRC-07",
+        "FRC-09"
+      ],
+      "goal": "Сформировать документ, который воспроизводимо соответствует сохранённой конфигурации и не раскрывает скрываемые финансовые данные."
+    },
+    {
+      "id": "FRC-11",
+      "num": 11,
+      "file": "specs/FRC-11_honest_surface.md",
+      "title": "Честные обещания, навигация и отделение демонстрации",
+      "owner": "Frontend + product owner",
+      "deps": [
+        "FRC-00",
+        "FRC-01"
+      ],
+      "goal": "Публичные страницы и рабочий интерфейс описывают фактический релиз, а не функции будущей оперативной платформы."
+    },
+    {
+      "id": "FRC-12",
+      "num": 12,
+      "file": "specs/FRC-12_demo_requests.md",
+      "title": "Заявка на демонстрацию: реальная запись и уведомление",
+      "owner": "Frontend landing + backend public form + infrastructure",
+      "deps": [
+        "FRC-00",
+        "FRC-01"
+      ],
+      "goal": "Ни одна принятая интерфейсом заявка не теряется, а команда получает уведомление либо видит доставочный сбой."
+    },
+    {
+      "id": "FRC-13",
+      "num": 13,
+      "file": "specs/FRC-13_release_verification.md",
+      "title": "CI и сквозная приёмка на настоящем backend",
+      "owner": "QA + frontend/backend + infrastructure",
+      "deps": [
+        "FRC-00",
+        "FRC-01",
+        "FRC-02",
+        "FRC-03",
+        "FRC-04",
+        "FRC-05",
+        "FRC-06",
+        "FRC-07",
+        "FRC-08",
+        "FRC-09",
+        "FRC-10",
+        "FRC-11",
+        "FRC-12"
+      ],
+      "goal": "Релиз принимается по воспроизводимому пользовательскому результату, а не только по зелёной сборке или mock UI."
+    },
+    {
+      "id": "FRC-14",
+      "num": 14,
+      "file": "specs/FRC-14_production_gate.md",
+      "title": "Эксплуатация, восстановление и решение о выпуске",
+      "owner": "Infrastructure / Tech Lead / владелец продукта и данных",
+      "deps": [
+        "FRC-00",
+        "FRC-01",
+        "FRC-02",
+        "FRC-04",
+        "FRC-12",
+        "FRC-13"
+      ],
+      "goal": "Дать ограниченному кругу клиентов рабочий сервис, который можно наблюдать, восстановить и безопасно обновлять."
+    }
+  ]
+}

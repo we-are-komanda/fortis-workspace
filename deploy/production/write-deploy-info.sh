@@ -9,7 +9,7 @@ git_value() {
   local repo_path="$1"
   shift
 
-  git -C "${repo_path}" "$@" 2>/dev/null || true
+  git --no-optional-locks -C "${repo_path}" "$@" 2>/dev/null || true
 }
 
 write_var() {
@@ -21,17 +21,34 @@ write_var() {
 write_repo_metadata() {
   local prefix="$1"
   local repo_path="$2"
-  local ref subject branch full_sha
+  local ref subject branch full_sha dirty git_status actual_root expected_root field
+
+  actual_root="$(git_value "${repo_path}" rev-parse --show-toplevel)"
+  expected_root="$(cd "${repo_path}" 2>/dev/null && pwd -P)" || expected_root=""
+  if [[ -z "${actual_root}" || "${actual_root}" != "${expected_root}" ]]; then
+    for field in REF SHA COMMIT_SUBJECT BRANCH DIRTY; do
+      write_var "${prefix}${field}" unknown
+    done
+    return
+  fi
 
   ref="$(git_value "${repo_path}" rev-parse --short HEAD)"
   full_sha="$(git_value "${repo_path}" rev-parse HEAD)"
   subject="$(git_value "${repo_path}" log -1 --pretty=%s)"
   branch="$(git_value "${repo_path}" branch --show-current)"
+  dirty=unknown
+  if git --no-optional-locks -C "${repo_path}" rev-parse --verify HEAD >/dev/null 2>&1; then
+    if git_status="$(git --no-optional-locks -C "${repo_path}" status --porcelain --untracked-files=normal 2>/dev/null)"; then
+      dirty=false
+      [[ -z "${git_status}" ]] || dirty=true
+    fi
+  fi
 
   write_var "${prefix}REF" "${ref:-unknown}"
   write_var "${prefix}SHA" "${full_sha:-unknown}"
   write_var "${prefix}COMMIT_SUBJECT" "${subject:-unknown}"
   write_var "${prefix}BRANCH" "${branch:-detached}"
+  write_var "${prefix}DIRTY" "${dirty}"
 }
 
 {
@@ -39,5 +56,6 @@ write_repo_metadata() {
   write_repo_metadata "DEPLOY_" "${REPO_ROOT}"
   write_repo_metadata "DEPLOY_FRONTEND_" "${REPO_ROOT}/frontend"
   write_repo_metadata "DEPLOY_BACKEND_" "${REPO_ROOT}/backend"
+  write_repo_metadata "DEPLOY_KNOWLEDGE_BASE_" "${REPO_ROOT}/knowledge-base"
   write_var "DEPLOY_GENERATED_AT" "$(date -u '+%Y-%m-%dT%H:%M:%SZ')"
 } >"${OUTPUT_FILE}"

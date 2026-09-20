@@ -1,0 +1,44 @@
+=== RUN   TestFRC02TenantIsolation
+=== RUN   TestFRC02TenantIsolation/A
+=== RUN   TestFRC02TenantIsolation/A/A_enterprises
+=== RUN   TestFRC02TenantIsolation/A/B_C_projects
+=== RUN   TestFRC02TenantIsolation/A/D_E_financial_compare
+=== RUN   TestFRC02TenantIsolation/A/F_G_private_assets_documents
+=== RUN   TestFRC02TenantIsolation/A/J_public_catalog
+=== RUN   TestFRC02TenantIsolation/B
+=== RUN   TestFRC02TenantIsolation/B/A_enterprises
+=== RUN   TestFRC02TenantIsolation/B/B_C_projects
+=== RUN   TestFRC02TenantIsolation/B/D_E_financial_compare
+=== RUN   TestFRC02TenantIsolation/B/F_G_private_assets_documents
+=== RUN   TestFRC02TenantIsolation/B/J_public_catalog
+--- PASS: TestFRC02TenantIsolation (0.12s)
+    --- PASS: TestFRC02TenantIsolation/A (0.00s)
+        --- PASS: TestFRC02TenantIsolation/A/A_enterprises (0.00s)
+        --- PASS: TestFRC02TenantIsolation/A/B_C_projects (0.00s)
+        --- PASS: TestFRC02TenantIsolation/A/D_E_financial_compare (0.00s)
+        --- PASS: TestFRC02TenantIsolation/A/F_G_private_assets_documents (0.00s)
+        --- PASS: TestFRC02TenantIsolation/A/J_public_catalog (0.00s)
+    --- PASS: TestFRC02TenantIsolation/B (0.00s)
+        --- PASS: TestFRC02TenantIsolation/B/A_enterprises (0.00s)
+        --- PASS: TestFRC02TenantIsolation/B/B_C_projects (0.00s)
+        --- PASS: TestFRC02TenantIsolation/B/D_E_financial_compare (0.00s)
+        --- PASS: TestFRC02TenantIsolation/B/F_G_private_assets_documents (0.00s)
+        --- PASS: TestFRC02TenantIsolation/B/J_public_catalog (0.00s)
+=== RUN   TestFRC02RevocationSameJWT
+--- PASS: TestFRC02RevocationSameJWT (0.10s)
+=== RUN   TestFRC02OrphansAndMissing
+--- PASS: TestFRC02OrphansAndMissing (0.10s)
+=== RUN   TestFRC02IdentityAndAccessFailure
+--- PASS: TestFRC02IdentityAndAccessFailure (0.11s)
+=== RUN   TestFRC02MemberCRUDAndPagination
+--- PASS: TestFRC02MemberCRUDAndPagination (0.10s)
+=== RUN   TestFRC02ForeignMissingAndInvalidIdentity
+--- PASS: TestFRC02ForeignMissingAndInvalidIdentity (0.10s)
+=== RUN   TestFRC02Postgres
+    frc02_postgres_test.go:29: FRC02_TEST_DSN unset: PostgreSQL isolation not verified
+--- SKIP: TestFRC02Postgres (0.00s)
+=== RUN   TestFRC02BrowserServer
+    frc02_postgres_test.go:105: browser fixture disabled
+--- SKIP: TestFRC02BrowserServer (0.00s)
+PASS
+ok  	github.com/fortis/backend/cmd/app	1.136s
