@@ -1,0 +1,56 @@
+# FRC05 files at code acceptance
+
+Shared files contain04/09 integration; this is a source snapshot, not an isolated commit claim.
+
+- `backend/cmd/app/dependencies.go`
+- `backend/cmd/app/frc02_access_test.go`
+- `backend/cmd/app/frc02_postgres_test.go`
+- `backend/cmd/app/frc04_postgres_test.go`
+- `backend/cmd/app/frc05_postgres_test.go`
+- `backend/internal/modules/budget/application/budget_service.go`
+- `backend/internal/modules/budget/application/budget_service_test.go`
+- `backend/internal/modules/budget/application/project_cost.go`
+- `backend/internal/modules/budget/document/cost.go`
+- `backend/internal/modules/budget/document/cost_test.go`
+- `backend/internal/modules/budget/document/testdata/finance-v1.json`
+- `backend/internal/modules/budget/domain/cost_projection.go`
+- `backend/internal/modules/budget/domain/cost_projection_repository_interface.go`
+- `backend/internal/modules/budget/infrastructure/cost_projection_repository.go`
+- `backend/internal/modules/budget/infrastructure/models.go`
+- `backend/internal/modules/budget/ui/controller.go`
+- `backend/internal/modules/budget/ui/controller_test.go`
+- `backend/internal/modules/budget/ui/dto.go`
+- `backend/internal/modules/budget/ui/mapper.go`
+- `backend/internal/modules/defense_project/domain/defense_project.go`
+- `backend/internal/modules/defense_project/infrastructure/models.go`
+- `backend/internal/modules/defense_project/infrastructure/project_revision_repository.go`
+- `backend/migrations/1789914500_cost_projections.down.sql`
+- `backend/migrations/1789914500_cost_projections.up.sql`
+- `frontend/src/modules/defense-calculator/domain/format.ts`
+- `frontend/src/modules/defense-calculator/domain/project-asset-adapter.test.ts`
+- `frontend/src/modules/defense-calculator/domain/project-report-lines.ts`
+- `frontend/src/modules/defense-calculator/domain/structural-profile.ts`
+- `frontend/src/modules/defense-calculator/domain/use-project-cost.ts`
+- `frontend/src/modules/defense-calculator/infra/backend-project-api.ts`
+- `frontend/src/modules/defense-calculator/infra/cost-projection.release.test.ts`
+- `frontend/src/modules/defense-calculator/ui/calculator-page.browser.test.ts`
+- `frontend/src/modules/defense-calculator/ui/calculator-page.tsx`
+- `frontend/src/modules/defense-calculator/ui/calculator-report.tsx`
+- `frontend/src/modules/drone-defense/domain/custom-layer-color.release.test.ts`
+- `frontend/src/modules/drone-defense/domain/echelon-map-model.ts`
+- `frontend/src/modules/drone-defense/infra/backend-integration-contract.test.ts`
+- `frontend/src/modules/drone-defense/ui/drone-defense-prototype.tsx`
+- `frontend/src/modules/drone-defense/ui/echelon-objects-list.tsx`
+- `frontend/src/modules/drone-defense/ui/mog-composition-editor.tsx`
+- `frontend/src/shared/config/product-capabilities.ts`
+- `frontend/src/shared/lib/cost-consumers.release.test.ts`
+- `frontend/src/shared/lib/cost-projection.test.ts`
+- `frontend/src/shared/lib/cost-projection.ts`
+- `frontend/src/shared/lib/data-provenance.ts`
+- `frontend/src/shared/lib/defense-project.ts`
+- `frontend/src/shared/types/defense-project.ts`
+- `frontend/src/shared/types/finance.ts`
+- `frontend/src/shared/ui/release-surface.test.tsx`
+- `frontend/test/fixtures/finance-v1.json`
+- `frontend/test/playwright/frc05-live.cjs`
+- `knowledge-base/03_Architecture/ADR-0020-canonical-versioned-cost.md`

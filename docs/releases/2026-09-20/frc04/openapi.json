@@ -1,0 +1,523 @@
+{
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "Documentation for fortis-backend.",
+    "title": "fortis-backend.",
+    "version": "1.0.0"
+  },
+  "basePath": "/",
+  "paths": {
+    "/api/v1/projects": {
+      "get": {
+        "description": "Возвращает список проектов с пагинацией.",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Список конфигураций проектов защиты",
+        "operationId": "listProjects",
+        "parameters": [
+          {
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "Limit",
+            "description": "Лимит записей",
+            "name": "limit",
+            "in": "query"
+          },
+          {
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "Offset",
+            "description": "Смещение",
+            "name": "offset",
+            "in": "query"
+          },
+          {
+            "type": "string",
+            "x-go-name": "EnterpriseID",
+            "description": "Фильтр по enterprise ID",
+            "name": "enterpriseId",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/ProjectListResponse"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "Принимает имя конфигурации и полный JSON проекта защиты в теле запроса.",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Создание новой конфигурации проекта защиты",
+        "operationId": "createProject",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "IdempotencyKey",
+            "description": "Ключ повторного запроса; область — текущий пользователь и операция, срок — 24 часа.",
+            "name": "Idempotency-Key",
+            "in": "header"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateProjectRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/ProjectResponse"
+          },
+          "400": {
+            "description": "Bad Request — ошибка валидации"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/projects/delete": {
+      "delete": {
+        "description": "Удаление конфигурации проекта защиты",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "operationId": "deleteProject",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "description": "ID проекта",
+            "name": "id",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK — проект удалён"
+          },
+          "400": {
+            "description": "Bad Request — не указан ID"
+          },
+          "404": {
+            "description": "Not Found — проект не найден"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/projects/export": {
+      "get": {
+        "description": "Возвращает полный JSON проекта защиты по ID.",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Экспорт проекта защиты в JSON",
+        "operationId": "exportProject",
+        "parameters": [
+          {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "ProjectVersion",
+            "description": "Версия сохранённого снимка; без параметра возвращается текущая.",
+            "name": "projectVersion",
+            "in": "query"
+          },
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "description": "ID проекта для экспорта",
+            "name": "id",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "JSON проекта защиты"
+          },
+          "400": {
+            "description": "Bad Request — не указан ID проекта"
+          },
+          "404": {
+            "description": "Not Found — проект не найден"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/projects/get": {
+      "get": {
+        "description": "Получение конфигурации проекта защиты по ID",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "operationId": "getProject",
+        "parameters": [
+          {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "ProjectVersion",
+            "description": "Версия сохранённого снимка; без параметра возвращается текущая.",
+            "name": "projectVersion",
+            "in": "query"
+          },
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "description": "ID проекта",
+            "name": "id",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/ProjectResponse"
+          },
+          "400": {
+            "description": "Bad Request — не указан ID"
+          },
+          "404": {
+            "description": "Not Found — проект не найден"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/projects/import": {
+      "post": {
+        "description": "Принимает JSON проекта защиты в теле запроса, валидирует,\nсохраняет в БД и возвращает ID сохранённого проекта.",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Импорт проекта защиты из JSON",
+        "operationId": "importProject",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "IdempotencyKey",
+            "description": "Ключ повторного запроса; область — текущий пользователь и операция, срок — 24 часа.",
+            "name": "Idempotency-Key",
+            "in": "header"
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ImportRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/ImportResponse"
+          },
+          "400": {
+            "description": "Bad Request — неверный JSON или ошибка валидации"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/projects/update": {
+      "put": {
+        "description": "Обновляет имя и содержимое с обязательной expected version. Enterprise ID неизменяем.",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Обновление конфигурации проекта защиты",
+        "operationId": "updateProject",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "description": "ID проекта",
+            "name": "id",
+            "in": "query",
+            "required": true
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateProjectRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/ProjectResponse"
+          },
+          "400": {
+            "description": "Bad Request — не указан ID"
+          },
+          "404": {
+            "description": "Not Found — проект не найден"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "responses": {
+    "ProjectListResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ProjectListResponse"
+      }
+    },
+    "ProjectResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/ProjectResponse"
+      }
+    },
+    "ImportResponse": {
+      "description": "ImportResponse DTO ответа после успешного импорта.",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "projectId": {
+            "description": "ID сохранённого проекта",
+            "type": "string",
+            "x-go-name": "ProjectID",
+            "example": "550e8400-e29b-41d4-a716-446655440000"
+          },
+          "projectName": {
+            "description": "Название проекта",
+            "type": "string",
+            "x-go-name": "ProjectName",
+            "example": "Защита объекта Альфа"
+          },
+          "projectVersion": {
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "ProjectVersion"
+          },
+          "snapshot": {
+            "x-go-name": "Snapshot"
+          },
+          "snapshotDigest": {
+            "type": "string",
+            "x-go-name": "SnapshotDigest"
+          },
+          "updatedAt": {
+            "description": "Дата обновления проекта",
+            "type": "string",
+            "x-go-name": "UpdatedAt",
+            "example": "2026-06-12T14:00:00.000Z"
+          },
+          "version": {
+            "description": "Версия проекта для optimistic locking",
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "Version",
+            "example": 1
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ProjectListResponse": {
+      "type": "object",
+      "title": "ProjectListResponse DTO ответа со списком проектов.",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ProjectResponse"
+          },
+          "x-go-name": "Items"
+        },
+        "totalItems": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "TotalItems"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_project/ui"
+    },
+    "ProjectResponse": {
+      "type": "object",
+      "title": "ProjectResponse DTO ответа с данными проекта.",
+      "properties": {
+        "enterpriseId": {
+          "description": "Enterprise ID для мультитенантности",
+          "type": "string",
+          "x-go-name": "EnterpriseID",
+          "example": "550e8400-e29b-41d4-a716-446655440000"
+        },
+        "name": {
+          "description": "Имя конфигурации",
+          "type": "string",
+          "x-go-name": "Name",
+          "example": "Моя конфигурация"
+        },
+        "projectId": {
+          "description": "ID проекта",
+          "type": "string",
+          "x-go-name": "ProjectID",
+          "example": "550e8400-e29b-41d4-a716-446655440000"
+        },
+        "projectName": {
+          "description": "Название проекта",
+          "type": "string",
+          "x-go-name": "ProjectName",
+          "example": "Защита объекта Альфа"
+        },
+        "projectVersion": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "ProjectVersion"
+        },
+        "snapshot": {
+          "x-go-name": "Snapshot"
+        },
+        "snapshotDigest": {
+          "type": "string",
+          "x-go-name": "SnapshotDigest"
+        },
+        "updatedAt": {
+          "description": "Дата обновления",
+          "type": "string",
+          "x-go-name": "UpdatedAt",
+          "example": "2026-06-12T14:00:00.000Z"
+        },
+        "version": {
+          "description": "Версия проекта для optimistic locking",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Version",
+          "example": 1
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_project/ui"
+    },
+    "CreateProjectRequest": {
+      "type": "object",
+      "title": "CreateProjectRequest DTO запроса на создание конфигурации.",
+      "required": [
+        "name",
+        "projectJson"
+      ],
+      "properties": {
+        "enterpriseId": {
+          "description": "Enterprise ID для мультитенантности",
+          "type": "string",
+          "x-go-name": "EnterpriseID",
+          "example": "550e8400-e29b-41d4-a716-446655440000"
+        },
+        "name": {
+          "description": "Имя конфигурации",
+          "type": "string",
+          "x-go-name": "Name",
+          "example": "Моя конфигурация"
+        },
+        "projectJson": {
+          "description": "JSON проекта защиты (полный DefenseProject)",
+          "type": "string",
+          "x-go-name": "ProjectJSON"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_project/ui"
+    },
+    "ImportRequest": {
+      "type": "object",
+      "title": "ImportRequest DTO запроса на импорт проекта.",
+      "required": [
+        "projectJson"
+      ],
+      "properties": {
+        "projectJson": {
+          "description": "JSON проекта защиты",
+          "type": "string",
+          "x-go-name": "ProjectJSON"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_project/ui"
+    },
+    "UpdateProjectRequest": {
+      "type": "object",
+      "title": "UpdateProjectRequest DTO запроса на обновление проекта.",
+      "required": [
+        "version"
+      ],
+      "properties": {
+        "enterpriseId": {
+          "description": "Новый enterprise ID",
+          "type": "string",
+          "x-go-name": "EnterpriseID"
+        },
+        "name": {
+          "description": "Новое имя конфигурации",
+          "type": "string",
+          "x-go-name": "Name"
+        },
+        "projectJson": {
+          "description": "JSON проекта защиты для перезаписи содержимого карты (опционально)",
+          "type": "string",
+          "x-go-name": "ProjectJSON"
+        },
+        "version": {
+          "description": "Обязательная положительная ожидаемая версия проекта.",
+          "type": "integer",
+          "format": "int64",
+          "minimum": 1,
+          "x-go-name": "Version"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_project/ui"
+    }
+  }
+}

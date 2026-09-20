@@ -1,0 +1,1742 @@
+{
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "Documentation for fortis-backend.",
+    "title": "fortis-backend.",
+    "version": "1.0.0"
+  },
+  "basePath": "/",
+  "paths": {
+    "/api/v1/assets": {
+      "get": {
+        "description": "Возвращает список средств защиты с пагинацией и фильтрацией по предприятию, признаку общего доступа и категории.",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Получение списка средств защиты",
+        "operationId": "listDefenseAssets",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "EnterpriseID",
+            "description": "ID предприятия для фильтрации",
+            "name": "enterpriseId",
+            "in": "query"
+          },
+          {
+            "type": "string",
+            "x-go-name": "IsPublic",
+            "description": "Фильтр по признаку общего доступа (true/false)",
+            "name": "isPublic",
+            "in": "query"
+          },
+          {
+            "type": "string",
+            "x-go-name": "Category",
+            "description": "Фильтр по категории",
+            "name": "category",
+            "in": "query"
+          },
+          {
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "Limit",
+            "description": "Количество записей на странице (по умолчанию 20, макс 100)",
+            "name": "limit",
+            "in": "query"
+          },
+          {
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "Offset",
+            "description": "Смещение от начала списка",
+            "name": "offset",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/DefenseAssetListResponse"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "Создаёт новое средство защиты с указанными параметрами.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Создание нового средства защиты",
+        "operationId": "createDefenseAsset",
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/CreateDefenseAssetRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "$ref": "#/responses/DefenseAssetResponse"
+          },
+          "400": {
+            "description": "Bad Request — неверные данные"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/assets/delete": {
+      "delete": {
+        "description": "Удаляет средство защиты по ID.",
+        "tags": [
+          "api"
+        ],
+        "summary": "Удаление средства защиты",
+        "operationId": "deleteDefenseAsset",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "description": "ID средства защиты",
+            "name": "id",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Средство защиты успешно удалено"
+          },
+          "400": {
+            "description": "Bad Request — не указан ID средства защиты"
+          },
+          "404": {
+            "description": "Not Found — средство защиты не найдено"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/assets/documents": {
+      "post": {
+        "description": "Загружает один файл до 10 MiB в карантин и публикует после сканирования.",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Загрузка приватного документа",
+        "operationId": "createAssetDocument",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "assetId",
+            "in": "formData",
+            "required": true
+          },
+          {
+            "type": "file",
+            "name": "file",
+            "in": "formData",
+            "required": true
+          },
+          {
+            "type": "boolean",
+            "default": true,
+            "name": "commercial",
+            "in": "formData"
+          }
+        ],
+        "responses": {
+          "201": {
+            "$ref": "#/responses/AssetDocumentResponse"
+          },
+          "400": {
+            "description": "Неверные поля загрузки"
+          },
+          "403": {
+            "description": "Изменение общего каталога запрещено"
+          },
+          "404": {
+            "description": "Карточка не найдена"
+          },
+          "413": {
+            "description": "Файл превышает 10 MiB"
+          },
+          "415": {
+            "description": "Формат или содержимое файла не поддерживается"
+          },
+          "422": {
+            "description": "Файл отклонён проверкой"
+          },
+          "503": {
+            "description": "Хранилище или сканер недоступны"
+          }
+        }
+      }
+    },
+    "/api/v1/assets/documents/delete": {
+      "delete": {
+        "description": "Удаляет метаданные документа по ID.",
+        "tags": [
+          "api"
+        ],
+        "summary": "Удаление документа",
+        "operationId": "deleteAssetDocument",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "description": "ID документа",
+            "name": "id",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Документ успешно удалён"
+          },
+          "400": {
+            "description": "Bad Request — не указан ID документа"
+          },
+          "404": {
+            "description": "Not Found — документ не найден"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/assets/documents/download": {
+      "get": {
+        "description": "Повторно проверяет доступ к родителю и возвращает проверенные байты вложением.",
+        "produces": [
+          "application/pdf",
+          "image/png",
+          "image/jpeg",
+          "text/plain"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Скачивание приватного документа",
+        "operationId": "downloadAssetDocument",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "name": "id",
+            "in": "query",
+            "required": true
+          },
+          {
+            "type": "string",
+            "x-go-name": "AssetID",
+            "description": "Необязательная дополнительная проверка родительской карточки.",
+            "name": "assetId",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/AssetDocumentDownloadResponse"
+          },
+          "400": {
+            "description": "Bad Request — не указан ID"
+          },
+          "404": {
+            "description": "Not Found — документ не найден"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/assets/documents/get": {
+      "get": {
+        "description": "Возвращает метаданные документа по его ID.",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Получение метаданных документа",
+        "operationId": "getAssetDocument",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "description": "ID документа",
+            "name": "id",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/AssetDocumentResponse"
+          },
+          "400": {
+            "description": "Bad Request — не указан ID"
+          },
+          "404": {
+            "description": "Not Found — документ не найден"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/assets/documents/list": {
+      "get": {
+        "description": "Возвращает список документов, прикреплённых к указанному средству защиты.",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Получение списка документов средства защиты",
+        "operationId": "listAssetDocuments",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "AssetID",
+            "description": "ID средства защиты",
+            "name": "assetId",
+            "in": "query",
+            "required": true
+          },
+          {
+            "maximum": 100,
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "Limit",
+            "name": "limit",
+            "in": "query"
+          },
+          {
+            "minimum": 0,
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "Offset",
+            "name": "offset",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/AssetDocumentListResponse"
+          },
+          "400": {
+            "description": "Bad Request — не указан assetId"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/assets/get": {
+      "get": {
+        "description": "Возвращает одно средство защиты по его ID.",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Получение средства защиты по ID",
+        "operationId": "getDefenseAsset",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "description": "ID средства защиты",
+            "name": "id",
+            "in": "query",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/DefenseAssetResponse"
+          },
+          "400": {
+            "description": "Bad Request — не указан ID"
+          },
+          "404": {
+            "description": "Not Found — средство защиты не найдено"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api/v1/assets/update": {
+      "put": {
+        "description": "Обновляет поля существующего средства защиты по ID.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Обновление средства защиты",
+        "operationId": "updateDefenseAsset",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "name": "id",
+            "in": "query",
+            "required": true
+          },
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UpdateDefenseAssetRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/DefenseAssetResponse"
+          },
+          "400": {
+            "description": "Bad Request — неверные параметры"
+          },
+          "404": {
+            "description": "Not Found — средство защиты не найдено"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AssetDocumentDTO": {
+      "type": "object",
+      "title": "AssetDocumentDTO DTO ответа с метаданными документа.",
+      "properties": {
+        "assetId": {
+          "description": "ID средства защиты",
+          "type": "string",
+          "x-go-name": "AssetID",
+          "example": "550e8400-e29b-41d4-a716-446655440001"
+        },
+        "checksum": {
+          "type": "string",
+          "x-go-name": "Checksum"
+        },
+        "commercial": {
+          "type": "boolean",
+          "x-go-name": "Commercial"
+        },
+        "createdAt": {
+          "description": "Дата создания (RFC3339)",
+          "type": "string",
+          "x-go-name": "CreatedAt",
+          "example": "2026-06-12T14:00:00Z"
+        },
+        "downloadUrl": {
+          "description": "Относительный URL авторизованного скачивания; отсутствует для недоступного файла.",
+          "type": "string",
+          "x-go-name": "DownloadURL"
+        },
+        "id": {
+          "description": "ID документа",
+          "type": "string",
+          "x-go-name": "ID",
+          "example": "550e8400-e29b-41d4-a716-446655440000"
+        },
+        "mimeType": {
+          "description": "MIME-тип файла",
+          "type": "string",
+          "x-go-name": "MimeType",
+          "example": "application/pdf"
+        },
+        "name": {
+          "description": "Оригинальное имя файла",
+          "type": "string",
+          "x-go-name": "Name",
+          "example": "схема_рлс.pdf"
+        },
+        "ownerId": {
+          "description": "ID пользователя, загрузившего документ",
+          "type": "string",
+          "x-go-name": "OwnerID"
+        },
+        "revision": {
+          "type": "string",
+          "x-go-name": "Revision"
+        },
+        "sizeBytes": {
+          "description": "Размер файла в байтах",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "SizeBytes",
+          "example": 1048576
+        },
+        "status": {
+          "type": "string",
+          "x-go-name": "Status"
+        },
+        "updatedAt": {
+          "description": "Дата обновления (RFC3339)",
+          "type": "string",
+          "x-go-name": "UpdatedAt",
+          "example": "2026-06-12T14:00:00Z"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "AssetDocumentListResponse": {
+      "type": "object",
+      "title": "AssetDocumentListResponse DTO ответа со списком документов.",
+      "properties": {
+        "items": {
+          "description": "Список документов",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AssetDocumentDTO"
+          },
+          "x-go-name": "Items"
+        },
+        "totalItems": {
+          "description": "Общее количество документов",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "TotalItems"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "CompoundProfileDTO": {
+      "type": "object",
+      "title": "CompoundProfileDTO DTO профиля составной установки.",
+      "properties": {
+        "accountability": {
+          "description": "Подотчётность (МО, Росгвардия, ЧОП)",
+          "type": "string",
+          "x-go-name": "Accountability",
+          "example": "МО"
+        },
+        "armament": {
+          "description": "Вооружение (одна строка)",
+          "type": "string",
+          "x-go-name": "Armament",
+          "example": "Автомат/пулемёт/ПБС"
+        },
+        "azimuth": {
+          "description": "Азимут",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "Azimuth"
+        },
+        "kind": {
+          "description": "Тип профиля (compound-post)",
+          "type": "string",
+          "x-go-name": "Kind",
+          "example": "compound-post"
+        },
+        "personnelCount": {
+          "description": "Численность личного состава",
+          "type": "string",
+          "x-go-name": "PersonnelCount",
+          "example": "4"
+        },
+        "postType": {
+          "description": "Тип поста (МОГ, ПВН, ГОР, КПП)",
+          "type": "string",
+          "x-go-name": "PostType",
+          "example": "МОГ"
+        },
+        "sectorOrRange": {
+          "description": "Сектор/дальность",
+          "type": "string",
+          "x-go-name": "SectorOrRange",
+          "example": "до 4-8 км, сектор 90-360°"
+        },
+        "weaponUnits": {
+          "description": "Количество единиц вооружения",
+          "type": "string",
+          "x-go-name": "WeaponUnits",
+          "example": "2"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "CreateDefenseAssetRequest": {
+      "type": "object",
+      "title": "CreateDefenseAssetRequest DTO запроса на создание средства защиты.",
+      "required": [
+        "name",
+        "category",
+        "coverageType"
+      ],
+      "properties": {
+        "calculatorAssetId": {
+          "description": "ID калькуляторного средства",
+          "type": "string",
+          "x-go-name": "CalculatorAssetID"
+        },
+        "category": {
+          "description": "Категория",
+          "type": "string",
+          "enum": [
+            "early-warning",
+            "detection",
+            "classification",
+            "jamming",
+            "spoofing",
+            "kinetic",
+            "interceptor",
+            "passive-protection",
+            "engineering-protection",
+            "software",
+            "command-center",
+            "external-service",
+            "radiotechnical",
+            "radar",
+            "electronic-warfare",
+            "missile",
+            "anti-missile",
+            "shturmovaya",
+            "artillery",
+            "aircraft",
+            "helicopter",
+            "uav",
+            "ship",
+            "fortification",
+            "infrastructure"
+          ],
+          "x-go-name": "Category",
+          "example": "radar"
+        },
+        "compatibleLayerCodes": {
+          "description": "Совместимые коды слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "CompatibleLayerCodes"
+        },
+        "compatibleLayerTypes": {
+          "description": "Совместимые типы слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "CompatibleLayerTypes"
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PriceComponentDTO"
+          },
+          "x-go-name": "Components"
+        },
+        "compoundProfile": {
+          "$ref": "#/definitions/CompoundProfileDTO"
+        },
+        "coverageAngle": {
+          "description": "Угол покрытия (градусы)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "CoverageAngle"
+        },
+        "coverageRadius": {
+          "description": "Радиус покрытия (км)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "CoverageRadius"
+        },
+        "coverageType": {
+          "description": "Тип покрытия",
+          "type": "string",
+          "enum": [
+            "circle",
+            "sector",
+            "line",
+            "polygon",
+            "none"
+          ],
+          "x-go-name": "CoverageType",
+          "example": "circle"
+        },
+        "currency": {
+          "description": "Валюта",
+          "type": "string",
+          "x-go-name": "Currency",
+          "example": "RUB"
+        },
+        "deploymentType": {
+          "description": "Тип развёртывания",
+          "type": "string",
+          "enum": [
+            "static",
+            "mobile",
+            "infrastructure",
+            "software",
+            "external"
+          ],
+          "x-go-name": "DeploymentType"
+        },
+        "description": {
+          "description": "Описание",
+          "type": "string",
+          "x-go-name": "Description"
+        },
+        "detectionSpec": {
+          "$ref": "#/definitions/DetectionSpecDTO"
+        },
+        "enterpriseId": {
+          "description": "ID предприятия (null для общего каталога)",
+          "type": "string",
+          "x-go-name": "EnterpriseID"
+        },
+        "ewSpec": {
+          "$ref": "#/definitions/EWSpecDTO"
+        },
+        "fieldProvenance": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/ProvenanceDTO"
+          },
+          "x-go-name": "FieldProvenance"
+        },
+        "iconUrl": {
+          "description": "URL иконки",
+          "type": "string",
+          "x-go-name": "IconURL"
+        },
+        "incompatibleLayerCodes": {
+          "description": "Несовместимые коды слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "IncompatibleLayerCodes"
+        },
+        "isPublic": {
+          "description": "Флаг общего доступа",
+          "type": "boolean",
+          "x-go-name": "IsPublic"
+        },
+        "legacyItemId": {
+          "description": "ID устаревшего элемента",
+          "type": "string",
+          "x-go-name": "LegacyItemID"
+        },
+        "mapCatalogGroupIds": {
+          "description": "ID групп каталога карты",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "MapCatalogGroupIDs"
+        },
+        "maxEffectiveDistance": {
+          "description": "Максимальная эффективная дальность (км)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "MaxEffectiveDistance"
+        },
+        "minEffectiveDistance": {
+          "description": "Минимальная эффективная дальность (км)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "MinEffectiveDistance"
+        },
+        "modelUrl": {
+          "description": "URL 3D-модели",
+          "type": "string",
+          "x-go-name": "ModelURL"
+        },
+        "name": {
+          "description": "Название средства защиты",
+          "type": "string",
+          "x-go-name": "Name",
+          "example": "РЛС 55Ж6"
+        },
+        "placementType": {
+          "description": "Тип размещения",
+          "type": "string",
+          "enum": [
+            "map-object",
+            "zone-object",
+            "non-physical"
+          ],
+          "x-go-name": "PlacementType"
+        },
+        "pricePerUnitMln": {
+          "description": "Цена за единицу в млн руб",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "PricePerUnitMln"
+        },
+        "pricingMode": {
+          "type": "string",
+          "x-go-name": "PricingMode"
+        },
+        "priority": {
+          "description": "Приоритет",
+          "type": "string",
+          "enum": [
+            "critical",
+            "high",
+            "medium",
+            "low"
+          ],
+          "x-go-name": "Priority"
+        },
+        "protectionType": {
+          "description": "Тип защиты",
+          "type": "string",
+          "x-go-name": "ProtectionType"
+        },
+        "provenance": {
+          "$ref": "#/definitions/ProvenanceDTO"
+        },
+        "recommendedLayerCodes": {
+          "description": "Рекомендуемые коды слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "RecommendedLayerCodes"
+        },
+        "roles": {
+          "description": "Роли",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "detect",
+              "track",
+              "classify",
+              "suppress",
+              "destroy",
+              "delay",
+              "protect",
+              "coordinate",
+              "monitor",
+              "alert",
+              "detection",
+              "destruction",
+              "ew",
+              "c2",
+              "cover",
+              "deception",
+              "supply",
+              "engineering",
+              "recon",
+              "special"
+            ]
+          },
+          "x-go-name": "Roles"
+        },
+        "score": {
+          "description": "Оценка",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Score"
+        },
+        "shortName": {
+          "description": "Краткое название",
+          "type": "string",
+          "x-go-name": "ShortName"
+        },
+        "tags": {
+          "description": "Теги",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "Tags"
+        },
+        "unitLabel": {
+          "description": "Название единицы измерения",
+          "type": "string",
+          "x-go-name": "UnitLabel"
+        },
+        "unitPriceMinor": {
+          "description": "Цена в копейках RUB: отсутствие сохраняет legacy fallback, null означает неизвестную цену.",
+          "type": "string",
+          "x-go-name": "UnitPriceMinor"
+        },
+        "weaponSpec": {
+          "$ref": "#/definitions/WeaponSpecDTO"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "DefenseAssetDTO": {
+      "type": "object",
+      "title": "DefenseAssetDTO DTO ответа с данными средства защиты.",
+      "properties": {
+        "calculatorAssetId": {
+          "description": "ID калькуляторного средства",
+          "type": "string",
+          "x-go-name": "CalculatorAssetID"
+        },
+        "category": {
+          "description": "Категория (radiotechnical, radar, electronic-warfare, missile, anti-missile, shturmovaya, artillery, aircraft, helicopter, uav, ship, fortification, infrastructure)",
+          "type": "string",
+          "enum": [
+            "early-warning",
+            "detection",
+            "classification",
+            "jamming",
+            "spoofing",
+            "kinetic",
+            "interceptor",
+            "passive-protection",
+            "engineering-protection",
+            "software",
+            "command-center",
+            "external-service",
+            "radiotechnical",
+            "radar",
+            "electronic-warfare",
+            "missile",
+            "anti-missile",
+            "shturmovaya",
+            "artillery",
+            "aircraft",
+            "helicopter",
+            "uav",
+            "ship",
+            "fortification",
+            "infrastructure"
+          ],
+          "x-go-name": "Category",
+          "example": "radar"
+        },
+        "compatibleLayerCodes": {
+          "description": "Совместимые коды слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "CompatibleLayerCodes"
+        },
+        "compatibleLayerTypes": {
+          "description": "Совместимые типы слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "CompatibleLayerTypes"
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PriceComponentDTO"
+          },
+          "x-go-name": "Components"
+        },
+        "compoundProfile": {
+          "$ref": "#/definitions/CompoundProfileDTO"
+        },
+        "coverageAngle": {
+          "description": "Угол покрытия (градусы)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "CoverageAngle"
+        },
+        "coverageRadius": {
+          "description": "Радиус покрытия (км)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "CoverageRadius"
+        },
+        "coverageType": {
+          "description": "Тип покрытия (circle, sector, line, polygon, none)",
+          "type": "string",
+          "enum": [
+            "circle",
+            "sector",
+            "line",
+            "polygon",
+            "none"
+          ],
+          "x-go-name": "CoverageType",
+          "example": "circle"
+        },
+        "createdAt": {
+          "description": "Дата создания (RFC3339)",
+          "type": "string",
+          "x-go-name": "CreatedAt",
+          "example": "2026-06-12T14:00:00Z"
+        },
+        "currency": {
+          "description": "Валюта",
+          "type": "string",
+          "x-go-name": "Currency",
+          "example": "RUB"
+        },
+        "deploymentType": {
+          "description": "Тип развёртывания (static, mobile, infrastructure, software, external)",
+          "type": "string",
+          "enum": [
+            "static",
+            "mobile",
+            "infrastructure",
+            "software",
+            "external"
+          ],
+          "x-go-name": "DeploymentType",
+          "example": "static"
+        },
+        "description": {
+          "description": "Описание",
+          "type": "string",
+          "x-go-name": "Description"
+        },
+        "detectionSpec": {
+          "$ref": "#/definitions/DetectionSpecDTO"
+        },
+        "enterpriseId": {
+          "description": "ID предприятия (null для общего каталога)",
+          "type": "string",
+          "x-go-name": "EnterpriseID"
+        },
+        "ewSpec": {
+          "$ref": "#/definitions/EWSpecDTO"
+        },
+        "fieldProvenance": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/ProvenanceDTO"
+          },
+          "x-go-name": "FieldProvenance"
+        },
+        "iconUrl": {
+          "description": "URL иконки",
+          "type": "string",
+          "x-go-name": "IconURL"
+        },
+        "id": {
+          "description": "ID средства защиты",
+          "type": "string",
+          "x-go-name": "ID",
+          "example": "550e8400-e29b-41d4-a716-446655440000"
+        },
+        "incompatibleLayerCodes": {
+          "description": "Несовместимые коды слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "IncompatibleLayerCodes"
+        },
+        "isPublic": {
+          "description": "Флаг общего доступа",
+          "type": "boolean",
+          "x-go-name": "IsPublic"
+        },
+        "legacyItemId": {
+          "description": "ID устаревшего элемента",
+          "type": "string",
+          "x-go-name": "LegacyItemID"
+        },
+        "mapCatalogGroupIds": {
+          "description": "ID групп каталога карты",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "MapCatalogGroupIDs"
+        },
+        "maxEffectiveDistance": {
+          "description": "Максимальная эффективная дальность (км)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "MaxEffectiveDistance"
+        },
+        "minEffectiveDistance": {
+          "description": "Минимальная эффективная дальность (км)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "MinEffectiveDistance"
+        },
+        "modelUrl": {
+          "description": "URL 3D-модели",
+          "type": "string",
+          "x-go-name": "ModelURL"
+        },
+        "name": {
+          "description": "Название средства защиты",
+          "type": "string",
+          "x-go-name": "Name",
+          "example": "РЛС 55Ж6"
+        },
+        "placementType": {
+          "description": "Тип размещения (map-object, zone-object, non-physical)",
+          "type": "string",
+          "enum": [
+            "map-object",
+            "zone-object",
+            "non-physical"
+          ],
+          "x-go-name": "PlacementType",
+          "example": "map-object"
+        },
+        "pricePerUnitMln": {
+          "description": "Цена за единицу в млн руб",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "PricePerUnitMln"
+        },
+        "pricingMode": {
+          "type": "string",
+          "x-go-name": "PricingMode"
+        },
+        "priority": {
+          "description": "Приоритет (critical, high, medium, low)",
+          "type": "string",
+          "enum": [
+            "critical",
+            "high",
+            "medium",
+            "low"
+          ],
+          "x-go-name": "Priority"
+        },
+        "protectionType": {
+          "description": "Тип защиты",
+          "type": "string",
+          "x-go-name": "ProtectionType"
+        },
+        "provenance": {
+          "$ref": "#/definitions/ProvenanceDTO"
+        },
+        "recommendedLayerCodes": {
+          "description": "Рекомендуемые коды слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "RecommendedLayerCodes"
+        },
+        "roles": {
+          "description": "Роли (detection, destruction, ew, c2, cover, deception, supply, engineering, recon, special)",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "detect",
+              "track",
+              "classify",
+              "suppress",
+              "destroy",
+              "delay",
+              "protect",
+              "coordinate",
+              "monitor",
+              "alert",
+              "detection",
+              "destruction",
+              "ew",
+              "c2",
+              "cover",
+              "deception",
+              "supply",
+              "engineering",
+              "recon",
+              "special"
+            ]
+          },
+          "x-go-name": "Roles"
+        },
+        "score": {
+          "description": "Оценка/рейтинг",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Score"
+        },
+        "shortName": {
+          "description": "Краткое название",
+          "type": "string",
+          "x-go-name": "ShortName",
+          "example": "55Ж6"
+        },
+        "tags": {
+          "description": "Теги",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "Tags"
+        },
+        "unitLabel": {
+          "description": "Название единицы измерения",
+          "type": "string",
+          "x-go-name": "UnitLabel",
+          "example": "шт"
+        },
+        "unitPriceMinor": {
+          "description": "Цена в копейках RUB: отсутствие сохраняет legacy fallback, null означает неизвестную цену.",
+          "type": "string",
+          "x-go-name": "UnitPriceMinor"
+        },
+        "updatedAt": {
+          "description": "Дата обновления (RFC3339)",
+          "type": "string",
+          "x-go-name": "UpdatedAt",
+          "example": "2026-06-12T14:00:00Z"
+        },
+        "weaponSpec": {
+          "$ref": "#/definitions/WeaponSpecDTO"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "DefenseAssetListResponse": {
+      "type": "object",
+      "title": "DefenseAssetListResponse DTO ответа со списком средств защиты.",
+      "properties": {
+        "items": {
+          "description": "Список элементов",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DefenseAssetDTO"
+          },
+          "x-go-name": "Items"
+        },
+        "totalItems": {
+          "description": "Общее количество элементов",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "TotalItems"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "DetectionSpecDTO": {
+      "type": "object",
+      "title": "DetectionSpecDTO DTO ТТХ средств обнаружения.",
+      "properties": {
+        "detectionMode": {
+          "description": "Режим обнаружения (активный/пассивный)",
+          "type": "string",
+          "x-go-name": "DetectionMode"
+        },
+        "fieldOfView": {
+          "description": "Поле зрения (градусы)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "FieldOfView"
+        },
+        "frequencyRange": {
+          "description": "Диапазон частот обнаружения",
+          "type": "string",
+          "x-go-name": "FrequencyRange"
+        },
+        "hasThermalImager": {
+          "description": "Наличие тепловизора",
+          "type": "boolean",
+          "x-go-name": "HasThermalImager"
+        },
+        "rotationSpeed": {
+          "description": "Скорость оборота (для активной РЛС)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "RotationSpeed"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "EWSpecDTO": {
+      "type": "object",
+      "title": "EWSpecDTO DTO ТТХ средств РЭБ/спуферов.",
+      "properties": {
+        "actionRange": {
+          "description": "Дальность/зона действия (км)",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "ActionRange"
+        },
+        "azimuth": {
+          "description": "Азимут",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "Azimuth"
+        },
+        "frequencyRange": {
+          "description": "Диапазон частот",
+          "type": "string",
+          "x-go-name": "FrequencyRange"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "PriceComponentDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "x-go-name": "ID"
+        },
+        "name": {
+          "type": "string",
+          "x-go-name": "Name"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Quantity"
+        },
+        "unitPriceMinor": {
+          "type": "string",
+          "x-go-name": "UnitPriceMinor"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "ProvenanceDTO": {
+      "type": "object",
+      "properties": {
+        "quality": {
+          "type": "string",
+          "x-go-name": "Quality"
+        },
+        "recordedAt": {
+          "type": "string",
+          "x-go-name": "RecordedAt"
+        },
+        "recordedBy": {
+          "type": "string",
+          "x-go-name": "RecordedBy"
+        },
+        "revision": {
+          "type": "string",
+          "x-go-name": "Revision"
+        },
+        "sourceDate": {
+          "type": "string",
+          "x-go-name": "SourceDate"
+        },
+        "sourceDocumentChecksum": {
+          "type": "string",
+          "x-go-name": "SourceDocumentChecksum"
+        },
+        "sourceDocumentId": {
+          "type": "string",
+          "x-go-name": "SourceDocumentID"
+        },
+        "sourceDocumentRevision": {
+          "type": "string",
+          "x-go-name": "SourceDocumentRevision"
+        },
+        "sourceLabel": {
+          "type": "string",
+          "x-go-name": "SourceLabel"
+        },
+        "sourceUrl": {
+          "type": "string",
+          "x-go-name": "SourceURL"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "UpdateDefenseAssetRequest": {
+      "type": "object",
+      "title": "UpdateDefenseAssetRequest DTO запроса на обновление средства защиты.",
+      "properties": {
+        "calculatorAssetId": {
+          "description": "ID калькуляторного средства",
+          "type": "string",
+          "x-go-name": "CalculatorAssetID"
+        },
+        "category": {
+          "description": "Категория",
+          "type": "string",
+          "enum": [
+            "early-warning",
+            "detection",
+            "classification",
+            "jamming",
+            "spoofing",
+            "kinetic",
+            "interceptor",
+            "passive-protection",
+            "engineering-protection",
+            "software",
+            "command-center",
+            "external-service",
+            "radiotechnical",
+            "radar",
+            "electronic-warfare",
+            "missile",
+            "anti-missile",
+            "shturmovaya",
+            "artillery",
+            "aircraft",
+            "helicopter",
+            "uav",
+            "ship",
+            "fortification",
+            "infrastructure"
+          ],
+          "x-go-name": "Category"
+        },
+        "compatibleLayerCodes": {
+          "description": "Совместимые коды слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "CompatibleLayerCodes"
+        },
+        "compatibleLayerTypes": {
+          "description": "Совместимые типы слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "CompatibleLayerTypes"
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PriceComponentDTO"
+          },
+          "x-go-name": "Components"
+        },
+        "compoundProfile": {
+          "$ref": "#/definitions/CompoundProfileDTO"
+        },
+        "coverageAngle": {
+          "description": "Угол покрытия",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "CoverageAngle"
+        },
+        "coverageRadius": {
+          "description": "Радиус покрытия",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "CoverageRadius"
+        },
+        "coverageType": {
+          "description": "Тип покрытия",
+          "type": "string",
+          "enum": [
+            "circle",
+            "sector",
+            "line",
+            "polygon",
+            "none"
+          ],
+          "x-go-name": "CoverageType"
+        },
+        "currency": {
+          "description": "Валюта",
+          "type": "string",
+          "x-go-name": "Currency"
+        },
+        "deploymentType": {
+          "description": "Тип развёртывания",
+          "type": "string",
+          "enum": [
+            "static",
+            "mobile",
+            "infrastructure",
+            "software",
+            "external"
+          ],
+          "x-go-name": "DeploymentType"
+        },
+        "description": {
+          "description": "Описание",
+          "type": "string",
+          "x-go-name": "Description"
+        },
+        "detectionSpec": {
+          "$ref": "#/definitions/DetectionSpecDTO"
+        },
+        "ewSpec": {
+          "$ref": "#/definitions/EWSpecDTO"
+        },
+        "fieldProvenance": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/ProvenanceDTO"
+          },
+          "x-go-name": "FieldProvenance"
+        },
+        "iconUrl": {
+          "description": "URL иконки",
+          "type": "string",
+          "x-go-name": "IconURL"
+        },
+        "incompatibleLayerCodes": {
+          "description": "Несовместимые коды слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "IncompatibleLayerCodes"
+        },
+        "isPublic": {
+          "description": "Флаг общего доступа",
+          "type": "boolean",
+          "x-go-name": "IsPublic"
+        },
+        "legacyItemId": {
+          "description": "ID устаревшего элемента",
+          "type": "string",
+          "x-go-name": "LegacyItemID"
+        },
+        "mapCatalogGroupIds": {
+          "description": "ID групп каталога карты",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "MapCatalogGroupIDs"
+        },
+        "maxEffectiveDistance": {
+          "description": "Максимальная эффективная дальность",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "MaxEffectiveDistance"
+        },
+        "minEffectiveDistance": {
+          "description": "Минимальная эффективная дальность",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "MinEffectiveDistance"
+        },
+        "modelUrl": {
+          "description": "URL 3D-модели",
+          "type": "string",
+          "x-go-name": "ModelURL"
+        },
+        "name": {
+          "description": "Название средства защиты",
+          "type": "string",
+          "x-go-name": "Name"
+        },
+        "placementType": {
+          "description": "Тип размещения",
+          "type": "string",
+          "enum": [
+            "map-object",
+            "zone-object",
+            "non-physical"
+          ],
+          "x-go-name": "PlacementType"
+        },
+        "pricePerUnitMln": {
+          "description": "Цена за единицу",
+          "type": "number",
+          "format": "double",
+          "x-go-name": "PricePerUnitMln"
+        },
+        "pricingMode": {
+          "type": "string",
+          "x-go-name": "PricingMode"
+        },
+        "priority": {
+          "description": "Приоритет",
+          "type": "string",
+          "enum": [
+            "critical",
+            "high",
+            "medium",
+            "low"
+          ],
+          "x-go-name": "Priority"
+        },
+        "protectionType": {
+          "description": "Тип защиты",
+          "type": "string",
+          "x-go-name": "ProtectionType"
+        },
+        "provenance": {
+          "$ref": "#/definitions/ProvenanceDTO"
+        },
+        "recommendedLayerCodes": {
+          "description": "Рекомендуемые коды слоёв",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "RecommendedLayerCodes"
+        },
+        "roles": {
+          "description": "Роли",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "detect",
+              "track",
+              "classify",
+              "suppress",
+              "destroy",
+              "delay",
+              "protect",
+              "coordinate",
+              "monitor",
+              "alert",
+              "detection",
+              "destruction",
+              "ew",
+              "c2",
+              "cover",
+              "deception",
+              "supply",
+              "engineering",
+              "recon",
+              "special"
+            ]
+          },
+          "x-go-name": "Roles"
+        },
+        "score": {
+          "description": "Оценка",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Score"
+        },
+        "shortName": {
+          "description": "Краткое название",
+          "type": "string",
+          "x-go-name": "ShortName"
+        },
+        "tags": {
+          "description": "Теги",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "Tags"
+        },
+        "unitLabel": {
+          "description": "Название единицы измерения",
+          "type": "string",
+          "x-go-name": "UnitLabel"
+        },
+        "unitPriceMinor": {
+          "description": "Цена в копейках RUB: отсутствие сохраняет legacy fallback, null означает неизвестную цену.",
+          "type": "string",
+          "x-go-name": "UnitPriceMinor"
+        },
+        "weaponSpec": {
+          "$ref": "#/definitions/WeaponSpecDTO"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    },
+    "WeaponSpecDTO": {
+      "type": "object",
+      "title": "WeaponSpecDTO DTO ТТХ оружия/установок.",
+      "properties": {
+        "ammunitionType": {
+          "description": "Тип боеприпаса",
+          "type": "string",
+          "x-go-name": "AmmunitionType"
+        },
+        "caliber": {
+          "description": "Калибр",
+          "type": "string",
+          "x-go-name": "Caliber"
+        },
+        "isManual": {
+          "description": "Ручной режим",
+          "type": "boolean",
+          "x-go-name": "IsManual"
+        },
+        "moduleCount": {
+          "description": "Количество модулей",
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "ModuleCount"
+        },
+        "operationMode": {
+          "description": "Режим работы (ручная/автоматическая)",
+          "type": "string",
+          "x-go-name": "OperationMode"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/defense_asset/ui"
+    }
+  },
+  "responses": {
+    "AssetDocumentDownloadResponse": {
+      "description": "AssetDocumentDownloadResponse описывает байты проверенного файла.",
+      "schema": {
+        "type": "file"
+      }
+    },
+    "AssetDocumentListResponse": {
+      "description": "AssetDocumentListResponseBody описывает тело списка документов.",
+      "schema": {
+        "$ref": "#/definitions/AssetDocumentListResponse"
+      }
+    },
+    "AssetDocumentResponse": {
+      "description": "AssetDocumentResponse описывает тело метаданных документа.",
+      "schema": {
+        "$ref": "#/definitions/AssetDocumentDTO"
+      }
+    },
+    "DefenseAssetListResponse": {
+      "description": "DefenseAssetListResponseBody описывает тело списка карточек.",
+      "schema": {
+        "$ref": "#/definitions/DefenseAssetListResponse"
+      }
+    },
+    "DefenseAssetResponse": {
+      "description": "DefenseAssetResponse описывает тело ответа карточки.",
+      "schema": {
+        "$ref": "#/definitions/DefenseAssetDTO"
+      }
+    }
+  },
+  "parameters": {}
+}

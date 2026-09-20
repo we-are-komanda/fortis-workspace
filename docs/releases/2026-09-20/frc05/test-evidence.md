@@ -1,0 +1,20 @@
+# FRC-05 verification
+
+Date2026-09-20; Node26.4/Next16.2.11 installed, Go1.26.0, disposable PG16 port55434. [Backend evidence](backend-evidence.md), [engine/reviewer evidence](frontend-engine-evidence.md) contain detailed commands and RED/GREEN. No skipped opt-in test is counted as PASS.
+
+- Root fresh focused FE suite: cost engine19 + client3 + consumer1 + backend contract1 + capability3 =27/27 PASS. `node --import tsx --test src/shared/lib/cost-projection.test.ts src/shared/lib/cost-consumers.release.test.ts src/modules/defense-calculator/infra/cost-projection.release.test.ts src/shared/ui/release-surface.test.tsx src/modules/drone-defense/infra/backend-integration-contract.test.ts`.
+- Actual calculator/store/hook Chromium9/9 PASS: `env FRC05_BROWSER_TESTS=true node --import tsx --test src/modules/defense-calculator/ui/calculator-page.browser.test.ts`. Includes latev7/v8, project switch, allsaved→alldraft, 503/retry/no fallback, empty, zero/unknown, safeHTML, invalidsource, real maplist.
+- Actual browser→Next BFF→Go→PG: `node test/playwright/frc05-live.cjs` PASS. Login B, create full synthetic finance-v1project, GETversion1cost, openmap, internalnavigationcalculator, verify47500000minor/groups25000000+22500000, hiddenobj2present, stablecachedresponse. Desktop1440/mobile375 no horizontaloverflow, pageErrors[]. Screenshots `/private/tmp/fortis-frc05-browser/saved-cost-{1440,375}.png` visually inspected. Developmenttools indicator and existing map glyph warnings are not runtimeexceptions; no production screenshot claim.
+- Initial browser harness used a single shared outer PGtransaction for concurrent requests and crashed; test-only BrowserServer now uses existing04 per-schema connection pool. No production repository fix inferred. SequentialFRC02PG still transaction-isolated. Root reran FRC02Postgres PASS after legacy documents metadataGET200/download404 update.
+- Live map bug RED TypeError color is not iterable → one-line indexclamp → three focused maptests PASS; `custom-layer-color.release.test.ts` remains runnable.
+- Root fullTypeScript and changedcost/map lint exit0; productionbuild `.next/frc05-build` exit0 (compile5.9s/types4.9s). Production server with loopbackHTTP returned expected configurationunavailable; stopped it, no false runtimePASS. Build auto-added tempdist typepaths; root restores own generatedtsconfig change atservercleanup.
+- Backend freshcombined FRC02/04/05 actualPG21top+11nestedPASS; purebudget +fullsuite/build/vet detailed inbackend evidence. Independent financial corpus10/10 FE/BE parity, Decimal507checksPASS.
+- Generated cost-only OpenAPI with transitive models validates (`swagger0.36.6 validate openapi.json`). Whole unrelated Swagger awaits owning09/10/13 annotations.
+
+COST01–08/10–11 puregolden+API/PG; COST09 browser; immutablehistory/revocation/cacheconcurrency PG. Original six unrelated FE baselinefailures remain tracked globally; fullfinalregression isFRC13.
+
+## Post-integration review and final regression
+
+Later review reproduced malformed draftprovenance Reactcrash and map invalidquantity reachinguncaughtlocalcost summaries. Bothfixedwithpermanenttests: selectedsourcevalidation, controlledinvalid-price label/edit guard, mapsummariesreusewholevalidatedprojection ornullwhilekeepingstructure. IndependentactualNextmapprobe quantity0 nowpageErrors[] andcontrolledretrybanner. RootChromiumcalculator10/10 plus09panel/manager13/13 PASS, changedlint andfullbuild PASS. Finalreal05browser47500000minor/groups25000000,22500000 PASS. This supersedes earlier9testcount andsourcehashes; followupmanifest records currentfiles.
+
+Observedconsole limitation: synthetic05fixture givesboth customlayers codeUSER2, causingduplicate decklayer IDs/rendererassertion logs despite distinctfinancialgroup IDs. Financialsum/identity andpageErrors assertionspass; thisisnot aclaim ofcleanmapconsole. Track duplicate-code mapadapter behavior in nextintegration review; no additionalcodechange afteruserstop. Existingglyph/emptyicon warnings also remainoutsidefinancialarithmetic.

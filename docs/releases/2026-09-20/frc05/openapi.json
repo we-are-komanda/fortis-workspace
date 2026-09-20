@@ -1,0 +1,318 @@
+{
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "Documentation for fortis-backend.",
+    "title": "fortis-backend.",
+    "version": "1.0.0"
+  },
+  "basePath": "/",
+  "paths": {
+    "/api/v1/projects/cost": {
+      "get": {
+        "description": "Выполняет полный расчёт стоимости размещённых средств защиты с группировкой\nпо эшелонам и типам.",
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "api"
+        ],
+        "summary": "Рассчитать стоимость конфигурации проекта",
+        "operationId": "calculateCost",
+        "parameters": [
+          {
+            "type": "string",
+            "x-go-name": "ProjectID",
+            "description": "ID проекта (предпочтительный параметр).",
+            "name": "projectId",
+            "in": "query"
+          },
+          {
+            "type": "string",
+            "x-go-name": "ID",
+            "description": "Совместимый alias projectId; конфликтующие значения отклоняются.",
+            "name": "id",
+            "in": "query"
+          },
+          {
+            "minimum": 1,
+            "type": "integer",
+            "format": "int64",
+            "x-go-name": "ProjectVersion",
+            "description": "Версия сохранённой ревизии; без параметра читается текущая.",
+            "name": "projectVersion",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/CostProjectionResponse"
+          },
+          "400": {
+            "description": "Bad Request — не указан ID проекта"
+          },
+          "404": {
+            "description": "Not Found — проект не найден"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CostProjection": {
+      "type": "object",
+      "title": "CostProjectionDTO — точная стоимость сохранённой ревизии в копейках RUB.",
+      "properties": {
+        "byLayer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CostGroupDTO"
+          },
+          "x-go-name": "ByLayer"
+        },
+        "byType": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CostGroupDTO"
+          },
+          "x-go-name": "ByType"
+        },
+        "currency": {
+          "type": "string",
+          "x-go-name": "Currency"
+        },
+        "identity": {
+          "$ref": "#/definitions/CalculationIdentityDTO"
+        },
+        "isComplete": {
+          "type": "boolean",
+          "x-go-name": "IsComplete"
+        },
+        "knownSubtotalMinor": {
+          "type": "string",
+          "x-go-name": "KnownSubtotalMinor"
+        },
+        "lines": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/FinancialLineDTO"
+          },
+          "x-go-name": "Lines"
+        },
+        "totalMinor": {
+          "type": "string",
+          "x-go-name": "TotalMinor"
+        },
+        "unknownPriceObjectIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "UnknownPriceObjectIDs"
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CostIssueDTO"
+          },
+          "x-go-name": "Warnings"
+        }
+      },
+      "x-go-name": "CostProjectionDTO",
+      "x-go-package": "github.com/fortis/backend/internal/modules/budget/ui"
+    },
+    "FinancialLineDTO": {
+      "type": "object",
+      "properties": {
+        "assetId": {
+          "type": "string",
+          "x-go-name": "AssetID"
+        },
+        "category": {
+          "type": "string",
+          "x-go-name": "Category"
+        },
+        "layerId": {
+          "type": "string",
+          "x-go-name": "LayerID"
+        },
+        "lineTotalMinor": {
+          "type": "string",
+          "x-go-name": "LineTotalMinor"
+        },
+        "name": {
+          "type": "string",
+          "x-go-name": "Name"
+        },
+        "objectId": {
+          "type": "string",
+          "x-go-name": "ObjectID"
+        },
+        "priceSource": {
+          "type": "string",
+          "x-go-name": "PriceSource"
+        },
+        "provenance": {
+          "$ref": "#/definitions/CostDataProvenanceDTO"
+        },
+        "quantity": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "Quantity"
+        },
+        "unitPriceMinor": {
+          "type": "string",
+          "x-go-name": "UnitPriceMinor"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/budget/ui"
+    },
+    "CostIssueDTO": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "x-go-name": "Code"
+        },
+        "message": {
+          "type": "string",
+          "x-go-name": "Message"
+        },
+        "objectIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "x-go-name": "ObjectIDs"
+        },
+        "severity": {
+          "type": "string",
+          "x-go-name": "Severity"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/budget/ui"
+    },
+    "CostDataProvenanceDTO": {
+      "type": "object",
+      "properties": {
+        "quality": {
+          "type": "string",
+          "x-go-name": "Quality"
+        },
+        "recordedAt": {
+          "type": "string",
+          "x-go-name": "RecordedAt"
+        },
+        "recordedBy": {
+          "type": "string",
+          "x-go-name": "RecordedBy"
+        },
+        "revision": {
+          "type": "string",
+          "x-go-name": "Revision"
+        },
+        "sourceDate": {
+          "type": "string",
+          "x-go-name": "SourceDate"
+        },
+        "sourceDocumentChecksum": {
+          "type": "string",
+          "x-go-name": "SourceDocumentChecksum"
+        },
+        "sourceDocumentId": {
+          "type": "string",
+          "x-go-name": "SourceDocumentID"
+        },
+        "sourceDocumentRevision": {
+          "type": "string",
+          "x-go-name": "SourceDocumentRevision"
+        },
+        "sourceLabel": {
+          "type": "string",
+          "x-go-name": "SourceLabel"
+        },
+        "sourceUrl": {
+          "type": "string",
+          "x-go-name": "SourceURL"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/budget/ui"
+    },
+    "CalculationIdentityDTO": {
+      "type": "object",
+      "properties": {
+        "calculationVersion": {
+          "type": "string",
+          "x-go-name": "CalculationVersion"
+        },
+        "inputDataVersions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "x-go-name": "InputDataVersions"
+        },
+        "projectId": {
+          "type": "string",
+          "x-go-name": "ProjectID"
+        },
+        "projectVersion": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "ProjectVersion"
+        },
+        "snapshotDigest": {
+          "type": "string",
+          "x-go-name": "SnapshotDigest"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/budget/ui"
+    },
+    "CostGroupDTO": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "x-go-name": "ID"
+        },
+        "knownSubtotalMinor": {
+          "type": "string",
+          "x-go-name": "KnownSubtotalMinor"
+        },
+        "name": {
+          "type": "string",
+          "x-go-name": "Name"
+        },
+        "objectCount": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "ObjectCount"
+        },
+        "totalMinor": {
+          "type": "string",
+          "x-go-name": "TotalMinor"
+        },
+        "unitCount": {
+          "type": "integer",
+          "format": "int64",
+          "x-go-name": "UnitCount"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/budget/ui"
+    }
+  },
+  "responses": {
+    "CostProjectionResponse": {
+      "description": "",
+      "schema": {
+        "$ref": "#/definitions/CostProjection"
+      }
+    }
+  },
+  "parameters": {}
+}

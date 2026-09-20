@@ -1,0 +1,125 @@
+{
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "Documentation for fortis-backend.",
+    "title": "fortis-backend.",
+    "version": "1.0.0"
+  },
+  "basePath": "/",
+  "paths": {
+    "/api/v1/demo-requests": {
+      "post": {
+        "description": "Сохраняет заявку и уведомление атомарно; повтор ключа возвращает прежний номер.",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "tags": [
+          "demoRequests"
+        ],
+        "summary": "Приём заявки на демонстрацию",
+        "operationId": "submitDemoRequest",
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DemoRequestInput"
+            }
+          },
+          {
+            "type": "string",
+            "x-go-name": "IdempotencyKey",
+            "name": "Idempotency-Key",
+            "in": "header",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/DemoRequestAccepted"
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/DemoRequestAccepted"
+            }
+          },
+          "400": {
+            "description": "Некорректные поля"
+          },
+          "403": {
+            "description": "Запрещённый источник запроса"
+          },
+          "409": {
+            "description": "Конфликт ключа идемпотентности"
+          },
+          "413": {
+            "description": "Превышен размер тела"
+          },
+          "429": {
+            "description": "Превышен лимит заявок"
+          },
+          "503": {
+            "description": "Приём заявок недоступен"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "DemoRequestInput": {
+      "type": "object",
+      "properties": {
+        "comment": {
+          "type": "string",
+          "x-go-name": "Comment"
+        },
+        "consent": {
+          "type": "boolean",
+          "x-go-name": "Consent"
+        },
+        "consentVersion": {
+          "type": "string",
+          "x-go-name": "ConsentVersion"
+        },
+        "email": {
+          "type": "string",
+          "x-go-name": "Email"
+        },
+        "name": {
+          "type": "string",
+          "x-go-name": "Name"
+        },
+        "organization": {
+          "type": "string",
+          "x-go-name": "Organization"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/demo_request/ui"
+    },
+    "DemoRequestAccepted": {
+      "type": "object",
+      "properties": {
+        "requestId": {
+          "type": "string",
+          "x-go-name": "RequestID"
+        },
+        "status": {
+          "type": "string",
+          "x-go-name": "Status"
+        }
+      },
+      "x-go-package": "github.com/fortis/backend/internal/modules/demo_request/ui"
+    }
+  }
+}

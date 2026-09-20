@@ -1,3 +1,5 @@
+> Active autonomous run authority: the current user authorized FRC03–14 without per-spec approval. Historical statements below that stop after FRC00/01/02 describe earlier runs. Current decisions are in the **Autonomous FRC03–14 addenda** and [autonomous-run](autonomous-run.md). Code acceptance does not promote production/runtime acceptance.
+
 # FRC-00 — исходный комплект и матрица приёмки
 
 Дата: 2026-09-20. Исходный baseline согласован пользователем. Изменения FRC-00
@@ -198,3 +200,29 @@ Latest FRC-02 status: **Implemented / code-level verification passed / productio
 Evidence: [implementation report](frc02/implementation-report.md), [route matrix](frc02/authorization-matrix.md), [commands/logs](frc02/test-evidence.md), [incremental file inventory](frc02/changed-files.md), [orphan inventory](frc02/orphan-inventory.md). Independent review found one stale frontend error race; reproduced in five cases and fixed RED→GREEN. No backend authorization bypass found by that review; this is not a production security audit.
 
 FRC-00 remains Implemented / Acceptance blocked by runtime evidence. FRC-01 remains Implemented / code-level acceptance passed / runtime acceptance blocked. No FRC-03, commit, push, deployment or production migrations.
+
+# Autonomous FRC03–14 addenda
+
+## FRC-11 — CODE PASS / RUNTIME BLOCKED
+
+Reviewer root; code acceptance2026-09-20. COPY01/02/03/05/06/07 PASS within local checks; COPY04 local demo marker PASS, production origin/cookie/storage separation BLOCKED. FRC11 focused20/20 plus latest4/4, typecheck/lint/build PASS. Real Chromium:6 widths and11 blocked direct routes, actual synthetic PG-backed login, no console errors/overflow. Hidden offscreen CTA review defect fixed. Capability manifest keeps unaccepted financial/version functions not_released.
+
+Evidence: [implementation](frc11/implementation-report.md), [tests](frc11/test-evidence.md), [files](frc11/changed-files.md), [working source hashes](frc11/source-manifest.json). No production deployment; source and UI are local candidates.
+
+## FRC-04 — CODE PASS / RUNTIME BLOCKED
+
+REV01–10 and scoped project audit PASS. PostgreSQL15 top-level+8 nested (includes FRC02); full Go243+84 and unit-tag275+84 PASS with21 explicit opt-in skips, separately run relevant SQL; build/vet PASS. FE round-trip3/3 including actual DB output, focused boundary regressions, types/lint/build PASS. Independent reviewer reproduced and closed geometry panic and expired receipt race; no open findings. Scoped generated OpenAPI validates; whole API legacy annotations outside04/12 tracked forFRC13. Production migration/deployed retention/runtime evidence remains blocked.
+
+[Implementation](frc04/implementation-report.md) · [tests](frc04/test-evidence.md) · [files](frc04/changed-files.md) · [source hashes](frc04/source-manifest.json) · [OpenAPI](frc04/openapi.json). Root grants code acceptance and FRC05/09 implementation dependency is satisfied; FRC07 budget enforcement remains downstream.
+
+## Autonomous FRC12 acceptance —2026-09-20
+
+**CODE PASS / RUNTIME BLOCKED.** LEAD01–10 local evidence, independent review and actual browser→BFF→Go→PostgreSQL retry/receipt verified. See [implementation](frc12/implementation-report.md), [tests](frc12/test-evidence.md), [runtime gates](frc12/runtime-configuration.md). Publication remains disabled pending owner policy and actual SMTP/alert/TLS/ingress evidence.
+
+## FRC05 root code acceptance — 2026-09-20
+
+**CODE PASS / RUNTIME BLOCKED.** COST01–11: exactminor sharedgolden, FE/BEparity, immutablePGcache andauthorization, onepinnedsavedprojection/all-draft UI. Actualbrowser/BFF/Go/PG475000rub, hiddenrows andcustomlayers; Chromium9/9 late/error/zero/null regressions; types/lint/productionbuild/scopedSwaggerPASS. No newunexplained05failure. ProductionTLS/toolchain/migrations remainFRC13/14. [Implementation](frc05/implementation-report.md), [tests](frc05/test-evidence.md), [files](frc05/changed-files.md), [hashes](frc05/source-manifest.json). FRC06 code dependency satisfied. No push/deploy/productionmigration.
+
+## FRC09 root code acceptance —2026-09-20
+
+**CODE PASS / RUNTIME BLOCKED.** DATA01–10: provenance/typedcardroundtrip, explicitrefresh, immutableprivatedocuments, quarantine+auth+audit, actualbrowserfilebytes andforeign404. Rootchangedlint/build/scopedOpenAPI PASS; combinedChromium23/23, Node23/23, actualPG/racetests passed. [Report](frc09/implementation-report.md), [tests](frc09/test-evidence.md), [files](frc09/changed-files.md), [hashes](frc09/source-manifest.json). Real scanner/storage/retention/TLS/productionmigration remain FRC14. Userrequested stopafter09; FRC06partial, whole release notaccepted.
