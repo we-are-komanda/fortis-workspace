@@ -1,0 +1,14 @@
+Progress: resolved 1, reused 0, downloaded 0, added 0
+ ERR_PNPM_NO_MATCHING_VERSION  No matching version found for @tailwindcss/postcss@^4.2.4 while fetching it from https://registry.npmjs.org/
+
+This error happened while installing a direct dependency of /Users/rr/Documents/Fortis/frontend
+
+The latest release of @tailwindcss/postcss is "4.2.1".
+
+Other releases are:
+  * internal: 0.0.0-internal.b2586d4e
+  * next: 4.0.0
+  * insiders: 0.0.0-insiders.ad9fdef
+
+If you need the full list of all 749 published versions run "$ pnpm view @tailwindcss/postcss versions".
+ WARN  deprecated eslint@9.39.4: This version is no longer supported. Please see https://eslint.org/version-support for other options.

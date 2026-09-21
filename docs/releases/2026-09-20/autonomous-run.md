@@ -166,3 +166,8 @@ User explicitly asked to finishnearesttaskthenstop. Root completedFRC09 acceptan
 ## Resume 2026-09-21 — FRC06 accepted locally
 
 Current request supersedes stopped checkpoints. All four origins synchronized; `045db0d`/`6bf246e` retained. FRC06 local staged PASS:30criteria, focused48, browser13, live realPG six checkpoints, independent review7closed, types/lint/build pass. Full250=201pass/6 exact historical fail/43opt-in skip. SAVE09 gated N/A and mandatory FRC10, not report PASS. Frontend `a56d128e715ed09387428ad3dd67434d18855dd5`. See frc06/recovery-checkpoint and test-evidence. Next chain03→verticalgate→07→08→10→13→14, local commits authorized/no push. User DB/root/root2 unchanged. Owned BE8092 stopped and schema cleaned; PG55434/Next3111 retained, user8090/3000 untouched.
+
+
+## FRC-07 — local acceptance,2026-09-21
+
+**PASS локального этапа.** Server-owned immutable budget, exact shared Commit gate, explicit pinned-source clone, unlimited import, lower-limit/non-increasing-overage semantics. BUD01–18 PASS under ADR-0023/user override. Actual Next→Go→disposablePG seven checkpoints PASS, originalv1→11/copyv1/importv1,0console/pageerrors. Frontend focused61/61; rendered56/56 including17budget; full314=232PASS/6exacthistoricalFAIL/76opt-inSKIP; full signatures6/6 unchanged. Types/lint/buildPASS with frozen manifest+lock Next16.2.11;420 source hashes verified. FullGo/build and realPG26top-level+20subcasesPASS. Independent review has no open findings. Pre13 stable deck layer.id RED→GREEN also recorded; FRC13 is not yet accepted. Evidence: docs/releases/2026-09-20/frc07/test-evidence.md. No new migrations, user5432/root/root2 mutations, push or deployment. Next08→10→13→14.

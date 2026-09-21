@@ -1,5 +1,21 @@
 # FRC-07 backend implementation plan and recovery checkpoint
 
+## Active execution agreement — 2026-09-21
+
+FRC03 and real vertical gate accepted at parent7de854b, frontend e49253b, backend5a4a6d5, KB4cd6ff1. FRC07 implementation is now authorized. User continuation supersedes the historical STOP and undecided proposals below. Read ADR-0023 before using this plan: new/importunlimited; explicit accessible pinned budgetSource only for create/clone; reducedlimit overage allowed followed by non-increasing/reducing writes; reasonCode non_increasing_overage. No migration expected, no new dependency. Existing Commit remains one atomic authority.
+
+Ownership: backend implementation/tests — integration_research; frontend production/focusedtests — frc06_acceptance_tests; independent plans/renderedtests/review — frc06_verification; root — ADR, shared agreement, actual integration and acceptance. Root handles approved Chromium/PG runs if an agent approval call is unavailable by account limit. Child commits only after accepted stage, then parent pointers; no push/deploy.
+
+Execution checklist:
+- [ ] RED→GREEN pure budget rules: exact equality/onekopeck/zero, unknown, loweredlimit nonincrease.
+- [ ] Shared Commit authority and explicit clone source digest/access; atomic rollback/concurrentCAS PG evidence.
+- [ ] Pinned budget read, readonly candidatecheck and canonical budgetPUT with currentversion receipt.
+- [ ] Existing FE save pipeline supports budget update/retry/recovery, reusable UI and honest projected/full costs.
+- [ ] Independent browser/API tests, real Next→Go→PG budget scenario, full regressions/types/lint/build.
+- [ ] Final review, criteria/docs/KB, childcommits thenparent.
+
+The remainder records the original research state, including superseded alternatives; it is not current authority.
+
 > Research only, 2026-09-20. Implementation NOT STARTED. Parent authorized investigation only pending FRC-06 acceptance; the user subsequently instructed the team to finish its nearest task and STOP. No FRC-07 code, tests, migration or runtime changes were made. Resume only on new authorization.
 >
 > For agentic workers: use the approved native implementation/review workflow and TDD after GO. No commits, pushes or deployment are authorized by this plan.

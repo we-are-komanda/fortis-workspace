@@ -72,7 +72,7 @@ export type BudgetCheckRequest = { version: number; projectJson: string };
 export type BudgetCheckResponse = {
   basedOn: ProjectRef;
   status: "allowed" | "blocked";
-  reasonCode: "within_budget" | "unlimited" | "budget_exceeded" | "price_unknown";
+  reasonCode: "within_budget" | "non_increasing_overage" | "unlimited" | "budget_exceeded" | "price_unknown";
   projectedSpentMinor: string | null;
   projectedRemainingMinor: string | null;
 };

@@ -1,0 +1,23 @@
+=== RUN   TestFRC07PostgresAtomicBudgetGate
+    frc07_postgres_test.go:27: 
+        	Error Trace:	/Users/rr/Documents/Fortis/backend/cmd/app/frc04_postgres_test.go:527
+        	            				/Users/rr/Documents/Fortis/backend/cmd/app/frc07_postgres_test.go:27
+        	Error:      	Not equal: 
+        	            	expected: 200
+        	            	actual  : 400
+        	Test:       	TestFRC07PostgresAtomicBudgetGate
+        	Messages:   	{"status":"error","errors":[{"name":"validation_error","value":"id query parameter is required"}]}
+--- FAIL: TestFRC07PostgresAtomicBudgetGate (0.23s)
+=== RUN   TestFRC07PostgresConcurrentBudgetGate
+    frc07_postgres_test.go:58: 
+        	Error Trace:	/Users/rr/Documents/Fortis/backend/cmd/app/frc04_postgres_test.go:527
+        	            				/Users/rr/Documents/Fortis/backend/cmd/app/frc07_postgres_test.go:58
+        	Error:      	Not equal: 
+        	            	expected: 200
+        	            	actual  : 400
+        	Test:       	TestFRC07PostgresConcurrentBudgetGate
+        	Messages:   	{"status":"error","errors":[{"name":"validation_error","value":"id query parameter is required"}]}
+--- FAIL: TestFRC07PostgresConcurrentBudgetGate (0.24s)
+FAIL
+FAIL	github.com/fortis/backend/cmd/app	1.139s
+FAIL

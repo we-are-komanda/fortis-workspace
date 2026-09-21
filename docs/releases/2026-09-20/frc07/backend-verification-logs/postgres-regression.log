@@ -1,0 +1,94 @@
+=== RUN   TestFRC02Postgres
+=== RUN   TestFRC02Postgres/A
+=== RUN   TestFRC02Postgres/B
+--- PASS: TestFRC02Postgres (1.30s)
+    --- PASS: TestFRC02Postgres/A (0.05s)
+    --- PASS: TestFRC02Postgres/B (0.03s)
+=== RUN   TestFRC03PostgresProvision
+=== RUN   TestFRC03PostgresProvision/missing_user_rolls_back
+=== RUN   TestFRC03PostgresProvision/membership_failure_rolls_back_enterprise
+=== RUN   TestFRC03PostgresProvision/concurrent_exact_retries_create_one_pair
+=== RUN   TestFRC03PostgresProvision/successful_retry_does_not_change_data_or_log_input
+=== RUN   TestFRC03PostgresProvision/changed_details_or_recipient_conflict_without_mutations
+=== RUN   TestFRC03PostgresProvision/retry_cannot_restore_revoked_membership
+--- PASS: TestFRC03PostgresProvision (0.44s)
+    --- PASS: TestFRC03PostgresProvision/missing_user_rolls_back (0.00s)
+    --- PASS: TestFRC03PostgresProvision/membership_failure_rolls_back_enterprise (0.00s)
+    --- PASS: TestFRC03PostgresProvision/concurrent_exact_retries_create_one_pair (0.03s)
+    --- PASS: TestFRC03PostgresProvision/successful_retry_does_not_change_data_or_log_input (0.00s)
+    --- PASS: TestFRC03PostgresProvision/changed_details_or_recipient_conflict_without_mutations (0.00s)
+    --- PASS: TestFRC03PostgresProvision/retry_cannot_restore_revoked_membership (0.00s)
+=== RUN   TestFRC03PostgresConfigurationName
+--- PASS: TestFRC03PostgresConfigurationName (0.54s)
+=== RUN   TestFRC04PostgresCASAndRollback
+=== RUN   TestFRC04PostgresCASAndRollback/two_writers_same_version
+=== RUN   TestFRC04PostgresCASAndRollback/revision_failure_rolls_back_current_budget_and_version
+--- PASS: TestFRC04PostgresCASAndRollback (0.49s)
+    --- PASS: TestFRC04PostgresCASAndRollback/two_writers_same_version (0.01s)
+    --- PASS: TestFRC04PostgresCASAndRollback/revision_failure_rolls_back_current_budget_and_version (0.02s)
+=== RUN   TestFRC04PostgresFrontendFixture
+--- PASS: TestFRC04PostgresFrontendFixture (1.32s)
+=== RUN   TestFRC04PostgresReplayScopesExpiryAndAccess
+--- PASS: TestFRC04PostgresReplayScopesExpiryAndAccess (0.50s)
+=== RUN   TestFRC04PostgresLegacyBackfill
+--- PASS: TestFRC04PostgresLegacyBackfill (0.14s)
+=== RUN   TestFRC04PostgresFreezesActualTemplateAndBudget
+--- PASS: TestFRC04PostgresFreezesActualTemplateAndBudget (0.48s)
+=== RUN   TestFRC04PostgresLegacyGeometryDefaults
+=== RUN   TestFRC04PostgresLegacyGeometryDefaults/circle
+=== RUN   TestFRC04PostgresLegacyGeometryDefaults/ring
+--- PASS: TestFRC04PostgresLegacyGeometryDefaults (1.07s)
+    --- PASS: TestFRC04PostgresLegacyGeometryDefaults/circle (0.03s)
+    --- PASS: TestFRC04PostgresLegacyGeometryDefaults/ring (0.02s)
+=== RUN   TestFRC04PostgresConcurrentIdempotency
+--- PASS: TestFRC04PostgresConcurrentIdempotency (1.26s)
+=== RUN   TestFRC04PostgresConcurrentExpiredIdempotency
+--- PASS: TestFRC04PostgresConcurrentExpiredIdempotency (1.57s)
+=== RUN   TestFRC04PostgresMembershipRecheckedInsideWrite
+--- PASS: TestFRC04PostgresMembershipRecheckedInsideWrite (1.84s)
+=== RUN   TestFRC04PostgresDeletingIdentityDoesNotRewriteRevisions
+--- PASS: TestFRC04PostgresDeletingIdentityDoesNotRewriteRevisions (1.98s)
+=== RUN   TestFRC04PostgresAuditAtomicity
+--- PASS: TestFRC04PostgresAuditAtomicity (2.11s)
+=== RUN   TestFRC04PostgresRevisionAndIdempotency
+=== RUN   TestFRC04PostgresRevisionAndIdempotency/immutable_revision
+=== RUN   TestFRC04PostgresRevisionAndIdempotency/idempotent_replay
+--- PASS: TestFRC04PostgresRevisionAndIdempotency (1.71s)
+    --- PASS: TestFRC04PostgresRevisionAndIdempotency/immutable_revision (0.02s)
+    --- PASS: TestFRC04PostgresRevisionAndIdempotency/idempotent_replay (0.01s)
+=== RUN   TestFRC05PostgresLegacyBindingMigration
+--- PASS: TestFRC05PostgresLegacyBindingMigration (0.52s)
+=== RUN   TestFRC05PostgresConcurrentCacheAndAccess
+--- PASS: TestFRC05PostgresConcurrentCacheAndAccess (1.48s)
+=== RUN   TestFRC05PostgresFrozenAlgorithmBinding
+--- PASS: TestFRC05PostgresFrozenAlgorithmBinding (1.41s)
+=== RUN   TestFRC05PostgresMoneyValidationAndNumericStorage
+=== RUN   TestFRC05PostgresMoneyValidationAndNumericStorage/unknown
+=== RUN   TestFRC05PostgresMoneyValidationAndNumericStorage/invalid
+=== RUN   TestFRC05PostgresMoneyValidationAndNumericStorage/large
+--- PASS: TestFRC05PostgresMoneyValidationAndNumericStorage (1.22s)
+    --- PASS: TestFRC05PostgresMoneyValidationAndNumericStorage/unknown (0.02s)
+    --- PASS: TestFRC05PostgresMoneyValidationAndNumericStorage/invalid (0.00s)
+    --- PASS: TestFRC05PostgresMoneyValidationAndNumericStorage/large (0.02s)
+=== RUN   TestFRC05PostgresFrozenProjection
+--- PASS: TestFRC05PostgresFrozenProjection (0.78s)
+=== RUN   TestFRC05PostgresFrozenSourceProvenance
+--- PASS: TestFRC05PostgresFrozenSourceProvenance (1.13s)
+=== RUN   TestFRC07PostgresAtomicBudgetGate
+--- PASS: TestFRC07PostgresAtomicBudgetGate (0.96s)
+=== RUN   TestFRC07PostgresConcurrentBudgetGate
+--- PASS: TestFRC07PostgresConcurrentBudgetGate (0.55s)
+=== RUN   TestFRC07PostgresUnknownZeroAndValidation
+--- PASS: TestFRC07PostgresUnknownZeroAndValidation (0.95s)
+=== RUN   TestFRC07PostgresCloneAuthorityAndReplay
+--- PASS: TestFRC07PostgresCloneAuthorityAndReplay (0.66s)
+=== RUN   TestFRC07PostgresRollbackAndBudgetRace
+=== RUN   TestFRC07PostgresRollbackAndBudgetRace/rollback_budget_configs
+=== RUN   TestFRC07PostgresRollbackAndBudgetRace/rollback_project_revisions
+=== RUN   TestFRC07PostgresRollbackAndBudgetRace/rollback_audit_events
+--- PASS: TestFRC07PostgresRollbackAndBudgetRace (0.85s)
+    --- PASS: TestFRC07PostgresRollbackAndBudgetRace/rollback_budget_configs (0.02s)
+    --- PASS: TestFRC07PostgresRollbackAndBudgetRace/rollback_project_revisions (0.02s)
+    --- PASS: TestFRC07PostgresRollbackAndBudgetRace/rollback_audit_events (0.01s)
+PASS
+ok  	github.com/fortis/backend/cmd/app	28.085s

@@ -1,0 +1,9 @@
+2026/09/21 13:25:16 INFO environment=dev
+2026/09/21 13:25:16 INFO work_mode=enterprise-provision
+{"name":"Trusted CLI and ordinary UI create an unlimited server project","projectId":"d982aa31-7b02-4a44-b859-ee7cbd3e62af","enterpriseId":"46ee58f2-4889-4229-b324-4aee5f52c214"}
+{"name":"Actual budget UI sets 500000 RUB over exact saved 475000 RUB; check is read-only","version":3}
+{"name":"One kopeck excess is blocked without mutation; exact equality saves","version":4}
+{"name":"Lower limit creates a version; flat and reducing costs save; increasing overage is rejected","version":8}
+{"name":"Ordinary Save as new names an accessible pinned source; clone budget stays independent","sourceProjectId":"d982aa31-7b02-4a44-b859-ee7cbd3e62af","sourceVersion":8,"cloneProjectId":"f32afa07-c1be-4945-b137-a49a79bddb3a","cloneVersion":1}
+{"name":"Import is unlimited; limited unknown is rejected; unlimited unknown remains null in real calculator","importedProjectId":"e3f05010-c235-4b7f-9e08-60c9997ff617","projectId":"d982aa31-7b02-4a44-b859-ee7cbd3e62af","version":11}
+{"name":"Second identity cannot obtain budget or candidate price details","status":404}

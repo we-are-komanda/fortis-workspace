@@ -1,0 +1,80 @@
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Progress: resolved 2, reused 0, downloaded 0, added 0
+Progress: resolved 4, reused 0, downloaded 0, added 0
+Progress: resolved 5, reused 0, downloaded 0, added 0
+ WARN  deprecated eslint@9.39.4: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Progress: resolved 8, reused 0, downloaded 0, added 0
+ WARN  Request took 10067ms: https://registry.npmjs.org/tsx
+Progress: resolved 9, reused 0, downloaded 0, added 0
+ WARN  Request took 11287ms: https://registry.npmjs.org/@storybook%2Fnextjs-vite
+ WARN  Request took 11506ms: https://registry.npmjs.org/@storybook%2Ftest-runner
+ WARN  Request took 11616ms: https://registry.npmjs.org/@types%2Freact
+ WARN  Request took 11678ms: https://registry.npmjs.org/@tailwindcss%2Fpostcss
+Progress: resolved 13, reused 0, downloaded 0, added 0
+Progress: resolved 14, reused 0, downloaded 0, added 0
+Progress: resolved 15, reused 0, downloaded 0, added 0
+ WARN  Request took 14356ms: https://registry.npmjs.org/clsx
+ WARN  Request took 14386ms: https://registry.npmjs.org/class-variance-authority
+Progress: resolved 19, reused 0, downloaded 0, added 0
+ WARN  Request took 16710ms: https://registry.npmjs.org/storybook
+Progress: resolved 20, reused 0, downloaded 0, added 0
+ WARN  GET https://registry.npmjs.org/@deck.gl%2Fcore error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@deck.gl%2Freact error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+ WARN  GET https://registry.npmjs.org/@ant-design%2Fnextjs-registry error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+Progress: resolved 21, reused 0, downloaded 0, added 0
+ WARN  Request took 18647ms: https://registry.npmjs.org/dayjs
+ WARN  Request took 19386ms: https://registry.npmjs.org/@deck.gl%2Flayers
+ WARN  Request took 19445ms: https://registry.npmjs.org/@deck.gl%2Fgeo-layers
+ WARN  Request took 19482ms: https://registry.npmjs.org/@tanstack%2Freact-query
+Progress: resolved 27, reused 0, downloaded 0, added 0
+Progress: resolved 28, reused 0, downloaded 0, added 0
+ WARN  Request took 21206ms: https://registry.npmjs.org/lucide-react
+ WARN  Request took 21605ms: https://registry.npmjs.org/@react-three%2Ffiber
+Progress: resolved 30, reused 0, downloaded 0, added 0
+ WARN  Request took 23501ms: https://registry.npmjs.org/antd
+Progress: resolved 31, reused 0, downloaded 0, added 0
+ WARN  Request took 24897ms: https://registry.npmjs.org/tailwindcss
+Progress: resolved 32, reused 0, downloaded 0, added 0
+ WARN  Request took 25756ms: https://registry.npmjs.org/@playwright%2Ftest
+ WARN  Request took 14326ms: https://registry.npmjs.org/three
+Progress: resolved 34, reused 0, downloaded 0, added 0
+ WARN  Request took 27653ms: https://registry.npmjs.org/@types%2Fnode
+Progress: resolved 35, reused 0, downloaded 0, added 0
+ WARN  Request took 27996ms: https://registry.npmjs.org/@ant-design%2Fnextjs-registry
+Progress: resolved 36, reused 0, downloaded 0, added 0
+ WARN  Request took 20772ms: https://registry.npmjs.org/react-map-gl
+Progress: resolved 37, reused 0, downloaded 0, added 0
+ WARN  Request took 30871ms: https://registry.npmjs.org/@deck.gl%2Freact
+Progress: resolved 38, reused 0, downloaded 0, added 0
+ WARN  Request took 36430ms: https://registry.npmjs.org/@react-three%2Fdrei
+Progress: resolved 39, reused 0, downloaded 0, added 0
+ WARN  Request took 40059ms: https://registry.npmjs.org/typescript
+Progress: resolved 40, reused 0, downloaded 0, added 0
+ WARN  Request took 44248ms: https://registry.npmjs.org/@deck.gl%2Fcore
+Progress: resolved 41, reused 0, downloaded 0, added 0
+Progress: resolved 61, reused 0, downloaded 0, added 0
+Progress: resolved 101, reused 0, downloaded 0, added 0
+Progress: resolved 128, reused 0, downloaded 0, added 0
+Progress: resolved 168, reused 0, downloaded 0, added 0
+Progress: resolved 267, reused 0, downloaded 0, added 0
+Progress: resolved 435, reused 0, downloaded 0, added 0
+Progress: resolved 661, reused 0, downloaded 0, added 0
+Progress: resolved 692, reused 0, downloaded 0, added 0
+Progress: resolved 978, reused 0, downloaded 0, added 0
+Progress: resolved 1257, reused 0, downloaded 0, added 0
+Progress: resolved 1340, reused 0, downloaded 0, added 0
+Progress: resolved 1366, reused 0, downloaded 0, added 0
+ WARN  Request took 11559ms: https://registry.npmjs.org/typescript-eslint
+Progress: resolved 1374, reused 0, downloaded 0, added 0
+Progress: resolved 1393, reused 0, downloaded 0, added 0
+Progress: resolved 1412, reused 0, downloaded 0, added 0
+Progress: resolved 1416, reused 0, downloaded 0, added 0
+Progress: resolved 1432, reused 0, downloaded 0, added 0
+Progress: resolved 1474, reused 0, downloaded 0, added 0
+Progress: resolved 1491, reused 0, downloaded 0, added 0
+Progress: resolved 1501, reused 0, downloaded 0, added 0
+ WARN  9 deprecated subdependencies found: expect-playwright@0.8.0, glob@10.5.0, glob@7.2.3, inflight@1.0.6, jest-process-manager@0.4.0, node-domexception@1.0.0, rimraf@3.0.2, tsconfck@3.1.6, uuid@8.3.2
+Progress: resolved 1522, reused 0, downloaded 0, added 0
+Progress: resolved 1522, reused 0, downloaded 0, added 0, done
+
+Done in 1m 8.6s using pnpm v10.26.1

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "env",
+    "GOTOOLCHAIN=local",
+    "GOPROXY=off",
+    "GOCACHE=/private/tmp/frc07-independent-gocache",
+    "go",
+    "test",
+    "./internal/modules/budget/...",
+    "./internal/modules/defense_project/..."
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/backend",
+  "exitCode": 0,
+  "capture": "Tool PTY output transcribed with whitespace normalized; no PostgreSQL integration in this command."
+}
