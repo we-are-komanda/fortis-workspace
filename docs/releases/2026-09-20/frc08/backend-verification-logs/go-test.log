@@ -1,0 +1,43 @@
+ok  	github.com/fortis/backend/cmd/app	3.119s
+?   	github.com/fortis/backend/internal/audit	[no test files]
+ok  	github.com/fortis/backend/internal/auth	(cached)
+ok  	github.com/fortis/backend/internal/config	(cached)
+?   	github.com/fortis/backend/internal/db	[no test files]
+?   	github.com/fortis/backend/internal/metrics	[no test files]
+ok  	github.com/fortis/backend/internal/middleware	(cached)
+ok  	github.com/fortis/backend/internal/modules/budget/application	2.145s
+ok  	github.com/fortis/backend/internal/modules/budget/document	(cached)
+ok  	github.com/fortis/backend/internal/modules/budget/domain	0.560s
+?   	github.com/fortis/backend/internal/modules/budget/infrastructure	[no test files]
+ok  	github.com/fortis/backend/internal/modules/budget/ui	1.787s
+ok  	github.com/fortis/backend/internal/modules/defense_asset/application	(cached)
+ok  	github.com/fortis/backend/internal/modules/defense_asset/domain	(cached)
+ok  	github.com/fortis/backend/internal/modules/defense_asset/infrastructure	(cached)
+ok  	github.com/fortis/backend/internal/modules/defense_asset/ui	(cached)
+ok  	github.com/fortis/backend/internal/modules/defense_project/application	(cached)
+ok  	github.com/fortis/backend/internal/modules/defense_project/document	(cached)
+ok  	github.com/fortis/backend/internal/modules/defense_project/domain	(cached)
+ok  	github.com/fortis/backend/internal/modules/defense_project/infrastructure	(cached)
+ok  	github.com/fortis/backend/internal/modules/defense_project/ui	(cached)
+?   	github.com/fortis/backend/internal/modules/demo_request/application	[no test files]
+ok  	github.com/fortis/backend/internal/modules/demo_request/domain	(cached)
+ok  	github.com/fortis/backend/internal/modules/demo_request/infrastructure	(cached)
+?   	github.com/fortis/backend/internal/modules/demo_request/ui	[no test files]
+ok  	github.com/fortis/backend/internal/modules/enterprise/application	(cached)
+ok  	github.com/fortis/backend/internal/modules/enterprise/domain	(cached)
+?   	github.com/fortis/backend/internal/modules/enterprise/infrastructure	[no test files]
+ok  	github.com/fortis/backend/internal/modules/enterprise/ui	(cached)
+?   	github.com/fortis/backend/internal/modules/platform/application	[no test files]
+?   	github.com/fortis/backend/internal/modules/platform/domain	[no test files]
+?   	github.com/fortis/backend/internal/modules/platform/infrastructure	[no test files]
+?   	github.com/fortis/backend/internal/modules/platform/ui	[no test files]
+ok  	github.com/fortis/backend/internal/modules/report/application	2.516s
+?   	github.com/fortis/backend/internal/modules/report/domain	[no test files]
+ok  	github.com/fortis/backend/internal/modules/report/ui	2.903s
+ok  	github.com/fortis/backend/internal/modules/user/application	(cached)
+ok  	github.com/fortis/backend/internal/modules/user/domain	(cached)
+?   	github.com/fortis/backend/internal/modules/user/infrastructure	[no test files]
+ok  	github.com/fortis/backend/internal/modules/user/ui	(cached)
+ok  	github.com/fortis/backend/internal/probe	(cached)
+?   	github.com/fortis/backend/internal/rdbms	[no test files]
+ok  	github.com/fortis/backend/pkg/handlers	(cached)

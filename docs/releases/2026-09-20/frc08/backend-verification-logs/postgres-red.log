@@ -1,0 +1,13 @@
+=== RUN   TestFRC08PostgresPinnedComparison
+    frc08_postgres_test.go:36: 
+        	Error Trace:	/Users/rr/Documents/Fortis/backend/cmd/app/frc04_postgres_test.go:535
+        	            				/Users/rr/Documents/Fortis/backend/cmd/app/frc08_postgres_test.go:36
+        	Error:      	Not equal: 
+        	            	expected: 200
+        	            	actual  : 400
+        	Test:       	TestFRC08PostgresPinnedComparison
+        	Messages:   	{"status":"error","errors":[{"name":"validation_error","value":"both id1 and id2 query parameters are required"}]}
+--- FAIL: TestFRC08PostgresPinnedComparison (0.37s)
+FAIL
+FAIL	github.com/fortis/backend/cmd/app	1.022s
+FAIL

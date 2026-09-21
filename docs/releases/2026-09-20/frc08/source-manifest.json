@@ -1,0 +1,141 @@
+{
+  "frontend": {
+    "baseHead": "6838dd1fc1931b0ae220f9ad6a76179876c5934b",
+    "files": [
+      {
+        "path": "src/modules/defense-calculator/domain/configuration-comparison.test.ts",
+        "sha256": "67bb9001797c8fa4e0a558d153305596835b0bfac5b1ef068a6b0df24cfadc63"
+      },
+      {
+        "path": "src/modules/defense-calculator/domain/configuration-comparison.ts",
+        "sha256": "25d24c53708b4e49219e3854590b725910c2b1fc94434250023c7eb538cece8a"
+      },
+      {
+        "path": "src/modules/defense-calculator/infra/backend-project-api.ts",
+        "sha256": "412dabb5114c44dd5f31b8bcc31ad4a7245216e3499d69f6b5dae757177170a8"
+      },
+      {
+        "path": "src/modules/defense-calculator/infra/compare-revisions.release.test.ts",
+        "sha256": "370b3309be5704e59fc5fd7624adadb99b78803a22f47e05121d8d77ff768142"
+      },
+      {
+        "path": "src/modules/defense-calculator/ui/calculator-page.tsx",
+        "sha256": "9aafa0c0fa273042a61005b4e839c2e6d23c73eeaa9d1adb207213755f69527c"
+      },
+      {
+        "path": "src/modules/defense-calculator/ui/configuration-comparison.browser.test.ts",
+        "sha256": "2ca9102280ab30a78a92c812d7bd2b01d3a5c4a5613ca7525dc2688d9b503b9a"
+      },
+      {
+        "path": "src/modules/defense-calculator/ui/configuration-comparison.tsx",
+        "sha256": "3c616cf2b269d6ef7db61a19b7c5741988515c5654f70a5736155a68ef73e8b6"
+      },
+      {
+        "path": "src/modules/drone-defense/infra/backend-integration-contract.test.ts",
+        "sha256": "9a9c45ecfd9450f23c1dc1fb523acda004b0adb26bcfdac7f23e7172554d5a8b"
+      },
+      {
+        "path": "src/modules/workspace/ui/project-workspace-page.tsx",
+        "sha256": "c3cd0b050e354bea2275922513ae70cb3278cb3e2f82772acd80e0028e26cdee"
+      },
+      {
+        "path": "src/shared/config/product-capabilities.ts",
+        "sha256": "9dceeeb86456e0606bdf8a6293ff4af331d03ad2e8ce7f72df1e1646145eca09"
+      },
+      {
+        "path": "src/shared/lib/identity.ts",
+        "sha256": "a3a302bcbba01b112c6c66e68613ef5dee7fe2afcc39b6c9d55b0615e841871c"
+      },
+      {
+        "path": "src/shared/types/finance.ts",
+        "sha256": "393f5c7d2b2d9cee7ff9995c13471fb49b2f6424e92c9efc5e62ca8ea741778f"
+      },
+      {
+        "path": "src/shared/ui/release-surface.test.tsx",
+        "sha256": "dfc5a4c39194a8d933afd00b838d792504a4e7994d141b6280715b07a52e22c8"
+      },
+      {
+        "path": "test/playwright/frc08-live.cjs",
+        "sha256": "eb2a0eaa6651205360742c966380e83b03b74b288838eb0f34824558430cc65a"
+      }
+    ]
+  },
+  "backend": {
+    "baseHead": "387572a1310f11cc175f8db6ca1297e9e8264eef",
+    "files": [
+      {
+        "path": "cmd/app/frc02_access_test.go",
+        "sha256": "ee8cb1b01ae4eb696b9837824a66240fdfad8889c5501174353b7cabdf54a4f1"
+      },
+      {
+        "path": "cmd/app/frc02_postgres_test.go",
+        "sha256": "124ec1f3776bbeec16f3299ef57ef80e63b19564d06f6d57500cae75fa7312f2"
+      },
+      {
+        "path": "cmd/app/frc08_postgres_test.go",
+        "sha256": "2032592cce810326a23741e99048262fec12f9158b7203bd5f35ebe0049efe97"
+      },
+      {
+        "path": "internal/modules/budget/application/budget_service.go",
+        "sha256": "f82388055fee24a662df561636f4c49067ae094b5c29c2b8929c3d4a5c45a8e6"
+      },
+      {
+        "path": "internal/modules/budget/application/budget_service_test.go",
+        "sha256": "f059366f2b18ea2dcb429fac52fc4ba495cce0dc102d3d5fd98df01540078937"
+      },
+      {
+        "path": "internal/modules/budget/application/project_cost.go",
+        "sha256": "94937e169b55dc045e0b230530409c45f2f87a8e1642aec1ef5387105cca8416"
+      },
+      {
+        "path": "internal/modules/budget/domain/revision_comparison.go",
+        "sha256": "834717d9ab7aad0f9830762c8b29332f14780ae4379a10b2090fadfb20245783"
+      },
+      {
+        "path": "internal/modules/budget/domain/revision_comparison_test.go",
+        "sha256": "f5e358028b6078fe435b07f4d108a4d8aa7e4d31bc5325908d677e4916feda8f"
+      },
+      {
+        "path": "internal/modules/budget/domain/structural_profile.go",
+        "sha256": "ba145d517ccd92762d37b71a052e50096e32dd2a8ce88dd098846c3c2e298f68"
+      },
+      {
+        "path": "internal/modules/budget/domain/structural_profile_test.go",
+        "sha256": "92fa1cbc51076288cbc89e21ea9fa7011959e0b9716230045e683da43af6e93d"
+      },
+      {
+        "path": "internal/modules/budget/ui/controller.go",
+        "sha256": "5fb18640e8c4b5a794987981df7f77e32b0b0006353019b102a71a62c134d665"
+      },
+      {
+        "path": "internal/modules/budget/ui/controller_test.go",
+        "sha256": "23cbebc1c22636be7323ec60339ea5a7706ff128b397e0531df15e0643f875db"
+      },
+      {
+        "path": "internal/modules/budget/ui/dto.go",
+        "sha256": "895cea854acfa1689bd9161e00a24d89a70b4b01c8639bd62c9a4a21985e61b5"
+      },
+      {
+        "path": "internal/modules/budget/ui/mapper.go",
+        "sha256": "9b539304b1ea1891d88e4896be3e05b39459b3a2d433aa1814eb41800887b8e6"
+      }
+    ]
+  },
+  "knowledge-base": {
+    "baseHead": "00c5aaa47d503d393ddbee22cf99468b17736767",
+    "files": [
+      {
+        "path": "00_Index.md",
+        "sha256": "338c15c30376b12697e064523f87ee06d47c2d3e228f8203b1e086dcb15adae0"
+      },
+      {
+        "path": "01_Requirements/Release_2026_09_20_Autonomous_Run.md",
+        "sha256": "df66b59705894b805872903bd10cf77f739093189573412043f298c061bbfe49"
+      },
+      {
+        "path": "03_Architecture/ADR-0024-pinned-saved-comparison.md",
+        "sha256": "3effa7e874081f6968b4f5286cf2702376e8be15992afd24b8c67f8530672adb"
+      }
+    ]
+  }
+}

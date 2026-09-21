@@ -1,0 +1,98 @@
+[
+  {
+    "path": "src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs"
+    ],
+    "cwd": "/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m",
+    "exitCode": 1,
+    "matchesPreviousSignature": true,
+    "matchesHistoricalSignature": true,
+    "signature": "AssertionError [ERR_ASSERTION]: Catalog sidebar must animate a fluid desktop width instead of unmounting\n    at file://<frontend>/src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs:22:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)\n    at async node:internal/modules/esm/loader:646:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}"
+  },
+  {
+    "path": "src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs"
+    ],
+    "cwd": "/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m",
+    "exitCode": 1,
+    "matchesPreviousSignature": true,
+    "matchesHistoricalSignature": true,
+    "signature": "AssertionError [ERR_ASSERTION]: GisBoard must expose clickable map zoom controls\n    at file://<frontend>/src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs:6:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)\n    at async node:internal/modules/esm/loader:646:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}"
+  },
+  {
+    "path": "src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs"
+    ],
+    "cwd": "/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m",
+    "exitCode": 1,
+    "matchesPreviousSignature": true,
+    "matchesHistoricalSignature": true,
+    "signature": "Error: Scenario modeling navigation must open a dedicated prototype state\n    at assert (file://<frontend>/src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs:6:25)\n    at file://<frontend>/src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs:16:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)\n    at async node:internal/modules/esm/loader:646:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+  },
+  {
+    "path": "src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs"
+    ],
+    "cwd": "/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m",
+    "exitCode": 1,
+    "matchesPreviousSignature": true,
+    "matchesHistoricalSignature": true,
+    "signature": "Error: DefenseStudioShell must expose the new WIP route in desktop rail and compact navigation drawer\n    at assert (file://<frontend>/src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs:4:25)\n    at file://<frontend>/src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs:21:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)\n    at async node:internal/modules/esm/loader:646:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)"
+  },
+  {
+    "path": "src/modules/drone-defense/domain/user-facing-copy-contract.test.ts",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "src/modules/drone-defense/domain/user-facing-copy-contract.test.ts"
+    ],
+    "cwd": "/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m",
+    "exitCode": 1,
+    "matchesPreviousSignature": true,
+    "matchesHistoricalSignature": true,
+    "signature": "Error: GIS runtime must read workspace and compact-card copy from prototypeRu\n    at <anonymous> (<frontend>/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:119:9)\n    at Object.<anonymous> (<frontend>/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:154:99)\n    at Module._compile (node:internal/modules/cjs/loader:1944:14)\n    at Object.transformer (<frontend>/node_modules/.pnpm/tsx@4.22.4/node_modules/tsx/dist/register-BOkp8V6j.cjs:9:3176)\n    at Module.load (node:internal/modules/cjs/loader:1666:32)\n    at Module._load (node:internal/modules/cjs/loader:1447:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:260:19)\n    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:373:15)\n    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:245:9)\n    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)"
+  },
+  {
+    "path": "src/shared/lib/defense-project.test.ts",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "src/shared/lib/defense-project.test.ts"
+    ],
+    "cwd": "/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m",
+    "exitCode": 1,
+    "matchesPreviousSignature": true,
+    "matchesHistoricalSignature": true,
+    "signature": "Error: shared asset catalog must not expose user-facing recommendation or compatibility labels\n    at assert (<frontend>/src/shared/lib/defense-project.test.ts:42:25)\n    at <anonymous> (<frontend>/src/shared/lib/defense-project.test.ts:69:1)\n    at Object.<anonymous> (<frontend>/src/shared/lib/defense-project.test.ts:413:71)\n    at Module._compile (node:internal/modules/cjs/loader:1944:14)\n    at Object.transformer (<frontend>/node_modules/.pnpm/tsx@4.22.4/node_modules/tsx/dist/register-BOkp8V6j.cjs:9:3176)\n    at Module.load (node:internal/modules/cjs/loader:1666:32)\n    at Module._load (node:internal/modules/cjs/loader:1447:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:260:19)\n    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:373:15)\n    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:245:9)"
+  }
+]

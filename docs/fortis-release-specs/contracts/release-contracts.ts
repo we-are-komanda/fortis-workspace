@@ -80,8 +80,8 @@ export type SaveStatus = "loading" | "saved" | "dirty" | "saving" | "offline_dra
 export type SaveRequest = { name: string; enterpriseId: string; projectJson: string; version: number };
 export type CompareResult = {
   enterpriseId: string;
-  a: { identity: CalculationIdentity; cost: CostProjection; budget: BudgetProjection };
-  b: { identity: CalculationIdentity; cost: CostProjection; budget: BudgetProjection };
+  a: { identity: CalculationIdentity; name: string; updatedAt: string; cost: CostProjection; budget: BudgetProjection };
+  b: { identity: CalculationIdentity; name: string; updatedAt: string; cost: CostProjection; budget: BudgetProjection };
   differenceMinor: string | null; // B - A; may be negative.
   differencePercent: string | null; // null when A = 0 or totals incomplete.
   warnings: Issue[];

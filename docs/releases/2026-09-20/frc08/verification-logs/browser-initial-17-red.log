@@ -1,0 +1,47 @@
+✔ finance A7/B3 comparison requests both pinned references and displays exact positive difference (885.753167ms)
+✔ zero baseline shows an exact absolute difference and no percentage (277.739542ms)
+✔ unknown total stays incomplete and prevents a numeric comparison delta (282.19675ms)
+✔ the same project can be compared at different revisions but identical refs never request (279.702666ms)
+✔ background saves and refreshed project summaries never move a selected revision (311.27725ms)
+✔ dirty comparison Cancel retains edits and performs neither save nor comparison (326.42125ms)
+✔ explicit last-saved comparison preserves all unsaved edits and selected refs (331.377292ms)
+✔ Save-and-compare waits for the confirmed save then pins the acknowledged version (269.820542ms)
+✔ a failed Save-and-compare keeps edits and never compares an unconfirmed revision (259.439959ms)
+✔ a revoked second side replaces prior success with an error and no partial prices (341.206083ms)
+✔ malformed nested snapshot identity fails closed before any comparison is shown (279.113791ms)
+✔ late response for the previous pair cannot replace a newly selected revision (291.258083ms)
+✔ switching enterprise clears a pending comparison and permits a new pair immediately (351.973792ms)
+✔ switching identity clears a pending comparison and permits a new pair immediately (333.893ms)
+✔ matching names with different layer and asset IDs remain separate with source warnings (294.51175ms)
+✔ a newer edit during Save-and-compare remains dirty until the user explicitly chooses saved versions (683.269333ms)
+✖ saving the active revision repins only that operand and preserves a historical side of the same project (5272.00625ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 16
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11772.210333
+
+✖ failing tests:
+
+test at src/modules/defense-calculator/ui/configuration-comparison.browser.test.ts:23:26813
+✖ saving the active revision repins only that operand and preserves a historical side of the same project (5272.00625ms)
+  Error: expect(locator).toBeVisible() failed
+  
+  Locator: getByRole('region', { name: 'Результат сравнения', exact: true })
+  Expected: visible
+  Timeout: 5000ms
+  Error: element(s) not found
+  
+  Call log:
+    - Expect "to.be.visible" with timeout 5000ms
+    - waiting for getByRole('region', { name: 'Результат сравнения', exact: true })
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeVisible (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/defense-calculator/ui/configuration-comparison.browser.test.ts:402:92) {
+    matcherResult: { message: `expect(locator).toBeVisible() failed\n\nLocator: getByRole('region', { name: 'Результат сравнения', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect "to.be.visible" with timeout 5000ms\n  - waiting for getByRole('region', { name: 'Результат сравнения', exact: true })\n`, pass: false, actual: undefined, name: 'toBeVisible', expected: 'visible', log: [ '  - Expect "to.be.visible" with timeout 5000ms', "  - waiting for getByRole('region', { name: 'Результат сравнения', exact: true })" ], timeout: 5000, ariaSnapshot: `- 'status "Тест: активный проект"': Unsaved private edit\n- region "Сравнение конфигураций":\n  - heading "Сравнение конфигураций" [level=2]\n  - paragraph: Выберите две сохранённые версии одного предприятия. Номера остаются фиксированными после новых сохранений.\n  - text: Первая конфигурация\n  - combobox "Первая конфигурация":\n    - option "Выберите конфигурацию"\n    - option "Current A8" [selected]\n  - text: Версия A\n  - spinbutton "Версия A": "9"\n  - text: Вторая конфигурация\n  - combobox "Вторая конфигурация":\n    - option "Выберите конфигурацию"\n    - option "Current A8" [selected]\n  - text: Версия B\n  - spinbutton "Версия B": "9"\n  - button "Сравнить" [disabled]\n  - alert: Укажите положительные целые номера двух разных сохранённых версий.\n  - alert: Выберите две разные сохранённые версии.\n- dialog "Есть несохранённые изменения":\n  - button "Close":\n    - img "close"\n  - text: Есть несохранённые изменения\n  - paragraph: Сохраните текущий проект перед сравнением или явно сравните выбранные сохранённые версии без локальных изменений.\n  - alert: Выберите две разные сохранённые версии.\n  - button "Отмена"\n  - button "Сравнить последние сохранённые"\n  - button "Сохранить и сравнить"` }
+  }

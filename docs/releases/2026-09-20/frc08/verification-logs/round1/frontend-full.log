@@ -1,0 +1,537 @@
+✔ release landing renders the approved positioning and honest workflow links (39.954416ms)
+✔ comparison joins real identifiers and never conflates equal display names (1.304125ms)
+✔ a stable identifier pairs renamed entries with their changed quantities (0.171583ms)
+OK НАК: 2454.1 млн ≈ 2454.1 млн (2.45 млрд)
+OK НЕВ: 1987 млн ≈ 1987 млн (1.99 млрд)
+OK ФОСФОРИТ: 3446.6 млн ≈ 3446.6 млн (3.45 млрд)
+OK БМУ: 1819.7 млн ≈ 1819.7 млн (1.82 млрд)
+costing.test.ts: all configuration totals reconcile ✓
+✔ src/modules/defense-calculator/domain/costing.test.ts (233.189375ms)
+project-asset-adapter.test.ts: calculator reads canonical project asset library
+✔ src/modules/defense-calculator/domain/project-asset-adapter.test.ts (263.473041ms)
+project-report-lines: OK
+✔ src/modules/defense-calculator/domain/project-report-lines.test.ts (259.878334ms)
+OK Мобильный РЛС: 79 → green
+OK Дроны-перехватчики: 74 → green
+OK Ствольная ПВО 30 мм (цитадель или аналог): 60 → orange
+OK Лазер: 40 → red
+scoring.test.ts: all scores and colours match PDF/Excel anchors ✓
+✔ src/modules/defense-calculator/domain/scoring.test.ts (241.599625ms)
+structural-profile: OK
+✔ src/modules/defense-calculator/domain/structural-profile.test.ts (392.560042ms)
+✔ comparison pins both complete server references and validates the two projections (42.279125ms)
+✔ comparison rejects wrong side, tenant, money and mismatched nested snapshot authority (3.8645ms)
+✔ zero denominator and incomplete comparison preserve explicit null semantics (73.049375ms)
+✔ comparison rejects invalid versions before requesting and permits one project at two revisions (0.494333ms)
+✔ percentage validation keeps exact half rounding and canonical rounded zero (2.924333ms)
+✔ cost request pins project/version and accepts only matching exact projection (17.666625ms)
+✔ cost request rejects non-positive/noninteger revision before network (0.303625ms)
+✔ malformed provenance cannot enter rendered cost lines (0.547959ms)
+﹣ rendered shared edit gate preserves current content on one-minor excess and accepts exact equality (2.645583ms) # SKIP
+﹣ overage edits compare with the saved baseline and allow undo of an unsaved reduction (0.183917ms) # SKIP
+﹣ pending budget GET is visibly unverified and a pinned response supplies exact money (0.1045ms) # SKIP
+﹣ lowering the limit below saved spend commits a new version and exposes the overage (0.151208ms) # SKIP
+﹣ limited zero is submitted exactly and blocks a one-minor paid edit (0.173ms) # SKIP
+﹣ unknown spend remains incomplete when explicitly switching to unlimited (0.124292ms) # SKIP
+﹣ GET failure offers explicit retry without displaying a fabricated budget (0.096292ms) # SKIP
+﹣ rejected budget PUT preserves entered money and unrelated unsaved project edits (0.143041ms) # SKIP
+﹣ late successful budget PUT advances the baseline without overwriting a newer edit (0.136459ms) # SKIP
+﹣ full-candidate preflight carries all local changes and does not save or reserve budget (0.129042ms) # SKIP
+﹣ late budget response cannot replace a newly selected project context (0.077125ms) # SKIP
+﹣ late budget response cannot replace a newly selected version context (0.078458ms) # SKIP
+﹣ late budget response cannot replace a newly selected identity context (0.057709ms) # SKIP
+﹣ wrong-version budget acknowledgement is rejected without a local-money fallback (0.057667ms) # SKIP
+﹣ a pending check for the previous project does not disable checking the newly opened project (0.113542ms) # SKIP
+﹣ recovering an uncertain budget update displays its frozen requested money before retry (0.074917ms) # SKIP
+﹣ a conflict after retrying a recovered budget intent retains its requested value (0.063917ms) # SKIP
+﹣ late saved version response cannot replace the newly selected projection (0.681625ms) # SKIP
+﹣ late saved project response cannot replace the newly selected projection (0.1365ms) # SKIP
+﹣ saved rows and totals come from one server projection; dirty edits replace all of it (0.079125ms) # SKIP
+﹣ unknown prices stay incomplete while explicit zero remains a known price (0.073875ms) # SKIP
+﹣ empty project has zero total and no catalogue or recommended rows (0.085583ms) # SKIP
+﹣ saved 503 shows a retryable error with request ID and never falls back to local money (1.552333ms) # SKIP
+﹣ saved names and source labels render as escaped text (0.12ms) # SKIP
+﹣ malformed provenance fails as a protocol error before it reaches React rendering (0.083166ms) # SKIP
+﹣ map object list uses real object financial lines, including zero and unknown (0.123416ms) # SKIP
+﹣ malformed draft source shows an input error without crashing React (0.065167ms) # SKIP
+﹣ finance A7/B3 comparison requests both pinned references and displays exact positive difference (0.923458ms) # SKIP
+﹣ zero baseline shows an exact absolute difference and no percentage (0.978875ms) # SKIP
+﹣ unknown total stays incomplete and prevents a numeric comparison delta (0.076584ms) # SKIP
+﹣ the same project can be compared at different revisions but identical refs never request (0.052084ms) # SKIP
+﹣ background saves and refreshed project summaries never move a selected revision (0.076375ms) # SKIP
+﹣ dirty comparison Cancel retains edits and performs neither save nor comparison (0.043625ms) # SKIP
+﹣ explicit last-saved comparison preserves all unsaved edits and selected refs (0.042833ms) # SKIP
+﹣ Save-and-compare waits for the confirmed save then pins the acknowledged version (0.045ms) # SKIP
+﹣ a failed Save-and-compare keeps edits and never compares an unconfirmed revision (0.067459ms) # SKIP
+﹣ a revoked second side replaces prior success with an error and no partial prices (0.076292ms) # SKIP
+﹣ malformed nested snapshot identity fails closed before any comparison is shown (0.036833ms) # SKIP
+﹣ late response for the previous pair cannot replace a newly selected revision (0.037042ms) # SKIP
+﹣ switching enterprise clears a pending comparison and permits a new pair immediately (0.028791ms) # SKIP
+﹣ switching identity clears a pending comparison and permits a new pair immediately (0.031792ms) # SKIP
+﹣ matching names with different layer and asset IDs remain separate with source warnings (0.026458ms) # SKIP
+﹣ a newer edit during Save-and-compare remains dirty until the user explicitly chooses saved versions (0.024209ms) # SKIP
+﹣ saving the active revision repins only that operand and preserves a historical side of the same project (0.027584ms) # SKIP
+✔ unchanged typed card form preserves fields, sub-metre distances and roles (11.16725ms)
+✔ empty price is unknown; exact halfkopeck rounds once; bad price and unsupported confirmed fail (1.542584ms)
+✔ clearing source quality removes old price-field confirmation (4.320667ms)
+✔ unchanged source editor preserves distinct card and price provenance (0.787833ms)
+✔ malformed exact price can be opened but cannot be silently saved as unknown or rounded (0.705709ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Catalog sidebar must animate a fluid desktop width instead of unmounting
+    at file:///private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs:22:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
+✖ src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs (172.891916ms)
+compact-asset-cards-contract.test.mjs: compact draggable asset cards contract passed
+✔ src/modules/drone-defense/domain/compact-asset-cards-contract.test.mjs (158.658167ms)
+✔ custom zero-order layer without explicit color renders zones and slots (1.291334ms)
+defense-project-source-contract.test.ts: prototype source contract passed
+✔ src/modules/drone-defense/domain/defense-project-source-contract.test.ts (376.4055ms)
+✔ src/modules/drone-defense/domain/defense-studio-contract.test.ts (386.581625ms)
+✔ src/modules/drone-defense/domain/echelon-build-assets-contract.test.ts (389.352ms)
+✔ src/modules/drone-defense/domain/echelon-catalog-contract.test.ts (364.007458ms)
+✔ src/modules/drone-defense/domain/echelon-map-model-contract.test.ts (248.855625ms)
+✔ src/modules/drone-defense/domain/echelon-slot-contract.test.ts (133.734333ms)
+✔ src/modules/drone-defense/domain/layer-distance-contract.test.ts (284.259291ms)
+layer-manager-polish-contract.test.mjs: layer manager polish contract wired
+✔ src/modules/drone-defense/domain/layer-manager-polish-contract.test.mjs (208.191959ms)
+map-marker-double-click-focus-contract.test.mjs: marker double-click smoothly focuses placement
+✔ src/modules/drone-defense/domain/map-marker-double-click-focus-contract.test.mjs (239.189125ms)
+map-placement-icons-contract.test.mjs: dropped objects render as icons on the active echelon
+✔ src/modules/drone-defense/domain/map-placement-icons-contract.test.mjs (237.502333ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: GisBoard must expose clickable map zoom controls
+    at file:///private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs:6:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
+✖ src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs (237.122791ms)
+mog-azimuth-dial-contract.test.mjs: visual МОГ azimuth dial contract passed
+✔ src/modules/drone-defense/domain/mog-azimuth-dial-contract.test.mjs (157.915375ms)
+mog-editor domain helpers: ok
+✔ src/modules/drone-defense/domain/mog-editor.test.ts (340.512459ms)
+mog-sector-dial-contract.test.mjs: visual МОГ sector dial contract passed
+✔ src/modules/drone-defense/domain/mog-sector-dial-contract.test.mjs (177.18525ms)
+placement-focus-view-state.test.ts: placement double-click focus zooms in and stays centered
+✔ src/modules/drone-defense/domain/placement-focus-view-state.test.ts (238.596209ms)
+✔ src/modules/drone-defense/domain/placement-helpers-contract.test.ts (293.336459ms)
+✔ common local mutation boundary blocks known excess without losing current content (5.580417ms)
+✔ a blocked catalogue preview remains pending and cannot report that it was applied (0.51775ms)
+✔ a blocked catalogue removal reports failure without changing the unknown-price project (0.523083ms)
+✔ budget acknowledgement advances the saved baseline without losing a concurrent local edit (26.179625ms)
+✔ budget 422 preserves the form intent and draft without an automatic retry (25.416208ms)
+✔ ambiguous budget PUT verifies before an explicit retry and never writes automatically (17.082542ms)
+✔ a lost committed budget receipt is verified without a second write and keeps later edits (40.604458ms)
+✔ a divergent budget verification retains the draft and never retries the write (2.48575ms)
+✔ a late budget receipt cannot restore the previous identity (2.224791ms)
+✔ copy retries retain the explicit saved budget source, body and idempotency key (7.409ms)
+✔ workspace new projects have no inherited budget source despite an active saved project (0.67525ms)
+✔ a pending budget update cannot be replaced by a create attempt (0.632083ms)
+✔ restoring a budget write interrupted before its response requires verification (2.055458ms)
+project-map-adapter.test.ts: placed objects map adapter passed
+✔ src/modules/drone-defense/domain/project-map-adapter.test.ts (316.485708ms)
+✔ authoritative GET version cannot be replaced by an older cached list summary (81.531833ms)
+✔ quota does not discard an edit in memory and exposes recovery failure (1.946042ms)
+✔ business revision changes for edits but not UI selection; a reverted edit returns to baseline (0.583292ms)
+✔ pending save preserves business edit as dirty (6.428625ms)
+✔ pending save preserves UI selection as saved (1.393042ms)
+✔ lost update response verifies current server identity before any second write (1.028333ms)
+✔ create manual retry preserves exact body and idempotency key (10.383417ms)
+✔ create retry replays the frozen attempt even after a newer local edit (0.660042ms)
+✔ recovery candidate is exposed only after a fresh authorized project read (0.490625ms)
+✔ recovery is hidden when fresh project authorization fails (0.210708ms)
+✔ persisted layer visibility during PUT keeps the newer business revision dirty (0.902791ms)
+✔ persisted layer lock during PUT keeps the newer business revision dirty (0.619ms)
+✔ unchanged server revision permits only an explicit retry of the frozen update after another verification (0.671666ms)
+✔ ambiguous update with divergent server content blocks another write (0.922167ms)
+✔ ambiguous update with divergent server project blocks another write (1.782125ms)
+✔ ambiguous update with divergent server enterprise blocks another write (0.792292ms)
+✔ 409 preserves the local draft and a new variant never writes the conflicted project (9.695ms)
+✔ 401 after a real dirty save does not retry or verify and blocks further writes (10.094667ms)
+✔ 403 after a real dirty save does not retry or verify and blocks further writes (0.609167ms)
+✔ 404 after a real dirty save does not retry or verify and blocks further writes (3.931542ms)
+✔ workspace startup and authorized recovery discovery leave the server project active until explicit restore (0.76875ms)
+✔ stored recovery with fresh 403 cannot replace the active server project (0.348041ms)
+✔ stored recovery with fresh 404 cannot replace the active server project (0.196084ms)
+✔ stored recovery with fresh 503 cannot replace the active server project (0.304042ms)
+✔ the next identity cannot discover or apply the previous identity recovery candidate (0.429916ms)
+✔ an already discovered draft cannot bypass a subsequently revoked project access (0.384166ms)
+✔ UI selection after server load cannot overwrite an undiscovered recovery draft (0.347083ms)
+✔ access revalidation on return to the same project cannot implicitly replace unsaved business content (0.208833ms)
+✔ memory-only discard works when persistent drafts are disabled and storage is forbidden (0.299917ms)
+✔ a malformed save acknowledgement cannot move a project to another enterprise (0.47475ms)
+✔ a confirmed save permits leaving even when the subsequent project list refresh fails (0.566ms)
+✔ a stale recovery candidate cannot replace another current project (0.20825ms)
+✔ a stale recovery candidate cannot replace another current enterprise (0.140542ms)
+✔ late ambiguous-save verification cannot restore the identity of a project that was left (2.201792ms)
+protected-object-map-contract.test.ts: protected object first viewport contract passed
+✔ src/modules/drone-defense/domain/protected-object-map-contract.test.ts (236.914708ms)
+file:///private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs:6
+  if (!condition) throw new Error(message);
+                        ^
+
+Error: Scenario modeling navigation must open a dedicated prototype state
+    at assert (file:///private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs:6:25)
+    at file:///private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs:16:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v26.4.0
+✖ src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs (183.028083ms)
+prototype-workflow-contract: OK
+✔ src/modules/drone-defense/domain/prototype-workflow-contract.test.ts (281.546375ms)
+retrospective-analysis-contract.test.ts: OK
+✔ src/modules/drone-defense/domain/retrospective-analysis-contract.test.ts (166.980416ms)
+file:///private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs:4
+  if (!condition) throw new Error(message);
+                        ^
+
+Error: DefenseStudioShell must expose the new WIP route in desktop rail and compact navigation drawer
+    at assert (file:///private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs:4:25)
+    at file:///private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs:21:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v26.4.0
+✖ src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs (146.750791ms)
+scene-contract.test.mjs: no eager /models/*.glb preloads in scene module
+✔ src/modules/drone-defense/domain/scene-contract.test.mjs (181.036917ms)
+tactical-map-markers-contract.test.mjs: tactical map marker contract passed
+✔ src/modules/drone-defense/domain/tactical-map-markers-contract.test.mjs (178.933166ms)
+unrestricted-placement-contract.test.mjs: all defense assets can be placed without conflicts
+✔ src/modules/drone-defense/domain/unrestricted-placement-contract.test.mjs (195.175833ms)
+fetchVariants: OK
+saveAsNewVariant: OK
+loadVariant: OK
+deleteVariant: OK
+saveAsNewVariant failure: OK
+overwriteActiveVariant version: OK
+overwriteActiveVariant conflict: OK
+use-defense-variants-store.test.ts: variants store contracts passed
+✔ src/modules/drone-defense/domain/use-defense-variants-store.test.ts (533.727583ms)
+/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:119
+  throw new Error("GIS runtime must read workspace and compact-card copy from prototypeRu");
+        ^
+
+Error: GIS runtime must read workspace and compact-card copy from prototypeRu
+    at <anonymous> (/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:119:9)
+    at Object.<anonymous> (/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:154:99)
+    at Module._compile (node:internal/modules/cjs/loader:1944:14)
+    at Object.transformer (/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/node_modules/.pnpm/tsx@4.22.4/node_modules/tsx/dist/register-BOkp8V6j.cjs:9:3176)
+    at Module.load (node:internal/modules/cjs/loader:1666:32)
+    at Module._load (node:internal/modules/cjs/loader:1447:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:260:19)
+    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:373:15)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:245:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+
+Node.js v26.4.0
+✖ src/modules/drone-defense/domain/user-facing-copy-contract.test.ts (313.001583ms)
+✔ draft remains a draft instead of claiming that it is saved (1.435041ms)
+✔ saving and a persisted variant expose independent save and version states (0.188458ms)
+✔ a version conflict wins over the generic save error (0.111958ms)
+asset-api-proxy-contract.test.ts: shared route boundary passed
+✔ src/modules/drone-defense/infra/asset-api-proxy-contract.test.ts (180.480083ms)
+✔ upload sends actual File multipart without metadata storage keys or invented headers (21.195542ms)
+✔ client rejects oversized, empty and unsupported files before any request (3.9405ms)
+✔ exact 10 MiB allowed and all four allowlisted MIME types supported (9.483125ms)
+✔ list validates consumed fields, parent scope and ready integrity metadata (7.505959ms)
+✔ download returns authenticated blob from fixed route, ignoring external metadata URL (2.06375ms)
+✔ download retains shared 401 invalidation and support request ID (1.0875ms)
+✔ late binary response is rejected after account switch (0.531167ms)
+✔ non-ready download fails closed without network and delete sends only ID (0.661417ms)
+✔ download rejects unexpected executable MIME or length but accepts text MIME charset (0.966042ms)
+asset-library-api.test.ts: asset library API contracts passed
+✔ src/modules/drone-defense/infra/asset-library-api.test.ts (368.524083ms)
+backend-integration-contract.test.ts: contracts passed
+✔ src/modules/drone-defense/infra/backend-integration-contract.test.ts (655.290083ms)
+✔ BFF preserves upstream error status and body, including HTML and empty bodies (484.709667ms)
+✔ projects rejects an empty successful body instead of returning 200 null (60.03875ms)
+✔ BFF and API v1 share target, query and auth; legitimate empty stays empty (18.298416ms)
+✔ binary documents preserve bytes/status/content type and mutation method/body (9.502459ms)
+✔ missing configuration fails without network fallback; conflicts fail (0.551375ms)
+✔ connection refused is 502; deadline is 504 with request id (27.555875ms)
+✔ workspace ignores query demo; demo route is explicit and marked (6.772125ms)
+✔ JSON helper rejects malformed success and wrong list shape (6.414042ms)
+✔ JSON adaptation deadline includes the response body, not only headers (52.021791ms)
+✔ asset DTO roundtrip preserves native categories/roles, exactnull prices and provenance references (2.126875ms)
+✔ old sources remain unknown; malformed finance/source metadata fails closed (0.451459ms)
+✔ bundled demo quality survives seed serialization and project export/import (3.185333ms)
+✔ legacy backend seed lineage remains demo even with supplied confirmed sources (0.248167ms)
+enterprise-api.test.ts: enterprise API contracts passed
+✔ src/modules/drone-defense/infra/enterprise-api.test.ts (305.165916ms)
+✔ project BFF selects the requested revision without letting query override the resource ID (285.891875ms)
+✔ project creation preserves the caller's idempotency key through the BFF (23.020625ms)
+✔ release API client selects a revision and sends a stable caller-supplied creation key (14.952209ms)
+✔ frontend liveness is independent of config/dependencies; readiness checks both (273.954834ms)
+seed-backend-asset-library.test.ts: seed payload contracts passed
+✔ src/modules/drone-defense/infra/seed-backend-asset-library.test.ts (415.099666ms)
+﹣ lists all statuses safely and only ready source callback exposes immutable metadata (0.61775ms) # SKIP
+﹣ scanner503 preserves selected file, refreshes quarantine and succeeds only after a real retry (0.125709ms) # SKIP
+﹣ invalid file is blocked locally with accessible feedback (0.09275ms) # SKIP
+﹣ download uses authenticated blob attachment and deletion refreshes the list (0.096792ms) # SKIP
+﹣ changing selected card suppresses a delayed old list and optional source controls (0.145375ms) # SKIP
+﹣ account switch removes document metadata and selected file immediately (4.017291ms) # SKIP
+﹣ revoked download closes stale ready actions and metadata until list is verified again (0.15325ms) # SKIP
+﹣ new private card inherits enterprise, validates source before write and renders supplied HTML as text (0.293958ms) # SKIP
+﹣ price edit downgrades confirmed source and selecting unknown clears both price provenance fields (0.052417ms) # SKIP
+﹣ ready document callback fills source, server-stamped immutable revision enters preview (0.041791ms) # SKIP
+﹣ catalogue preview cancel leaves saved project intact; explicit apply makes one draft preserving instance price (0.043959ms) # SKIP
+﹣ using a ready document as source cannot silently discard selection under default quality (0.042959ms) # SKIP
+﹣ invalid imported price stays editable and cannot silently save until explicitly corrected (0.036584ms) # SKIP
+=== defense-tool-icon feature invariants ===
+
+[✓] All invariants hold: size=32, radius=4, offset=16
+
+=== placeObject integration (via domain helpers) ===
+
+[✓] Center point validation: success — ok
+[✓] Object placed at center: placed-1789987741882-xvcs96y
+[✓] No placement diagnostics: 0
+
+[✓] Far point placed; diagnostics: 0
+
+=== all tests passed ===
+✔ src/modules/drone-defense/ui/defense-tool-icon.test.ts (421.2285ms)
+﹣ variant Stay preserves edit; Discard opens target and deletes discarded recovery (0.840875ms) # SKIP
+﹣ conflict reload asks before replacing the active project (0.097958ms) # SKIP
+﹣ enterprise switch while dirty offers Stay and Discard (0.04775ms) # SKIP
+﹣ logout while dirty offers Stay and Discard before ending session (0.044167ms) # SKIP
+﹣ failed or pending Save cannot navigate; explicit retry confirms before opening target (0.055708ms) # SKIP
+﹣ failed create retains the name and explicit retry replays the frozen body/key (0.037125ms) # SKIP
+﹣ recovery rechecks access when Restore is clicked, after the offer was displayed (0.033292ms) # SKIP
+﹣ revoked dirty project still requires an explicit decision before another variant loads (0.0405ms) # SKIP
+﹣ reload keeps saved state until explicit scoped recovery (0.059166ms) # SKIP
+﹣ session recheck hides all protected dialogs and preserves same-user transition state (0.060416ms) # SKIP
+﹣ logout Save stays on failed save, then leaves only after confirmed retry (0.0335ms) # SKIP
+﹣ switching identity clears the previous user logout intent and name (0.028209ms) # SKIP
+﹣ enterprise Save keeps selection after failure and switches after confirmed retry (0.032709ms) # SKIP
+﹣ successful logout never rechecks a known invalid session (0.078375ms) # SKIP
+﹣ an initially unknown session still checks auth and redirects on its first 401 (0.034833ms) # SKIP
+✔ public form errors preserve the workspace identity and input page (87.27275ms)
+✔ demo collection is disabled without explicit complete publication configuration (172.86625ms)
+✔ public form blocks wrong origin, non-JSON and streamed oversized bodies before forwarding (4.042791ms)
+✔ public form forwards only validated edge identity and durable acknowledgement (194.187625ms)
+✔ generic API proxy cannot forward browser-controlled origin or IP into the trusted form channel (6.207084ms)
+✔ public form rejects a successful response that does not acknowledge a durable receipt (14.412666ms)
+✔ demo client requires a receipt and preserves the same key on manual retry (26.421583ms)
+﹣ disabled collection never mounts personal-data fields or a success state (19.133167ms) # SKIP
+﹣ required fields and server-provided consent are validated before sending (1.205375ms) # SKIP
+﹣ configuration failure remains closed and allows an explicit reload (0.105458ms) # SKIP
+﹣ changed consent requires the server text to be reloaded and explicitly accepted (0.37225ms) # SKIP
+﹣ double submit sends once; failed manual retry retains values and key; changed body gets a new key (0.062708ms) # SKIP
+﹣ server field validation and malformed success keep input without false receipt (0.050791ms) # SKIP
+✔ project page requests the server enterprise filter and keeps the filtered total (32.350125ms)
+✔ a late enterprise or previous page reply cannot replace the latest list (1.162291ms)
+✔ pending or failed workspace create preserves the previous current context and retries the frozen request (24.662166ms)
+✔ late workspace create acknowledgement cannot overwrite a newer current edit (10.239ms)
+✔ create returns no navigation result after identity changes during its list refresh (31.023708ms)
+✔ workspace names reject whitespace and more than 120 Unicode code points before sending (0.945292ms)
+✔ project load rejects missing enterprise ownership instead of adopting baseObject identity (0.799ms)
+✔ saving a legacy project cannot infer enterprise ownership from baseObject.id (0.344958ms)
+✔ enterprise coordinates must be explicit finite valid GIS values; zero remains valid (0.414792ms)
+﹣ WS01 empty enterprise never falls back to another enterprise rows or comparison options (1.747708ms) # SKIP
+﹣ WS02/03 no membership prevents create; Refresh discovers a new authorized assignment (0.140708ms) # SKIP
+﹣ WS04/09 pending and failed create preserve current context; unchanged retry commits server context once (0.085416ms) # SKIP
+﹣ WS05 late previous enterprise response cannot populate the newly selected empty enterprise (0.086292ms) # SKIP
+﹣ WS06 all 121 scoped projects are reachable by server pagination and enterprise switch resets the page (0.110083ms) # SKIP
+﹣ WS07 revoked open cannot navigate using the previously active project (0.981958ms) # SKIP
+﹣ WS08 whitespace name never sends POST and preserves the user's input (0.104458ms) # SKIP
+﹣ WS11 selected enterprise persists for its owner and never transfers to another identity (0.1ms) # SKIP
+﹣ WS13 failed enterprise refresh clears stale rows and cannot look like an authorized empty state (11.85325ms) # SKIP
+﹣ WS05 obsolete pagination response cannot restore rows after enterprise switch (1.941417ms) # SKIP
+﹣ WS13 failed project list is an error, never an empty successful enterprise (0.167375ms) # SKIP
+﹣ shared variants modal renders a project list failure rather than an empty success (0.099291ms) # SKIP
+﹣ WS14 enterprise beyond the first hundred remains reachable and scoped (0.06ms) # SKIP
+﹣ WS08 name limit counts Unicode code points: 121 is rejected and 120 survives intact (0.060166ms) # SKIP
+✔ src/shared/config/base-map-sources.test.ts (278.560625ms)
+defense-asset-library.test.ts: mock TTX contracts passed
+✔ src/shared/config/defense-asset-library.test.ts (293.555208ms)
+api-client.test.ts: shared /api/v1 client contracts passed
+✔ src/shared/lib/api-client.test.ts (230.156084ms)
+✔ production login and registration issue Secure cookies (15.93125ms)
+✔ invalid cookie does not admit protected pages (10.100333ms)
+✔ login next permits only internal paths (0.310292ms)
+✔ cookie clearing keeps production flags; local HTTP development remains usable (3.967625ms)
+✔ exact budget equality passes and one kopeck over is blocked (2.276792ms)
+✔ limited zero is distinct from unlimited and unknown never becomes zero (0.200541ms)
+✔ an existing overage admits non-increasing totals, but a copy must fit its limit (0.482458ms)
+✔ budget ruble input and signed remaining preserve exact decimal values (0.713084ms)
+✔ pinned budget reads reject mismatched identity, numeric money and inconsistent totals (0.8005ms)
+✔ preflight receipts preserve scope and distinguish unlimited from an incomplete remaining amount (0.515875ms)
+✔ catalog refresh previews changes without mutating the saved price snapshot or overrides (3.889791ms)
+✔ an obsolete preview cannot replace edits made after it was fetched (7.579ms)
+✔ missing catalog entries do not erase sources from a saved project (0.743416ms)
+✔ saving a catalog card then selecting it keeps an applicable preview (0.373084ms)
+✔ multiple card saves accumulate until the preview is applied (0.300083ms)
+✔ legacy bundled demo imported into an enterprise retains demo while unrelated legacy cards stay unknown (1.31075ms)
+✔ map and legacy report adapters derive exact values from the canonical minor projection (15.241417ms)
+✔ map structural summaries accept unavailable cost without recalculating invalid inputs (2.876ms)
+✔ invalid unused catalog prices produce an error label without crashing catalog rendering (1.468584ms)
+✔ finance-v1 variantA: exact placed rows, real layer IDs and reconciled groups (22.855625ms)
+✔ finance-v1 variantB: exact placed rows, real layer IDs and reconciled groups (0.891333ms)
+✔ hidden/inactive/maintenance objects and hidden layers remain in the estimate (0.5945ms)
+✔ custom layer rename preserves grouping and a missing layer never drops a line (17.040333ms)
+✔ explicit zero override wins; explicit null override is unknown and blocks all fallbacks (0.290708ms)
+✔ components mode counts the explicit financial components once and ignores bundle price (9.096875ms)
+✔ catalogue unit prices reuse canonical bundle/components/unknown/legacy selection (1.601917ms)
+✔ empty, absent or unknown components cannot imply a free bundle; explicit zero can (1.108292ms)
+✔ unknown template or missing asset retains rows and the known subtotal (1.84675ms)
+✔ a missing template retains an explicit RUB override and warns about the missing reference (0.386708ms)
+✔ empty placedObjects yields no financial rows or groups despite a populated catalogue (1.447208ms)
+✔ legacy decimal conversion is exact half-up per unit and warns only on the selected legacy path (0.710333ms)
+✔ large sums and formatting retain every kopeck beyond Number.MAX_SAFE_INTEGER (2.96825ms)
+✔ invalid placement/component quantities fail with field feedback instead of rounding (0.867375ms)
+✔ invalid selected prices, component unit overflow, currency and mode fail closed (0.772333ms)
+✔ malformed legacy values cannot be coerced into prices (1.340625ms)
+✔ empty optional object names fall back to the template label (3.484334ms)
+✔ financial provenance follows the selected price and descriptive compound data creates no charge (3.053958ms)
+✔ projection is pure and draft identity never invents a server digest (0.202042ms)
+✔ malformed draft source is an input issue tied to the affected object (0.1655ms)
+defense-configuration.test.ts: shared configuration contracts passed
+✔ src/shared/lib/defense-configuration.test.ts (265.373375ms)
+defense-layer-geometry.test.ts: OK
+✔ src/shared/lib/defense-layer-geometry.test.ts (201.590875ms)
+defense-project-base-object.test.ts: base object contracts passed
+✔ src/shared/lib/defense-project-base-object.test.ts (457.562958ms)
+✔ project import preserves explicit diagnostic conflict snapshots and backfills absent flags (9.3585ms)
+defense-project-polygon-geometry.test.ts: OK
+✔ src/shared/lib/defense-project-polygon-geometry.test.ts (391.217125ms)
+/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/shared/lib/defense-project.test.ts:42
+  if (!condition) throw new Error(message);
+                        ^
+
+Error: shared asset catalog must not expose user-facing recommendation or compatibility labels
+    at assert (/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/shared/lib/defense-project.test.ts:42:25)
+    at <anonymous> (/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/shared/lib/defense-project.test.ts:69:1)
+    at Object.<anonymous> (/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/shared/lib/defense-project.test.ts:413:71)
+    at Module._compile (node:internal/modules/cjs/loader:1944:14)
+    at Object.transformer (/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/node_modules/.pnpm/tsx@4.22.4/node_modules/tsx/dist/register-BOkp8V6j.cjs:9:3176)
+    at Module.load (node:internal/modules/cjs/loader:1666:32)
+    at Module._load (node:internal/modules/cjs/loader:1447:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:260:19)
+    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:373:15)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:245:9)
+
+Node.js v26.4.0
+✖ src/shared/lib/defense-project.test.ts (426.275792ms)
+(node:39734) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ workspace recovery cannot cross authenticated identities (2.619083ms)
+✔ successful authentication clears the previous identity and permits a fresh verification (2.298916ms)
+✔ account switch resets all stores and drops an in-flight A list (39.761417ms)
+✔ 401 invalidates identity; 403/404 block saving without retries or false saved state (2.239709ms)
+✔ late logout completion cannot clear the next authenticated identity (0.768791ms)
+▶ late project access failures cannot invalidate another current project
+  ✔ load (1.298625ms)
+  ✔ overwrite (0.304375ms)
+  ✔ create (0.520709ms)
+  ✔ delete (0.254791ms)
+  ✔ list (0.21125ms)
+✔ late project access failures cannot invalidate another current project (3.108458ms)
+✔ logout preserves scoped recovery only for its owner after fresh access and explicit restoration (4.751458ms)
+✔ scopes use all identities and never read legacy or other-user keys (1.251584ms)
+✔ quota and security/getter failures become recovery errors instead of exceptions (0.341833ms)
+✔ corrupt JSON and cross-scope envelopes are rejected without deleting stored data (0.336875ms)
+✔ attempt replay metadata must match its scoped project and exact request body (0.409958ms)
+✔ draft scopes with delimiter characters remain isolated by user, enterprise and project (0.584625ms)
+✔ reload preserves the exact frozen create body and key alongside a newer draft (2.757375ms)
+✔ recovery names count Unicode code points at the 120 character boundary (0.233209ms)
+✔ budget recovery preserves the frozen version and exact config alongside newer draft edits (0.54375ms)
+✔ project import preserves existing geometry fields and safe extensions (9.793458ms)
+✔ complete synthetic project fixture survives frontend export and import (6.265541ms)
+﹣ real PostgreSQL export retains every frontend business field (0.090542ms) # SKIP
+✔ failed and empty library refresh never inject bundled data into a backend project (11.049167ms)
+✔ empty enterprises stays empty instead of adding a local object (0.830541ms)
+(node:39739) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ failed load and save preserve current project; no automatic retry after any error (479.047041ms)
+✔ recovery ignores legacy keys and changes an open project only after authorized explicit restoration (11.462042ms)
+✔ recovery preserves empty catalogs and user asset values without bundled expansion (0.457083ms)
+✔ workspace creation is empty; remount does not reload a hydrated dirty project (0.424375ms)
+✔ pending load cannot replace newer user edits or a cancelled navigation (105.178167ms)
+✔ selection and transport changes are not business changes (3.190167ms)
+✔ persisted layer visibility and lock state are business changes (0.619708ms)
+✔ placed-object map visibility is a persisted business change (0.327792ms)
+✔ business comparison preserves unknown fields and array ordering (0.281292ms)
+✔ verification rejects another enterprise and invalid or regressed server revisions (0.253416ms)
+✔ verification needs matching identity and sent content, not a higher revision alone (0.259792ms)
+✔ only positive integral saved backend identity can authorize a last-saved action (2.010583ms)
+✔ unchanged version permits retry only when the server still matches the saved baseline (0.271916ms)
+✔ API errors retain a validated Retry-After duration for manual retry (88.724833ms)
+use-defense-configuration-store.test.ts: shared store contracts passed
+✔ src/shared/lib/use-defense-configuration-store.test.ts (388.862459ms)
+replaceProject: fully replaces project state with no leftover placed objects: OK
+use-defense-project-store.replace.test.ts: replaceProject contracts passed
+✔ src/shared/lib/use-defense-project-store.replace.test.ts (581.675708ms)
+budgetApplied flag: OK
+use-defense-project-store.test.ts: project store contracts passed
+✔ src/shared/lib/use-defense-project-store.test.ts (775.761ms)
+✔ src/shared/lib/use-map-view-store.test.ts (362.502875ms)
+✔ persistent drafts follow delivery policy and invalid policy fails closed (196.304125ms)
+✔ Fortis public UI exposes semantic actions required by the GIS runtime (46.434708ms)
+✔ GIS domain components accept real project states instead of Storybook-only L1-L4 data (5.268708ms)
+✔ capability policy does not promote demo or unaccepted functionality into workspace (0.481375ms)
+✔ unavailable notice has a working-zone exit and demo marker stays fixed (8.883542ms)
+✔ direct operational pages and layout render notices without executing mock modules (99.746375ms)
+ℹ tests 338
+ℹ suites 0
+ℹ pass 239
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 93
+ℹ todo 0
+ℹ duration_ms 5709.180625
+
+✖ failing tests:
+
+test at src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs:1:1
+✖ src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs (172.891916ms)
+  'test failed'
+
+test at src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs:1:1
+✖ src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs (237.122791ms)
+  'test failed'
+
+test at src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs:1:1
+✖ src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs (183.028083ms)
+  'test failed'
+
+test at src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs:1:1
+✖ src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs (146.750791ms)
+  'test failed'
+
+test at src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:1:1
+✖ src/modules/drone-defense/domain/user-facing-copy-contract.test.ts (313.001583ms)
+  'test failed'
+
+test at src/shared/lib/defense-project.test.ts:1:1
+✖ src/shared/lib/defense-project.test.ts (426.275792ms)
+  'test failed'

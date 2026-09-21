@@ -1,0 +1,1710 @@
+{
+  "source": "/Users/rr/Documents/Fortis/frontend",
+  "buildDirectory": "/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m",
+  "files": [
+    {
+      "path": "components.json",
+      "sha256": "a7720c54d6a109d6063937fac1c7766c44a1020cdbe43eb489ca2cb126fbbaa9"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "sha256": "9f34dd8c6f9cd5330aa47c674d418c2251159a450bbc8a966f2d99c7125d9328"
+    },
+    {
+      "path": "next.config.ts",
+      "sha256": "6f52bc4a5a6c9ac9e5414f4f6fe24c1c7a3b30e4b1394017fad8e370c1ee9132"
+    },
+    {
+      "path": "package.json",
+      "sha256": "d0ddd08943c8610de6b4bd91c42248bc0600098f4f9236182e5b1a5114433be7"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "sha256": "b9154c61099fa31683b18bc80d295b527a464351c2b0a21c14d84f60509802a7"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "sha256": "6f096f437a72ffe947829a23631ecb9992533a8b307f4978e4ebfa27b2318be6"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "sha256": "5b0bc4c78be977cd81f947fb5563aaa7cc6d451e6f1c53a3260b7656a7144d20"
+    },
+    {
+      "path": "public/drone-defense/assets/acoustic-detection.avif",
+      "sha256": "ab64809a6591ee65c0f38080bc7ed13bd6cbf9becddd54e4fa146f97607d8a05"
+    },
+    {
+      "path": "public/drone-defense/assets/aircraft.avif",
+      "sha256": "2114d07104eed9e93a8921348c41d855ed99a270b03ba8de43350eabc4d85125"
+    },
+    {
+      "path": "public/drone-defense/assets/anti-drone-rifle.avif",
+      "sha256": "fe3e264c650752108dc6e4ac833503001e41f84a5315660707112e7f94dad578"
+    },
+    {
+      "path": "public/drone-defense/assets/armored-vehicle.avif",
+      "sha256": "b5434ce48a35bfd3d850fe04eca0b887a731002d6a90fe6cf87c96bde0e41952"
+    },
+    {
+      "path": "public/drone-defense/assets/atz-personnel-protection.avif",
+      "sha256": "053527c20d12b486473b2d3e38120a314f28fb0f67d9c36efefe5a8edd7ac1de"
+    },
+    {
+      "path": "public/drone-defense/assets/automatic-weapons.avif",
+      "sha256": "ae606eb153629ba7b4489ff5f0ee2b84c586104277fb59a9a02422834daf56da"
+    },
+    {
+      "path": "public/drone-defense/assets/bars.avif",
+      "sha256": "e87e5539c943d6d4c09207afab61095303e4667dd7f440dfa66de6add891b4b7"
+    },
+    {
+      "path": "public/drone-defense/assets/camouflage-nets.avif",
+      "sha256": "265a47002ae1cd6945c0cd76ae048b520b7228a9bb35ed7e99c292f786fd322a"
+    },
+    {
+      "path": "public/drone-defense/assets/contrast-reduction.avif",
+      "sha256": "77393ca71a6a3dbe061c5215f73e234ab3ed65b90833609d33ba0f2e25a35fff"
+    },
+    {
+      "path": "public/drone-defense/assets/decoys.avif",
+      "sha256": "302b8d5cf5aa8ea1722dbd1e3fa4d15a023218216850ddced387cfd00c4e59ad"
+    },
+    {
+      "path": "public/drone-defense/assets/domes-aerostats.avif",
+      "sha256": "687a86d53a4e229d4fee8371e9c02487b9284d3d20cd440f6166157f42991252"
+    },
+    {
+      "path": "public/drone-defense/assets/interceptor-drones.avif",
+      "sha256": "e21024cfcdd64f99e37c3beab75ef99827d2780c11baef66520815d1ef0b5bfa"
+    },
+    {
+      "path": "public/drone-defense/assets/jamming-generator.avif",
+      "sha256": "079e999f1be57ce638383325ca472dc88e132ba3d48dfe256c608079ed502934"
+    },
+    {
+      "path": "public/drone-defense/assets/laser.avif",
+      "sha256": "8b26ddf6fb87f60753eaf459037024d1e3071042e7854fa1b6691894de7d5ac9"
+    },
+    {
+      "path": "public/drone-defense/assets/microwave-weapon.avif",
+      "sha256": "2cdff099fb4948a1244119308400cd9ac05b40db92f80c83bcb26425fbfd91a9"
+    },
+    {
+      "path": "public/drone-defense/assets/mog-mobile-fire-group.avif",
+      "sha256": "358342364bdacfb4fae6aa01f8c4b9887788485577baeda0db6c6373677cc38b"
+    },
+    {
+      "path": "public/drone-defense/assets/mog-mounted-system.avif",
+      "sha256": "74c819de6a72129f5a8ef4c755610d55a77a3d729da048f39d00810eea205a7c"
+    },
+    {
+      "path": "public/drone-defense/assets/optical-detection.avif",
+      "sha256": "59ee3889edc905c65e3e5389c953e25fcf6c6f10791326ff40134f1bc4fafaee"
+    },
+    {
+      "path": "public/drone-defense/assets/passive-itz-bundle.avif",
+      "sha256": "50376bfa5a89152c4b8f891bc431e10db6dbcd7039a27fdd9c13c8063381e791"
+    },
+    {
+      "path": "public/drone-defense/assets/pzrk.avif",
+      "sha256": "74b5b1c5523ff92c5d45e044df576207e00c2ae08a820f12df5b350aa22dd9fa"
+    },
+    {
+      "path": "public/drone-defense/assets/radar.avif",
+      "sha256": "4556ec6965b9f4e4c1002a1e965a40385d5cd378784598c209f5ca576df76042"
+    },
+    {
+      "path": "public/drone-defense/assets/rf-detection.avif",
+      "sha256": "cf0e555f1fc416fcc3fdf77954f849a3ca405cc55331b9fd373310a48d7c4246"
+    },
+    {
+      "path": "public/drone-defense/assets/smoke-generation.avif",
+      "sha256": "05cc7e4d9f9a959a022731946a86647f30294007e9b2ae8c862796ba1de4c5b1"
+    },
+    {
+      "path": "public/drone-defense/assets/spoofers.avif",
+      "sha256": "2ea08e70ac2044eb1e8c750878cf7259d9246d33f215603cc9fe802df913ac26"
+    },
+    {
+      "path": "public/drone-defense/assets/thermal-decoys.avif",
+      "sha256": "484222327bf295dad92158a0103ea6eace2eac577bcbbd33e2908b3d2d1b4c32"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/acoustic-detection.avif",
+      "sha256": "f3b58e98e36bedc60f225fbfdd9760b5919fda9eb891fff389c8cf9c744eeb86"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/aircraft.avif",
+      "sha256": "2d008a9cc47c83834cba0873a3dcec145121bcbd29f9352540a890ebb4176b93"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/armored-vehicle.avif",
+      "sha256": "5018e3c2531788cf636b9a654621070846e091bc7e18ea9953dab0f647ac5735"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/atz-personnel-protection.avif",
+      "sha256": "f385d774207310e6a38b8522d29c9192018bee0474d47f5d2dca9c9577b1bde9"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/automatic-weapons.avif",
+      "sha256": "59d4c7f745e7973038a504723415699d9936e2ee9a0fe5c77b9402fda063c861"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/bars.avif",
+      "sha256": "5a50236dfe2ec75a745e7cf07e1ce1fc80675fbebd3410774719b2b319957ba9"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/camouflage-nets.avif",
+      "sha256": "68e3d7fb0d40cd5d3eeb401882070e3e782095f47f3cddb5f9986cecf41a3db5"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/contrast-reduction.avif",
+      "sha256": "5b912e595902f7504a2e899741a16d9933df3ea569990f267d1bef06d5b8c698"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/decoys.avif",
+      "sha256": "115ba021f3be157bb5d83c8bafa30eb6a5108d25b10604acb8c15150b2f87224"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/domes-aerostats.avif",
+      "sha256": "3b18c85e72e6d2b886cf9c0b43d973b63a71e2afe4065a4c1e0cfa1e254d5ef0"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/interceptor-drones.avif",
+      "sha256": "60801de8f292827444344792d234d400f5e2d038f11294ac4a250852c562728d"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/jamming-generator.avif",
+      "sha256": "10089cc82bf147a9002bc8a88a8b3eb9f7bd3de719c224dafbda674b1371d036"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/laser.avif",
+      "sha256": "53874c909a066b4f48b6e39b1260ff9e2f6959fe8d43cec2463cf480dddebfd2"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/microwave-weapon.avif",
+      "sha256": "c670691b2b2cdd1b336c97743d91359d52e2fc3d1cd635c7a6f82a93aefdda7d"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/mog-mobile-fire-group.avif",
+      "sha256": "358342364bdacfb4fae6aa01f8c4b9887788485577baeda0db6c6373677cc38b"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/mog-mounted-system.avif",
+      "sha256": "738abf270caf5f265e1151f50a6eec2333c0ddcd48359b503825cf630e865991"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/optical-detection.avif",
+      "sha256": "067eae9331fccf2440a8c67ab2d3c5f4e9e5794cc8e97c9637cb3aaa53c05434"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/passive-itz-bundle.avif",
+      "sha256": "9e792c78ba4e691abd78c11dee4d6cf8dd12b0a1e6005b9dc02f87bfd6adeff2"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/pzrk.avif",
+      "sha256": "1c7803ac77ff7aed3c882795516550e2007737fd8f4e29904be048591de91c4f"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/radar.avif",
+      "sha256": "fba90c4743ee79441fe7cf7bed36ff9ee43b508ac14e4d176b0e411263845b64"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/rf-detection.avif",
+      "sha256": "0f5c181af35a54a618c2a746c9cbd67fca0b4b399bce520267258c684654c301"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/smoke-generation.avif",
+      "sha256": "af2a8150ab6e51e54a0f9299e8550062913de83ca6d0996d226359f9b7dc7c6d"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/spoofers.avif",
+      "sha256": "af88925a846d88e94cb9c1aac5bb7d7f2a94caeaf41654e41c6f8f70c39fc795"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/thermal-decoys.avif",
+      "sha256": "5d49b53191a877b239eb05b8d85dec9fbbb4204c0a85411430f218eb7e7a2625"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/zak.avif",
+      "sha256": "f4b68e37aa3f56a66539202103a08b50af989e0766fb46c6a8be0bb54c574fdc"
+    },
+    {
+      "path": "public/drone-defense/assets/thumbs/zrpk.avif",
+      "sha256": "846a688cf157637f9912c7571cd5be509087da5ff994ad557f80dd12df69ae3f"
+    },
+    {
+      "path": "public/drone-defense/assets/zak.avif",
+      "sha256": "ff1ed3629128c00aa0ee3586cee51b5d276848adca96d4a2b8b096f6519141ca"
+    },
+    {
+      "path": "public/drone-defense/assets/zrk.avif",
+      "sha256": "f5005029cd4016ad4097a61875b1701c2707d9210a91c8e4cededc4ad52c8482"
+    },
+    {
+      "path": "public/drone-defense/assets/zrpk.avif",
+      "sha256": "6d348cf6724bc92c2f300ad376a499325cf77496802307bced0d98aedda79dc0"
+    },
+    {
+      "path": "public/drone-defense/echelons/l1/military-command-post.png",
+      "sha256": "9b56ae3885bff526c9c3426e67481107271effb213474a62e94b74f376aa05c7"
+    },
+    {
+      "path": "public/drone-defense/echelons/l1/neighbor-enterprise-network-station.png",
+      "sha256": "8a6b2dac6e945d22209209106c104c9f97602341fe09b280344f42101d786991"
+    },
+    {
+      "path": "public/drone-defense/echelons/l1/osint-monitoring-workstation.png",
+      "sha256": "22b17e4f6c7798c5498c67ba4df245569e66a805797d96d08ec86dc9eb7cf7cd"
+    },
+    {
+      "path": "public/drone-defense/echelons/l1/regional-mchs-center.png",
+      "sha256": "f15ca455df0ff129bba18c9e7b5b477172cc4567a2b8e406c5f22dab44948653"
+    },
+    {
+      "path": "public/drone-defense/echelons/l1/regional-operations-hq-fsb-curator.png",
+      "sha256": "bb305da957c65122a6218fdbe454f84a1bc7dc46f3f33fceadef0cd2dde76825"
+    },
+    {
+      "path": "public/drone-defense/echelons/l2/acoustic-array.png",
+      "sha256": "647009f4d06c3f4d48c89a7163a26503a012f4c731d0b28c50aeccc65e02ae10"
+    },
+    {
+      "path": "public/drone-defense/echelons/l2/optoelectronic-system.png",
+      "sha256": "5523b767cf6f44b93a704665e6d800d953edf72c345551bdeb394f7398af7641"
+    },
+    {
+      "path": "public/drone-defense/echelons/l2/passive-rf-detector.png",
+      "sha256": "4209bb6d5bff813b64947dd828d265c90800c02d4c3b7116b64d376d0ed117f9"
+    },
+    {
+      "path": "public/drone-defense/echelons/l2/radar-station.png",
+      "sha256": "403a857e1424a7692eb1402eba4fd1e2d1bd41955a87f26986d7499823168624"
+    },
+    {
+      "path": "public/drone-defense/echelons/l2/target-classification-software.png",
+      "sha256": "f26c0d4f47d9d6422d785ae2246b847316c4cad7ff659171c43091540d2d1845"
+    },
+    {
+      "path": "public/drone-defense/echelons/l2/thermal-imaging-system.png",
+      "sha256": "d5a28785ad6e060756070e5fd8c099977cb24a6aa658a9a6002fcb193c9aafdf"
+    },
+    {
+      "path": "public/drone-defense/echelons/placeholders/l3.svg",
+      "sha256": "00104899fa0c9142209ee5f84e1a609159d9dbd2f0bb9fababb5eae553a397f5"
+    },
+    {
+      "path": "public/drone-defense/echelons/placeholders/l4.svg",
+      "sha256": "60ef331ed64d3171ac44715ef33ef968e4724e757f084d084f16aafc062867a5"
+    },
+    {
+      "path": "public/drone-defense/echelons/placeholders/l5.svg",
+      "sha256": "79d5d44b1bcc9015e6a75d6b46b88de0ea5fc1e41f068711b104faa9e029817f"
+    },
+    {
+      "path": "public/drone-defense/echelons/placeholders/l6.svg",
+      "sha256": "ca7c693a282c7f9252300e16ccccd237046f090b7c18d3e31aee00b9b3c331cb"
+    },
+    {
+      "path": "public/drone-defense/echelons/placeholders/l7.svg",
+      "sha256": "205c4a954051ccb6750c46ad9118b416249f05bcfc585f9463dda9bfcd2ba74b"
+    },
+    {
+      "path": "public/drone-defense/echelons/placeholders/l8.svg",
+      "sha256": "5229e752bcb24971e20dd0ff9ac45af22472069421fd1835e93499c7249e8513"
+    },
+    {
+      "path": "public/drone-defense/echelons/placeholders/l9.svg",
+      "sha256": "4975c6d938367eb32b5c94c9e8f2b1c82008f5153483a5328fab5e7910946e85"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/acoustic-array.avif",
+      "sha256": "20652d37514d2caab61a8b0782c9943f75f8282aab0d494d0e43f1a1099fe2c1"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/military-command-post.avif",
+      "sha256": "5ac54ae443f1ec6d027bc0b4878b24b27a996607fd17a570a930778fae09867c"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/neighbor-enterprise-network-station.avif",
+      "sha256": "cfb70a236922ce83f497d1301157e687c97c9a946f993024f0f7e38a1fd38958"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/optoelectronic-system.avif",
+      "sha256": "63e85f87d66fbc6b34ada7c96b08760b7bb28b88dd3fa60be1b89f5067bbbb41"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/osint-monitoring-workstation.avif",
+      "sha256": "f5dc9df0c24f7a840e0d0887f34903110d6d0723e2b849f16c8801d5bbff2ae5"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/passive-rf-detector.avif",
+      "sha256": "e47b0daac80cb1a71d50e88aac417a8a6f9aca26203bdf53a9639af928c38fad"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/radar-station.avif",
+      "sha256": "7aeb2cc98dd2ee233484be40767fb4c132f1e436daec2686670d9ab746cf3dc4"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/regional-mchs-center.avif",
+      "sha256": "2109a08232365bd471ebf18b0336d76bad1b06788eddd5060419060bc828ab6d"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/regional-operations-hq-fsb-curator.avif",
+      "sha256": "b759b5f4c6c9d89073934614a47fbb1ff8211854e7629fbe1146e7c71766ad44"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/target-classification-software.avif",
+      "sha256": "1b97e5369a1be8f6a35b384286bfdefccec597c254a7022c7fc3eedd20b897e9"
+    },
+    {
+      "path": "public/drone-defense/echelons/thumbs/thermal-imaging-system.avif",
+      "sha256": "e7a15a9e28e5302a775fef48bbd6063691a06e6514e963a526dc85b950d649af"
+    },
+    {
+      "path": "public/file.svg",
+      "sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4"
+    },
+    {
+      "path": "public/globe.svg",
+      "sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf"
+    },
+    {
+      "path": "public/models/chaklun-v2-drone.glb",
+      "sha256": "923b1ebee7489490b8a8d599526520c5c5a2c1f00609c183b6e39680f21c15d8"
+    },
+    {
+      "path": "public/models/fixed-wing-uav-reference.glb",
+      "sha256": "b0246ca66f7a2bfdc5a6c037f55159e1ffbe3587d9786a1142581b40770a62e5"
+    },
+    {
+      "path": "public/models/kolonnyy-apparat-s-zashchitoy.glb",
+      "sha256": "a9ebb68c0c2b55cae544bec525667d24ab832a0ffbdbac52830c0e1607862d6f"
+    },
+    {
+      "path": "public/models/meshy-rocket-engine-test-stand-generate.glb",
+      "sha256": "9c28141da117da0680e932c1e407a1940ac82bd6205b119b79791367f2421869"
+    },
+    {
+      "path": "public/models/meshy-rocket-engine-test-stand.glb",
+      "sha256": "3c6e9144caf19d71eb3c09f2c5f037a6b25a8dc3f67a164a781a19aea4a46407"
+    },
+    {
+      "path": "public/models/meshy-silent-sky-scout.glb",
+      "sha256": "34c635a27edffc66b0a69f0d1cec1d3e5934f2fd2cf3cd4d76357e16d719f878"
+    },
+    {
+      "path": "public/models/protection/02_cable_mesh_curtain_textured.glb",
+      "sha256": "bce0ea27ae90acbf5f5855257011a5395e5e9295163ef3411ad191ac6e4857d7"
+    },
+    {
+      "path": "public/models/protection/03_fbs_protection_enclosure_textured.glb",
+      "sha256": "1d620b398e35ff91034824ba02da771839e8f96e9f2b65697500a9f3681e392c"
+    },
+    {
+      "path": "public/models/protection/04_perimeter_fbs_cable_barrier_textured.glb",
+      "sha256": "eb520d946272b97010528cb53e17f45245a08153c2730a9d34a3d8d37a46b569"
+    },
+    {
+      "path": "public/models/protection/05_protective_scaffolding_with_equipment_textured.glb",
+      "sha256": "de6ae98ac330800827f3a6bd8721efb2b80e2b692ad5eaf3bb03ae12811a559f"
+    },
+    {
+      "path": "public/models/protective/cable_mesh_curtain_module.glb",
+      "sha256": "aa92fe79626398b00ce3ac94dbf1a829a18ccda5933841db14d5f12523b58efd"
+    },
+    {
+      "path": "public/models/protective/fbs_protection_enclosure.glb",
+      "sha256": "3fa0e7e42323880a25ab4b72aa99a33210558eaf82551ff7f4905e2e0f38bfd6"
+    },
+    {
+      "path": "public/models/protective/operator_substation_protected.glb",
+      "sha256": "22bae68e305e0e12fe37d8449dadc94658549bc18eaa6737746c11040a3d7292"
+    },
+    {
+      "path": "public/models/protective/perimeter_fbs_cable_barrier.glb",
+      "sha256": "9ebd6c61a365ab87b48626c1c45c8c0ecd8b8af1738d3574ac8377fdc9338b09"
+    },
+    {
+      "path": "public/models/protective/protective_scaffolding_with_equipment.glb",
+      "sha256": "a43b562046866551660f9fb03351fd8171ab8c886c16b7796981c7826e87f11c"
+    },
+    {
+      "path": "public/next.svg",
+      "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc"
+    },
+    {
+      "path": "public/textures/protective/concrete_texture.png",
+      "sha256": "ffcc47fec45f9c7a4cad5da10f67cd527033b82d1539383ed714ba7e51b4f2a4"
+    },
+    {
+      "path": "public/textures/protective/metal_texture.png",
+      "sha256": "14b96d05d5945b1e3276eb57152c0a2cbc8bbb8c53e5402255a5cd453bf97e0d"
+    },
+    {
+      "path": "public/textures/protective/wall_texture.png",
+      "sha256": "2c62d1ece84e80ac97a28057675979a660fd47e655a9f2e924506ddef5595e65"
+    },
+    {
+      "path": "public/vercel.svg",
+      "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4"
+    },
+    {
+      "path": "public/window.svg",
+      "sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1"
+    },
+    {
+      "path": "scripts/generate-fixed-wing-uav-glb.mjs",
+      "sha256": "326a801aaec44fa278406ab2a03d67657b1d9553ee097e894af3370323841d8a"
+    },
+    {
+      "path": "src/app/(dashboard)/dashboard/alert/page.tsx",
+      "sha256": "6bfab921b2c3558251408c8c6def5708feaec869f3e5c8d3a4991ad4b07e2d72"
+    },
+    {
+      "path": "src/app/(dashboard)/dashboard/incidents/page.tsx",
+      "sha256": "2186b042a1d57d5d324229ede367dfecf72d5e0eab1eb98fb630e91703341dd5"
+    },
+    {
+      "path": "src/app/(dashboard)/dashboard/page.tsx",
+      "sha256": "c5d6f880807cf14970f468ffceb07d4a0e33e7a3d64e17bd22d00d590a15977c"
+    },
+    {
+      "path": "src/app/(dashboard)/dashboard/reports/page.tsx",
+      "sha256": "1153e971e1aecead1d35d21359c1a9fd4aa133a087e335bec2bc41b004d6cad6"
+    },
+    {
+      "path": "src/app/(dashboard)/dashboard/settings/page.tsx",
+      "sha256": "489208819c38dc6be07d4f010ba88073ff683713673c4e68359367f49dcec965"
+    },
+    {
+      "path": "src/app/(dashboard)/dashboard/sites/[id]/page.tsx",
+      "sha256": "497f26df67e41d3298a1612933d8f71df92d936c4878bc6c1bf8ff66c3f8050c"
+    },
+    {
+      "path": "src/app/(dashboard)/dashboard/sites/page.tsx",
+      "sha256": "5e546c61807a1437259ce391e155ec656333eedc9c2d385c6aa0b5cad92f4956"
+    },
+    {
+      "path": "src/app/(dashboard)/dashboard/team/page.tsx",
+      "sha256": "07daa5e7a659f18da6081a654d9e01ab63260c61dbbfbd8f69cd8551eaa29564"
+    },
+    {
+      "path": "src/app/(dashboard)/layout.tsx",
+      "sha256": "d1fbe215fbbca55e760c0b9760346c6e99b4680aee0285d8cdf7273b18f8ff3d"
+    },
+    {
+      "path": "src/app/(defense-studio)/calculator/page.tsx",
+      "sha256": "3d483060f32b1ed16b4df43ee3ba818040394af4a227fa5925c70268596bb384"
+    },
+    {
+      "path": "src/app/(defense-studio)/layout.tsx",
+      "sha256": "32af0f85f0ef1576394085e8838c3784770c407f93d45d349786fa29afec271f"
+    },
+    {
+      "path": "src/app/(defense-studio)/prototype/page.tsx",
+      "sha256": "a280026b00d85096f210865f9d3630968d44853cda549b157101b23563a33ebb"
+    },
+    {
+      "path": "src/app/(defense-studio)/retrospective-analysis/page.tsx",
+      "sha256": "0116134b992a2ed7e84f92fa18d3a7308cefbad160e393921f8d802e2e01f10d"
+    },
+    {
+      "path": "src/app/(public)/layout.tsx",
+      "sha256": "746d40c13af1a37c9e43340a694834de29674e659d0dddaf9d2d6136b8173502"
+    },
+    {
+      "path": "src/app/(public)/login/page.tsx",
+      "sha256": "5fc2ad04424c76a11200c0a4dcdd309278a9e63e269ede9536f4f69215db55be"
+    },
+    {
+      "path": "src/app/(public)/register/page.tsx",
+      "sha256": "f77b30a5da4c0fbe240b7560013670a7d7494362cdb29ba3da9984f84951b329"
+    },
+    {
+      "path": "src/app/api/auth/login/route.ts",
+      "sha256": "8d233c3175184d9b3264ec6880c3b92e00e168baea8811dd06f0ce5bd912377f"
+    },
+    {
+      "path": "src/app/api/auth/logout/route.ts",
+      "sha256": "96ca4bf8c6aa65e85b0de6effc072c4ec2474a3b77a6717ba6ab699e8508ee60"
+    },
+    {
+      "path": "src/app/api/auth/me/route.ts",
+      "sha256": "074885be93d318ebde33fd91c1bd6be787b56e6e30fd9b61ba914cbaf2573fea"
+    },
+    {
+      "path": "src/app/api/auth/register/route.ts",
+      "sha256": "bd124b09eff9d30cbf05490d22953b2e59fea10a1346a36f6b0082264f1bbb18"
+    },
+    {
+      "path": "src/app/api/defense/catalog/route.ts",
+      "sha256": "85beb31043aa6f0122f40b2bb74943af86a3d14658d70a2bd5b03c142e51d1d0"
+    },
+    {
+      "path": "src/app/api/defense/evaluate/route.ts",
+      "sha256": "545765a59db7fe58a9182839765880a36a2b44cb9d77efca1cc0f35ea5fdd995"
+    },
+    {
+      "path": "src/app/api/defense/facilities/route.ts",
+      "sha256": "165601e2552f8fc90897e2a329fd75d73fa8c2f100409ec8cf096a71ae10d262"
+    },
+    {
+      "path": "src/app/api/defense/layers/route.ts",
+      "sha256": "6a178fd535744c671dd738df4cbf510ebeb6744439403fe91b68c6a279525d43"
+    },
+    {
+      "path": "src/app/api/defense/projects/[id]/route.ts",
+      "sha256": "25ca5f01b6a8fd066a16b9fe9067aad0d351668f5f5084e78656cee478c9b9b4"
+    },
+    {
+      "path": "src/app/api/defense/projects/route.ts",
+      "sha256": "57b5158c3ad4b70be4b51a4f701c0227d811dd5cf1be4a8625779a8f750aea50"
+    },
+    {
+      "path": "src/app/api/defense/recommend/route.ts",
+      "sha256": "0493d3c545bafab0ac355751eb6a0fcb9e2c1eb39d728f8c52b3c0a69d43a961"
+    },
+    {
+      "path": "src/app/api/health/live/route.ts",
+      "sha256": "cf6647b5277a587a3b19910a258257e65f8040edef188b1f1d513b7471a52af5"
+    },
+    {
+      "path": "src/app/api/health/ready/route.ts",
+      "sha256": "0a7ee446bba42d6c4468e91c98909748b2ea68f01e4de219696bef8c3a26ed85"
+    },
+    {
+      "path": "src/app/api/public/demo-requests/route.ts",
+      "sha256": "ae745237b08250dec4f14924a6e71329a1dc8ee3aa7126f96624a1774c2509d1"
+    },
+    {
+      "path": "src/app/api/runtime/route.ts",
+      "sha256": "693e45b146ae021606c0c683a2be880d8f28a19457174fb57614b58ef8b971dc"
+    },
+    {
+      "path": "src/app/api/v1/[...path]/route.ts",
+      "sha256": "877ea79825a63c2cd2dc4190f7a18184b8f359b71b1059ddee2fa766fcd609e2"
+    },
+    {
+      "path": "src/app/favicon.ico",
+      "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932"
+    },
+    {
+      "path": "src/app/globals.css",
+      "sha256": "1a226e7f0e862291fc740217b84ab42c65598c1b68ab0435f2cc677e92cb0211"
+    },
+    {
+      "path": "src/app/layout.tsx",
+      "sha256": "b52021038c0f08f845195bc31a9508d47e0d8003ed4b80af97359aa1a0bb9dcc"
+    },
+    {
+      "path": "src/app/page-hero-copy.test.ts",
+      "sha256": "8cb498e41a4cb762fc12a769a09f143250012f232159d5b6f6152326da08b337"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "sha256": "ba11a7474d898da97e5a7ea6250fb367b86d1b562bf43a2488454244e0a915a5"
+    },
+    {
+      "path": "src/app/workspace/page.tsx",
+      "sha256": "66203134d05ba8fc8b5736d5a95856e75d3c5a41885bf9141a023f96bb1df22a"
+    },
+    {
+      "path": "src/components/FactoryMap/ScaledGlbModel.tsx",
+      "sha256": "f0ae97f6f37b5e295ca2a634e01577d08effdd0c657ce19b30c086a2764c9ad9"
+    },
+    {
+      "path": "src/components/ui/badge.tsx",
+      "sha256": "1b292cd64608eef62eab1e43621071b32f794988a8c4e40fd1086cfbf8d9ef5d"
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "sha256": "6f7d18705d50ab348f8d47fc040ed296503a6300fea6686c0acae42dbf20099a"
+    },
+    {
+      "path": "src/components/ui/separator.tsx",
+      "sha256": "c924a82e99fda03684c17238d04eec857edc83977da2ee601795e94e52b4828f"
+    },
+    {
+      "path": "src/components/ui/tooltip.tsx",
+      "sha256": "f26881e08ed65a973a15ac3bd509bca50c31da1d5b275bc3f9c48b5de1d1c966"
+    },
+    {
+      "path": "src/config/assetDimensions.ts",
+      "sha256": "7e2850e3cc05a6723d5f3ea5ff70ae7ced3d489099e727c6b75017830fafbbd3"
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "sha256": "7c8c3dfc0cdd370d44932828eb067ef771c8fe7996693221d5d4b90af6d54f2d"
+    },
+    {
+      "path": "src/modules/alert/domain/useAlertStore.ts",
+      "sha256": "df240676299985b56e2953e59609f501efa776138714f95c739d670497b34ce4"
+    },
+    {
+      "path": "src/modules/alert/ui/alarm-confirm-modal.tsx",
+      "sha256": "45b4eaab900756c84c602cfb357d2a02801fe93ba2e2bc4229b143894293da8b"
+    },
+    {
+      "path": "src/modules/alert/ui/alert-center-page.tsx",
+      "sha256": "52592739ced47f0bbb4de873a835eeb7c88936a8f21f245b64ecc24a0aa037ad"
+    },
+    {
+      "path": "src/modules/alert/ui/compass-rose.tsx",
+      "sha256": "b55181869ae0efce95aea33152cf6dec6044d11c60ff762a0a946f48094499f1"
+    },
+    {
+      "path": "src/modules/alert/ui/device-drawer.tsx",
+      "sha256": "44a62028511c3964a5e669d31438650e99fa0536cfe7c5435747d3cce9c738dd"
+    },
+    {
+      "path": "src/modules/alert/ui/event-card.tsx",
+      "sha256": "78ce61767843d2ae9c618ab527ed01b51628f29702974a7f59473a8e9a22cab8"
+    },
+    {
+      "path": "src/modules/alert/ui/radar-scope.tsx",
+      "sha256": "426ea83cd0bc21cfe6e91bd1b1c0a6803f5d43bee1844ebd8f934e3aa1bcc40a"
+    },
+    {
+      "path": "src/modules/alert/ui/sensor-panels.tsx",
+      "sha256": "fb708e7c22a807f03bae8ec874320b81d0ebf5eda230b30d89316facc659d67f"
+    },
+    {
+      "path": "src/modules/alert/ui/status-banner.tsx",
+      "sha256": "77f9eb1715c464c0cd159529188be3b34179b38b70a4c6e82e2957ffd76205ae"
+    },
+    {
+      "path": "src/modules/analytics/ui/reports-page.tsx",
+      "sha256": "ba9c34e7419e6ab3ea8b47881692c04f9a5dd9ef97ff71a1ac1912f2b1f753b9"
+    },
+    {
+      "path": "src/modules/auth/ui/login-page.tsx",
+      "sha256": "a6d1d375b1ab40a2022a209720cf3dd7719177a4048c984dbd76c9bb49dd95f5"
+    },
+    {
+      "path": "src/modules/auth/ui/register-page.tsx",
+      "sha256": "ee471945bc59c1054da68da72c7d904d1212ff46252b75bdfdd313c364a1424c"
+    },
+    {
+      "path": "src/modules/dashboard/ui/dashboard-page.tsx",
+      "sha256": "084308e2001ddfc06453dd5c6abb99b61c15fc08298b0bf56cefd9bc6aa566fe"
+    },
+    {
+      "path": "src/modules/dashboard/ui/header.tsx",
+      "sha256": "fcd28fd44d10310b27c2049165c7d5545cc47a9d8e3b3143d1d2f09e86193b60"
+    },
+    {
+      "path": "src/modules/dashboard/ui/sidebar.tsx",
+      "sha256": "d7252c2016dbefa257c5471a3273319736f895c476fa77480de0d667fa2db1be"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/budget-fit.ts",
+      "sha256": "46a799319b7a3c5ce453a1cd82e650580385230bcc51f519e6b400e2fbd5e6a7"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/calculator-types.ts",
+      "sha256": "c0d6902e79dd79ed4180a7582cbfff869d0191c963f305cea24905663a2b7ad3"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/configuration-comparison.test.ts",
+      "sha256": "67bb9001797c8fa4e0a558d153305596835b0bfac5b1ef068a6b0df24cfadc63"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/configuration-comparison.ts",
+      "sha256": "25d24c53708b4e49219e3854590b725910c2b1fc94434250023c7eb538cece8a"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/costing.test.ts",
+      "sha256": "952e1263d52fde0265d4b4eb900c19aecf6c95b5e05bb3fba586ba84bf875b6b"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/costing.ts",
+      "sha256": "b5d726507c140eeca0c1a78c8256546671113ec588ad81b500d7d7f0dd52a64e"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/format.ts",
+      "sha256": "a748b960528e2040688ceee2d36aba978f32808e47be4be5c9f3f8f3056b1616"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/project-asset-adapter.test.ts",
+      "sha256": "b8bceb018f0b843566dadb074a58e13c0da5cf0a2b1e9fca0dc886cd3217d27b"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/project-asset-adapter.ts",
+      "sha256": "3392ddc37efb52ccd938e414308619a1aa51a054cbbe43bbea3e75e287ac3cd7"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/project-report-lines.test.ts",
+      "sha256": "d57665c095a56364d823a3d7c374a3ac7317e4a67554e0da404d32f960e525b4"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/project-report-lines.ts",
+      "sha256": "25fe9bd9f6716b5e41c6dcd50bfcf70e15f99ed7cbd437447d38d274d20651d0"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/scoring.test.ts",
+      "sha256": "1685c20d79e6c323c11744458f66682d643a0944596c15da365a1e35079c581a"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/scoring.ts",
+      "sha256": "65840a8ca315a6fc0bd60fda602156b444b42594905889c303532ff86a224744"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/structural-profile.test.ts",
+      "sha256": "b80f7b523a8e6b100cc6b8181c916bd725d8cc50eee84dd4eab32ccf5fe45f5a"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/structural-profile.ts",
+      "sha256": "9675b0fc51a5baf148206beae172110196f9b4aeca717fa97e3acf78777e9646"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/use-project-budget.ts",
+      "sha256": "24b7b4e2308223d59290e5d21a97cef397d87557e6dcc4356ebe8f4e088c760d"
+    },
+    {
+      "path": "src/modules/defense-calculator/domain/use-project-cost.ts",
+      "sha256": "ddd67c0061a90666bb6ba48ca738c0a08ca5b8c9ed238eb599b7309597fb19c6"
+    },
+    {
+      "path": "src/modules/defense-calculator/infra/backend-project-api.ts",
+      "sha256": "412dabb5114c44dd5f31b8bcc31ad4a7245216e3499d69f6b5dae757177170a8"
+    },
+    {
+      "path": "src/modules/defense-calculator/infra/catalog-data.ts",
+      "sha256": "661d929021833d9560fce50763098953e2c09666f18dace9b41729198e4681c1"
+    },
+    {
+      "path": "src/modules/defense-calculator/infra/compare-revisions.release.test.ts",
+      "sha256": "370b3309be5704e59fc5fd7624adadb99b78803a22f47e05121d8d77ff768142"
+    },
+    {
+      "path": "src/modules/defense-calculator/infra/cost-projection.release.test.ts",
+      "sha256": "93fab6878e2295c7e0ef1397e26974cb08d55f4ec8f5ee04fa713fb69779fe36"
+    },
+    {
+      "path": "src/modules/defense-calculator/ui/budget-gate.browser.test.ts",
+      "sha256": "a2c264dbed4690592cd55fb07c50644963f233ea4dbb01f9f61acf024f131dd2"
+    },
+    {
+      "path": "src/modules/defense-calculator/ui/calculator-page.browser.test.ts",
+      "sha256": "e7c1d6e5b9f5fd5b3a62a38911dd3e0aea29280007349eb53e7dc428f157c6f2"
+    },
+    {
+      "path": "src/modules/defense-calculator/ui/calculator-page.tsx",
+      "sha256": "9aafa0c0fa273042a61005b4e839c2e6d23c73eeaa9d1adb207213755f69527c"
+    },
+    {
+      "path": "src/modules/defense-calculator/ui/calculator-report.tsx",
+      "sha256": "af48afee0830bc71c4a18be0603d72a412137daaa56882db86a93bf102f0c42f"
+    },
+    {
+      "path": "src/modules/defense-calculator/ui/configuration-comparison.browser.test.ts",
+      "sha256": "2ca9102280ab30a78a92c812d7bd2b01d3a5c4a5613ca7525dc2688d9b503b9a"
+    },
+    {
+      "path": "src/modules/defense-calculator/ui/configuration-comparison.tsx",
+      "sha256": "3c616cf2b269d6ef7db61a19b7c5741988515c5654f70a5736155a68ef73e8b6"
+    },
+    {
+      "path": "src/modules/defense-calculator/ui/project-budget-panel.tsx",
+      "sha256": "175c19b29c1d8126982d0bc07019329522dbb8d4578367328f77f29c2f7f72a1"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/asset-library-form.release.test.ts",
+      "sha256": "939d5df1bdf348a23e7e00e2d22372d182f67d522e251cea464d3a10b633bf62"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/asset-library-form.ts",
+      "sha256": "99c25f547d4f64be1c122c351568fde8c71facbc5c0bc21ea229b25d54f52054"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/catalog-sidebar-motion-contract.test.mjs",
+      "sha256": "25a7d89e9f5a1cbab821acabe9bc415788e7a1fa4fc4d2647ea6b8a981cf4afb"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/compact-asset-cards-contract.test.mjs",
+      "sha256": "ed743b7504325ddf63a8ed9db212f1f340524e7e6434046357753a7131a33966"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/configuration-scene-mapper.ts",
+      "sha256": "a492d65184e426bd9e630772c863658a1a46a63ba2137ca5a22a20ca19016290"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/custom-layer-color.release.test.ts",
+      "sha256": "18b8ad9f7fed26cd391a2f33754e6470c1062d414987bcab1262d0402674e185"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/defense-project-source-contract.test.ts",
+      "sha256": "d3627b0d39fc7eab237554bc52cac7851a0cd3fc26456be4f65693ec464566e5"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/defense-studio-contract.test.ts",
+      "sha256": "8d84c794a0a7301a3cf46bf1eb925e2a25a7191859aabc2a51970d48341d5907"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/echelon-build-assets-contract.test.ts",
+      "sha256": "925c79b24bf2b6cca5dcc96fdcc2bae38c596e535d9575764f9452ea31784bfd"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/echelon-build-assets.ts",
+      "sha256": "5a0680b6d73dfe7205ce95f07bfdd392b072d7b2153b682f7af53956c132c945"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/echelon-catalog-contract.test.ts",
+      "sha256": "644aa0b183d5a39f2cdcfbe71957bf4eef5cf177c83c74f07b5490f5fca0d4a9"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/echelon-map-model-contract.test.ts",
+      "sha256": "43ac236b6ad9aa5e9702cee8dcd66143b6bf47176dc5ba9967c37a1386b07cea"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/echelon-map-model.ts",
+      "sha256": "e0be0904390be0d13c48c63fade1c4006b19b9b796b36960afae9c84e69b86ad"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/echelon-slot-contract.test.ts",
+      "sha256": "7660d44c368a99cd5dbc10898aa1ebf4a166119ec58b2258afa5ddf5323375fc"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/evaluation.ts",
+      "sha256": "c732d8812737db883ffc528e741f8c2bc581ed49a0540181153994edd70a7c0f"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/layer-distance-contract.test.ts",
+      "sha256": "35ee6a14a68c71175e208a2cd79635cf71e2a6404bec4698dac782f04944ea3d"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/layer-manager-polish-contract.test.mjs",
+      "sha256": "769237aa588185658e41a488c5b7efae22724e5a94d85592c8826d0dd0533f7c"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/map-marker-double-click-focus-contract.test.mjs",
+      "sha256": "fa359f25bc2a0dd96775b924f7c74412539979366c4c37228e13bbd465e8a273"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/map-placement-icons-contract.test.mjs",
+      "sha256": "b56c9f904a100877c0b6658d9f130f4ed8d736b6ce79956c121e37c68f17f85c"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/map-zoom-controls-contract.test.mjs",
+      "sha256": "345cbccdff54d49c4293970a5dbc8eddcf629805b9adc5c50a6a075b6676502d"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/mog-azimuth-dial-contract.test.mjs",
+      "sha256": "58ddf3b0e728051e853a9fc06315bb4f1a1e400624589b47cc2c8b0cde282703"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/mog-coverage.ts",
+      "sha256": "f2832081f946921c3a0b6626d84e3afcbc7e08a2837e32e8b6ab0f1b10f7c415"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/mog-editor.test.ts",
+      "sha256": "07918b83efff1811685bc0ca7b380f6cb6af586c21c98fa7f669faab19566c1d"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/mog-editor.ts",
+      "sha256": "16d05649f5c785d9baefbb0c4ff8f823332c3846e61e543dcd1ac14fb1ea6114"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/mog-sector-dial-contract.test.mjs",
+      "sha256": "793c0ad34330c196a9c7448ba2d5c08c009bf8bc0c93e86c79350adc2f9c96ca"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/placement-focus-view-state.test.ts",
+      "sha256": "52eea927706df36b518a3603a2ff7dbb2d275fa895f6baea47f4c256e37e04ab"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/placement-helpers-contract.test.ts",
+      "sha256": "d27379e48382698107b81a5dcb1ec573e490fac24c025844db4037f8f8fc79a0"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/placement-helpers.ts",
+      "sha256": "84caa14b83e21583625272b61a1d3fc17bd319c3fa1214ec38793aa8faf4e5d6"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/project-budget.release.test.ts",
+      "sha256": "46ad009d8863d6bde315108e4a9e499abc25a9f0523f62aefbdab23b7addd416"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/project-map-adapter.test.ts",
+      "sha256": "a41c6372ff48f4398a7fe4711a9d6f9c9a938f8c503c8453abaeb42041326e24"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/project-map-adapter.ts",
+      "sha256": "1bcbf52e1e35bd054bbbfb78e63d693f43bc004235cb8783e80a28e5ba985cd1"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/project-save.release.test.ts",
+      "sha256": "fc37690ba8b12e5441bfc1cad05e53c1e6e93952263805ffa756cc7100f284f6"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/protected-object-map-contract.test.ts",
+      "sha256": "88c8e79887fbe4cdd5096ff7d04604f4938dd34ce73184b0e9ddf9f0ce5331cf"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/protection-visibility.ts",
+      "sha256": "6d26af978d404a5b40fb615aa3972650c8509069e62f26d672fa69d1a93cc609"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/prototype-3d-placeholder-contract.test.mjs",
+      "sha256": "56b8d28ec05277cbadbb802988aa2ca9630298d9438d000a798b22ee0992efdc"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/prototype-types.ts",
+      "sha256": "54479cab5a967d5f64903895a34941041433aba1d51ae46fc94370c808b0dbd1"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/prototype-workflow-contract.test.ts",
+      "sha256": "62034e90390a4f20d924fdf28dee4b3287bbaf91e9480191debcce89c2f56647"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/prototype-workflow.ts",
+      "sha256": "c9224089554fd7f193529d25781df1b00a5cd473c3b0a23fbb65176f063401c1"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/retrospective-analysis-contract.test.ts",
+      "sha256": "f779af3b9bd827d91bf4455fe99091e1751d8017b592401118f28cf458fa4db9"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/retrospective-analysis-navigation-contract.test.mjs",
+      "sha256": "29a7f2eee9c0c0c7f67a46058055b166ad336f80627e9553fa8ffbbd9d6d3626"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/retrospective-analysis.ts",
+      "sha256": "f2c02963141b8e4df32a2ecf12a00830d1f2beb67563219ce04ced092a519b4d"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/scene-contract.test.mjs",
+      "sha256": "8abd71cb632ddc553a5238b645c064555c6a98ef24cb9e2aba05b425fb50af2f"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/tactical-map-markers-contract.test.mjs",
+      "sha256": "c8e287136abfb293594cf4157c5e3465892b091b1de1edef185590985930e2aa"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/unrestricted-placement-contract.test.mjs",
+      "sha256": "4f6533e46ac0279b79127b9dc34731c82130cff3f9639ede76a0f35e58cc304d"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/use-defense-studio-store.ts",
+      "sha256": "935739e46bff75812bcfff69e9a06015b8d291469b435e702ae38921f1c18e9d"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/use-defense-variants-store.test.ts",
+      "sha256": "b46551f4b36c2499d687f9ed192faa9a747dc3eb1136f70852a1aaa17f5c43b1"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/use-defense-variants-store.ts",
+      "sha256": "4df038af6421fe998f3210454d84d1e9f79cbb439b7dbf8e35b910affce2365a"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/user-facing-copy-contract.test.ts",
+      "sha256": "bcb9b5a06d434a0fbae178d116a383d825cd80225bd28c5a534e08c2279b91e1"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/variant-ui-state.test.ts",
+      "sha256": "cf96b8e3dfd7af9d1751bc1f5406dc2f5a74c7d27e9f4e9cc1ac5a78384b90ba"
+    },
+    {
+      "path": "src/modules/drone-defense/domain/variant-ui-state.ts",
+      "sha256": "f716e2244074fab40727bba0f80e950e1d8ca96408a263798f09e73f3ce03046"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/api-client.ts",
+      "sha256": "3dd16a3bde87e5bbe8c6bf196e5a704c7458235dcd6e25742762eb6776885eb6"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/asset-api-proxy-contract.test.ts",
+      "sha256": "89fd00a75bd1611824db26d9a36ccac3024780c2fa770b249a4f6b4565a6445e"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/asset-documents-api.test.ts",
+      "sha256": "bce54d33e1f0818355cc9556328ed92a3d98e293b7b7a77ccaeb0b6c1d9ceae5"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/asset-documents-api.ts",
+      "sha256": "6d3407eb72622ae99e51c150db8925a71a55dab37c1beac63232a42c73e6b0f8"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/asset-library-api.test.ts",
+      "sha256": "9372bbcffeae879059b8a033351437ab64baf1a4cf4f426f6a6a1a68021effcb"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/asset-library-api.ts",
+      "sha256": "af09536b8091de32ae04458aef8b126198147e92e0b9c89c1052414655781e2e"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/backend-integration-contract.test.ts",
+      "sha256": "9a9c45ecfd9450f23c1dc1fb523acda004b0adb26bcfdac7f23e7172554d5a8b"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/backend-proxy.release.test.ts",
+      "sha256": "cf2a26d5cb15d1a9aa466e166d37c297e2dd9a8036eebd7f0d6c952000158a21"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/backend-proxy.ts",
+      "sha256": "fda1ae4a1f45d80dd24c89cde55e1692f345b12b26d4417f558026bd1ff1ebb9"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/catalog-provenance.release.test.ts",
+      "sha256": "8e7a959f8ea98335d741770fe939d9ac8cc3d3986d1deec59a69b8610d80dd5b"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/data/defense-catalog-seed.json",
+      "sha256": "d5714ef0573bdad9200c20248d873f1adbb14a6b49da7641f242e102464c61f7"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/enterprise-api.test.ts",
+      "sha256": "06f4c7230d44d041f2c80072c06d3b9126d125a64603363e5705b9d7ec55c3ae"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/enterprise-api.ts",
+      "sha256": "b8726e059ae7be9a49bec47de5e0b8699786143df67d1c8b0a67759656719635"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/mock-defense-data.ts",
+      "sha256": "8978266f1279ce92796bde6e81193956aba68456328370022873fbc98167f0e5"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/mock-defense-repository.ts",
+      "sha256": "0c9001983483bcbdc85dc02bf3aa2053b9b8054f4b9c1d50fb1e19688240789e"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/project-revisions.release.test.ts",
+      "sha256": "33df42ad9e03afbc78e07fd24c373f7ff645bef2f456ea2738ee652c5bdc5767"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/readiness.release.test.ts",
+      "sha256": "9cbea16cc1ee92981ff0e500fbbde2dbdb9901f6ce66224fdfb9e65ac98d1f98"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/seed-backend-asset-library.test.ts",
+      "sha256": "9351e95682f6c0f32630ec48db76a0c3ffde168c8ca5c472f6e5dcfecf30bcf1"
+    },
+    {
+      "path": "src/modules/drone-defense/infra/seed-backend-asset-library.ts",
+      "sha256": "2ea75aa84a6928eeb02b50003f848b111f4ef7612cf111609dd7c3c570516b63"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/asset-documents-panel.browser.test.ts",
+      "sha256": "a2192b435b941f22ed7889c928f49f60cef7c8f5ae1fb9882f0c0bc9e1fa230b"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/asset-documents-panel.tsx",
+      "sha256": "836990001dcb819717a268540b0ea7eac547cbb06f8aaad85d85426310dc258f"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/asset-library-manager.browser.test.ts",
+      "sha256": "a70bb04254ea46e7f0e17f3e33487059c61e3becd8ffe10a50154b5b28b8cf3e"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/asset-library-manager.tsx",
+      "sha256": "6078f6de3c920a2f7a5a4bdfea5a621622e3b4ddec73036c6ac1eff1072affb7"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/assets-panel.tsx",
+      "sha256": "38c7dd34610d69bef7d161f357d6bb2325ad2b277e65d85aec2f2226ba61304a"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/coordinate-placement-panel.tsx",
+      "sha256": "daab6fabbf43c4d9032d8042c067a62d866375dcddef1c355bcec91524a5e7bd"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/data/threat-types.ts",
+      "sha256": "86ca639715d1bf2291092dac9dcd8cc15bf91396f4e7f843a0a5f34440129203"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/data/typical-chemical-plant-map.json",
+      "sha256": "b989b3dd1cb8d47f3858ae33661c605e962e488a7b0fc2816704b3358ad9e631"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/defense-asset-card.tsx",
+      "sha256": "2f9dafb1d4a078d93d2d42bb1282f8c1f1cbfa8c3eed422381efaaa70a4e1d28"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/defense-catalog/defense-catalog-tab.module.css",
+      "sha256": "be7eb4ab6e3ff147880486edeb2071064e1ea68b324527e5fee02574b42f9f30"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/defense-catalog/defense-catalog-tab.tsx",
+      "sha256": "26f5d7bff043c4641f99a2881dafc12243c983b1e9f4496da89b3a64416264f4"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/defense-studio-shell.tsx",
+      "sha256": "0457e421b948440bc08d0fa1a2bc7085aeac05b64efd16ea15741d34f71fdff5"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/defense-tool-icon.test.ts",
+      "sha256": "3978393c08afd330ef91132b38d39a465265448bf1dcafbb74e2fb90846c8dad"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/defense-tool-icon.tsx",
+      "sha256": "cea2c40cd99e26f2641fc0810c741b05cc3b19c1c2fde3dc74b76eb002920f43"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/defense-tools-panel.tsx",
+      "sha256": "02fbd3a22ebc5526657a0529230f525735d4e6b658472e1bdfa9ddbc3346e2bc"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/drone-defense-prototype.module.css",
+      "sha256": "92297b4c9cc0a2b8fa3e948de1f68d4b55c46c073914844d95c47485669f0114"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/drone-defense-prototype.tsx",
+      "sha256": "b44abddc994b4450c39ba0401092248a2717202a64b9bf41eae2d0532ace0816"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/echelon-objects-list.tsx",
+      "sha256": "3160e8a86ddff6f052974bc1c957aa0b90ccbe7787873a4eb8d2208de52409fe"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/facility-drilldown.tsx",
+      "sha256": "82b3c773c08ab7447af17db782c3894ab2789f4f7afd1249efbc6143b3bca782"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/gis-board.tsx",
+      "sha256": "0695dbbebff361f6e9334d38adfd2a4789b701210f7ef180bf7d88771f847342"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/map-object-marker.tsx",
+      "sha256": "059d8e27a467176fce2d5bafe2706edad0980ce48caa2580515cb5c80b3e7890"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/mog-composition-editor.tsx",
+      "sha256": "d8d6f7af09749bf32f6de845d866bd482bd703bc0a8a785a8a6f44f545ba677a"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/plant-map.ts",
+      "sha256": "5ef5ff9d5e57bce7c96dea5bbc851b449f72209bfdbc1c4e6a1dd7a158dd9fa8"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/project-recovery.browser.test.ts",
+      "sha256": "664c592dc3d8db253d2c8c1acfd0f7dd37256137f1467f9fc474c6f3d118830c"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/properties-panel.tsx",
+      "sha256": "7d13ae4eca59791a2e9072684da7d263616342e3cd9ff19ddf6099b0acf27c41"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/prototype-3d-placeholder.tsx",
+      "sha256": "5f0b72707943213edd0f3ef7b8d180f1c7e473f7c6d1e5c6d0dc68267105e4a1"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/retrospective-analysis.tsx",
+      "sha256": "06c4b3fe1e41d2ad28f289077bb01232b40782c807ff67c8e5ec8ebfb3413017"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/scene.tsx",
+      "sha256": "e3e4f0b843c157820d88c194f55697662f995c1e9bf8e808ef1cfb01e00951cc"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/status-bar.tsx",
+      "sha256": "2f70501e9c8d45ed59813bb9b5668e903311a0f20e68feec07898db1299f8cf4"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/topbar.tsx",
+      "sha256": "c68260cd83a4e9eeb162eef34f999116904638057c49544e7b691dfdd446e315"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/variant-selector.tsx",
+      "sha256": "a5d63d741bb9627319979fb17915d401b73f5042450e9f5e5541a716bb56cea5"
+    },
+    {
+      "path": "src/modules/drone-defense/ui/variants-modal.tsx",
+      "sha256": "d2af024986307101eb5cf06ab6457609d60b7ff720a4f8011aec303ef064552f"
+    },
+    {
+      "path": "src/modules/home/infra/demo-request-api.ts",
+      "sha256": "66ee31f9701e72ff24f91b3a4c3ca0605a7d0a6e29393148fb04ed2cd8f6a9ad"
+    },
+    {
+      "path": "src/modules/home/infra/demo-request-proxy.ts",
+      "sha256": "28ab9ff8a60c06bae44ef3e447e99a9c571315c31cef32cee32e2566bdfad432"
+    },
+    {
+      "path": "src/modules/home/infra/demo-request-session.release.test.ts",
+      "sha256": "99ded82d577ae8b80e2d266d08823a18f2abab000a1445125050c859622046e8"
+    },
+    {
+      "path": "src/modules/home/infra/demo-request.release.test.ts",
+      "sha256": "4a231bb3d97e2969ad8ff74c57048184966dad04dfccf65d74da1223a2a62e63"
+    },
+    {
+      "path": "src/modules/home/ui/demo-request-form.browser.test.ts",
+      "sha256": "f2e7c70018ef5d98824b07c14c01d54b8f5005d0809a3205f2eca500e9ab79db"
+    },
+    {
+      "path": "src/modules/home/ui/demo-request-form.tsx",
+      "sha256": "14c685bf2043c42e755f3f9a21c4a1152cf3ef0b144dd467b444eb24d809e3fa"
+    },
+    {
+      "path": "src/modules/incidents/ui/incidents-page.tsx",
+      "sha256": "b10a072575ae29a80ef5b73cf642a755b80ab7e9b08564964728c21b4740fea9"
+    },
+    {
+      "path": "src/modules/onboarding/domain/useOnboardingStore.ts",
+      "sha256": "3ae1fcc807334f1baa6aff66d83564f41ced96699cfb2aa881d22b0df75a4111"
+    },
+    {
+      "path": "src/modules/onboarding/ui/onboarding-modal.tsx",
+      "sha256": "5217de4b25b8f9cc3d5fd8fb63d38b0d3995bf51a880b708dc6dd25272b390d8"
+    },
+    {
+      "path": "src/modules/onboarding/ui/onboarding-trigger.tsx",
+      "sha256": "232e14a17a4d70b6aec3711ac9bebf4b3602eae3bc7bc5c711e7374aa025dd71"
+    },
+    {
+      "path": "src/modules/settings/ui/settings-page.tsx",
+      "sha256": "080c0137bf2e1694cef2f3b24e0e575cf215745cb4fb4f95e00fd0fc10190145"
+    },
+    {
+      "path": "src/modules/sites/ui/site-detail-page.tsx",
+      "sha256": "62605673604de19b062af38d57b2f254f4b406dfbf7d3cb44c7fa702888f314a"
+    },
+    {
+      "path": "src/modules/sites/ui/sites-page.tsx",
+      "sha256": "60015df9b29a276fbfb0748582c9cabedd8af761ec33ee41478e11c89f9db827"
+    },
+    {
+      "path": "src/modules/team/ui/team-page.tsx",
+      "sha256": "70f1fa74574ac3c592496b2c86195dac993e6db76e73deaae819e8d57488bcfe"
+    },
+    {
+      "path": "src/modules/workspace/domain/workspace-projects.test.ts",
+      "sha256": "a8ce4d0985fcb1df8e37d4b869e3c867f8ffeec05fde628d7e86c0770902b731"
+    },
+    {
+      "path": "src/modules/workspace/ui/project-workspace-page.tsx",
+      "sha256": "c3cd0b050e354bea2275922513ae70cb3278cb3e2f82772acd80e0028e26cdee"
+    },
+    {
+      "path": "src/modules/workspace/ui/project-workspace.browser.test.ts",
+      "sha256": "9dd66ae921aefe2a180ad76758bea90870485790e3a2e973bce527458ebfcc75"
+    },
+    {
+      "path": "src/proxy.ts",
+      "sha256": "88229e2f26553ef7eb325ea48c976e6df0907f368cd4f3aa284a7d45b65140d6"
+    },
+    {
+      "path": "src/shared/config/base-map-sources.test.ts",
+      "sha256": "450a333afcebf4fb10f8ab1119e5eba59afb939fe2929b18fd3b4e3888a55f51"
+    },
+    {
+      "path": "src/shared/config/base-map-sources.ts",
+      "sha256": "965de98c6ce43eb66ab9235957df12355e8b0747689f84bbb7f8fb73d0217efb"
+    },
+    {
+      "path": "src/shared/config/default-defense-layers.ts",
+      "sha256": "01fb790ebaf1665695530eb60c9514c321f8a4840378f444a46d45187a18615d"
+    },
+    {
+      "path": "src/shared/config/defense-asset-library.test.ts",
+      "sha256": "0b6d54bc34f26ef3deb530acb93915c21579fece8e7cd2cc2a1c282265994392"
+    },
+    {
+      "path": "src/shared/config/defense-asset-library.ts",
+      "sha256": "58dc91b9a55049e507da2b8287f55cbda307490f189a02f08ba0c41df67926d6"
+    },
+    {
+      "path": "src/shared/config/defense-catalog.ts",
+      "sha256": "8ea7175c98f4800f0b5d8bcaf359afaa13cb251e0f2c5083ece09bac9c95b8b8"
+    },
+    {
+      "path": "src/shared/config/defense-visuals.ts",
+      "sha256": "99f9607f7f76095847a09dc2cae1f7edd235f2d199e5855398f053b1a6324a58"
+    },
+    {
+      "path": "src/shared/config/product-capabilities.ts",
+      "sha256": "9dceeeb86456e0606bdf8a6293ff4af331d03ad2e8ce7f72df1e1646145eca09"
+    },
+    {
+      "path": "src/shared/config/prototype-ru.ts",
+      "sha256": "b37162b71b0e457555221a2d34ef9899ef3523314cdc50b05289a8d959ea29de"
+    },
+    {
+      "path": "src/shared/lib/api-client.test.ts",
+      "sha256": "c5826fae9957664fd3fdc9c9be3ad7bb879f13fd41b9dc18afd02f3dc59c2650"
+    },
+    {
+      "path": "src/shared/lib/api-client.ts",
+      "sha256": "813c28df3d1f6e7fbff84a4ab2aa7caf2baa55b0feacb7aec3ebe759967f78c9"
+    },
+    {
+      "path": "src/shared/lib/auth-boundary.release.test.ts",
+      "sha256": "8e5ca96be2a0964f3101cc29c97eb6053271cbfa3c83110b090d7aa11952e1af"
+    },
+    {
+      "path": "src/shared/lib/base-path.ts",
+      "sha256": "978ff15aca47502d2942bc04728617af1a9811fc81895d2b709bde7c359ba8fe"
+    },
+    {
+      "path": "src/shared/lib/budget-projection.test.ts",
+      "sha256": "bd8b365133031569e83208e25ec11db2ffcce9a1f3befe40439284d8f77c536b"
+    },
+    {
+      "path": "src/shared/lib/budget-projection.ts",
+      "sha256": "0d44c84a7d036f444a40233a945a62fbd64c411717b1d11eb8e0a1c3803dde3e"
+    },
+    {
+      "path": "src/shared/lib/catalog-refresh.release.test.ts",
+      "sha256": "fb6e8709294625a7f9abe9da50ba7d2a383a9429ef26f0bb87b202aee3a97b23"
+    },
+    {
+      "path": "src/shared/lib/cost-consumers.release.test.ts",
+      "sha256": "ee5bf31998aaf3d231d4af1f7b4377bf32de229708e35ae71a9a5aed3fa7414a"
+    },
+    {
+      "path": "src/shared/lib/cost-projection.test.ts",
+      "sha256": "f5418d78f14c7c085428e653dde41d80cfc12030853cb3b50b8c22b465e81e5c"
+    },
+    {
+      "path": "src/shared/lib/cost-projection.ts",
+      "sha256": "cf8755418a931995b865b919dad293710ce56b06bb1413cd42937c441d7619d5"
+    },
+    {
+      "path": "src/shared/lib/data-provenance.ts",
+      "sha256": "c595dd3c0eb890d9b9009661b816f5f619b41b6467d1914540d641bac6ef0235"
+    },
+    {
+      "path": "src/shared/lib/defense-configuration.test.ts",
+      "sha256": "6e4061b6675d5031e69944b761d78c2689b552c26514cfa7eafa27e1782af4d3"
+    },
+    {
+      "path": "src/shared/lib/defense-configuration.ts",
+      "sha256": "5541aaca1ab86a2270ebba0d527506f52beea0882e242b00ed3f92e963443a99"
+    },
+    {
+      "path": "src/shared/lib/defense-layer-geometry.test.ts",
+      "sha256": "1fe89156f659fa43856f505f0a529aa8d01047bbe7690fa909b9bf46bf5f3b39"
+    },
+    {
+      "path": "src/shared/lib/defense-layer-geometry.ts",
+      "sha256": "efa2dd56a1d9e4efbcd5e42dcba0234e1fd5030d6d9311e663ebff433a3069a4"
+    },
+    {
+      "path": "src/shared/lib/defense-project-base-object.test.ts",
+      "sha256": "ffbc453e86f21c17ec918eb836f72a33135e0ff00a2a45ef6a7b333603d49012"
+    },
+    {
+      "path": "src/shared/lib/defense-project-conflict-hydration.test.ts",
+      "sha256": "003395d5a7b87fc8065550d67bae4cd8c6eea57ae7aae502a04a9057d4f49817"
+    },
+    {
+      "path": "src/shared/lib/defense-project-polygon-geometry.test.ts",
+      "sha256": "381c7b0554a19bb681c0a0ca170c6ade23ccae05eaf040da485262b2ba046046"
+    },
+    {
+      "path": "src/shared/lib/defense-project.test.ts",
+      "sha256": "14949f22dd00a8ab5fc50e64083dff07eb3e0e6ea52b9def379e81f8106218b7"
+    },
+    {
+      "path": "src/shared/lib/defense-project.ts",
+      "sha256": "23817a8558de90e751340b7ab648f20d6411e488c0ea3db984f4210364b2443b"
+    },
+    {
+      "path": "src/shared/lib/identity-isolation.release.test.ts",
+      "sha256": "6652a3857895bd0d75e3fb51fa8416fcd06f33aeb80824711fed633af3eaf634"
+    },
+    {
+      "path": "src/shared/lib/identity.ts",
+      "sha256": "a3a302bcbba01b112c6c66e68613ef5dee7fe2afcc39b6c9d55b0615e841871c"
+    },
+    {
+      "path": "src/shared/lib/mock-data.ts",
+      "sha256": "a7bb0e62cff8dc3c8a66e5a42498d6b37e077a6b31edad7b534f85a111e1b7df"
+    },
+    {
+      "path": "src/shared/lib/project-draft-storage.test.ts",
+      "sha256": "86bc500f3fb0af9a8ecc63841c8b034fd6394e3f18e6700c01760e2b86849f26"
+    },
+    {
+      "path": "src/shared/lib/project-draft-storage.ts",
+      "sha256": "e4fa6cf73e4c2d7603635573f094c26877e914964d088da1ffc42f68054ad271"
+    },
+    {
+      "path": "src/shared/lib/project-roundtrip.release.test.ts",
+      "sha256": "29a53ec030f6514c6db3c1ff241de921b06a736a83948948d83ca61ae88bd8ca"
+    },
+    {
+      "path": "src/shared/lib/project-runtime.release.test.ts",
+      "sha256": "9412e07c9e1a074189031cf94a93c42109e9951faa5d5302baee418b4d7ea692"
+    },
+    {
+      "path": "src/shared/lib/project-save-state.test.ts",
+      "sha256": "bbcf482aadebf1c260214cb0ac5c45c575677df2d25ba6c015c60dda3eb14d33"
+    },
+    {
+      "path": "src/shared/lib/project-save-state.ts",
+      "sha256": "384c3ae81e2d6d363efc52a02060128286f3de473c791b91681a45da5c5f3f3b"
+    },
+    {
+      "path": "src/shared/lib/retry-after.release.test.ts",
+      "sha256": "91d369575078fb471988eb1e29954ce3646047b9dc653fe21d4538e424c35239"
+    },
+    {
+      "path": "src/shared/lib/safe-next.ts",
+      "sha256": "96b2f0bed1cd9630b23e0ef8d1170b59dd133e017bd27310faa70193e7994124"
+    },
+    {
+      "path": "src/shared/lib/session-state.ts",
+      "sha256": "0b2bd0380e8c755ebc18f5499ec244437a8a8fc01dbf6aa9553157590cf9eaff"
+    },
+    {
+      "path": "src/shared/lib/use-defense-configuration-store.test.ts",
+      "sha256": "ac0489309700bd58b9db566562c65c61470d0eb5a34b2c4881201e89fd2ed00c"
+    },
+    {
+      "path": "src/shared/lib/use-defense-configuration-store.ts",
+      "sha256": "3166606d6ba71e92349b606ba5e5841f343225723d5bbb0c7b30d56394440d53"
+    },
+    {
+      "path": "src/shared/lib/use-defense-project-store.replace.test.ts",
+      "sha256": "db26d1f1eea3db019a084d1098bfef6a22db31f51c454f8e739ebca40cba63bf"
+    },
+    {
+      "path": "src/shared/lib/use-defense-project-store.test.ts",
+      "sha256": "0489a87cb2bc19e87d3a7805cb126bf558e746336e60b416952d111643f49ef7"
+    },
+    {
+      "path": "src/shared/lib/use-defense-project-store.ts",
+      "sha256": "2d096517ac055ff24dc01c8bb82b01578e8cfe4b2fdf68fc74a5ab478edc7f1e"
+    },
+    {
+      "path": "src/shared/lib/use-map-view-store.test.ts",
+      "sha256": "6628bbeeffbfa742475873c3b1e3d535ae0621895f414ee89767a40ab96e2404"
+    },
+    {
+      "path": "src/shared/lib/use-map-view-store.ts",
+      "sha256": "007254e9ed5f29f8efb99540cbbc0a9ecfc4ca95205607b51c0da7722624c965"
+    },
+    {
+      "path": "src/shared/server/auth-cookie.ts",
+      "sha256": "3a8943705fd5241c31f6e1a2a908437c9ec774e948b28e3d04d379fba145e74a"
+    },
+    {
+      "path": "src/shared/server/local-draft-policy.release.test.ts",
+      "sha256": "dc85378eaf535d64e43592e4c081a1eaaae07fc76c7911f99f4e534e707e320c"
+    },
+    {
+      "path": "src/shared/server/runtime-config.ts",
+      "sha256": "6494240f4528864a6ccd86fdae540d495e55d4e1e14d9a84296fe98fc10817cb"
+    },
+    {
+      "path": "src/shared/types/defense-configuration.ts",
+      "sha256": "f4fafe7f7c15ad816b31d6dc3da07e4fc9c43df109f98af0d004e13396501cef"
+    },
+    {
+      "path": "src/shared/types/defense-project.ts",
+      "sha256": "85d412d26e2598e078ad673a31be5b9fc099d24b60fb5f89ac7180127797b431"
+    },
+    {
+      "path": "src/shared/types/defense.ts",
+      "sha256": "cf21ccc8b48e8e5b6ddc1c92dd60f91c1a31cccf0ff13c0fbb96fb944f7e1c4a"
+    },
+    {
+      "path": "src/shared/types/drone-defense.ts",
+      "sha256": "4fde051b142b50f7fe7a5cf0e6278fd01361de00041a7fa431efd149d63ad387"
+    },
+    {
+      "path": "src/shared/types/finance.ts",
+      "sha256": "393f5c7d2b2d9cee7ff9995c13471fb49b2f6424e92c9efc5e62ca8ea741778f"
+    },
+    {
+      "path": "src/shared/ui/demo-marker.tsx",
+      "sha256": "3f8bfa608c2a977b030e70ea2b49d290350ab2a12fd8a1f21d203cbf733ff830"
+    },
+    {
+      "path": "src/shared/ui/fortis/core.stories.tsx",
+      "sha256": "d8bcb392f94e4eb08f83454020ae18751d6f1c86c8b53f4bd37bc5e500436f75"
+    },
+    {
+      "path": "src/shared/ui/fortis/core.tsx",
+      "sha256": "8a66e3f82bfb8783a5f3149c8359c3fabee08ad13c6db79721cf7d2dba55f589"
+    },
+    {
+      "path": "src/shared/ui/fortis/data-navigation-domain.stories.tsx",
+      "sha256": "4b6daf93f996a03cf3ad3524ac814ae4cdccd1cc97f14eabd3d9a49117351dce"
+    },
+    {
+      "path": "src/shared/ui/fortis/data-navigation-domain.tsx",
+      "sha256": "a209b2cbb3f8cade862ad14ba41d6dc18c853b232b13b05a1938de48880027cf"
+    },
+    {
+      "path": "src/shared/ui/fortis/feedback-domain.tsx",
+      "sha256": "af305b2784a1318fd76634eaa22b3f522640444f0a6b59ecc12a99298c9a90b6"
+    },
+    {
+      "path": "src/shared/ui/fortis/foundations.stories.tsx",
+      "sha256": "c39ad49337bc3caf915a9cf097074a4d46ee1b1f1de87c23399f70d889064a31"
+    },
+    {
+      "path": "src/shared/ui/fortis/gis-runtime-contract.test.tsx",
+      "sha256": "0c402c61ae753746a2e566a321d441d55a0553cba179dd0adb15693b13a93ef2"
+    },
+    {
+      "path": "src/shared/ui/fortis/gis-workspace.stories.tsx",
+      "sha256": "4267e1787fb423177f242a8ff9cacf98967c6eff3de0fc0ee10c25edef0c896d"
+    },
+    {
+      "path": "src/shared/ui/fortis/icon.tsx",
+      "sha256": "9ad87ceca8121d3dfc9a466a3b243d6db0224a3d0bd630b12fe8005ef268e88f"
+    },
+    {
+      "path": "src/shared/ui/fortis/index.ts",
+      "sha256": "8b420e71ac962309f9909dd3f8e6a20e44d07287a70fffd8cf67d891d0891bbe"
+    },
+    {
+      "path": "src/shared/ui/fortis/indicators.tsx",
+      "sha256": "0dafba572349222960ce04d9cb9bd9a8448eb2720297a343faa8a9e613d708a9"
+    },
+    {
+      "path": "src/shared/ui/fortis/individual-components.stories.tsx",
+      "sha256": "1293ac6e3b37dc7c9667a20a3c6f1ae9e23b9f486b813f8bd34a18a5650d3540"
+    },
+    {
+      "path": "src/shared/ui/fortis/overlays.stories.tsx",
+      "sha256": "99aafbcec0285b00c1669ef04dc114a4922f2ae1a0243e2dd3cedffce3cdca92"
+    },
+    {
+      "path": "src/shared/ui/fortis/overlays.tsx",
+      "sha256": "bfd54c46c5b620128aa4d56ce6c0d7635e40184b872c49875686150cdf31d2ab"
+    },
+    {
+      "path": "src/shared/ui/fortis/provider.tsx",
+      "sha256": "b3ba37344dce623d74b9ac6a9860d938365f82e4a49901c9afbbedaec171456d"
+    },
+    {
+      "path": "src/shared/ui/fortis/selection.stories.tsx",
+      "sha256": "ef31808f72a2c500c165b8449f8ec52fe8cb3cd5d1b2078e4404a1d987713900"
+    },
+    {
+      "path": "src/shared/ui/fortis/selection.tsx",
+      "sha256": "9c38a74cee4086ac4fde8e9bba67c15da816210e67f8b5752b0e61cfe4efbd7c"
+    },
+    {
+      "path": "src/shared/ui/fortis/tokens.css",
+      "sha256": "339292e891358a6fbe59b19f01a340917c63cc7bdd33171d2084707d09c54c94"
+    },
+    {
+      "path": "src/shared/ui/identity-boundary.tsx",
+      "sha256": "8565f8e0669dc5668e1904eafb2ba6ff0eec4f564ef7baea435cf1c47059dfe4"
+    },
+    {
+      "path": "src/shared/ui/release-capability.tsx",
+      "sha256": "5cae57a90d1603e4e4762dcf23cc2c5b46dc5a7c5f2bd95b83574e311c5200f3"
+    },
+    {
+      "path": "src/shared/ui/release-surface.test.tsx",
+      "sha256": "dfc5a4c39194a8d933afd00b838d792504a4e7994d141b6280715b07a52e22c8"
+    },
+    {
+      "path": "src/shared/ui/runtime-provider.tsx",
+      "sha256": "7950b3e315c7c121973e980a6391b7aa04b736a42fca72905db35e7e548514fe"
+    },
+    {
+      "path": "src/shared/ui/theme-provider.tsx",
+      "sha256": "c11ddaadc4b7b6b57a1e1c6c32b89f07357e5a84b673faf8e0c083b8871f5bae"
+    },
+    {
+      "path": "src/shared/ui/theme-toggle.tsx",
+      "sha256": "b16fb08c91106e663386eccc27c8b333519c23213b6f281400799af95e7d7750"
+    },
+    {
+      "path": "test/fixtures/finance-v1.json",
+      "sha256": "4d40df5ac6ed06b96e493876bac0de43cf9ba6d325bedd05c02670779a691920"
+    },
+    {
+      "path": "test/fixtures/frc04-project.json",
+      "sha256": "e83a3e3ea16a77edca5f2822962eb0bbc3abd5617f2f796686f20e8ec20f4520"
+    },
+    {
+      "path": "test/playwright/asset-library-form.config.ts",
+      "sha256": "793d6f83af671b9707cee6ad104aba31340ffa1c06a95904105ace68d31cf8e2"
+    },
+    {
+      "path": "test/playwright/capture-stage-5-before.mjs",
+      "sha256": "ca273fedba4a94153a247bb166ea6fd7b030fcd5bc57d74aceb952129840ff59"
+    },
+    {
+      "path": "test/playwright/fortis-overlays.config.ts",
+      "sha256": "f6e1777c5bd51b9074611e0129755ab19c595ae027319e1064ecd2ee6db39f82"
+    },
+    {
+      "path": "test/playwright/fortis-overlays.spec.ts",
+      "sha256": "01d29e18fe79a9e6f32e5f068c708c899158094a306b1a83199cf306ad093fd0"
+    },
+    {
+      "path": "test/playwright/frc02.config.ts",
+      "sha256": "cbb2d05e24c55f7675bff0b2026501253b619596e709e276172a746a35bbec62"
+    },
+    {
+      "path": "test/playwright/frc02.spec.ts",
+      "sha256": "298c3b5dbece732da6fae1512638940d08ecefb414fa005826b773368f4f3a5f"
+    },
+    {
+      "path": "test/playwright/frc03-live.cjs",
+      "sha256": "c5408da659d240c721b5d86118c2f0ce1fb4955801611caf0970f55b5cb572e4"
+    },
+    {
+      "path": "test/playwright/frc05-live.cjs",
+      "sha256": "d57f0580c31109b3b6a4a4be42bf2a111478e938e6367f91b4634d408169cfcf"
+    },
+    {
+      "path": "test/playwright/frc06-live.cjs",
+      "sha256": "e5c1d9f588a2c12256467619b577f3acdf282d1d36c03d3dba39cb7c622f32d7"
+    },
+    {
+      "path": "test/playwright/frc07-live.cjs",
+      "sha256": "140eb40816a2c569c178144e2282df740a8af87986589548adab7080c9ede96d"
+    },
+    {
+      "path": "test/playwright/frc08-live.cjs",
+      "sha256": "eb2a0eaa6651205360742c966380e83b03b74b288838eb0f34824558430cc65a"
+    },
+    {
+      "path": "test/playwright/frc09-live.cjs",
+      "sha256": "4c1246af74d9ae8cdf43a422e741af0f28260e235820bb2b5c82fd9d196178e2"
+    },
+    {
+      "path": "test/playwright/frc11-live.cjs",
+      "sha256": "1bda319e89ea964c4d9f782add524a4647971c4c315c18eb993d7a5e4e353938"
+    },
+    {
+      "path": "test/playwright/frc12-live.cjs",
+      "sha256": "0f5c5a0ba14ff6e33d9f63ddc06928122bc6919ecb13644ca83fdf6d0155e2f6"
+    },
+    {
+      "path": "test/playwright/frc13-layer-identities.cjs",
+      "sha256": "4dec16410465efbb681482034d91413d3edd1c36d8abe8d22e9e5beb3012c2ec"
+    },
+    {
+      "path": "test/playwright/prototype.spec.ts",
+      "sha256": "d8a026ebe7f1094f7ab5b419b375b4df511cceec8cedc340783b9307a14bf135"
+    },
+    {
+      "path": "test/playwright/stage-5.config.ts",
+      "sha256": "b919724b28f305d2bcb6ce5050710311cea463e1130a3e67bda80a6c77ca5dba"
+    },
+    {
+      "path": "test/playwright/workspace-drawers.config.ts",
+      "sha256": "7371b4cd96f3b06bc3330ba766c49d0230ba480e071cca3a124d8a4a5dfd238d"
+    },
+    {
+      "path": "test/playwright/workspace-p1p2.config.ts",
+      "sha256": "89c51bdb48c92ce1242fe2419978485fcf35b07bd171ce12ff6aafd73e5b7528"
+    },
+    {
+      "path": "test/playwright/workspace-p1p2.spec.ts",
+      "sha256": "4dde813fa034f072b28be0db9a6a0e95f40019078e90a2e9c3541750d9a2b1f1"
+    },
+    {
+      "path": "test/route-contract.test.mjs",
+      "sha256": "3f95fe2e6a3138f5b3fdcce7961f5d030124ebc32c22b7faafa065f438ef1d2a"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "63624643639709116c6da62f19efaa93e4843893832afa2bed7020367107e622"
+    }
+  ]
+}
