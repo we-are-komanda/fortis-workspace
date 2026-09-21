@@ -1,0 +1,17 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "pnpm",
+    "exec",
+    "eslint",
+    "src/shared/lib/data-provenance.ts",
+    "src/modules/drone-defense/domain/use-defense-variants-store.test.ts",
+    "src/shared/lib/identity-isolation.release.test.ts",
+    "src/shared/lib/project-runtime.release.test.ts",
+    "src/shared/lib/use-defense-project-store.test.ts",
+    "src/shared/lib/catalog-refresh.release.test.ts"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0
+}

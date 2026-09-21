@@ -1,0 +1,28 @@
+✔ authoritative GET version cannot be replaced by an older cached list summary (7.927917ms)
+✔ quota does not discard an edit in memory and exposes recovery failure (0.756875ms)
+✔ business revision changes for edits but not UI selection; a reverted edit returns to baseline (0.215333ms)
+✔ pending save preserves business edit as dirty (0.646209ms)
+✔ pending save preserves UI selection as saved (0.324125ms)
+✔ lost update response verifies current server identity before any second write (0.801916ms)
+✔ create manual retry preserves exact body and idempotency key (5.606666ms)
+✔ create retry replays the frozen attempt even after a newer local edit (0.498625ms)
+✔ recovery candidate is exposed only after a fresh authorized project read (0.312375ms)
+✔ recovery is hidden when fresh project authorization fails (0.137875ms)
+✔ scopes use all identities and never read legacy or other-user keys (0.941875ms)
+✔ quota and security/getter failures become recovery errors instead of exceptions (0.148416ms)
+✔ corrupt JSON and cross-scope envelopes are rejected without deleting stored data (0.126209ms)
+✔ attempt replay metadata must match its scoped project and exact request body (0.163375ms)
+✔ selection and transport changes are not business changes (1.559208ms)
+✔ persisted layer visibility and lock state are business changes (0.216333ms)
+✔ placed-object map visibility is a persisted business change (0.098416ms)
+✔ business comparison preserves unknown fields and array ordering (0.095125ms)
+✔ verification needs matching identity and sent content, not a higher revision alone (0.118167ms)
+✔ only positive integral saved backend identity can authorize a last-saved action (0.345041ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 143.393125

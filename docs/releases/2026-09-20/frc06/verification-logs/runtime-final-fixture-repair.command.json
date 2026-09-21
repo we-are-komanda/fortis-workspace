@@ -1,0 +1,13 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "src/shared/lib/project-runtime.release.test.ts"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0
+}

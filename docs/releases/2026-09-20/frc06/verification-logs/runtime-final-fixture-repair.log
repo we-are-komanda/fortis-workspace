@@ -1,0 +1,17 @@
+✔ failed and empty library refresh never inject bundled data into a backend project (0.571167ms)
+✔ empty enterprises stays empty instead of adding a local object (0.320792ms)
+(node:77158) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ failed load and save preserve current project; no automatic retry after any error (206.410625ms)
+✔ recovery ignores legacy keys and changes an open project only after authorized explicit restoration (5.04375ms)
+✔ recovery preserves empty catalogs and user asset values without bundled expansion (0.189ms)
+✔ workspace creation is empty; remount does not reload a hydrated dirty project (0.162792ms)
+✔ pending load cannot replace newer user edits or a cancelled navigation (48.320833ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 399.344083

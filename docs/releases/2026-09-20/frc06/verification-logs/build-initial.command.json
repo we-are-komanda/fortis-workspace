@@ -1,0 +1,12 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "pnpm",
+    "build"
+  ],
+  "cwd": "/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-ojle20md",
+  "sourceCommit": "045db0d",
+  "isolation": "git archive with unchanged installed node_modules tree via hard links",
+  "exitCode": 1
+}

@@ -1,0 +1,21 @@
+✔ variant Stay preserves edit; Discard opens target and deletes discarded recovery (1410.31125ms)
+✔ conflict reload asks before replacing the active project (814.055125ms)
+✔ enterprise switch while dirty offers Stay and Discard (349.321458ms)
+✔ logout while dirty offers Stay and Discard before ending session (573.820166ms)
+✔ failed or pending Save cannot navigate; explicit retry confirms before opening target (1103.539334ms)
+✔ failed create retains the name and explicit retry replays the frozen body/key (787.104459ms)
+✔ recovery rechecks access when Restore is clicked, after the offer was displayed (788.33275ms)
+✔ revoked dirty project still requires an explicit decision before another variant loads (718.925708ms)
+✔ reload keeps saved state until explicit scoped recovery (419.632583ms)
+✔ session recheck hides all protected dialogs and preserves same-user transition state (418.460625ms)
+✔ logout Save stays on failed save, then leaves only after confirmed retry (693.063416ms)
+✔ switching identity clears the previous user logout intent and name (313.114958ms)
+✔ enterprise Save keeps selection after failure and switches after confirmed retry (358.134791ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9030.022083

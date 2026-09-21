@@ -1,0 +1,9 @@
+{"name":"seeded real project","projectId":"c1ff624a-2415-415f-9cf8-6b636981a299","enterpriseId":"96604e7a-0f2a-4966-81f1-9f2de2bb2990","version":1}
+{"phase":"save control","box":{"x":8,"y":961,"width":59,"height":48},"enabled":true}
+{"name":"UI visibility change saved and survived reload","projectId":"c1ff624a-2415-415f-9cf8-6b636981a299","version":2,"visible":false}
+{"name":"map calculator map preserves unsaved visibility and identity","projectId":"c1ff624a-2415-415f-9cf8-6b636981a299","serverVersion":2}
+{"phase":"save control","box":{"x":8,"y":961,"width":59,"height":48},"enabled":true}
+{"name":"recovery is explicit and only Save writes recovered content","projectId":"c1ff624a-2415-415f-9cf8-6b636981a299","version":3}
+{"name":"409 retains draft; save-as-new creates independent version 1","originalId":"c1ff624a-2415-415f-9cf8-6b636981a299","originalVersion":4,"newId":"6fb03735-6e05-4fbf-a81b-a71917be8767","version":1,"url":"http://127.0.0.1:3111/prototype?projectId=6fb03735-6e05-4fbf-a81b-a71917be8767"}
+{"name":"saved-as-new identity survives reload","projectId":"6fb03735-6e05-4fbf-a81b-a71917be8767","version":1,"variantLabel":"Сохранено · Synthetic FRC06 browser 25f8ecbd\n▾"}
+{"status":"PASS","checks":6,"pageErrors":[],"knownDeckErrors":0,"output":"/private/tmp/frc06-live/final"}

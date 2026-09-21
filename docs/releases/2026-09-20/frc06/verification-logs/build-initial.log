@@ -1,0 +1,53 @@
+
+> fortis-frontend@0.1.0 build /private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-ojle20md
+> next build
+
+▲ Next.js 16.2.11 (Turbopack)
+
+  Creating an optimized production build ...
+Turbopack build encountered 4 warnings:
+[next]/internal/font/google/ibm_plex_mono_50724245.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap
+
+
+[next]/internal/font/google/manrope_e5bf0c60.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap
+
+
+[next]/internal/font/google/plus_jakarta_sans_b56502da.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap
+
+
+[next]/internal/font/google/syne_3f7c114d.module.css
+Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&display=swap
+
+
+
+> Build error occurred
+Error: Turbopack build failed with 4 errors:
+[next]/internal/font/google/ibm_plex_mono_50724245.module.css
+next/font: error:
+Failed to fetch `IBM Plex Mono` from Google Fonts.
+
+
+[next]/internal/font/google/manrope_e5bf0c60.module.css
+next/font: error:
+Failed to fetch `Manrope` from Google Fonts.
+
+
+[next]/internal/font/google/plus_jakarta_sans_b56502da.module.css
+next/font: error:
+Failed to fetch `Plus Jakarta Sans` from Google Fonts.
+
+
+[next]/internal/font/google/syne_3f7c114d.module.css
+next/font: error:
+Failed to fetch `Syne` from Google Fonts.
+
+
+    at ignore-listed frames
+ ELIFECYCLE  Command failed with exit code 1.

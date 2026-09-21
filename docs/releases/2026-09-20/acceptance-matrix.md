@@ -226,3 +226,12 @@ REV01–10 and scoped project audit PASS. PostgreSQL15 top-level+8 nested (inclu
 ## FRC09 root code acceptance —2026-09-20
 
 **CODE PASS / RUNTIME BLOCKED.** DATA01–10: provenance/typedcardroundtrip, explicitrefresh, immutableprivatedocuments, quarantine+auth+audit, actualbrowserfilebytes andforeign404. Rootchangedlint/build/scopedOpenAPI PASS; combinedChromium23/23, Node23/23, actualPG/racetests passed. [Report](frc09/implementation-report.md), [tests](frc09/test-evidence.md), [files](frc09/changed-files.md), [hashes](frc09/source-manifest.json). Real scanner/storage/retention/TLS/productionmigration remain FRC14. Userrequested stopafter09; FRC06partial, whole release notaccepted.
+
+
+## FRC-06 — resumed acceptance, 2026-09-21
+
+**PASS — local staged acceptance.** All 30 user criteria PASS; SAVE01–08/10 PASS. SAVE09 NOT APPLICABLE while official-report capability remains disabled; actual dirty Save/last-saved workflow mandatory in FRC10. No report or production PASS.
+
+Focused48/48, rendered Chromium13/13, real Next→Go→PostgreSQL six checkpoints PASS. Original v1→2→3→4, independent copy v1 survives reload. Go tests/build + realPG21 top-level PASS. Frontend regressions38PASS/1explicitPGskip; full250=201PASS/6 historical FAIL/43opt-inSKIP, exact signatures6/6 unchanged. Types/lint21files/build PASS; test/build source manifests454files identical, drift=[]. Seven review defects fixed, eight independent probes PASS. Frontend `a56d128e715ed09387428ad3dd67434d18855dd5`.
+
+[Implementation](frc06/implementation-report.md) · [30+SAVE criteria](frc06/acceptance-criteria.md) · [tests](frc06/test-evidence.md) · [review](frc06/independent-review.md) · [checkpoint](frc06/recovery-checkpoint.md). FRC03 may proceed; whole release remains unaccepted.

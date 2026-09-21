@@ -1,0 +1,62 @@
+
+> fortis-frontend@0.1.0 build /private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-ojle20md
+> next build
+
+▲ Next.js 16.2.11 (Turbopack)
+
+  Creating an optimized production build ...
+(node:56495) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:56496) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✓ Compiled successfully in 4.9s
+  Running TypeScript ...
+  Finished TypeScript in 4.6s ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/12) ...
+  Generating static pages using 9 workers (3/12) 
+  Generating static pages using 9 workers (6/12) 
+  Generating static pages using 9 workers (9/12) 
+✓ Generating static pages using 9 workers (12/12) in 113ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/auth/login
+├ ƒ /api/auth/logout
+├ ƒ /api/auth/me
+├ ƒ /api/auth/register
+├ ƒ /api/defense/catalog
+├ ƒ /api/defense/evaluate
+├ ƒ /api/defense/facilities
+├ ƒ /api/defense/layers
+├ ƒ /api/defense/projects
+├ ƒ /api/defense/projects/[id]
+├ ƒ /api/defense/recommend
+├ ƒ /api/health/live
+├ ƒ /api/health/ready
+├ ƒ /api/public/demo-requests
+├ ƒ /api/runtime
+├ ƒ /api/v1/[...path]
+├ ○ /calculator
+├ ƒ /dashboard
+├ ƒ /dashboard/alert
+├ ƒ /dashboard/incidents
+├ ƒ /dashboard/reports
+├ ƒ /dashboard/settings
+├ ƒ /dashboard/sites
+├ ƒ /dashboard/sites/[id]
+├ ƒ /dashboard/team
+├ ○ /login
+├ ƒ /prototype
+├ ○ /register
+├ ƒ /retrospective-analysis
+└ ○ /workspace
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

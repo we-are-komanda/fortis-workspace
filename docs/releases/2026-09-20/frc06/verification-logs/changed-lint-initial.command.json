@@ -1,0 +1,22 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "pnpm",
+    "exec",
+    "eslint",
+    "src/modules/drone-defense/domain/project-save.release.test.ts",
+    "src/modules/drone-defense/domain/use-defense-variants-store.ts",
+    "src/modules/drone-defense/infra/api-client.ts",
+    "src/modules/drone-defense/ui/defense-studio-shell.tsx",
+    "src/modules/drone-defense/ui/variants-modal.tsx",
+    "src/modules/workspace/ui/project-workspace-page.tsx",
+    "src/shared/lib/project-draft-storage.test.ts",
+    "src/shared/lib/project-draft-storage.ts",
+    "src/shared/lib/project-save-state.test.ts",
+    "src/shared/lib/project-save-state.ts",
+    "src/shared/lib/use-defense-project-store.ts"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0
+}

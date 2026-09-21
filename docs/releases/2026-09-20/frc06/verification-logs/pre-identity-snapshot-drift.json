@@ -1,0 +1,7 @@
+[
+  "src/modules/drone-defense/ui/project-recovery.browser.test.ts",
+  "src/shared/lib/project-runtime.release.test.ts",
+  "src/shared/lib/identity.ts",
+  "src/shared/ui/identity-boundary.tsx",
+  "src/shared/lib/identity-isolation.release.test.ts"
+]

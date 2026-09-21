@@ -1,0 +1,83 @@
+fetchVariants: OK
+saveAsNewVariant: OK
+loadVariant: OK
+deleteVariant: OK
+saveAsNewVariant failure: OK
+overwriteActiveVariant version: OK
+overwriteActiveVariant conflict: OK
+use-defense-variants-store.test.ts: variants store contracts passed
+✔ src/modules/drone-defense/domain/use-defense-variants-store.test.ts (601.846292ms)
+✔ BFF preserves upstream error status and body, including HTML and empty bodies (268.665042ms)
+✔ projects rejects an empty successful body instead of returning 200 null (163.376334ms)
+✔ BFF and API v1 share target, query and auth; legitimate empty stays empty (8.8495ms)
+✔ binary documents preserve bytes/status/content type and mutation method/body (15.351917ms)
+✔ missing configuration fails without network fallback; conflicts fail (3.361625ms)
+✔ connection refused is 502; deadline is 504 with request id (33.037667ms)
+✔ workspace ignores query demo; demo route is explicit and marked (4.504792ms)
+✔ JSON helper rejects malformed success and wrong list shape (3.446083ms)
+✔ JSON adaptation deadline includes the response body, not only headers (26.473125ms)
+✔ project BFF selects the requested revision without letting query override the resource ID (186.649042ms)
+✔ project creation preserves the caller's idempotency key through the BFF (13.318667ms)
+✔ release API client selects a revision and sends a stable caller-supplied creation key (19.620333ms)
+✔ frontend liveness is independent of config/dependencies; readiness checks both (49.090125ms)
+✔ production login and registration issue Secure cookies (11.70025ms)
+✔ invalid cookie does not admit protected pages (7.327084ms)
+✔ login next permits only internal paths (0.376291ms)
+✔ cookie clearing keeps production flags; local HTTP development remains usable (3.346583ms)
+(node:74508) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ workspace recovery cannot cross authenticated identities (1.151334ms)
+✔ account switch resets all stores and drops an in-flight A list (71.275917ms)
+✔ 401 invalidates identity; 403/404 block saving without retries or false saved state (5.644208ms)
+▶ late project access failures cannot invalidate another current project
+  ✔ load (0.558208ms)
+  ✔ overwrite (5.224959ms)
+  ✔ create (0.914417ms)
+  ✔ delete (0.279ms)
+  ✔ list (0.19675ms)
+✔ late project access failures cannot invalidate another current project (9.295083ms)
+✔ logout preserves scoped recovery only for its owner after fresh access and explicit restoration (0.888584ms)
+✔ project import preserves existing geometry fields and safe extensions (4.711375ms)
+✔ complete synthetic project fixture survives frontend export and import (0.821583ms)
+﹣ real PostgreSQL export retains every frontend business field (0.093708ms) # SKIP
+✔ failed and empty library refresh never inject bundled data into a backend project (2.201375ms)
+✔ empty enterprises stays empty instead of adding a local object (0.383625ms)
+(node:74511) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ failed load and save preserve current project; no automatic retry after any error (351.064916ms)
+✔ recovery ignores legacy keys and changes an open project only after authorized explicit restoration (4.22725ms)
+✔ recovery preserves empty catalogs and user asset values without bundled expansion (0.164959ms)
+✖ workspace creation is empty; remount does not reload a hydrated dirty project (4.938417ms)
+✔ pending load cannot replace newer user edits or a cancelled navigation (51.340083ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 36
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 997.853542
+
+✖ failing tests:
+
+test at src/shared/lib/project-runtime.release.test.ts:2:10036
+✖ workspace creation is empty; remount does not reload a hydrated dirty project (4.938417ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/project-runtime.release.test.ts:114:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

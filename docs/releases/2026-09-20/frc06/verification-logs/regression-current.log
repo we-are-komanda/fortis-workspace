@@ -1,0 +1,59 @@
+fetchVariants: OK
+saveAsNewVariant: OK
+loadVariant: OK
+deleteVariant: OK
+saveAsNewVariant failure: OK
+overwriteActiveVariant version: OK
+overwriteActiveVariant conflict: OK
+use-defense-variants-store.test.ts: variants store contracts passed
+✔ src/modules/drone-defense/domain/use-defense-variants-store.test.ts (185.2425ms)
+✔ BFF preserves upstream error status and body, including HTML and empty bodies (105.925291ms)
+✔ projects rejects an empty successful body instead of returning 200 null (25.827708ms)
+✔ BFF and API v1 share target, query and auth; legitimate empty stays empty (8.239208ms)
+✔ binary documents preserve bytes/status/content type and mutation method/body (6.672208ms)
+✔ missing configuration fails without network fallback; conflicts fail (0.279833ms)
+✔ connection refused is 502; deadline is 504 with request id (27.248042ms)
+✔ workspace ignores query demo; demo route is explicit and marked (3.917084ms)
+✔ JSON helper rejects malformed success and wrong list shape (3.385625ms)
+✔ JSON adaptation deadline includes the response body, not only headers (26.99825ms)
+✔ project BFF selects the requested revision without letting query override the resource ID (46.12425ms)
+✔ project creation preserves the caller's idempotency key through the BFF (4.527708ms)
+✔ release API client selects a revision and sends a stable caller-supplied creation key (8.027708ms)
+✔ frontend liveness is independent of config/dependencies; readiness checks both (46.562292ms)
+✔ production login and registration issue Secure cookies (8.163083ms)
+✔ invalid cookie does not admit protected pages (3.18775ms)
+✔ login next permits only internal paths (0.11575ms)
+✔ cookie clearing keeps production flags; local HTTP development remains usable (1.601833ms)
+(node:59922) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ workspace recovery cannot cross authenticated identities (3.927167ms)
+✔ account switch resets all stores and drops an in-flight A list (10.646667ms)
+✔ 401 invalidates identity; 403/404 block saving without retries or false saved state (0.867708ms)
+▶ late project access failures cannot invalidate another current project
+  ✔ load (0.341375ms)
+  ✔ overwrite (0.210375ms)
+  ✔ create (0.388792ms)
+  ✔ delete (0.195542ms)
+  ✔ list (0.171542ms)
+✔ late project access failures cannot invalidate another current project (1.645333ms)
+✔ logout preserves scoped recovery only for its owner after fresh access and explicit restoration (0.823416ms)
+✔ project import preserves existing geometry fields and safe extensions (5.195667ms)
+✔ complete synthetic project fixture survives frontend export and import (1.318167ms)
+﹣ real PostgreSQL export retains every frontend business field (0.098ms) # SKIP
+✔ failed and empty library refresh never inject bundled data into a backend project (1.496166ms)
+✔ empty enterprises stays empty instead of adding a local object (2.353ms)
+(node:59924) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ failed load and save preserve current project; no automatic retry after any error (210.064709ms)
+✔ recovery ignores legacy keys and changes an open project only after authorized explicit restoration (4.334875ms)
+✔ recovery preserves empty catalogs and user asset values without bundled expansion (0.157833ms)
+✔ workspace creation is empty; remount does not reload a hydrated dirty project (0.123167ms)
+✔ pending load cannot replace newer user edits or a cancelled navigation (47.497ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 470.7455

@@ -161,3 +161,8 @@ User explicitly asked to finishnearesttaskthenstop. Root completedFRC09 acceptan
 ## Публикация checkpoint по запросу пользователя — 2026-09-20
 
 После подготовки отчёта пользователь явно запросил коммит и push в develop всех репозиториев. Это разрешение на публикацию текущего промежуточного состояния, включая незавершённые FRC-03/06, а не приёмка релиза. Предпубликационная проверка: четыре origin/develop синхронизированы; backend go test ./... и frontend tsc --noEmit --incremental false прошли; FRC-06 повторно дал 4 PASS / 3 известных FAIL. Полный frontend suite и production evidence этим не заменяются. Локальные .env, JWT secret и backup базы исключены из Git. Предшествующие указания «коммитов/push не было» описывают состояние до этого запроса.
+
+
+## Resume 2026-09-21 — FRC06 accepted locally
+
+Current request supersedes stopped checkpoints. All four origins synchronized; `045db0d`/`6bf246e` retained. FRC06 local staged PASS:30criteria, focused48, browser13, live realPG six checkpoints, independent review7closed, types/lint/build pass. Full250=201pass/6 exact historical fail/43opt-in skip. SAVE09 gated N/A and mandatory FRC10, not report PASS. Frontend `a56d128e715ed09387428ad3dd67434d18855dd5`. See frc06/recovery-checkpoint and test-evidence. Next chain03→verticalgate→07→08→10→13→14, local commits authorized/no push. User DB/root/root2 unchanged. Owned BE8092 stopped and schema cleaned; PG55434/Next3111 retained, user8090/3000 untouched.
