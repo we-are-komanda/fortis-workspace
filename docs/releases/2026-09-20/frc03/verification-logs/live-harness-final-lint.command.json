@@ -1,0 +1,12 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "pnpm",
+    "exec",
+    "eslint",
+    "test/playwright/frc03-live.cjs"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0
+}

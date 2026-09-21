@@ -1,0 +1,4 @@
+# ./internal/modules/enterprise/...
+pattern ./internal/modules/enterprise/...: open /Users/rr/Library/Caches/go-build/62/62bba206e25a4a77a0c3158b26005093cfeb208ebff29476d596974d470b7bc9-d: operation not permitted
+FAIL	./internal/modules/enterprise/... [setup failed]
+FAIL

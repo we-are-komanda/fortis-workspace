@@ -1,0 +1,12 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "node",
+    "--import",
+    "tsx",
+    "../docs/releases/2026-09-20/frc03/verification-logs/malformed-create-probe.ts"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0
+}

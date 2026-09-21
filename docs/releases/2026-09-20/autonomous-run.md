@@ -1,7 +1,7 @@
 # Autonomous release-hardening run — 2026-09-20
 
 - startedAt: 2026-09-20T14:12:33.402565+00:00
-- Current task: PAUSED at user request after FRC09 code acceptance. FRC04/05/09/11/12 code accepted; FRC06 unfinished. Resume only on user request.
+- Current task: ACTIVE under the 2026-09-21 continuation. FRC06 accepted locally; FRC03 and separate real vertical gate accepted locally; child commits recorded; FRC07 next. Continue through FRC07 → FRC08 → FRC10 → FRC13 → FRC14; no push or deployment.
 - Execution: current checkout; no reset/rebase/push/deployment/production migration. Local commits only after accepted, separable changes.
 - Authority: current user request, accepted ADR-0016/0017, then release package. Preserve historical evidence as history.
 
@@ -23,11 +23,11 @@ Parent gitlinks equal the child HEADs above. All four fetches completed; initial
 | FRC-00 | Implemented / Acceptance blocked by runtime evidence | Fresh baseline unittest: 10 PASS | Deployed identity/digests/migrations absent | Existing baseline | Preserve |
 | FRC-01 | Implemented / code-level acceptance passed / runtime acceptance blocked | Fresh focused frontend + readiness verification | Deployment/TLS/production evidence | Existing baseline | Preserve |
 | FRC-02 | CODE PASS / RUNTIME BLOCKED — entry gate passed in ADR-0017 scope | Fresh FE focused 31/31 + 5/5; BE isolation 7 top-level + 12 nested; readiness 1; save/version 11. Source audit found no tenant blocker | Production orphan inventory/storage/TLS remain; local PG/browser not yet rerun | Existing baseline | Preserve invariants |
-| FRC-03 | RESEARCH ONLY / PAUSED | No03implementation | Depends06 | — | See frc03/research-checkpoint.md |
+| FRC-03 | PASS local staged + vertical gate | Browser29, focused9, full212PASS/6historicalFAIL/59SKIP; realCLI/PG/Next→Go→PG | No local blocker; production remains14 | frontend e49253b; backend5a4a6d5 | FRC07 GO |
 | FRC-04 | CODE PASS / RUNTIME BLOCKED | REV01–10 PG+audit; BE full/unit/build/vet; FE roundtrip3/3+types/lint/build; independent review PASS; scoped OpenAPI valid | Production migration/deployed retention/runtime | Deferred shared hunks | FRC05+09 dependency satisfied |
 | FRC-05 | CODE PASS / RUNTIME BLOCKED | COST01–11; FE27+browser9; liveGo/PG475000RUB; PG21+11; types/lint/build/SwaggerPASS | Deployed identity/migration/toolchain/TLS | Deferred shared hunks | FRC06 GO |
-| FRC-06 | PARTIAL / PAUSED — NOT ACCEPTED | Purestate/storage GREEN;3 intentionalRED; types/lintPASS | Lifecycle/recovery integration incomplete | — | See frc06/recovery-checkpoint.md |
-| FRC-07 | RESEARCH ONLY / PAUSED | No07implementation | Depends06 | — | See frc07/backend-plan.md |
+| FRC-06 | PASS (local staged scope) | 30 criteria; focused48, browser13, real Next→Go→PG; full201 PASS/6 historical FAIL/43 SKIP; types/lint/build | SAVE09 gated N/A until mandatory FRC10 | frontend a56d128; parent0560b79 | Preserve and regress |
+| FRC-07 | RESEARCH READY | Approved budget semantics recorded in current user instruction and durable context | Wait FRC03 real vertical gate | — | Update historical plan against approved contract, then implement |
 | FRC-08 | NOT STARTED | Not executed | Not assessed | — | Honor dependency graph below |
 | FRC-09 | CODE PASS / RUNTIME BLOCKED | DATA01–10; Node23; Chromium23combined; actualbrowser/PG; race/build/lint/SwaggerPASS | Real scanner/privatevolume/retention/TLS | Deferred shared06hunks | Userrequestedstop |
 | FRC-10 | NOT STARTED | Not executed | Not assessed | — | Honor dependency graph below |

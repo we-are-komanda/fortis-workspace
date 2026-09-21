@@ -1,0 +1,11 @@
+✔ failed or pending Save cannot navigate; explicit retry confirms before opening target (2348.767208ms)
+✔ successful logout never rechecks a known invalid session (493.681583ms)
+✔ an initially unknown session still checks auth and redirects on its first 401 (365.811625ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3762.739333

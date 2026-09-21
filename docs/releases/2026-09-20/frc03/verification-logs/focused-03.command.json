@@ -1,0 +1,14 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "src/modules/workspace/domain/workspace-projects.test.ts"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0,
+  "sourceManifest": "frontend-source-manifest.json"
+}

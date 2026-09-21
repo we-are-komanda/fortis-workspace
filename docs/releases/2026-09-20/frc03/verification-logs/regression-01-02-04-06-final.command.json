@@ -1,0 +1,24 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "src/modules/drone-defense/domain/project-save.release.test.ts",
+    "src/modules/drone-defense/domain/use-defense-variants-store.test.ts",
+    "src/modules/drone-defense/infra/backend-proxy.release.test.ts",
+    "src/modules/drone-defense/infra/project-revisions.release.test.ts",
+    "src/modules/drone-defense/infra/readiness.release.test.ts",
+    "src/shared/lib/auth-boundary.release.test.ts",
+    "src/shared/lib/identity-isolation.release.test.ts",
+    "src/shared/lib/project-draft-storage.test.ts",
+    "src/shared/lib/project-roundtrip.release.test.ts",
+    "src/shared/lib/project-runtime.release.test.ts",
+    "src/shared/lib/project-save-state.test.ts"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0,
+  "sourceManifest": "frontend-final-source-manifest.json"
+}

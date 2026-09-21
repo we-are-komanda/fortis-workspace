@@ -1,0 +1,17 @@
+{
+  "frontend": {
+    "files": 457,
+    "postVerificationDrift": [
+      "test/playwright/frc03-live.cjs"
+    ],
+    "productionDrift": []
+  },
+  "backend": {
+    "files": 241,
+    "postVerificationDrift": [
+      "README.md"
+    ],
+    "productionDrift": []
+  },
+  "frontendBuildAndTestManifestsIdentical": true
+}

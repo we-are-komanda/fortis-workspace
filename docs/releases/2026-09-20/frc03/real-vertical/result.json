@@ -1,0 +1,156 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "No membership shows empty state and disabled creation"
+    },
+    {
+      "name": "Operator CLI created enterprise and membership; Refresh reads actual scoped access",
+      "enterpriseId": "32285635-1f78-4670-bec7-1729e3251ef1",
+      "userId": "c85902ac-341a-4a94-8934-03596c0af15c"
+    },
+    {
+      "name": "Normal workspace Create opens authoritative empty project",
+      "projectId": "1399fcab-3947-4422-9d80-526089ce2a95",
+      "enterpriseId": "32285635-1f78-4670-bec7-1729e3251ef1",
+      "version": 1
+    },
+    {
+      "name": "UI business edit saved v2 and reload preserves ID/version/canonical content",
+      "projectId": "1399fcab-3947-4422-9d80-526089ce2a95",
+      "version": 2,
+      "savedHash": "e1d571cff7f0c829a3cb79a1e9c365918d93fe111822ee28f5b0595dfc30b3c2",
+      "layerId": "layer-1789984150242-35illtd"
+    },
+    {
+      "name": "Logout and login return to the same saved project",
+      "projectId": "1399fcab-3947-4422-9d80-526089ce2a95",
+      "version": 2
+    },
+    {
+      "name": "Real filtered pagination reaches all 121 projects; empty enterprise has no fallback",
+      "totalItems": 121,
+      "pages": [
+        "1–50",
+        "51–100",
+        "101–121"
+      ],
+      "emptyEnterpriseId": "fa2ef418-2898-4243-8946-ac08b480f5e3"
+    },
+    {
+      "name": "Second identity cannot list or read first user enterprise/project",
+      "foreignStatus": 404
+    }
+  ],
+  "pageErrors": [],
+  "consoleRecords": [
+    {
+      "type": "warning",
+      "message": "[.WebGL-0x10c004f4600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "message": "[.WebGL-0x10c004f4600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "message": "[.WebGL-0x10c004f4600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "type": "warning",
+      "message": "[.WebGL-0x10c004f4600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    },
+    {
+      "type": "warning",
+      "message": "Expected value to be of type number, but found null instead."
+    },
+    {
+      "type": "warning",
+      "message": "Expected value to be of type number, but found null instead."
+    },
+    {
+      "type": "warning",
+      "message": "Expected value to be of type number, but found null instead."
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: Н (1053)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: о (1086)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: в (1074)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: ы (1099)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: й (1081)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: б (1073)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: ъ (1098)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: е (1077)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: к (1082)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: т (1090)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: з (1079)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: а (1072)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: щ (1097)"
+    },
+    {
+      "type": "warning",
+      "message": "deck: Missing character: и (1080)"
+    },
+    {
+      "type": "warning",
+      "message": "Expected value to be of type number, but found null instead."
+    },
+    {
+      "type": "warning",
+      "message": "Expected value to be of type number, but found null instead."
+    },
+    {
+      "type": "warning",
+      "message": "Expected value to be of type number, but found null instead."
+    },
+    {
+      "type": "warning",
+      "message": "Expected value to be of type number, but found null instead."
+    },
+    {
+      "type": "warning",
+      "message": "Expected value to be of type number, but found null instead."
+    },
+    {
+      "type": "warning",
+      "message": "Expected value to be of type number, but found null instead."
+    }
+  ]
+}

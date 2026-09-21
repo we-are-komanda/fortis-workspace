@@ -1,0 +1,12 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "go",
+    "build",
+    "./..."
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/backend",
+  "exitCode": 0,
+  "sourceManifest": "backend-source-manifest.json"
+}

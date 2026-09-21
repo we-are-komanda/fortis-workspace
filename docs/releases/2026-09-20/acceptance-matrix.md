@@ -235,3 +235,8 @@ REV01–10 and scoped project audit PASS. PostgreSQL15 top-level+8 nested (inclu
 Focused48/48, rendered Chromium13/13, real Next→Go→PostgreSQL six checkpoints PASS. Original v1→2→3→4, independent copy v1 survives reload. Go tests/build + realPG21 top-level PASS. Frontend regressions38PASS/1explicitPGskip; full250=201PASS/6 historical FAIL/43opt-inSKIP, exact signatures6/6 unchanged. Types/lint21files/build PASS; test/build source manifests454files identical, drift=[]. Seven review defects fixed, eight independent probes PASS. Frontend `a56d128e715ed09387428ad3dd67434d18855dd5`.
 
 [Implementation](frc06/implementation-report.md) · [30+SAVE criteria](frc06/acceptance-criteria.md) · [tests](frc06/test-evidence.md) · [review](frc06/independent-review.md) · [checkpoint](frc06/recovery-checkpoint.md). FRC03 may proceed; whole release remains unaccepted.
+
+
+## FRC-03 и отдельный vertical gate — 2026-09-21
+
+**PASS локального этапа.** Trusted CLI→Next→Go→disposable PostgreSQL: первое созданиеv1, редактирование эшелона, Savev2, неизменный ID/полный canonical GET после reload/relogin,121 строк пагинации, пустое E2, изоляция B. Console/page errors0. Browser29/29; full277=212PASS/6exacthistoricalFAIL/59SKIP; types/lint/buildPASS. Operator realCLI9/PG23 и independent review пройдены. Финальное исправление auth/logout проверено root; независимые агенты после этого недоступны по лимиту аккаунта. Evidence: docs/releases/2026-09-20/frc03/test-evidence.md и real-vertical/result.json. Production не принята. Далее07→08→10→13→14; без push/deploy.

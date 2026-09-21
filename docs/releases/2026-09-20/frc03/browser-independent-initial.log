@@ -1,0 +1,246 @@
+✖ WS01 empty enterprise never falls back to another enterprise rows or comparison options (5983.000292ms)
+✖ WS02/03 no membership prevents create; Refresh discovers a new authorized assignment (196.507334ms)
+✖ WS04/09 pending and failed create preserve current context; unchanged retry commits server context once (237.176125ms)
+✖ WS05 late previous enterprise response cannot populate the newly selected empty enterprise (4176.907875ms)
+✖ WS06 all 121 scoped projects are reachable by server pagination and enterprise switch resets the page (5195.889959ms)
+✖ WS07 revoked open cannot navigate using the previously active project (5173.230625ms)
+✖ WS08 whitespace name never sends POST and preserves the user's input (208.184875ms)
+✖ WS11 selected enterprise persists for its owner and never transfers to another identity (246035.516125ms)
+✖ WS13 failed enterprise refresh clears stale rows and cannot look like an authorized empty state (5219.171875ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 0
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 273165.337667
+
+✖ failing tests:
+
+test at src/modules/workspace/ui/project-workspace.browser.test.ts:20:5538
+✖ WS01 empty enterprise never falls back to another enterprise rows or comparison options (5983.000292ms)
+  Error: expect(locator).toBeVisible() failed
+  
+  Locator: getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })
+  Expected: visible
+  Timeout: 5000ms
+  Error: element(s) not found
+  
+  Call log:
+    - Expect "to.be.visible" with timeout 5000ms
+    - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeVisible (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/workspace/ui/project-workspace.browser.test.ts:111:45) {
+    matcherResult: { message: `expect(locator).toBeVisible() failed\n\nLocator: getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect "to.be.visible" with timeout 5000ms\n  - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })\n`, pass: false, actual: undefined, name: 'toBeVisible', expected: 'visible', log: [ '  - Expect "to.be.visible" with timeout 5000ms', "  - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })" ], timeout: 5000, ariaSnapshot: '- text: Рабочая сессия\n- button "Выйти"\n- main:\n  - paragraph: Рабочая зона\n  - heading "Предприятие и конфигурация" [level=1]\n  - button "Обновить"\n  - heading "Предприятия" [level=2]\n  - button "Enterprise E1"\n  - button "Enterprise E2"\n  - heading "Новая конфигурация" [level=2]\n  - textbox "Название конфигурации": Новая конфигурация\n  - button "Создать"\n  - heading "Конфигурации" [level=2]\n  - text: 2 шт.\n  - button "Project PProject P · v7Открыть"\n  - button "Project QProject Q · v7Открыть"\n  - heading "Сравнение конфигураций" [level=2]\n  - combobox:\n    - option "Первая конфигурация" [selected]\n    - option "Project P"\n    - option "Project Q"\n  - combobox:\n    - option "Вторая конфигурация" [selected]\n    - option "Project P"\n    - option "Project Q"\n  - button "Сравнить" [disabled]' }
+  }
+
+test at src/modules/workspace/ui/project-workspace.browser.test.ts:20:6290
+✖ WS02/03 no membership prevents create; Refresh discovers a new authorized assignment (196.507334ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/workspace/ui/project-workspace.browser.test.ts:123:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/modules/workspace/ui/project-workspace.browser.test.ts:20:7288
+✖ WS04/09 pending and failed create preserve current context; unchanged retry commits server context once (237.176125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+  +   active: null,
+  +   baseline: null,
+  -   active: 'Existing',
+  -   baseline: {
+  -     activeLayerId: undefined,
+  -     assetLibrary: [],
+  -     baseObject: {
+  -       center: {
+  -         lat: 55.1,
+  -         lng: 37.1
+  -       },
+  -       id: 'local-draft',
+  -       name: 'Новый объект защиты'
+  -     },
+  -     enterpriseId: 'E1',
+  -     layers: [],
+  -     mode: 'view',
+  -     placedObjects: [],
+  -     projectId: 'Existing',
+  -     projectName: 'Project Existing',
+  -     schemaVersion: 1,
+  -     source: 'backend',
+  -     updatedAt: '2026-09-21T08:32:02.817Z',
+  -     version: 7
+  -   },
+      navigation: null,
+      project: {
+        activeLayerId: undefined,
+        assetLibrary: [],
+        baseObject: {
+  +       address: undefined,
+          center: {
+  +         lat: 55,
+  +         lng: 37
+  -         lat: 55.1,
+  -         lng: 37.1
+          },
+  +       enterpriseId: 'E2',
+  +       id: 'E2',
+  +       name: 'Enterprise E2',
+  +       source: 'backend',
+  +       status: 'active'
+  -       id: 'local-draft',
+  -       name: 'Новый объект защиты'
+        },
+  +     enterpriseId: 'E2',
+  -     enterpriseId: 'E1',
+        layers: [],
+        mode: 'view',
+        placedObjects: [],
+  +     projectId: 'current',
+  +     projectName: 'First E2 configuration',
+  -     projectId: 'Existing',
+  -     projectName: 'Project Existing',
+        schemaVersion: 1,
+  +     source: 'custom',
+  +     updatedAt: '2026-09-21T08:32:03.007Z'
+  -     source: 'backend',
+  -     updatedAt: '2026-09-21T08:32:02.817Z',
+  -     version: 7
+      },
+  +   replacements: [
+  +     'current'
+  +   ],
+  +   status: 'dirty'
+  -   replacements: [],
+  -   status: 'saved'
+    }
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/workspace/ui/project-workspace.browser.test.ts:135:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { project: { schemaVersion: 1, projectId: 'current', projectName: 'First E2 configuration', baseObject: [Object], layers: [], assetLibrary: [], placedObjects: [], activeLayerId: undefined, mode: 'view', source: 'custom', updatedAt: '2026-09-21T08:32:03.007Z', enterpriseId: 'E2' }, baseline: null, active: null, status: 'dirty', replacements: [ 'current' ], navigation: null },
+    expected: { project: { schemaVersion: 1, projectId: 'Existing', projectName: 'Project Existing', baseObject: [Object], layers: [], assetLibrary: [], placedObjects: [], activeLayerId: undefined, mode: 'view', source: 'backend', updatedAt: '2026-09-21T08:32:02.817Z', enterpriseId: 'E1', version: 7 }, baseline: { schemaVersion: 1, projectId: 'Existing', projectName: 'Project Existing', baseObject: [Object], layers: [], assetLibrary: [], placedObjects: [], activeLayerId: undefined, mode: 'view', source: 'backend', updatedAt: '2026-09-21T08:32:02.817Z', enterpriseId: 'E1', version: 7 }, active: 'Existing', status: 'saved', replacements: [], navigation: null },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/modules/workspace/ui/project-workspace.browser.test.ts:20:9134
+✖ WS05 late previous enterprise response cannot populate the newly selected empty enterprise (4176.907875ms)
+  page.waitForResponse: Timeout 4000ms exceeded while waiting for event "response"
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/workspace/ui/project-workspace.browser.test.ts:151:27) {
+    name: 'TimeoutError'
+  }
+
+test at src/modules/workspace/ui/project-workspace.browser.test.ts:20:9996
+✖ WS06 all 121 scoped projects are reachable by server pagination and enterprise switch resets the page (5195.889959ms)
+  Error: expect(locator).toBeVisible() failed
+  
+  Locator: getByRole('button', { name: /^Project 001 Project 001 · v7 Открыть$/ })
+  Expected: visible
+  Timeout: 5000ms
+  Error: element(s) not found
+  
+  Call log:
+    - Expect "to.be.visible" with timeout 5000ms
+    - waiting for getByRole('button', { name: /^Project 001 Project 001 · v7 Открыть$/ })
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeVisible (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/workspace/ui/project-workspace.browser.test.ts:157:47) {
+    matcherResult: { message: `expect(locator).toBeVisible() failed\n\nLocator: getByRole('button', { name: /^Project 001 Project 001 · v7 Открыть$/ })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect "to.be.visible" with timeout 5000ms\n  - waiting for getByRole('button', { name: /^Project 001 Project 001 · v7 Открыть$/ })\n`, pass: false, actual: undefined, name: 'toBeVisible', expected: 'visible', log: [ '  - Expect "to.be.visible" with timeout 5000ms', "  - waiting for getByRole('button', { name: /^Project 001 Project 001 · v7 Открыть$/ })" ], timeout: 5000, ariaSnapshot: '- text: Рабочая сессия\n- button "Выйти"\n- main:\n  - paragraph: Рабочая зона\n  - heading "Предприятие и конфигурация" [level=1]\n  - button "Обновить"\n  - heading "Предприятия" [level=2]\n  - button "Enterprise E1"\n  - button "Enterprise E2"\n  - heading "Новая конфигурация" [level=2]\n  - textbox "Название конфигурации": Новая конфигурация\n  - button "Создать"\n  - heading "Конфигурации" [level=2]\n  - text: 50 шт.\n  - button "Project 001Project 001 · v7Открыть"\n  - button "Project 002Project 002 · v7Открыть"\n  - button "Project 003Project 003 · v7Открыть"\n  - button "Project 004Project 004 · v7Открыть"\n  - button "Project 005Project 005 · v7Открыть"\n  - button "Project 006Project 006 · v7Открыть"\n  - button "Project 007Project 007 · v7Открыть"\n  - button "Project 008Project 008 · v7Открыть"\n  - button "Project 009Project 009 · v7Открыть"\n  - button "Project 010Project 010 · v7Открыть"\n  - button "Project 011Project 011 · v7Открыть"\n  - button "Project 012Project 012 · v7Открыть"\n  - button "Project 013Project 013 · v7Открыть"\n  - button "Project 014Project 014 · v7Открыть"\n  - button "Project 015Project 015 · v7Открыть"\n  - button "Project 016Project 016 · v7Открыть"\n  - button "Project 017Project 017 · v7Открыть"\n  - button "Project 018Project 018 · v7Открыть"\n  - button "Project 019Project 019 · v7Открыть"\n  - button "Project 020Project 020 · v7Открыть"\n  - button "Project 021Project 021 · v7Открыть"\n  - button "Project 022Project 022 · v7Открыть"\n  - button "Project 023Project 023 · v7Открыть"\n  - button "Project 024Project 024 · v7Открыть"\n  - button "Project 025Project 025 · v7Открыть"\n  - button "Project 026Project 026 · v7Открыть"\n  - button "Project 027Project 027 · v7Открыть"\n  - button "Project 028Project 028 · v7Открыть"\n  - button "Project 029Project 029 · v7Открыть"\n  - button "Project 030Project 030 · v7Открыть"\n  - button "Project 031Project 031 · v7Открыть"\n  - button "Project 032Project 032 · v7Открыть"\n  - button "Project 033Project 033 · v7Открыть"\n  - button "Project 034Project 034 · v7Открыть"\n  - button "Project 035Project 035 · v7Открыть"\n  - button "Project 036Project 036 · v7Открыть"\n  - button "Project 037Project 037 · v7Открыть"\n  - button "Project 038Project 038 · v7Открыть"\n  - button "Project 039Project 039 · v7Открыть"\n  - button "Project 040Project 040 · v7Открыть"\n  - button "Project 041Project 041 · v7Открыть"\n  - button "Project 042Project 042 · v7Открыть"\n  - button "Project 043Project 043 · v7Открыть"\n  - button "Project 044Project 044 · v7Открыть"\n  - button "Project 045Project 045 · v7Открыть"\n  - button "Project 046Project 046 · v7Открыть"\n  - button "Project 047Project 047 · v7Открыть"\n  - button "Project 048Project 048 · v7Открыть"\n  - button "Project 049Project 049 · v7Открыть"\n  - button "Project 050Project 050 · v7Открыть"\n  - heading "Сравнение конфигураций" [level=2]\n  - combobox:\n    - option "Первая конфигурация" [selected]\n    - option "Project 001"\n    - option "Project 002"\n    - option "Project 003"\n    - option "Project 004"\n    - option "Project 005"\n    - option "Project 006"\n    - option "Project 007"\n    - option "Project 008"\n    - option "Project 009"\n    - option "Project 010"\n    - option "Project 011"\n    - option "Project 012"\n    - option "Project 013"\n    - option "Project 014"\n    - option "Project 015"\n    - option "Project 016"\n    - option "Project 017"\n    - option "Project 018"\n    - option "Project 019"\n    - option "Project 020"\n    - option "Project 021"\n    - option "Project 022"\n    - option "Project 023"\n    - option "Project 024"\n    - option "Project 025"\n    - option "Project 026"\n    - option "Project 027"\n    - option "Project 028"\n    - option "Project 029"\n    - option "Project 030"\n    - option "Project 031"\n    - option "Project 032"\n    - option "Project 033"\n    - option "Project 034"\n    - option "Project 035"\n    - option "Project 036"\n    - option "Project 037"\n    - option "Project 038"\n    - option "Project 039"\n    - option "Project 040"\n    - option "Project 041"\n    - option "Project 042"\n    - option "Project 043"\n    - option "Project 044"\n    - option "Project 045"\n    - option "Project 046"\n    - option "Project 047"\n    - option "Project 048"\n    - option "Project 049"\n    - option "Project 050"\n  - combobox:\n    - option "Вторая конфигурация" [selected]\n    - option "Project 001"\n    - option "Project 002"\n    - option "Project 003"\n    - option "Project 004"\n    - option "Project 005"\n    - option "Project 006"\n    - option "Project 007"\n    - option "Project 008"\n    - option "Project 009"\n    - option "Project 010"\n    - option "Project 011"\n    - option "Project 012"\n    - option "Project 013"\n    - option "Project 014"\n    - option "Project 015"\n    - option "Project 016"\n    - option "Project 017"\n    - option "Project 018"\n    - option "Project 019"\n    - option "Project 020"\n    - option "Project 021"\n    - option "Project 022"\n    - option "Project 023"\n    - option "Project 024"\n    - option "Project 025"\n    - option "Project 026"\n    - option "Project 027"\n    - option "Project 028"\n    - option "Project 029"\n    - option "Project 030"\n    - option "Project 031"\n    - option "Project 032"\n    - option "Project 033"\n    - option "Project 034"\n    - option "Project 035"\n    - option "Project 036"\n    - option "Project 037"\n    - option "Project 038"\n    - option "Project 039"\n    - option "Project 040"\n    - option "Project 041"\n    - option "Project 042"\n    - option "Project 043"\n    - option "Project 044"\n    - option "Project 045"\n    - option "Project 046"\n    - option "Project 047"\n    - option "Project 048"\n    - option "Project 049"\n    - option "Project 050"\n  - button "Сравнить" [disabled]' }
+  }
+
+test at src/modules/workspace/ui/project-workspace.browser.test.ts:20:11923
+✖ WS07 revoked open cannot navigate using the previously active project (5173.230625ms)
+  Error: expect(locator).toBeVisible() failed
+  
+  Locator: getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })
+  Expected: visible
+  Timeout: 5000ms
+  Error: element(s) not found
+  
+  Call log:
+    - Expect "to.be.visible" with timeout 5000ms
+    - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeVisible (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/workspace/ui/project-workspace.browser.test.ts:169:45) {
+    matcherResult: { message: `expect(locator).toBeVisible() failed\n\nLocator: getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect "to.be.visible" with timeout 5000ms\n  - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })\n`, pass: false, actual: undefined, name: 'toBeVisible', expected: 'visible', log: [ '  - Expect "to.be.visible" with timeout 5000ms', "  - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })" ], timeout: 5000, ariaSnapshot: '- text: Рабочая сессия\n- button "Выйти"\n- main:\n  - paragraph: Рабочая зона\n  - heading "Предприятие и конфигурация" [level=1]\n  - button "Обновить"\n  - heading "Предприятия" [level=2]\n  - button "Enterprise E1"\n  - button "Enterprise E2"\n  - heading "Новая конфигурация" [level=2]\n  - textbox "Название конфигурации": Новая конфигурация\n  - button "Создать"\n  - heading "Конфигурации" [level=2]\n  - text: 2 шт.\n  - button "Project PProject P · v7Открыть"\n  - button "Project QProject Q · v7Открыть"\n  - heading "Сравнение конфигураций" [level=2]\n  - combobox:\n    - option "Первая конфигурация" [selected]\n    - option "Project P"\n    - option "Project Q"\n  - combobox:\n    - option "Вторая конфигурация" [selected]\n    - option "Project P"\n    - option "Project Q"\n  - button "Сравнить" [disabled]' }
+  }
+
+test at src/modules/workspace/ui/project-workspace.browser.test.ts:20:12672
+✖ WS08 whitespace name never sends POST and preserves the user's input (208.184875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/workspace/ui/project-workspace.browser.test.ts:179:63)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/modules/workspace/ui/project-workspace.browser.test.ts:20:13213
+✖ WS11 selected enterprise persists for its owner and never transfers to another identity (246035.516125ms)
+  Error: expect(locator).toBeVisible() failed
+  
+  Locator: getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })
+  Expected: visible
+  Timeout: 5000ms
+  Error: element(s) not found
+  
+  Call log:
+    - Expect "to.be.visible" with timeout 5000ms
+    - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeVisible (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/workspace/ui/project-workspace.browser.test.ts:184:45) {
+    matcherResult: { message: `expect(locator).toBeVisible() failed\n\nLocator: getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect "to.be.visible" with timeout 5000ms\n  - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })\n`, pass: false, actual: undefined, name: 'toBeVisible', expected: 'visible', log: [ '  - Expect "to.be.visible" with timeout 5000ms', "  - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })" ], timeout: 5000, ariaSnapshot: '- text: Рабочая сессия\n- button "Выйти"\n- main:\n  - paragraph: Рабочая зона\n  - heading "Предприятие и конфигурация" [level=1]\n  - button "Обновить"\n  - heading "Предприятия" [level=2]\n  - button "Enterprise E1"\n  - button "Enterprise E2"\n  - heading "Новая конфигурация" [level=2]\n  - textbox "Название конфигурации": Новая конфигурация\n  - button "Создать"\n  - heading "Конфигурации" [level=2]\n  - text: 2 шт.\n  - button "Project PProject P · v7Открыть"\n  - button "Project QProject Q · v7Открыть"\n  - heading "Сравнение конфигураций" [level=2]\n  - combobox:\n    - option "Первая конфигурация" [selected]\n    - option "Project P"\n    - option "Project Q"\n  - combobox:\n    - option "Вторая конфигурация" [selected]\n    - option "Project P"\n    - option "Project Q"\n  - button "Сравнить" [disabled]' }
+  }
+
+test at src/modules/workspace/ui/project-workspace.browser.test.ts:20:14469
+✖ WS13 failed enterprise refresh clears stale rows and cannot look like an authorized empty state (5219.171875ms)
+  Error: expect(locator).toBeVisible() failed
+  
+  Locator: getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })
+  Expected: visible
+  Timeout: 5000ms
+  Error: element(s) not found
+  
+  Call log:
+    - Expect "to.be.visible" with timeout 5000ms
+    - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeVisible (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/workspace/ui/project-workspace.browser.test.ts:195:45) {
+    matcherResult: { message: `expect(locator).toBeVisible() failed\n\nLocator: getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect "to.be.visible" with timeout 5000ms\n  - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })\n`, pass: false, actual: undefined, name: 'toBeVisible', expected: 'visible', log: [ '  - Expect "to.be.visible" with timeout 5000ms', "  - waiting for getByRole('button', { name: /^Project P Project P · v7 Открыть$/ })" ], timeout: 5000, ariaSnapshot: '- text: Рабочая сессия\n- button "Выйти"\n- main:\n  - paragraph: Рабочая зона\n  - heading "Предприятие и конфигурация" [level=1]\n  - button "Обновить"\n  - heading "Предприятия" [level=2]\n  - button "Enterprise E1"\n  - button "Enterprise E2"\n  - heading "Новая конфигурация" [level=2]\n  - textbox "Название конфигурации": Новая конфигурация\n  - button "Создать"\n  - heading "Конфигурации" [level=2]\n  - text: 2 шт.\n  - button "Project PProject P · v7Открыть"\n  - button "Project QProject Q · v7Открыть"\n  - heading "Сравнение конфигураций" [level=2]\n  - combobox:\n    - option "Первая конфигурация" [selected]\n    - option "Project P"\n    - option "Project Q"\n  - combobox:\n    - option "Вторая конфигурация" [selected]\n    - option "Project P"\n    - option "Project Q"\n  - button "Сравнить" [disabled]' }
+  }

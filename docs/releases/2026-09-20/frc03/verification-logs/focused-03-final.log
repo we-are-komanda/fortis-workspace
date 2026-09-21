@@ -1,0 +1,17 @@
+✔ project page requests the server enterprise filter and keeps the filtered total (140.511667ms)
+✔ a late enterprise or previous page reply cannot replace the latest list (0.754125ms)
+✔ pending or failed workspace create preserves the previous current context and retries the frozen request (44.799792ms)
+✔ late workspace create acknowledgement cannot overwrite a newer current edit (0.639ms)
+✔ create returns no navigation result after identity changes during its list refresh (32.798041ms)
+✔ workspace names reject whitespace and more than 120 Unicode code points before sending (1.478334ms)
+✔ project load rejects missing enterprise ownership instead of adopting baseObject identity (1.843792ms)
+✔ saving a legacy project cannot infer enterprise ownership from baseObject.id (0.223167ms)
+✔ enterprise coordinates must be explicit finite valid GIS values; zero remains valid (0.243375ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 845.272083
