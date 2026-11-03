@@ -14,3 +14,7 @@ At the user's explicit request, accepted trusted operator CLI created «Тест
 
 
 Local library restoration at user request,2026-10-10: existing34 public backend cards were present; test projectv1 had assetLibrary[]. Ordinary UI refresh→explicit apply→save restored34 cards in project882d4385-dcc7-4e53-959e-62d1467e6b9c v2. Reload and read-only PostgreSQL check confirm34 cards,0 placements. No source changes, new global seed, price edits or direct SQL writes. Existing demo provenance retained.
+
+## Integration checkpoint — 2026-11-03
+
+The frontend transport now requires projectVersion/hideCost and sends mapView, rejects legacy payloads and validates report identity and financial projections. The report UI remains not_released; map/inventory are typed unknown pending renderer validation. Standalone reportId rendering and real PDF/PostgreSQL acceptance remain unfinished, not prerequisites silently claimed complete by this merge. TypeScript, isolated production build, targeted ESLint and seven contract checks passed. Shared-workspace access replaces historical authentication requirements.

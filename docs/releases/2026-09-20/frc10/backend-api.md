@@ -7,7 +7,7 @@ Implementation source of truth: `backend/internal/modules/report/ui/dto.go` and 
 - Issue/reuse: `GET /api/v1/projects/report?id=<project UUID>&projectVersion=<positive integer>&hideCost=true|false&mapView=all|saved`.
 - `hideCost` and `projectVersion` are required. `mapView` defaults to `all`.
 - Reopen: `GET /api/v1/projects/report?reportId=<issued UUID>` only. Mixing this with any issuance parameter, duplicate parameters, and unknown parameters returns 400.
-- No implicit current project version, boolean coercion, anonymous access, or new RBAC surface.
+- No implicit current project version or boolean coercion. Access now follows ADR-0026 shared workspace without authentication; the earlier membership boundary is superseded.
 
 Responses are direct JSON bodies. Missing version is 400 `version_required`; malformed input is 400 `validation_error`; unavailable revision/report/current membership is 404; unavailable pinned priced calculator is 503 `unsupported_calculation_version`; invalid saved map geometry is 422 `invalid_report_snapshot`.
 
