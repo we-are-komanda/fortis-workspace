@@ -1,0 +1,23 @@
+2026/09/21 13:42:38 INFO environment=dev
+2026/09/21 13:42:38 INFO work_mode=enterprise-provision
+{"name":"Real immutable A7/B3 gives475000/550000 RUB and75000/15.79% difference","a":{"projectId":"f4678c07-8021-465c-b06d-2854f6b80473","projectVersion":7,"calculationVersion":"cost-rub-v1","inputDataVersions":{},"snapshotDigest":"5073ea61a8384632b3655bcd925e201becc485264db1c385dc1d88743c2ce7ef"},"b":{"projectId":"34787c9c-efcc-4d09-a424-56ef53a6ec5d","projectVersion":3,"calculationVersion":"cost-rub-v1","inputDataVersions":{},"snapshotDigest":"f46a559155c982a34e90f4b1a1a833d4c517f25bb633a4485905d2f6b1a6434a"}}
+{"name":"Ordinary workspace controls request explicit versions and render authoritative comparison"}
+{"name":"Current A8 does not mutate issued A7/B3 comparison","currentA":8,"pinnedA":7}
+{"name":"Zero/unknown preserve null semantics; same-project historical comparison works; foreign has no partial prices"}
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   'Warning: [antd: Modal] `maskClosable` is deprecated. Please use `mask.closable` instead.',
++   'Warning: [antd: Modal] `maskClosable` is deprecated. Please use `mask.closable` instead.'
++ ]
+- []
+
+    at /Users/rr/Documents/Fortis/frontend/test/playwright/frc08-live.cjs:127:12 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Array],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}

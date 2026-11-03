@@ -1,0 +1,37 @@
+✔ variant Stay preserves edit; Discard opens target and deletes discarded recovery (2162.656083ms)
+✔ conflict reload asks before replacing the active project (1107.541416ms)
+✔ enterprise switch while dirty offers Stay and Discard (501.59475ms)
+✔ logout while dirty offers Stay and Discard before ending session (739.981792ms)
+✔ failed or pending Save cannot navigate; explicit retry confirms before opening target (1020.63675ms)
+✔ failed create retains the name and explicit retry replays the frozen body/key (1045.078125ms)
+✔ recovery rechecks access when Restore is clicked, after the offer was displayed (1152.960625ms)
+✔ revoked dirty project still requires an explicit decision before another variant loads (628.138708ms)
+✔ reload keeps saved state until explicit scoped recovery (700.069875ms)
+✔ session recheck hides all protected dialogs and preserves same-user transition state (638.609208ms)
+✔ logout Save stays on failed save, then leaves only after confirmed retry (925.994042ms)
+✔ switching identity clears the previous user logout intent and name (476.463625ms)
+✔ enterprise Save keeps selection after failure and switches after confirmed retry (531.859792ms)
+✔ successful logout never rechecks a known invalid session (378.944625ms)
+✔ an initially unknown session still checks auth and redirects on its first 401 (286.947167ms)
+✔ WS01 empty enterprise never falls back to another enterprise rows or comparison options (1171.629792ms)
+✔ WS02/03 no membership prevents create; Refresh discovers a new authorized assignment (499.47325ms)
+✔ WS04/09 pending and failed create preserve current context; unchanged retry commits server context once (602.67225ms)
+✔ WS05 late previous enterprise response cannot populate the newly selected empty enterprise (496.107125ms)
+✔ WS06 all 121 scoped projects are reachable by server pagination and enterprise switch resets the page (671.932583ms)
+✔ WS07 revoked open cannot navigate using the previously active project (420.951125ms)
+✔ WS08 whitespace name never sends POST and preserves the user's input (345.355666ms)
+✔ WS11 selected enterprise persists for its owner and never transfers to another identity (690.39ms)
+✔ WS13 failed enterprise refresh clears stale rows and cannot look like an authorized empty state (403.892375ms)
+✔ WS05 obsolete pagination response cannot restore rows after enterprise switch (360.377792ms)
+✔ WS13 failed project list is an error, never an empty successful enterprise (432.013958ms)
+✔ shared variants modal renders a project list failure rather than an empty success (387.588333ms)
+✔ WS14 enterprise beyond the first hundred remains reachable and scoped (391.135125ms)
+✔ WS08 name limit counts Unicode code points: 121 is rejected and 120 survives intact (378.402375ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21080.301834

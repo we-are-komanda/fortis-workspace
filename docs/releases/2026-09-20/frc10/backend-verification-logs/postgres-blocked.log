@@ -1,0 +1,6 @@
+Attempted isolated PostgreSQL command (not executed):
+rtk proxy env GOTOOLCHAIN=local GOPROXY=off GOCACHE=/private/tmp/fortis-frc12-gocache FORTIS_FRC04_TEST_DSN='host=127.0.0.1 port=55434 user=fortis_test dbname=postgres sslmode=disable' go test ./cmd/app -run '^TestFRC10PostgresImmutableReport$' -count=1
+
+Automatic approval review failed because the access token could not be refreshed after an account change. The action was not executed because approval review could not complete. This was a review authentication failure, not a determination that the action was unsafe. The check was not bypassed.
+
+All six TestFRC10Postgres tests remain pending an authorized real run after account access is restored. No skipped test is recorded as passed.

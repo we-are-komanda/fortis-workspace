@@ -1,0 +1,40 @@
+=== RUN   TestProvisionValidatesBeforePersistence
+=== RUN   TestProvisionValidatesBeforePersistence/latitude_range
+=== RUN   TestProvisionValidatesBeforePersistence/longitude_range
+=== RUN   TestProvisionValidatesBeforePersistence/infinity
+=== RUN   TestProvisionValidatesBeforePersistence/invalid_user_ID
+=== RUN   TestProvisionValidatesBeforePersistence/oversized_name
+=== RUN   TestProvisionValidatesBeforePersistence/missing_latitude
+=== RUN   TestProvisionValidatesBeforePersistence/NaN
+=== RUN   TestProvisionValidatesBeforePersistence/missing_enterprise_ID
+=== RUN   TestProvisionValidatesBeforePersistence/nil_UUID
+=== RUN   TestProvisionValidatesBeforePersistence/blank_name
+=== RUN   TestProvisionValidatesBeforePersistence/blank_address
+=== RUN   TestProvisionValidatesBeforePersistence/missing_longitude
+--- PASS: TestProvisionValidatesBeforePersistence (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/latitude_range (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/longitude_range (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/infinity (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/invalid_user_ID (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/oversized_name (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/missing_latitude (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/NaN (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/missing_enterprise_ID (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/nil_UUID (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/blank_name (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/blank_address (0.00s)
+    --- PASS: TestProvisionValidatesBeforePersistence/missing_longitude (0.00s)
+=== RUN   TestProvisionExplicitZeroAndBoundaries
+--- PASS: TestProvisionExplicitZeroAndBoundaries (0.00s)
+=== RUN   TestProvisionFailureReturnsNoResultOrSensitiveDetails
+--- PASS: TestProvisionFailureReturnsNoResultOrSensitiveDetails (0.00s)
+PASS
+ok  	github.com/fortis/backend/internal/modules/enterprise/application	0.547s
+testing: warning: no tests to run
+PASS
+ok  	github.com/fortis/backend/internal/modules/enterprise/domain	0.352s [no tests to run]
+?   	github.com/fortis/backend/internal/modules/enterprise/infrastructure	[no test files]
+=== RUN   TestProvisionCLIRequiresExplicitCoordinatesAndSafeResult
+--- PASS: TestProvisionCLIRequiresExplicitCoordinatesAndSafeResult (0.00s)
+PASS
+ok  	github.com/fortis/backend/internal/modules/enterprise/ui	0.230s

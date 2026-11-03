@@ -1,0 +1,63 @@
+--- FAIL: TestConfigurationNameWriteBoundaries (0.00s)
+    --- FAIL: TestConfigurationNameWriteBoundaries/reject_ (0.00s)
+        config_name_test.go:30: 
+            	Error Trace:	/Users/rr/Documents/Fortis/backend/internal/modules/defense_project/application/config_name_test.go:30
+            	Error:      	Target error should be in err chain:
+            	            	expected: "invalid configuration name: name is required"
+            	            	in chain: 
+            	Test:       	TestConfigurationNameWriteBoundaries/reject_
+    --- FAIL: TestConfigurationNameWriteBoundaries/reject____ (0.00s)
+        config_name_test.go:28: 
+            	Error Trace:	/Users/rr/Documents/Fortis/backend/internal/modules/defense_project/application/config_name_test.go:28
+            	Error:      	Target error should be in err chain:
+            	            	expected: "invalid configuration name: name is required"
+            	            	in chain: 
+            	Test:       	TestConfigurationNameWriteBoundaries/reject____
+    --- FAIL: TestConfigurationNameWriteBoundaries/reject_яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя (0.00s)
+        config_name_test.go:28: 
+            	Error Trace:	/Users/rr/Documents/Fortis/backend/internal/modules/defense_project/application/config_name_test.go:28
+            	Error:      	Target error should be in err chain:
+            	            	expected: "invalid configuration name: name is required"
+            	            	in chain: 
+            	Test:       	TestConfigurationNameWriteBoundaries/reject_яяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя
+    --- FAIL: TestConfigurationNameWriteBoundaries/reject_😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀 (0.00s)
+        config_name_test.go:28: 
+            	Error Trace:	/Users/rr/Documents/Fortis/backend/internal/modules/defense_project/application/config_name_test.go:28
+            	Error:      	Target error should be in err chain:
+            	            	expected: "invalid configuration name: name is required"
+            	            	in chain: 
+            	Test:       	TestConfigurationNameWriteBoundaries/reject_😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀
+    config_name_test.go:37: 
+        	Error Trace:	/Users/rr/Documents/Fortis/backend/internal/modules/defense_project/application/config_name_test.go:37
+        	Error:      	Not equal: 
+        	            	expected: "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀"
+        	            	actual  : "  😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀  "
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀
+        	            	+  😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀  
+        	Test:       	TestConfigurationNameWriteBoundaries
+--- FAIL: TestConfigurationNameLegacyReadAndUnchangedContent (0.00s)
+    config_name_test.go:55: 
+        	Error Trace:	/Users/rr/Documents/Fortis/backend/internal/modules/defense_project/application/config_name_test.go:55
+        	Error:      	Not equal: 
+        	            	expected: "Тестовый проект"
+        	            	actual  : ""
+        	            	
+        	            	Diff:
+        	            	--- Expected
+        	            	+++ Actual
+        	            	@@ -1 +1 @@
+        	            	-Тестовый проект
+        	            	+
+        	Test:       	TestConfigurationNameLegacyReadAndUnchangedContent
+FAIL
+FAIL	github.com/fortis/backend/internal/modules/defense_project/application	0.343s
+--- FAIL: TestFRC03ConfigurationNameHTTP (0.11s)
+    frc03_access_test.go:15: PUT /projects/update?id=5a7c2cd4-a485-41ea-a7b5-e17821cb14e3: want 400 got 200 body={"projectVersion":2,"projectId":"5a7c2cd4-a485-41ea-a7b5-e17821cb14e3","name":"Config A","enterpriseId":"6ae30864-e7d6-414c-ab89-12fb9cdf0c97","projectName":"Project A","version":2,"updatedAt":"2026-09-21T09:23:41.298Z"}
+FAIL
+FAIL	github.com/fortis/backend/cmd/app	0.601s
+FAIL

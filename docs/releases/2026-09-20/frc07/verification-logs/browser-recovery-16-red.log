@@ -1,0 +1,33 @@
+✖ recovering an uncertain budget update displays its frozen requested money before retry (6373.9535ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8116.730625
+
+✖ failing tests:
+
+test at src/modules/defense-calculator/ui/budget-gate.browser.test.ts:41:25140
+✖ recovering an uncertain budget update displays its frozen requested money before retry (6373.9535ms)
+  Error: expect(locator).toHaveValue(expected) failed
+  
+  Locator:  getByRole('region', { name: 'Бюджет проекта', exact: true }).getByLabel('Лимит бюджета, ₽')
+  Expected: "600000.01"
+  Received: "500000.00"
+  Timeout:  5000ms
+  
+  Call log:
+    - Expect "to.have.value" with timeout 5000ms
+    - waiting for getByRole('region', { name: 'Бюджет проекта', exact: true }).getByLabel('Лимит бюджета, ₽')
+      14 × locator resolved to <input disabled value="500000.00" inputmode="decimal" aria-invalid="false" aria-label="Лимит бюджета, ₽" class="min-h-11 w-full rounded-md border border-slate-300 px-2"/>
+         - unexpected value "500000.00"
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toHaveValue (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/defense-calculator/ui/budget-gate.browser.test.ts:379:56) {
+    matcherResult: { name: 'toHaveValue', expected: '600000.01', message: `expect(locator).toHaveValue(expected) failed\n\nLocator:  getByRole('region', { name: 'Бюджет проекта', exact: true }).getByLabel('Лимит бюджета, ₽')\nExpected: "600000.01"\nReceived: "500000.00"\nTimeout:  5000ms\n\nCall log:\n  - Expect "to.have.value" with timeout 5000ms\n  - waiting for getByRole('region', { name: 'Бюджет проекта', exact: true }).getByLabel('Лимит бюджета, ₽')\n    14 × locator resolved to <input disabled value="500000.00" inputmode="decimal" aria-invalid="false" aria-label="Лимит бюджета, ₽" class="min-h-11 w-full rounded-md border border-slate-300 px-2"/>\n       - unexpected value "500000.00"\n`, pass: false, actual: '500000.00', log: [ '  - Expect "to.have.value" with timeout 5000ms', "  - waiting for getByRole('region', { name: 'Бюджет проекта', exact: true }).getByLabel('Лимит бюджета, ₽')", '    14 × locator resolved to <input disabled value="500000.00" inputmode="decimal" aria-invalid="false" aria-label="Лимит бюджета, ₽" class="min-h-11 w-full rounded-md border border-slate-300 px-2"/>', '       - unexpected value "500000.00"' ], timeout: 5000, ariaSnapshot: '- textbox "Лимит бюджета, ₽" [disabled]: "500000.00"' }
+  }

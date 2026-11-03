@@ -1,0 +1,22 @@
+✔ WS01 empty enterprise never falls back to another enterprise rows or comparison options (1491.003667ms)
+✔ WS02/03 no membership prevents create; Refresh discovers a new authorized assignment (344.4205ms)
+✔ WS04/09 pending and failed create preserve current context; unchanged retry commits server context once (470.856667ms)
+✔ WS05 late previous enterprise response cannot populate the newly selected empty enterprise (396.048916ms)
+✔ WS06 all 121 scoped projects are reachable by server pagination and enterprise switch resets the page (553.385542ms)
+✔ WS07 revoked open cannot navigate using the previously active project (302.385042ms)
+✔ WS08 whitespace name never sends POST and preserves the user's input (224.502375ms)
+✔ WS11 selected enterprise persists for its owner and never transfers to another identity (514.557791ms)
+✔ WS13 failed enterprise refresh clears stale rows and cannot look like an authorized empty state (338.708792ms)
+✔ WS05 obsolete pagination response cannot restore rows after enterprise switch (343.1415ms)
+✔ WS13 failed project list is an error, never an empty successful enterprise (340.535167ms)
+✔ shared variants modal renders a project list failure rather than an empty success (306.51625ms)
+✔ WS14 enterprise beyond the first hundred remains reachable and scoped (347.847042ms)
+✔ WS08 name limit counts Unicode code points: 121 is rejected and 120 survives intact (377.884875ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6809.07725

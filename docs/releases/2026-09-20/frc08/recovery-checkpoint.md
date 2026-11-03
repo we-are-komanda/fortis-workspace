@@ -1,0 +1,9 @@
+# FRC08 accepted checkpoint
+
+PASS local staged acceptance,2026-09-21. Root/independent review complete; all three findings closed. Final evidence: test-evidence.md, acceptance-criteria.md, independent-review.md, source-manifest.json and commits.json. Frontend341=239PASS/6exacthistoricalFAIL/96SKIP; browser76/76 including20comparison; types/lint/buildPASS;426sourcehashes match. FullGo/build and PG29top+20subcasesPASS. Real4checksPASS0console/pageerrors. No production acceptance.
+
+Current owned fixture Go8092 session85827, DBfrc03_browser_76fc5f22264b4784a6a66b6cf9c62c11; Nextdev3111 session82892; PG55434. Current real08A206606c0-0693-432d-b2cb-15898bf559eb pinned7/current8,B4304f62f-70b6-4b2d-8aa6-3683a0841d92 version3. Operator/private synthetic env in /private/tmp/frc03-backend-verification/. User Next3000/Go8090/PG5432/root/root2 untouched. Restart owned fixture after10backend changes; verify exact disposable DB before stopping via /__stop. Fixture lifetime2h.
+
+Next10→13→14→autonomous-final-report.md and stop. FRC10 saved immutable issued report payload/reportId, explicit dirty Save/lastsaved, server financial allowlist exclusion, frozen map and actual PDF required. Historical enterprise name is not in saved snapshot: nullable name with honest missing label, never current enterprise or base-object name substituted. No new RBAC underADR0017. Keep strict shared save guard. Parent and child local commits permitted; no push/deploy/production mutation.
+
+Frozen verification copy: /private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m; physical frozen Next16.2.11 dependencies already installed. Resync source for next stage, do not build user working.next. Pre13 stable deck layer.id and exactNext16.2.11 are already separately committed6838dd1; whole13 still pending. FRC14 production evidence must remain blocked when absent.

@@ -226,3 +226,27 @@ REV01–10 and scoped project audit PASS. PostgreSQL15 top-level+8 nested (inclu
 ## FRC09 root code acceptance —2026-09-20
 
 **CODE PASS / RUNTIME BLOCKED.** DATA01–10: provenance/typedcardroundtrip, explicitrefresh, immutableprivatedocuments, quarantine+auth+audit, actualbrowserfilebytes andforeign404. Rootchangedlint/build/scopedOpenAPI PASS; combinedChromium23/23, Node23/23, actualPG/racetests passed. [Report](frc09/implementation-report.md), [tests](frc09/test-evidence.md), [files](frc09/changed-files.md), [hashes](frc09/source-manifest.json). Real scanner/storage/retention/TLS/productionmigration remain FRC14. Userrequested stopafter09; FRC06partial, whole release notaccepted.
+
+
+## FRC-06 — resumed acceptance, 2026-09-21
+
+**PASS — local staged acceptance.** All 30 user criteria PASS; SAVE01–08/10 PASS. SAVE09 NOT APPLICABLE while official-report capability remains disabled; actual dirty Save/last-saved workflow mandatory in FRC10. No report or production PASS.
+
+Focused48/48, rendered Chromium13/13, real Next→Go→PostgreSQL six checkpoints PASS. Original v1→2→3→4, independent copy v1 survives reload. Go tests/build + realPG21 top-level PASS. Frontend regressions38PASS/1explicitPGskip; full250=201PASS/6 historical FAIL/43opt-inSKIP, exact signatures6/6 unchanged. Types/lint21files/build PASS; test/build source manifests454files identical, drift=[]. Seven review defects fixed, eight independent probes PASS. Frontend `a56d128e715ed09387428ad3dd67434d18855dd5`.
+
+[Implementation](frc06/implementation-report.md) · [30+SAVE criteria](frc06/acceptance-criteria.md) · [tests](frc06/test-evidence.md) · [review](frc06/independent-review.md) · [checkpoint](frc06/recovery-checkpoint.md). FRC03 may proceed; whole release remains unaccepted.
+
+
+## FRC-03 и отдельный vertical gate — 2026-09-21
+
+**PASS локального этапа.** Trusted CLI→Next→Go→disposable PostgreSQL: первое созданиеv1, редактирование эшелона, Savev2, неизменный ID/полный canonical GET после reload/relogin,121 строк пагинации, пустое E2, изоляция B. Console/page errors0. Browser29/29; full277=212PASS/6exacthistoricalFAIL/59SKIP; types/lint/buildPASS. Operator realCLI9/PG23 и independent review пройдены. Финальное исправление auth/logout проверено root; независимые агенты после этого недоступны по лимиту аккаунта. Evidence: docs/releases/2026-09-20/frc03/test-evidence.md и real-vertical/result.json. Production не принята. Далее07→08→10→13→14; без push/deploy.
+
+
+## FRC-07 — local acceptance,2026-09-21
+
+**PASS локального этапа.** Server-owned immutable budget, exact shared Commit gate, explicit pinned-source clone, unlimited import, lower-limit/non-increasing-overage semantics. BUD01–18 PASS under ADR-0023/user override. Actual Next→Go→disposablePG seven checkpoints PASS, originalv1→11/copyv1/importv1,0console/pageerrors. Frontend focused61/61; rendered56/56 including17budget; full314=232PASS/6exacthistoricalFAIL/76opt-inSKIP; full signatures6/6 unchanged. Types/lint/buildPASS with frozen manifest+lock Next16.2.11;420 source hashes verified. FullGo/build and realPG26top-level+20subcasesPASS. Independent review has no open findings. Pre13 stable deck layer.id RED→GREEN also recorded; FRC13 is not yet accepted. Evidence: docs/releases/2026-09-20/frc07/test-evidence.md. No new migrations, user5432/root/root2 mutations, push or deployment. Next08→10→13→14.
+
+
+## FRC-08 — local acceptance,2026-09-21
+
+**PASS локального этапа.** Explicit saved A7/B3 comparison, exact B−A/percentage, frozen budgets/provenance, stable-ID composition and strict dirty/save/access guards. CMP01–08 PASS; proposed CMP09 financial RBAC N/A under ADR-0017. Actual Next→Go→disposablePG4checkpoints PASS,475000/550000 RUB,+75000/+15.79%,currentA8 retainsA7,console/pageerrors0. Independent20/20; combined76/76; focused26/26. Full341=239PASS/6exacthistoricalFAIL/96opt-inSKIP,6/6 complete signatures unchanged against07 and original02. Types/lint14files/build PASS;426 hashes match final working/frozen source. FullGo/build and PG29top+20subcases PASS. Three review findings closed. Evidence: docs/releases/2026-09-20/frc08/test-evidence.md. No migration/dependency/deploy/push. Next10→13→14; report/SAVE09 and production remain unaccepted.

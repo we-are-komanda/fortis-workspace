@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "projectId": "40cc0f23-3487-4adb-8a75-2cee4af22b5d",
+  "layerIds": [
+    "synthetic-layer-alpha",
+    "synthetic-layer-beta"
+  ],
+  "codes": [
+    "SAME",
+    "SAME"
+  ],
+  "consoleErrors": [],
+  "pageErrors": []
+}

@@ -1,0 +1,19 @@
+# github.com/fortis/backend/internal/modules/budget/document [github.com/fortis/backend/internal/modules/budget/document.test]
+internal/modules/budget/document/budget_test.go:18:18: undefined: ReadBudget
+internal/modules/budget/document/budget_test.go:20:19: undefined: WriteBudget
+internal/modules/budget/document/budget_test.go:23:13: undefined: ReadBudget
+# github.com/fortis/backend/internal/modules/budget/domain [github.com/fortis/backend/internal/modules/budget/domain.test]
+internal/modules/budget/domain/budget_gate_test.go:21:17: undefined: NewBudgetConfigMinor
+internal/modules/budget/domain/budget_gate_test.go:33:13: undefined: CheckCandidateBudget
+internal/modules/budget/domain/budget_gate_test.go:36:41: undefined: BudgetViolation
+internal/modules/budget/domain/budget_gate_test.go:39:15: undefined: NewBudgetConfigMinor
+internal/modules/budget/domain/budget_gate_test.go:40:18: undefined: CheckCandidateBudget
+internal/modules/budget/domain/budget_gate_test.go:41:19: undefined: CheckCandidateBudget
+internal/modules/budget/domain/budget_gate_test.go:42:20: undefined: NewBudgetConfigMinor
+internal/modules/budget/domain/budget_gate_test.go:43:11: undefined: CheckCandidateBudget
+internal/modules/budget/domain/budget_gate_test.go:45:16: undefined: NewBudgetProjection
+internal/modules/budget/domain/budget_gate_test.go:51:13: undefined: NewBudgetConfigMinor
+internal/modules/budget/domain/budget_gate_test.go:51:13: too many errors
+FAIL	github.com/fortis/backend/internal/modules/budget/domain [build failed]
+FAIL	github.com/fortis/backend/internal/modules/budget/document [build failed]
+FAIL

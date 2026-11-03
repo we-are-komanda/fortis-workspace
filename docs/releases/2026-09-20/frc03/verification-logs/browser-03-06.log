@@ -1,0 +1,57 @@
+✔ variant Stay preserves edit; Discard opens target and deletes discarded recovery (2066.866166ms)
+✔ conflict reload asks before replacing the active project (1287.978416ms)
+✔ enterprise switch while dirty offers Stay and Discard (787.335125ms)
+✔ logout while dirty offers Stay and Discard before ending session (1597.293333ms)
+✔ failed or pending Save cannot navigate; explicit retry confirms before opening target (1127.167708ms)
+✔ failed create retains the name and explicit retry replays the frozen body/key (1103.29425ms)
+✔ recovery rechecks access when Restore is clicked, after the offer was displayed (599.628125ms)
+✔ revoked dirty project still requires an explicit decision before another variant loads (822.355208ms)
+✔ reload keeps saved state until explicit scoped recovery (520.98375ms)
+✔ session recheck hides all protected dialogs and preserves same-user transition state (788.251167ms)
+✔ logout Save stays on failed save, then leaves only after confirmed retry (765.896208ms)
+✔ switching identity clears the previous user logout intent and name (373.661292ms)
+✖ enterprise Save keeps selection after failure and switches after confirmed retry (5410.150041ms)
+✔ WS01 empty enterprise never falls back to another enterprise rows or comparison options (1395.397791ms)
+✔ WS02/03 no membership prevents create; Refresh discovers a new authorized assignment (395.370167ms)
+✔ WS04/09 pending and failed create preserve current context; unchanged retry commits server context once (523.422042ms)
+✔ WS05 late previous enterprise response cannot populate the newly selected empty enterprise (424.088542ms)
+✔ WS06 all 121 scoped projects are reachable by server pagination and enterprise switch resets the page (639.181917ms)
+✔ WS07 revoked open cannot navigate using the previously active project (453.179875ms)
+✔ WS08 whitespace name never sends POST and preserves the user's input (625.569459ms)
+✔ WS11 selected enterprise persists for its owner and never transfers to another identity (1512.818958ms)
+✔ WS13 failed enterprise refresh clears stale rows and cannot look like an authorized empty state (595.458541ms)
+✔ WS05 obsolete pagination response cannot restore rows after enterprise switch (594.594334ms)
+✔ WS13 failed project list is an error, never an empty successful enterprise (537.675875ms)
+✔ shared variants modal renders a project list failure rather than an empty success (399.960584ms)
+✔ WS14 enterprise beyond the first hundred remains reachable and scoped (474.2855ms)
+✔ WS08 name limit counts Unicode code points: 121 is rejected and 120 survives intact (457.675625ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 26
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18119.175541
+
+✖ failing tests:
+
+test at src/modules/drone-defense/ui/project-recovery.browser.test.ts:25:21727
+✖ enterprise Save keeps selection after failure and switches after confirmed retry (5410.150041ms)
+  Error: expect(locator).toBeVisible() failed
+  
+  Locator: getByText('Для выбранного предприятия пока нет конфигураций. Введите название выше и нажмите «Создать», чтобы перейти к карте.', { exact: true })
+  Expected: visible
+  Timeout: 5000ms
+  Error: element(s) not found
+  
+  Call log:
+    - Expect "to.be.visible" with timeout 5000ms
+    - waiting for getByText('Для выбранного предприятия пока нет конфигураций. Введите название выше и нажмите «Создать», чтобы перейти к карте.', { exact: true })
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeVisible (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/drone-defense/ui/project-recovery.browser.test.ts:268:168) {
+    matcherResult: { message: `expect(locator).toBeVisible() failed\n\nLocator: getByText('Для выбранного предприятия пока нет конфигураций. Введите название выше и нажмите «Создать», чтобы перейти к карте.', { exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect "to.be.visible" with timeout 5000ms\n  - waiting for getByText('Для выбранного предприятия пока нет конфигураций. Введите название выше и нажмите «Создать», чтобы перейти к карте.', { exact: true })\n`, pass: false, actual: undefined, name: 'toBeVisible', expected: 'visible', log: [ '  - Expect "to.be.visible" with timeout 5000ms', "  - waiting for getByText('Для выбранного предприятия пока нет конфигураций. Введите название выше и нажмите «Создать», чтобы перейти к карте.', { exact: true })" ], timeout: 5000, ariaSnapshot: '- text: Рабочая сессия\n- button "Выйти"\n- text: Название проекта\n- textbox "Название проекта": Unsaved edit\n- status "Текущий проект": P\n- button "Сохранено · Project P"\n- button "Сохранить"\n- button "Сохранить как…"\n- main:\n  - paragraph: Рабочая зона\n  - heading "Предприятие и конфигурация" [level=1]\n  - button "Обновить"\n  - heading "Предприятия" [level=2]\n  - button "Enterprise E"\n  - button "Enterprise F"\n  - heading "Новая конфигурация" [level=2]\n  - textbox "Название конфигурации": Новая конфигурация\n  - button "Создать"\n  - heading "Конфигурации" [level=2]\n  - text: "Всего: —"\n  - alert: Не удалось загрузить конфигурации. Сервер вернул некорректные данные. Нажмите «Обновить», чтобы повторить попытку.\n  - heading "Сравнение конфигураций" [level=2]\n  - combobox "Первая конфигурация":\n    - option "Первая конфигурация" [selected]\n  - combobox "Вторая конфигурация":\n    - option "Вторая конфигурация" [selected]\n  - button "Сравнить" [disabled]' }
+  }

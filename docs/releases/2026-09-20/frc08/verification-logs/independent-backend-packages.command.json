@@ -1,0 +1,17 @@
+{
+  "cwd": "/Users/rr/Documents/Fortis/backend",
+  "command": [
+    "rtk",
+    "proxy",
+    "env",
+    "GOTOOLCHAIN=local",
+    "GOPROXY=off",
+    "GOCACHE=/private/tmp/fortis-frc12-gocache",
+    "go",
+    "test",
+    "./internal/modules/budget/...",
+    "-count=1"
+  ],
+  "exitCode": 0,
+  "capture": "Tool result transcribed with whitespace normalized; four packages pass, one no-test package."
+}

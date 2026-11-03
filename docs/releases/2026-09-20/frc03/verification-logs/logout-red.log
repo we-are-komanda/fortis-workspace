@@ -1,0 +1,46 @@
+✖ successful logout never rechecks a known invalid session (3024.616375ms)
+✖ an initially unknown session still checks auth and redirects on its first 401 (381.918417ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4605.44825
+
+✖ failing tests:
+
+test at src/modules/drone-defense/ui/project-recovery.browser.test.ts:27:24410
+✖ successful logout never rechecks a known invalid session (3024.616375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/drone-defense/ui/project-recovery.browser.test.ts:287:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/modules/drone-defense/ui/project-recovery.browser.test.ts:27:25366
+✖ an initially unknown session still checks auth and redirects on its first 401 (381.918417ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/drone-defense/ui/project-recovery.browser.test.ts:297:12)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

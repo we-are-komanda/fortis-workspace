@@ -1,0 +1,62 @@
+{
+  "browser": "148.0.7778.96",
+  "platform": "darwin",
+  "arch": "arm64",
+  "cpu": "Apple M4",
+  "memoryGiB": 32,
+  "reducedMotion": true,
+  "headless": true,
+  "seconds": 1,
+  "acceptance": [
+    "A03",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09 (visibility event)",
+    "A10",
+    "A11",
+    "A12",
+    "A02",
+    "A13",
+    "A14"
+  ],
+  "initialWebGLFallback": "PASS: WebGL unavailable at initial entry, automatic 2D and enabled start",
+  "coldOpenMs": 1704,
+  "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+  "initialAssets": 36,
+  "resources": {
+    "contexts": 36,
+    "lost": 34,
+    "visibility": 0,
+    "frames": 1,
+    "activeContexts": 2
+  },
+  "performance": [
+    {
+      "mode": "playback",
+      "wallMs": 1045.6000000003696,
+      "frames": 7,
+      "medianFrameMs": 33.400000000001455,
+      "p95FrameMs": 316.6999999999971,
+      "maxFrameMs": 316.6999999999971,
+      "over50ms": 3
+    },
+    {
+      "mode": "comparison",
+      "wallMs": 1038.8000000005559,
+      "frames": 7,
+      "medianFrameMs": 50.900000000001455,
+      "p95FrameMs": 316.6999999999971,
+      "maxFrameMs": 316.6999999999971,
+      "over50ms": 4
+    }
+  ],
+  "requests": {
+    "businessWrites": [],
+    "ai": [],
+    "total": 228
+  },
+  "assets": 38,
+  "pageErrors": []
+}

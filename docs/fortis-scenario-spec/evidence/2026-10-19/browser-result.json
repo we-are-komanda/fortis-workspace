@@ -1,0 +1,784 @@
+{
+  "browser": "148.0.7778.96",
+  "platform": "darwin",
+  "arch": "arm64",
+  "cpu": "Apple M4",
+  "memoryGiB": 32,
+  "reducedMotion": true,
+  "headless": true,
+  "seconds": 10,
+  "acceptance": [
+    "A03",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09 (visibility event)",
+    "A10",
+    "A11",
+    "A12",
+    "A02",
+    "A13",
+    "A14"
+  ],
+  "initialWebGLFallback": "PASS: WebGL unavailable at initial entry, automatic 2D and enabled start",
+  "coldOpenMs": 1888,
+  "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+  "initialAssets": [
+    {
+      "url": "/_next/static/media/99e609270109b47d-s.p.40sczeszzbjw1.woff2",
+      "transferSize": 10352,
+      "encodedBodySize": 10052
+    },
+    {
+      "url": "/_next/static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2",
+      "transferSize": 24876,
+      "encodedBodySize": 24576
+    },
+    {
+      "url": "/_next/static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2",
+      "transferSize": 34860,
+      "encodedBodySize": 34560
+    },
+    {
+      "url": "/_next/static/media/a7e15459c1805da0-s.p.3y9b8znjr2455.woff2",
+      "transferSize": 10428,
+      "encodedBodySize": 10128
+    },
+    {
+      "url": "/_next/static/media/d3fe2f289711ac3f-s.p.1l2zhvq5eocqf.woff2",
+      "transferSize": 14844,
+      "encodedBodySize": 14544
+    },
+    {
+      "url": "/_next/static/media/effe91970fc4db64-s.p.0oace-s_gkfks.woff2",
+      "transferSize": 10360,
+      "encodedBodySize": 10060
+    },
+    {
+      "url": "/_next/static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
+      "transferSize": 27572,
+      "encodedBodySize": 27272
+    },
+    {
+      "url": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0zdh-k-._.js",
+      "transferSize": 975,
+      "encodedBodySize": 675
+    },
+    {
+      "url": "/_next/static/chunks/_1mqd443._.css",
+      "transferSize": 18578,
+      "encodedBodySize": 18278
+    },
+    {
+      "url": "/_next/static/chunks/%5Broot-of-the-server%5D__126b7q-._.css",
+      "transferSize": 33180,
+      "encodedBodySize": 32880
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_compiled_next-devtools_index_0nddvwx.js",
+      "transferSize": 217862,
+      "encodedBodySize": 217562
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_compiled_react-server-dom-turbopack_0soboec._.js",
+      "transferSize": 32421,
+      "encodedBodySize": 32121
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_compiled_0_s4-o4._.js",
+      "transferSize": 28966,
+      "encodedBodySize": 28666
+    },
+    {
+      "url": "/_next/static/chunks/0vvp_%40swc_helpers_cjs_0vb02wp._.js",
+      "transferSize": 1057,
+      "encodedBodySize": 757
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_1pjuuhu._.js",
+      "transferSize": 47490,
+      "encodedBodySize": 47190
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_client_0oavi7u._.js",
+      "transferSize": 156059,
+      "encodedBodySize": 155759
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_compiled_react-dom_1zv9fx4._.js",
+      "transferSize": 184813,
+      "encodedBodySize": 184513
+    },
+    {
+      "url": "/_next/static/chunks/_1anvha4._.js",
+      "transferSize": 1000,
+      "encodedBodySize": 700
+    },
+    {
+      "url": "/_next/static/chunks/turbopack-_1fb7oc7._.js",
+      "transferSize": 22870,
+      "encodedBodySize": 22570
+    },
+    {
+      "url": "/_next/static/chunks/src_app_layout_tsx_0gafrjd._.js",
+      "transferSize": 644,
+      "encodedBodySize": 344
+    },
+    {
+      "url": "/_next/static/chunks/src_0bpstpl._.js",
+      "transferSize": 13847,
+      "encodedBodySize": 13547
+    },
+    {
+      "url": "/_next/static/chunks/src_1jgc25c._.js",
+      "transferSize": 58615,
+      "encodedBodySize": 58315
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es__util_1nr2lp8._.js",
+      "transferSize": 15331,
+      "encodedBodySize": 15031
+    },
+    {
+      "url": "/_next/static/chunks/17-7_%40ant-design_icons_es_0mgq6oq._.js",
+      "transferSize": 13188,
+      "encodedBodySize": 12888
+    },
+    {
+      "url": "/_next/static/chunks/node_modules__pnpm_1fvnr_c._.js",
+      "transferSize": 77406,
+      "encodedBodySize": 77106
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_theme_0dfrjio._.js",
+      "transferSize": 11807,
+      "encodedBodySize": 11507
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_input_17oaljp._.js",
+      "transferSize": 20448,
+      "encodedBodySize": 20148
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_modal_0tk1wa9._.js",
+      "transferSize": 17657,
+      "encodedBodySize": 17357
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_typography_0juc162._.js",
+      "transferSize": 15774,
+      "encodedBodySize": 15474
+    },
+    {
+      "url": "/_next/static/chunks/1e9b_%40rc-component_async-validator_es_0zo-q4-._.js",
+      "transferSize": 11838,
+      "encodedBodySize": 11538
+    },
+    {
+      "url": "/_next/static/chunks/src_app_(defense-studio)_layout_tsx_0cwfc6f._.js",
+      "transferSize": 1116,
+      "encodedBodySize": 816
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_client_components_builtin_global-error_0cwfc6f.js",
+      "transferSize": 512,
+      "encodedBodySize": 212
+    },
+    {
+      "url": "/_next/static/chunks/0kxt_%40rc-component_form_es_0mod50v._.js",
+      "transferSize": 23658,
+      "encodedBodySize": 23358
+    },
+    {
+      "url": "/_next/static/chunks/1n8f_%40rc-component_trigger_es_0-d8rej._.js",
+      "transferSize": 19836,
+      "encodedBodySize": 19536
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_0lg-jge._.js",
+      "transferSize": 71892,
+      "encodedBodySize": 71592
+    },
+    {
+      "url": "/_next/static/chunks/node_modules__pnpm_1nlpf38._.js",
+      "transferSize": 90933,
+      "encodedBodySize": 90633
+    },
+    {
+      "url": "/_next/static/chunks/_189jgko._.js",
+      "transferSize": 1037,
+      "encodedBodySize": 737
+    },
+    {
+      "url": "/_next/static/chunks/17-7_%40ant-design_icons_es_icons_19xcd80._.js",
+      "transferSize": 11005,
+      "encodedBodySize": 10705
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_0mgfoad._.js",
+      "transferSize": 30340,
+      "encodedBodySize": 30040
+    },
+    {
+      "url": "/_next/static/chunks/1w3s_%40rc-component_menu_es_1m8904w._.js",
+      "transferSize": 20531,
+      "encodedBodySize": 20231
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_1ri-nld._.js",
+      "transferSize": 27355,
+      "encodedBodySize": 27055
+    },
+    {
+      "url": "/_next/static/chunks/1h11_%40luma_gl_engine_dist_0va0-74._.js",
+      "transferSize": 29426,
+      "encodedBodySize": 29126
+    },
+    {
+      "url": "/_next/static/chunks/0f-z_%40luma_gl_shadertools_dist_1w2dm1x._.js",
+      "transferSize": 33821,
+      "encodedBodySize": 33521
+    },
+    {
+      "url": "/_next/static/chunks/069i_%40luma_gl_core_dist_0k7c5zv._.js",
+      "transferSize": 48895,
+      "encodedBodySize": 48595
+    },
+    {
+      "url": "/_next/static/chunks/src_0n-1-x7._.js",
+      "transferSize": 105197,
+      "encodedBodySize": 104897
+    },
+    {
+      "url": "/_next/static/chunks/0rwd_%40deck_gl_core_dist_1w80qn_._.js",
+      "transferSize": 131110,
+      "encodedBodySize": 130810
+    },
+    {
+      "url": "/_next/static/chunks/08x0_mjolnir_js_dist_0sfd04n._.js",
+      "transferSize": 19003,
+      "encodedBodySize": 18703
+    },
+    {
+      "url": "/_next/static/chunks/1omm_%40math_gl_core_dist_16tumay._.js",
+      "transferSize": 22378,
+      "encodedBodySize": 22078
+    },
+    {
+      "url": "/_next/static/chunks/0cos_%40loaders_gl_core_dist_0xmgotl._.js",
+      "transferSize": 16650,
+      "encodedBodySize": 16350
+    },
+    {
+      "url": "/_next/static/chunks/0axz_%40vis_gl_react-maplibre_dist_0440jmw._.js",
+      "transferSize": 15417,
+      "encodedBodySize": 15117
+    },
+    {
+      "url": "/_next/static/chunks/0g8k_tailwind-merge_dist_bundle-mjs_mjs_15ho1qz._.js",
+      "transferSize": 19145,
+      "encodedBodySize": 18845
+    },
+    {
+      "url": "/_next/static/chunks/02-q_%40deck_gl_layers_dist_1j1jvo5._.js",
+      "transferSize": 49225,
+      "encodedBodySize": 48925
+    },
+    {
+      "url": "/_next/static/chunks/src_app_(defense-studio)_prototype_page_tsx_10di2p5._.js",
+      "transferSize": 870,
+      "encodedBodySize": 570
+    },
+    {
+      "url": "/_next/static/chunks/1o4b_%40luma_gl_webgl_dist_0ex__rr._.js",
+      "transferSize": 82803,
+      "encodedBodySize": 82503
+    },
+    {
+      "url": "/_next/static/chunks/1og-_h3-js_dist_browser_h3-js_es_1ldnn3t.js",
+      "transferSize": 91862,
+      "encodedBodySize": 91562
+    },
+    {
+      "url": "/_next/static/chunks/node_modules__pnpm_07tf-j2._.js",
+      "transferSize": 85772,
+      "encodedBodySize": 85472
+    },
+    {
+      "url": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsay._.js",
+      "transferSize": 4187,
+      "encodedBodySize": 3887
+    },
+    {
+      "url": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0w_2499._.js",
+      "transferSize": 589,
+      "encodedBodySize": 289
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_ui_scenario_scenario-map-3d_tsx_1aw7vl0._.js",
+      "transferSize": 759,
+      "encodedBodySize": 459
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_1kdovfl._.js",
+      "transferSize": 21836,
+      "encodedBodySize": 21536
+    },
+    {
+      "url": "/_next/static/chunks/node_modules__pnpm_1su__a9._.js",
+      "transferSize": 3454,
+      "encodedBodySize": 3154
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_ui_scenario_scenario_module_0fhlgvy.css",
+      "transferSize": 2852,
+      "encodedBodySize": 2552
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_ui_scenario_scenario-workspace_tsx_03lwzyu._.js",
+      "transferSize": 783,
+      "encodedBodySize": 483
+    },
+    {
+      "url": "/_next/static/chunks/1pln_three_build_three_core_0dwk_e3.js",
+      "transferSize": 288362,
+      "encodedBodySize": 288062
+    },
+    {
+      "url": "/_next/static/chunks/1pln_three_build_three_module_0goh-0y.js",
+      "transferSize": 132298,
+      "encodedBodySize": 131998
+    },
+    {
+      "url": "/_next/static/chunks/1pln_three_build_three_module_0z8o3z8.js",
+      "transferSize": 4948,
+      "encodedBodySize": 4648
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_03too07._.js",
+      "transferSize": 14365,
+      "encodedBodySize": 14065
+    },
+    {
+      "url": "/_next/static/chunks/node_modules__pnpm_1hbwus2._.js",
+      "transferSize": 30477,
+      "encodedBodySize": 30177
+    },
+    {
+      "url": "/_next/static/chunks/0x4k_%40react-three_fiber_dist_09ztacw._.js",
+      "transferSize": 156063,
+      "encodedBodySize": 155763
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_ui_scenario_scenario-map-3d_tsx_03lwzyu._.js",
+      "transferSize": 841,
+      "encodedBodySize": 541
+    }
+  ],
+  "resources": {
+    "contexts": 36,
+    "lost": 34,
+    "visibility": 0,
+    "frames": 1,
+    "activeContexts": 2
+  },
+  "performance": [
+    {
+      "mode": "playback",
+      "wallMs": 10255.699999998513,
+      "frames": 73,
+      "medianFrameMs": 33.400000000001455,
+      "p95FrameMs": 300,
+      "maxFrameMs": 300.1000000000058,
+      "over50ms": 33
+    },
+    {
+      "mode": "comparison",
+      "wallMs": 10185.999999994034,
+      "frames": 90,
+      "medianFrameMs": 17.60000000000582,
+      "p95FrameMs": 283.3999999999942,
+      "maxFrameMs": 283.5,
+      "over50ms": 33
+    }
+  ],
+  "requests": {
+    "businessWrites": [],
+    "ai": [],
+    "total": 268
+  },
+  "assets": [
+    {
+      "url": "/_next/static/media/99e609270109b47d-s.p.40sczeszzbjw1.woff2",
+      "transferSize": 10352,
+      "encodedBodySize": 10052
+    },
+    {
+      "url": "/_next/static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2",
+      "transferSize": 24876,
+      "encodedBodySize": 24576
+    },
+    {
+      "url": "/_next/static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2",
+      "transferSize": 34860,
+      "encodedBodySize": 34560
+    },
+    {
+      "url": "/_next/static/media/a7e15459c1805da0-s.p.3y9b8znjr2455.woff2",
+      "transferSize": 10428,
+      "encodedBodySize": 10128
+    },
+    {
+      "url": "/_next/static/media/d3fe2f289711ac3f-s.p.1l2zhvq5eocqf.woff2",
+      "transferSize": 14844,
+      "encodedBodySize": 14544
+    },
+    {
+      "url": "/_next/static/media/effe91970fc4db64-s.p.0oace-s_gkfks.woff2",
+      "transferSize": 10360,
+      "encodedBodySize": 10060
+    },
+    {
+      "url": "/_next/static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
+      "transferSize": 27572,
+      "encodedBodySize": 27272
+    },
+    {
+      "url": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0zdh-k-._.js",
+      "transferSize": 975,
+      "encodedBodySize": 675
+    },
+    {
+      "url": "/_next/static/chunks/_1mqd443._.css",
+      "transferSize": 18578,
+      "encodedBodySize": 18278
+    },
+    {
+      "url": "/_next/static/chunks/%5Broot-of-the-server%5D__126b7q-._.css",
+      "transferSize": 33180,
+      "encodedBodySize": 32880
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_compiled_next-devtools_index_0nddvwx.js",
+      "transferSize": 217862,
+      "encodedBodySize": 217562
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_compiled_react-server-dom-turbopack_0soboec._.js",
+      "transferSize": 32421,
+      "encodedBodySize": 32121
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_compiled_0_s4-o4._.js",
+      "transferSize": 28966,
+      "encodedBodySize": 28666
+    },
+    {
+      "url": "/_next/static/chunks/0vvp_%40swc_helpers_cjs_0vb02wp._.js",
+      "transferSize": 1057,
+      "encodedBodySize": 757
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_1pjuuhu._.js",
+      "transferSize": 47490,
+      "encodedBodySize": 47190
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_client_0oavi7u._.js",
+      "transferSize": 156059,
+      "encodedBodySize": 155759
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_compiled_react-dom_1zv9fx4._.js",
+      "transferSize": 184813,
+      "encodedBodySize": 184513
+    },
+    {
+      "url": "/_next/static/chunks/_1anvha4._.js",
+      "transferSize": 1000,
+      "encodedBodySize": 700
+    },
+    {
+      "url": "/_next/static/chunks/turbopack-_1fb7oc7._.js",
+      "transferSize": 22870,
+      "encodedBodySize": 22570
+    },
+    {
+      "url": "/_next/static/chunks/src_app_layout_tsx_0gafrjd._.js",
+      "transferSize": 644,
+      "encodedBodySize": 344
+    },
+    {
+      "url": "/_next/static/chunks/src_0bpstpl._.js",
+      "transferSize": 13847,
+      "encodedBodySize": 13547
+    },
+    {
+      "url": "/_next/static/chunks/src_1jgc25c._.js",
+      "transferSize": 58615,
+      "encodedBodySize": 58315
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es__util_1nr2lp8._.js",
+      "transferSize": 15331,
+      "encodedBodySize": 15031
+    },
+    {
+      "url": "/_next/static/chunks/17-7_%40ant-design_icons_es_0mgq6oq._.js",
+      "transferSize": 13188,
+      "encodedBodySize": 12888
+    },
+    {
+      "url": "/_next/static/chunks/node_modules__pnpm_1fvnr_c._.js",
+      "transferSize": 77406,
+      "encodedBodySize": 77106
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_theme_0dfrjio._.js",
+      "transferSize": 11807,
+      "encodedBodySize": 11507
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_input_17oaljp._.js",
+      "transferSize": 20448,
+      "encodedBodySize": 20148
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_modal_0tk1wa9._.js",
+      "transferSize": 17657,
+      "encodedBodySize": 17357
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_typography_0juc162._.js",
+      "transferSize": 15774,
+      "encodedBodySize": 15474
+    },
+    {
+      "url": "/_next/static/chunks/1e9b_%40rc-component_async-validator_es_0zo-q4-._.js",
+      "transferSize": 11838,
+      "encodedBodySize": 11538
+    },
+    {
+      "url": "/_next/static/chunks/src_app_(defense-studio)_layout_tsx_0cwfc6f._.js",
+      "transferSize": 1116,
+      "encodedBodySize": 816
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_dist_client_components_builtin_global-error_0cwfc6f.js",
+      "transferSize": 512,
+      "encodedBodySize": 212
+    },
+    {
+      "url": "/_next/static/chunks/0kxt_%40rc-component_form_es_0mod50v._.js",
+      "transferSize": 23658,
+      "encodedBodySize": 23358
+    },
+    {
+      "url": "/_next/static/chunks/1n8f_%40rc-component_trigger_es_0-d8rej._.js",
+      "transferSize": 19836,
+      "encodedBodySize": 19536
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_0lg-jge._.js",
+      "transferSize": 71892,
+      "encodedBodySize": 71592
+    },
+    {
+      "url": "/_next/static/chunks/node_modules__pnpm_1nlpf38._.js",
+      "transferSize": 90933,
+      "encodedBodySize": 90633
+    },
+    {
+      "url": "/_next/static/chunks/_189jgko._.js",
+      "transferSize": 1037,
+      "encodedBodySize": 737
+    },
+    {
+      "url": "/_next/static/chunks/17-7_%40ant-design_icons_es_icons_19xcd80._.js",
+      "transferSize": 11005,
+      "encodedBodySize": 10705
+    },
+    {
+      "url": "/_next/static/chunks/1jh6_next_0mgfoad._.js",
+      "transferSize": 30340,
+      "encodedBodySize": 30040
+    },
+    {
+      "url": "/_next/static/chunks/1w3s_%40rc-component_menu_es_1m8904w._.js",
+      "transferSize": 20531,
+      "encodedBodySize": 20231
+    },
+    {
+      "url": "/_next/static/chunks/0p1q_antd_es_1ri-nld._.js",
+      "transferSize": 27355,
+      "encodedBodySize": 27055
+    },
+    {
+      "url": "/_next/static/chunks/1h11_%40luma_gl_engine_dist_0va0-74._.js",
+      "transferSize": 29426,
+      "encodedBodySize": 29126
+    },
+    {
+      "url": "/_next/static/chunks/0f-z_%40luma_gl_shadertools_dist_1w2dm1x._.js",
+      "transferSize": 33821,
+      "encodedBodySize": 33521
+    },
+    {
+      "url": "/_next/static/chunks/069i_%40luma_gl_core_dist_0k7c5zv._.js",
+      "transferSize": 48895,
+      "encodedBodySize": 48595
+    },
+    {
+      "url": "/_next/static/chunks/src_0n-1-x7._.js",
+      "transferSize": 105197,
+      "encodedBodySize": 104897
+    },
+    {
+      "url": "/_next/static/chunks/0rwd_%40deck_gl_core_dist_1w80qn_._.js",
+      "transferSize": 131110,
+      "encodedBodySize": 130810
+    },
+    {
+      "url": "/_next/static/chunks/08x0_mjolnir_js_dist_0sfd04n._.js",
+      "transferSize": 19003,
+      "encodedBodySize": 18703
+    },
+    {
+      "url": "/_next/static/chunks/1omm_%40math_gl_core_dist_16tumay._.js",
+      "transferSize": 22378,
+      "encodedBodySize": 22078
+    },
+    {
+      "url": "/_next/static/chunks/0cos_%40loaders_gl_core_dist_0xmgotl._.js",
+      "transferSize": 16650,
+      "encodedBodySize": 16350
+    },
+    {
+      "url": "/_next/static/chunks/0axz_%40vis_gl_react-maplibre_dist_0440jmw._.js",
+      "transferSize": 15417,
+      "encodedBodySize": 15117
+    },
+    {
+      "url": "/_next/static/chunks/0g8k_tailwind-merge_dist_bundle-mjs_mjs_15ho1qz._.js",
+      "transferSize": 19145,
+      "encodedBodySize": 18845
+    },
+    {
+      "url": "/_next/static/chunks/02-q_%40deck_gl_layers_dist_1j1jvo5._.js",
+      "transferSize": 49225,
+      "encodedBodySize": 48925
+    },
+    {
+      "url": "/_next/static/chunks/src_app_(defense-studio)_prototype_page_tsx_10di2p5._.js",
+      "transferSize": 870,
+      "encodedBodySize": 570
+    },
+    {
+      "url": "/_next/static/chunks/1o4b_%40luma_gl_webgl_dist_0ex__rr._.js",
+      "transferSize": 82803,
+      "encodedBodySize": 82503
+    },
+    {
+      "url": "/_next/static/chunks/1og-_h3-js_dist_browser_h3-js_es_1ldnn3t.js",
+      "transferSize": 91862,
+      "encodedBodySize": 91562
+    },
+    {
+      "url": "/_next/static/chunks/node_modules__pnpm_07tf-j2._.js",
+      "transferSize": 85772,
+      "encodedBodySize": 85472
+    },
+    {
+      "url": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_1mojsay._.js",
+      "transferSize": 4187,
+      "encodedBodySize": 3887
+    },
+    {
+      "url": "/_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_0w_2499._.js",
+      "transferSize": 589,
+      "encodedBodySize": 289
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_ui_scenario_scenario-map-3d_tsx_1aw7vl0._.js",
+      "transferSize": 759,
+      "encodedBodySize": 459
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_1kdovfl._.js",
+      "transferSize": 21836,
+      "encodedBodySize": 21536
+    },
+    {
+      "url": "/_next/static/chunks/node_modules__pnpm_1su__a9._.js",
+      "transferSize": 3454,
+      "encodedBodySize": 3154
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_ui_scenario_scenario_module_0fhlgvy.css",
+      "transferSize": 2852,
+      "encodedBodySize": 2552
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_ui_scenario_scenario-workspace_tsx_03lwzyu._.js",
+      "transferSize": 783,
+      "encodedBodySize": 483
+    },
+    {
+      "url": "/_next/static/chunks/1pln_three_build_three_core_0dwk_e3.js",
+      "transferSize": 288362,
+      "encodedBodySize": 288062
+    },
+    {
+      "url": "/_next/static/chunks/1pln_three_build_three_module_0goh-0y.js",
+      "transferSize": 132298,
+      "encodedBodySize": 131998
+    },
+    {
+      "url": "/_next/static/chunks/1pln_three_build_three_module_0z8o3z8.js",
+      "transferSize": 4948,
+      "encodedBodySize": 4648
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_03too07._.js",
+      "transferSize": 14365,
+      "encodedBodySize": 14065
+    },
+    {
+      "url": "/_next/static/chunks/node_modules__pnpm_1hbwus2._.js",
+      "transferSize": 30477,
+      "encodedBodySize": 30177
+    },
+    {
+      "url": "/_next/static/chunks/0x4k_%40react-three_fiber_dist_09ztacw._.js",
+      "transferSize": 156063,
+      "encodedBodySize": 155763
+    },
+    {
+      "url": "/_next/static/chunks/src_modules_drone-defense_ui_scenario_scenario-map-3d_tsx_03lwzyu._.js",
+      "transferSize": 841,
+      "encodedBodySize": 541
+    },
+    {
+      "url": "/_next/static/media/1a099d89ee94ee96-s.35a5cae5tspm2.woff2",
+      "transferSize": 21988,
+      "encodedBodySize": 21688
+    },
+    {
+      "url": "/_next/static/chunks/1694_maplibre-gl_dist_maplibre-gl_14wheik.js",
+      "transferSize": 331210,
+      "encodedBodySize": 330910
+    },
+    {
+      "url": "/_next/static/chunks/1694_maplibre-gl_dist_maplibre-gl_1lm4glm.js",
+      "transferSize": 572,
+      "encodedBodySize": 272
+    },
+    {
+      "url": "/_next/static/chunks/%5Broot-of-the-server%5D__126b7q-._.css",
+      "transferSize": 33199,
+      "encodedBodySize": 32899
+    }
+  ],
+  "pageErrors": []
+}

@@ -1,0 +1,239 @@
+{
+  "browser": "148.0.7778.96",
+  "platform": "darwin",
+  "arch": "arm64",
+  "cpu": "Apple M4",
+  "memoryGiB": 32,
+  "reducedMotion": true,
+  "seconds": 60,
+  "acceptance": [
+    "A03",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09 (visibility event)",
+    "A10",
+    "A11",
+    "A12",
+    "A02",
+    "A13",
+    "A14"
+  ],
+  "coldOpenMs": 1636,
+  "resources": {
+    "contexts": 24,
+    "lost": 22,
+    "visibility": 0,
+    "frames": 1,
+    "activeContexts": 2
+  },
+  "performance": [
+    {
+      "mode": "playback",
+      "wallMs": 60008.90000000037,
+      "frames": 840,
+      "medianFrameMs": 100,
+      "p95FrameMs": 116.70000000001164,
+      "maxFrameMs": 366.6999999999971,
+      "over50ms": 509
+    },
+    {
+      "mode": "comparison",
+      "wallMs": 60127.499999999825,
+      "frames": 341,
+      "medianFrameMs": 106.89999999999418,
+      "p95FrameMs": 483.3000000000029,
+      "maxFrameMs": 4211.900000000009,
+      "over50ms": 258
+    }
+  ],
+  "requests": {
+    "businessWrites": [],
+    "ai": [],
+    "total": 230
+  },
+  "assets": [
+    {
+      "url": "/_next/static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2",
+      "transferSize": 34860,
+      "encodedBodySize": 34560
+    },
+    {
+      "url": "/_next/static/media/99e609270109b47d-s.p.40sczeszzbjw1.woff2",
+      "transferSize": 10352,
+      "encodedBodySize": 10052
+    },
+    {
+      "url": "/_next/static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2",
+      "transferSize": 24876,
+      "encodedBodySize": 24576
+    },
+    {
+      "url": "/_next/static/media/a7e15459c1805da0-s.p.3y9b8znjr2455.woff2",
+      "transferSize": 10428,
+      "encodedBodySize": 10128
+    },
+    {
+      "url": "/_next/static/media/d3fe2f289711ac3f-s.p.1l2zhvq5eocqf.woff2",
+      "transferSize": 14844,
+      "encodedBodySize": 14544
+    },
+    {
+      "url": "/_next/static/media/effe91970fc4db64-s.p.0oace-s_gkfks.woff2",
+      "transferSize": 10360,
+      "encodedBodySize": 10060
+    },
+    {
+      "url": "/_next/static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
+      "transferSize": 27572,
+      "encodedBodySize": 27272
+    },
+    {
+      "url": "/_next/static/chunks/31w3zn6bmq7y9.css",
+      "transferSize": 2168,
+      "encodedBodySize": 1868
+    },
+    {
+      "url": "/_next/static/chunks/3o48zf_-5bmrk.css",
+      "transferSize": 29596,
+      "encodedBodySize": 29296
+    },
+    {
+      "url": "/_next/static/chunks/1ll071wlnn93d.js",
+      "transferSize": 2312,
+      "encodedBodySize": 2012
+    },
+    {
+      "url": "/_next/static/chunks/3q9rny8-854j3.js",
+      "transferSize": 9392,
+      "encodedBodySize": 9092
+    },
+    {
+      "url": "/_next/static/chunks/38esku5myb-ui.js",
+      "transferSize": 7561,
+      "encodedBodySize": 7261
+    },
+    {
+      "url": "/_next/static/chunks/1vt2ga5n40qoi.js",
+      "transferSize": 37825,
+      "encodedBodySize": 37525
+    },
+    {
+      "url": "/_next/static/chunks/turbopack-226wcqdb2hzol.js",
+      "transferSize": 4486,
+      "encodedBodySize": 4186
+    },
+    {
+      "url": "/_next/static/chunks/00fkeh872fljy.js",
+      "transferSize": 9501,
+      "encodedBodySize": 9201
+    },
+    {
+      "url": "/_next/static/chunks/3g-xvld8tdm1n.js",
+      "transferSize": 13235,
+      "encodedBodySize": 12935
+    },
+    {
+      "url": "/_next/static/chunks/3me_px6ed52o-.js",
+      "transferSize": 17626,
+      "encodedBodySize": 17326
+    },
+    {
+      "url": "/_next/static/chunks/3zrqpftokmt8y.js",
+      "transferSize": 6211,
+      "encodedBodySize": 5911
+    },
+    {
+      "url": "/_next/static/chunks/203erw3_jq8b4.js",
+      "transferSize": 7358,
+      "encodedBodySize": 7058
+    },
+    {
+      "url": "/_next/static/chunks/389_660xoe0c5.js",
+      "transferSize": 33327,
+      "encodedBodySize": 33027
+    },
+    {
+      "url": "/_next/static/chunks/1vix7jbp64xx2.js",
+      "transferSize": 41764,
+      "encodedBodySize": 41464
+    },
+    {
+      "url": "/_next/static/chunks/2oqc9s5xejhtt.js",
+      "transferSize": 64385,
+      "encodedBodySize": 64085
+    },
+    {
+      "url": "/_next/static/chunks/09e1c7utdm5_r.js",
+      "transferSize": 88216,
+      "encodedBodySize": 87916
+    },
+    {
+      "url": "/_next/static/chunks/3abhkgbrkpz45.css",
+      "transferSize": 7899,
+      "encodedBodySize": 7599
+    },
+    {
+      "url": "/_next/static/chunks/2onuoye2b_g2z.css",
+      "transferSize": 10351,
+      "encodedBodySize": 10051
+    },
+    {
+      "url": "/_next/static/chunks/06nl15ygmeool.js",
+      "transferSize": 8521,
+      "encodedBodySize": 8221
+    },
+    {
+      "url": "/_next/static/chunks/0zeh5gaw9voim.js",
+      "transferSize": 55136,
+      "encodedBodySize": 54836
+    },
+    {
+      "url": "/_next/static/chunks/2xjjhzst_-5mf.js",
+      "transferSize": 246829,
+      "encodedBodySize": 246529
+    },
+    {
+      "url": "/_next/static/chunks/3o7cq680y4sn9.js",
+      "transferSize": 343719,
+      "encodedBodySize": 343419
+    },
+    {
+      "url": "/_next/static/chunks/1mc5uiggdyus7.js",
+      "transferSize": 9234,
+      "encodedBodySize": 8934
+    },
+    {
+      "url": "/_next/static/chunks/3ogzuco1puegf.css",
+      "transferSize": 2287,
+      "encodedBodySize": 1987
+    },
+    {
+      "url": "/_next/static/chunks/29goj-d0lae9n.js",
+      "transferSize": 2117,
+      "encodedBodySize": 1817
+    },
+    {
+      "url": "/_next/static/chunks/32_ajuoptrrmt.js",
+      "transferSize": 5722,
+      "encodedBodySize": 5422
+    },
+    {
+      "url": "/_next/static/chunks/32aroff6l8o5x.js",
+      "transferSize": 10121,
+      "encodedBodySize": 9821
+    },
+    {
+      "url": "/_next/static/media/1a099d89ee94ee96-s.35a5cae5tspm2.woff2",
+      "transferSize": 21988,
+      "encodedBodySize": 21688
+    },
+    {
+      "url": "/_next/static/chunks/09_mos6ghbwuz.js",
+      "transferSize": 273598,
+      "encodedBodySize": 273298
+    }
+  ],
+  "pageErrors": []
+}

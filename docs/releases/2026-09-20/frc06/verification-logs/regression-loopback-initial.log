@@ -1,0 +1,194 @@
+fetchVariants: OK
+saveAsNewVariant: OK
+loadVariant: OK
+deleteVariant: OK
+saveAsNewVariant failure: OK
+overwriteActiveVariant version: OK
+Error: 409 must tell the user to reload the current version
+    at assert (/Users/rr/Documents/Fortis/frontend/src/modules/drone-defense/domain/use-defense-variants-store.test.ts:8:25)
+    at main (/Users/rr/Documents/Fortis/frontend/src/modules/drone-defense/domain/use-defense-variants-store.test.ts:162:3)
+✖ src/modules/drone-defense/domain/use-defense-variants-store.test.ts (277.736ms)
+✔ BFF preserves upstream error status and body, including HTML and empty bodies (136.358708ms)
+✔ projects rejects an empty successful body instead of returning 200 null (25.655542ms)
+✔ BFF and API v1 share target, query and auth; legitimate empty stays empty (6.865083ms)
+✔ binary documents preserve bytes/status/content type and mutation method/body (6.314ms)
+✔ missing configuration fails without network fallback; conflicts fail (0.534792ms)
+✔ connection refused is 502; deadline is 504 with request id (27.861416ms)
+✔ workspace ignores query demo; demo route is explicit and marked (4.337625ms)
+✔ JSON helper rejects malformed success and wrong list shape (3.722292ms)
+✔ JSON adaptation deadline includes the response body, not only headers (26.455166ms)
+✔ project BFF selects the requested revision without letting query override the resource ID (79.670459ms)
+✔ project creation preserves the caller's idempotency key through the BFF (5.6675ms)
+✔ release API client selects a revision and sends a stable caller-supplied creation key (5.140375ms)
+✔ frontend liveness is independent of config/dependencies; readiness checks both (75.492834ms)
+✔ production login and registration issue Secure cookies (31.502416ms)
+✔ invalid cookie does not admit protected pages (6.518833ms)
+✔ login next permits only internal paths (0.1875ms)
+✔ cookie clearing keeps production flags; local HTTP development remains usable (2.792917ms)
+(node:52949) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ workspace recovery cannot cross authenticated identities (3.291625ms)
+✔ account switch resets all stores and drops an in-flight A list (27.714417ms)
+✖ 401 invalidates identity; 403/404 block saving without retries or false saved state (7.951875ms)
+▶ late project access failures cannot invalidate another current project
+  ✔ load (1.439542ms)
+  ✖ overwrite (1.556083ms)
+  ✔ create (0.902417ms)
+  ✔ delete (0.299083ms)
+  ✔ list (0.639458ms)
+✖ late project access failures cannot invalidate another current project (5.606583ms)
+✖ logout clears active memory but preserves only the owner recovery key (1.270959ms)
+✔ project import preserves existing geometry fields and safe extensions (3.257334ms)
+✖ complete synthetic project fixture survives frontend export and import (10.316ms)
+﹣ real PostgreSQL export retains every frontend business field (0.173583ms) # SKIP
+✔ failed and empty library refresh never inject bundled data into a backend project (0.663333ms)
+✔ empty enterprises stays empty instead of adding a local object (0.38625ms)
+(node:52951) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ failed load and save preserve current project; no automatic retry after any error (194.296458ms)
+✖ recovery does not overwrite an open project and is not server verification (0.644917ms)
+✔ recovery preserves empty catalogs and user asset values without bundled expansion (0.855833ms)
+✔ workspace creation is empty; remount does not reload a hydrated dirty project (0.188875ms)
+✔ pending load cannot replace newer user edits or a cancelled navigation (47.6545ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 29
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 485.662167
+
+✖ failing tests:
+
+test at src/modules/drone-defense/domain/use-defense-variants-store.test.ts:1:1
+✖ src/modules/drone-defense/domain/use-defense-variants-store.test.ts (277.736ms)
+  'test failed'
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:4726
+✖ 401 invalidates identity; 403/404 block saving without retries or false saved state (7.951875ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to:
+  
+  'saved'
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/identity-isolation.release.test.ts:59:11)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'saved',
+    expected: 'saved',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:6434
+✖ overwrite (1.556083ms)
+  TypeError: finish is not a function
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/identity-isolation.release.test.ts:91:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/identity-isolation.release.test.ts:79:4)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:7871
+✖ logout clears active memory but preserves only the owner recovery key (1.270959ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'current'
+  - 'private-A'
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/identity-isolation.release.test.ts:116:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'current',
+    expected: 'private-A',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/project-roundtrip.release.test.ts:2:3025
+✖ complete synthetic project fixture survives frontend export and import (10.316ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      activeLayerId: 'custom-polygon',
+      assetLibrary: [
+        {
+          calculatorAssetId: null,
+  ...
+          },
+  +       fieldProvenance: undefined,
+          iconUrl: '',
+          id: 'synthetic-asset',
+          incompatibleLayerCodes: [],
+          isPublic: false,
+          legacyItemId: 'legacy-fixture',
+  ...
+          protectionType: 'Synthetic',
+  +       provenance: null,
+          recommendedLayerCodes: [
+            'USER'
+          ],
+          roles: [
+            'monitor'
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/project-roundtrip.release.test.ts:42:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { schemaVersion: 1, projectId: 'local-fixture', projectName: 'Synthetic release round trip', baseObject: { id: 'synthetic-object', name: 'Synthetic object', center: [Object] }, layers: [ [Object], [Object] ], assetLibrary: [ [Object] ], placedObjects: [ [Object] ], activeLayerId: 'custom-polygon', mode: 'view', source: 'custom', updatedAt: '2026-09-20T00:00:00.000Z', enterpriseId: '11111111-1111-4111-8111-111111111111', selectedAssetId: 'synthetic-asset', selectedObjectId: 'synthetic-instance', extension: { note: 'safe non-authoritative extension', decimalText: '0.000000005' } },
+    expected: { schemaVersion: 1, projectId: 'local-fixture', projectName: 'Synthetic release round trip', baseObject: { id: 'synthetic-object', name: 'Synthetic object', center: [Object] }, layers: [ [Object], [Object] ], assetLibrary: [ [Object] ], placedObjects: [ [Object] ], activeLayerId: 'custom-polygon', mode: 'view', source: 'custom', updatedAt: '2026-09-20T00:00:00.000Z', enterpriseId: '11111111-1111-4111-8111-111111111111', selectedAssetId: 'synthetic-asset', selectedObjectId: 'synthetic-instance', extension: { note: 'safe non-authoritative extension', decimalText: '0.000000005' } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/project-runtime.release.test.ts:2:2905
+✖ failed load and save preserve current project; no automatic retry after any error (194.296458ms)
+  AssertionError [ERR_ASSERTION]: manual save must not schedule retries
+  
+  2 !== 3
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/project-runtime.release.test.ts:44:14)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/project-runtime.release.test.ts:2:4772
+✖ recovery does not overwrite an open project and is not server verification (0.644917ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'custom'
+  - 'backend'
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/project-runtime.release.test.ts:61:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'custom',
+    expected: 'backend',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

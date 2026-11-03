@@ -1,0 +1,15 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "env",
+    "FRC03_OPERATOR_BINARY=/private/tmp/frc03-backend-verification/fortis-operator",
+    "FRC03_OPERATOR_ENV_FILE=/private/tmp/frc03-backend-verification/operator-env.json",
+    "FRC07_BROWSER_OUTPUT=/private/tmp/frc07-live-third",
+    "node",
+    "test/playwright/frc07-live.cjs"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0,
+  "harnessSHA256": "140eb40816a2c569c178144e2282df740a8af87986589548adab7080c9ede96d"
+}

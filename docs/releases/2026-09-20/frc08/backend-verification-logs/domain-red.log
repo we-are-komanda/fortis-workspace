@@ -1,0 +1,6 @@
+# github.com/fortis/backend/internal/modules/budget/domain [github.com/fortis/backend/internal/modules/budget/domain.test]
+internal/modules/budget/domain/revision_comparison_test.go:9:66: undefined: ComparedRevision
+internal/modules/budget/domain/revision_comparison_test.go:14:9: undefined: NewComparedRevision
+internal/modules/budget/domain/revision_comparison_test.go:26:8: undefined: NewRevisionComparison
+FAIL	github.com/fortis/backend/internal/modules/budget/domain [build failed]
+FAIL

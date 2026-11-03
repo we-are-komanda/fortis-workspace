@@ -1,0 +1,17 @@
+/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:119
+  throw new Error("GIS runtime must read workspace and compact-card copy from prototypeRu");
+        ^
+
+Error: GIS runtime must read workspace and compact-card copy from prototypeRu
+    at <anonymous> (/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:119:9)
+    at Object.<anonymous> (/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/src/modules/drone-defense/domain/user-facing-copy-contract.test.ts:154:99)
+    at Module._compile (node:internal/modules/cjs/loader:1944:14)
+    at Object.transformer (/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m/node_modules/.pnpm/tsx@4.22.4/node_modules/tsx/dist/register-BOkp8V6j.cjs:9:3176)
+    at Module.load (node:internal/modules/cjs/loader:1666:32)
+    at Module._load (node:internal/modules/cjs/loader:1447:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:260:19)
+    at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:373:15)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:245:9)
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+
+Node.js v26.4.0

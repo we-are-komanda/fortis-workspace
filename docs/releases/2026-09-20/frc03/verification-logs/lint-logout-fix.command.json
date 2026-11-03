@@ -1,0 +1,28 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "pnpm",
+    "exec",
+    "eslint",
+    "src/modules/drone-defense/domain/use-defense-variants-store.test.ts",
+    "src/modules/drone-defense/domain/use-defense-variants-store.ts",
+    "src/modules/drone-defense/infra/api-client.ts",
+    "src/modules/drone-defense/infra/enterprise-api.ts",
+    "src/modules/drone-defense/infra/project-revisions.release.test.ts",
+    "src/modules/drone-defense/ui/drone-defense-prototype.tsx",
+    "src/modules/drone-defense/ui/project-recovery.browser.test.ts",
+    "src/modules/drone-defense/ui/variants-modal.tsx",
+    "src/modules/workspace/ui/project-workspace-page.tsx",
+    "src/shared/lib/project-draft-storage.test.ts",
+    "src/shared/lib/project-draft-storage.ts",
+    "src/shared/lib/project-runtime.release.test.ts",
+    "src/shared/ui/identity-boundary.tsx",
+    "src/modules/workspace/domain/workspace-projects.test.ts",
+    "src/modules/workspace/ui/project-workspace.browser.test.ts",
+    "test/playwright/frc03-live.cjs"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0,
+  "sourceManifest": "logout-fix-source-manifest.json"
+}

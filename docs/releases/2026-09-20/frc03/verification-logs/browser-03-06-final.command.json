@@ -1,0 +1,18 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "env",
+    "FRC03_BROWSER_TESTS=true",
+    "FRC06_BROWSER_TESTS=true",
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "src/modules/workspace/ui/project-workspace.browser.test.ts",
+    "src/modules/drone-defense/ui/project-recovery.browser.test.ts"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0,
+  "sourceManifest": "frontend-final-source-manifest.json"
+}

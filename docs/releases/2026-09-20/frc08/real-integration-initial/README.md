@@ -1,0 +1,1 @@
+Initial real Next→Go→PG comparison executed all four semantic checkpoints, then failed the strictconsole gate on two new Ant Design maskClosable deprecation errors. Product Modal updated to supported mask.closable. Do not count this run as acceptance; final full rerun follows the fix. No application error was filtered out.

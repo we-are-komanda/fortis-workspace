@@ -1,0 +1,43 @@
+ok  	github.com/fortis/backend/cmd/app	2.186s
+?   	github.com/fortis/backend/internal/audit	[no test files]
+ok  	github.com/fortis/backend/internal/auth	1.617s
+ok  	github.com/fortis/backend/internal/config	1.278s
+?   	github.com/fortis/backend/internal/db	[no test files]
+?   	github.com/fortis/backend/internal/metrics	[no test files]
+ok  	github.com/fortis/backend/internal/middleware	2.048s
+ok  	github.com/fortis/backend/internal/modules/budget/application	3.698s
+ok  	github.com/fortis/backend/internal/modules/budget/document	3.366s
+ok  	github.com/fortis/backend/internal/modules/budget/domain	2.694s
+?   	github.com/fortis/backend/internal/modules/budget/infrastructure	[no test files]
+ok  	github.com/fortis/backend/internal/modules/budget/ui	3.040s
+ok  	github.com/fortis/backend/internal/modules/defense_asset/application	2.374s
+ok  	github.com/fortis/backend/internal/modules/defense_asset/domain	0.444s
+ok  	github.com/fortis/backend/internal/modules/defense_asset/infrastructure	10.144s
+ok  	github.com/fortis/backend/internal/modules/defense_asset/ui	3.108s
+ok  	github.com/fortis/backend/internal/modules/defense_project/application	2.969s
+ok  	github.com/fortis/backend/internal/modules/defense_project/document	2.740s
+ok  	github.com/fortis/backend/internal/modules/defense_project/domain	2.918s
+ok  	github.com/fortis/backend/internal/modules/defense_project/infrastructure	2.934s
+ok  	github.com/fortis/backend/internal/modules/defense_project/ui	2.819s
+?   	github.com/fortis/backend/internal/modules/demo_request/application	[no test files]
+ok  	github.com/fortis/backend/internal/modules/demo_request/domain	2.797s
+ok  	github.com/fortis/backend/internal/modules/demo_request/infrastructure	2.854s
+?   	github.com/fortis/backend/internal/modules/demo_request/ui	[no test files]
+ok  	github.com/fortis/backend/internal/modules/enterprise/application	2.860s
+ok  	github.com/fortis/backend/internal/modules/enterprise/domain	2.984s
+?   	github.com/fortis/backend/internal/modules/enterprise/infrastructure	[no test files]
+ok  	github.com/fortis/backend/internal/modules/enterprise/ui	3.115s
+?   	github.com/fortis/backend/internal/modules/platform/application	[no test files]
+?   	github.com/fortis/backend/internal/modules/platform/domain	[no test files]
+?   	github.com/fortis/backend/internal/modules/platform/infrastructure	[no test files]
+?   	github.com/fortis/backend/internal/modules/platform/ui	[no test files]
+ok  	github.com/fortis/backend/internal/modules/report/application	3.468s
+?   	github.com/fortis/backend/internal/modules/report/domain	[no test files]
+ok  	github.com/fortis/backend/internal/modules/report/ui	3.485s
+ok  	github.com/fortis/backend/internal/modules/user/application	4.080s
+ok  	github.com/fortis/backend/internal/modules/user/domain	3.724s
+?   	github.com/fortis/backend/internal/modules/user/infrastructure	[no test files]
+ok  	github.com/fortis/backend/internal/modules/user/ui	3.734s
+ok  	github.com/fortis/backend/internal/probe	3.672s
+?   	github.com/fortis/backend/internal/rdbms	[no test files]
+ok  	github.com/fortis/backend/pkg/handlers	3.686s

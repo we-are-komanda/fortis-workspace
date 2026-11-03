@@ -1,0 +1,372 @@
+fetchVariants: OK
+saveAsNewVariant: OK
+loadVariant: OK
+deleteVariant: OK
+saveAsNewVariant failure: OK
+overwriteActiveVariant version: OK
+Error: 409 must tell the user to reload the current version
+    at assert (/Users/rr/Documents/Fortis/frontend/src/modules/drone-defense/domain/use-defense-variants-store.test.ts:8:25)
+    at main (/Users/rr/Documents/Fortis/frontend/src/modules/drone-defense/domain/use-defense-variants-store.test.ts:162:3)
+✖ src/modules/drone-defense/domain/use-defense-variants-store.test.ts (169.080458ms)
+✖ BFF preserves upstream error status and body, including HTML and empty bodies (3.436916ms)
+✖ projects rejects an empty successful body instead of returning 200 null (0.033042ms)
+✖ BFF and API v1 share target, query and auth; legitimate empty stays empty (0.034125ms)
+✖ binary documents preserve bytes/status/content type and mutation method/body (0.022209ms)
+✖ missing configuration fails without network fallback; conflicts fail (0.0285ms)
+✖ connection refused is 502; deadline is 504 with request id (0.0225ms)
+✖ workspace ignores query demo; demo route is explicit and marked (0.01925ms)
+✖ JSON helper rejects malformed success and wrong list shape (0.021375ms)
+✖ JSON adaptation deadline includes the response body, not only headers (0.034708ms)
+✖ project BFF selects the requested revision without letting query override the resource ID (4.143125ms)
+✖ project creation preserves the caller's idempotency key through the BFF (0.030083ms)
+✖ release API client selects a revision and sends a stable caller-supplied creation key (0.022292ms)
+✖ frontend liveness is independent of config/dependencies; readiness checks both (66.998833ms)
+✔ production login and registration issue Secure cookies (29.978167ms)
+✔ invalid cookie does not admit protected pages (3.10775ms)
+✔ login next permits only internal paths (0.103125ms)
+✔ cookie clearing keeps production flags; local HTTP development remains usable (1.61525ms)
+(node:50629) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ workspace recovery cannot cross authenticated identities (1.090333ms)
+✔ account switch resets all stores and drops an in-flight A list (7.937833ms)
+✖ 401 invalidates identity; 403/404 block saving without retries or false saved state (1.086917ms)
+▶ late project access failures cannot invalidate another current project
+  ✔ load (0.499875ms)
+  ✖ overwrite (0.209125ms)
+  ✔ create (0.46525ms)
+  ✔ delete (0.207792ms)
+  ✔ list (0.176917ms)
+✖ late project access failures cannot invalidate another current project (1.869792ms)
+✖ logout clears active memory but preserves only the owner recovery key (0.382625ms)
+✔ project import preserves existing geometry fields and safe extensions (1.678541ms)
+✖ complete synthetic project fixture survives frontend export and import (2.33275ms)
+﹣ real PostgreSQL export retains every frontend business field (0.057417ms) # SKIP
+(node:50631) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ failed and empty library refresh never inject bundled data into a backend project (1.565625ms)
+✔ empty enterprises stays empty instead of adding a local object (0.650208ms)
+✖ failed load and save preserve current project; no automatic retry after any error (5.541125ms)
+✖ recovery does not overwrite an open project and is not server verification (1.828792ms)
+✔ recovery preserves empty catalogs and user asset values without bundled expansion (0.308708ms)
+✔ workspace creation is empty; remount does not reload a hydrated dirty project (0.116542ms)
+✖ pending load cannot replace newer user edits or a cancelled navigation (2.700583ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 15
+ℹ fail 22
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 221.370583
+
+✖ failing tests:
+
+test at src/modules/drone-defense/domain/use-defense-variants-store.test.ts:1:1
+✖ src/modules/drone-defense/domain/use-defense-variants-store.test.ts (169.080458ms)
+  'test failed'
+
+test at src/modules/drone-defense/infra/backend-proxy.release.test.ts:2:2455
+✖ BFF preserves upstream error status and body, including HTML and empty bodies (3.436916ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/backend-proxy.release.test.ts:2:3062
+✖ projects rejects an empty successful body instead of returning 200 null (0.033042ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/backend-proxy.release.test.ts:2:3408
+✖ BFF and API v1 share target, query and auth; legitimate empty stays empty (0.034125ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/backend-proxy.release.test.ts:2:4381
+✖ binary documents preserve bytes/status/content type and mutation method/body (0.022209ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/backend-proxy.release.test.ts:2:5353
+✖ missing configuration fails without network fallback; conflicts fail (0.0285ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/backend-proxy.release.test.ts:2:6044
+✖ connection refused is 502; deadline is 504 with request id (0.0225ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/backend-proxy.release.test.ts:2:6763
+✖ workspace ignores query demo; demo route is explicit and marked (0.01925ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/backend-proxy.release.test.ts:2:7471
+✖ JSON helper rejects malformed success and wrong list shape (0.021375ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/backend-proxy.release.test.ts:2:8076
+✖ JSON adaptation deadline includes the response body, not only headers (0.034708ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/project-revisions.release.test.ts:2:2255
+✖ project BFF selects the requested revision without letting query override the resource ID (4.143125ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/project-revisions.release.test.ts:2:3206
+✖ project creation preserves the caller's idempotency key through the BFF (0.030083ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/project-revisions.release.test.ts:2:3909
+✖ release API client selects a revision and sends a stable caller-supplied creation key (0.022292ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/modules/drone-defense/infra/readiness.release.test.ts:2:974
+✖ frontend liveness is independent of config/dependencies; readiness checks both (66.998833ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:4726
+✖ 401 invalidates identity; 403/404 block saving without retries or false saved state (1.086917ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be strictly unequal to:
+  
+  'saved'
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/identity-isolation.release.test.ts:59:11)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'saved',
+    expected: 'saved',
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:6434
+✖ overwrite (0.209125ms)
+  TypeError: finish is not a function
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/identity-isolation.release.test.ts:91:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/identity-isolation.release.test.ts:79:4)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at src/shared/lib/identity-isolation.release.test.ts:2:7871
+✖ logout clears active memory but preserves only the owner recovery key (0.382625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'current'
+  - 'private-A'
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/identity-isolation.release.test.ts:116:10)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'current',
+    expected: 'private-A',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/project-roundtrip.release.test.ts:2:3025
+✖ complete synthetic project fixture survives frontend export and import (2.33275ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      activeLayerId: 'custom-polygon',
+      assetLibrary: [
+        {
+          calculatorAssetId: null,
+  ...
+          },
+  +       fieldProvenance: undefined,
+          iconUrl: '',
+          id: 'synthetic-asset',
+          incompatibleLayerCodes: [],
+          isPublic: false,
+          legacyItemId: 'legacy-fixture',
+  ...
+          protectionType: 'Synthetic',
+  +       provenance: null,
+          recommendedLayerCodes: [
+            'USER'
+          ],
+          roles: [
+            'monitor'
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/project-roundtrip.release.test.ts:42:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { schemaVersion: 1, projectId: 'local-fixture', projectName: 'Synthetic release round trip', baseObject: { id: 'synthetic-object', name: 'Synthetic object', center: [Object] }, layers: [ [Object], [Object] ], assetLibrary: [ [Object] ], placedObjects: [ [Object] ], activeLayerId: 'custom-polygon', mode: 'view', source: 'custom', updatedAt: '2026-09-20T00:00:00.000Z', enterpriseId: '11111111-1111-4111-8111-111111111111', selectedAssetId: 'synthetic-asset', selectedObjectId: 'synthetic-instance', extension: { note: 'safe non-authoritative extension', decimalText: '0.000000005' } },
+    expected: { schemaVersion: 1, projectId: 'local-fixture', projectName: 'Synthetic release round trip', baseObject: { id: 'synthetic-object', name: 'Synthetic object', center: [Object] }, layers: [ [Object], [Object] ], assetLibrary: [ [Object] ], placedObjects: [ [Object] ], activeLayerId: 'custom-polygon', mode: 'view', source: 'custom', updatedAt: '2026-09-20T00:00:00.000Z', enterpriseId: '11111111-1111-4111-8111-111111111111', selectedAssetId: 'synthetic-asset', selectedObjectId: 'synthetic-instance', extension: { note: 'safe non-authoritative extension', decimalText: '0.000000005' } },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/project-runtime.release.test.ts:2:2905
+✖ failed load and save preserve current project; no automatic retry after any error (5.541125ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }
+
+test at src/shared/lib/project-runtime.release.test.ts:2:4772
+✖ recovery does not overwrite an open project and is not server verification (1.828792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'custom'
+  - 'backend'
+  
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/shared/lib/project-runtime.release.test.ts:61:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'custom',
+    expected: 'backend',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at src/shared/lib/project-runtime.release.test.ts:2:8181
+✖ pending load cannot replace newer user edits or a cancelled navigation (2.700583ms)
+  Error: listen EPERM: operation not permitted 127.0.0.1
+      at Server.setupListenHandle [as _listen2] (node:net:2145:21)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EPERM',
+    errno: -1,
+    syscall: 'listen',
+    address: '127.0.0.1'
+  }

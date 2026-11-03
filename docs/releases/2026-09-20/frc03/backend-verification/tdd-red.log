@@ -1,0 +1,32 @@
+# github.com/fortis/backend/internal/modules/enterprise/application [github.com/fortis/backend/internal/modules/enterprise/application.test]
+internal/modules/enterprise/application/provision_test.go:26:30: undefined: ProvisionEnterpriseCommand
+internal/modules/enterprise/application/provision_test.go:28:9: undefined: ProvisionEnterpriseCommand
+internal/modules/enterprise/application/provision_test.go:32:45: undefined: ProvisionEnterpriseCommand
+internal/modules/enterprise/application/provision_test.go:33:36: undefined: ProvisionEnterpriseCommand
+internal/modules/enterprise/application/provision_test.go:34:30: undefined: ProvisionEnterpriseCommand
+internal/modules/enterprise/application/provision_test.go:35:23: undefined: ProvisionEnterpriseCommand
+internal/modules/enterprise/application/provision_test.go:36:25: undefined: ProvisionEnterpriseCommand
+internal/modules/enterprise/application/provision_test.go:37:29: undefined: ProvisionEnterpriseCommand
+internal/modules/enterprise/application/provision_test.go:38:28: undefined: ProvisionEnterpriseCommand
+internal/modules/enterprise/application/provision_test.go:39:31: undefined: ProvisionEnterpriseCommand
+internal/modules/enterprise/application/provision_test.go:39:31: too many errors
+FAIL	github.com/fortis/backend/internal/modules/enterprise/application [build failed]
+# github.com/fortis/backend/internal/modules/enterprise/ui [github.com/fortis/backend/internal/modules/enterprise/ui.test]
+internal/modules/enterprise/ui/provision_test.go:23:10: undefined: WriteProvision
+internal/modules/enterprise/ui/provision_test.go:23:50: undefined: ea.NewProvisionService
+internal/modules/enterprise/ui/provision_test.go:30:21: undefined: WriteProvision
+internal/modules/enterprise/ui/provision_test.go:30:61: undefined: ea.NewProvisionService
+# github.com/fortis/backend/cmd/app [github.com/fortis/backend/cmd/app.test]
+cmd/app/frc03_postgres_test.go:19:37: undefined: ea.ProvisionEnterpriseCommand
+cmd/app/frc03_postgres_test.go:21:12: undefined: ea.ProvisionEnterpriseCommand
+cmd/app/frc03_postgres_test.go:32:16: undefined: ea.NewProvisionService
+cmd/app/frc03_postgres_test.go:32:39: undefined: ei.NewEnterpriseProvisionRepository
+cmd/app/frc03_postgres_test.go:39:30: undefined: ed.ErrProvisionUserNotFound
+cmd/app/frc03_postgres_test.go:45:30: undefined: ea.ErrProvisionFailed
+cmd/app/frc03_postgres_test.go:68:31: undefined: ed.ErrProvisionConflict
+cmd/app/frc03_postgres_test.go:75:30: undefined: ed.ErrProvisionConflict
+ok  	github.com/fortis/backend/internal/modules/enterprise/domain	0.581s [no tests to run]
+?   	github.com/fortis/backend/internal/modules/enterprise/infrastructure	[no test files]
+FAIL	github.com/fortis/backend/internal/modules/enterprise/ui [build failed]
+FAIL	github.com/fortis/backend/cmd/app [build failed]
+FAIL

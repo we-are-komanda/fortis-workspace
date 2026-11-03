@@ -1,0 +1,15 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "go",
+    "test",
+    "-count=1",
+    "-run",
+    "TestProvision",
+    "-v",
+    "./internal/modules/enterprise/..."
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/backend",
+  "exitCode": 0
+}

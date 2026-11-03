@@ -1,0 +1,6 @@
+2026/09/21 13:53:43 INFO environment=dev
+2026/09/21 13:53:43 INFO work_mode=enterprise-provision
+{"name":"Real immutable A7/B3 gives475000/550000 RUB and75000/15.79% difference","a":{"projectId":"206606c0-0693-432d-b2cb-15898bf559eb","projectVersion":7,"calculationVersion":"cost-rub-v1","inputDataVersions":{},"snapshotDigest":"9fbf1f96c3d530891a1e5f9a8cd70164b4bdd5d2e6b5ae0436b94bb17169ebbf"},"b":{"projectId":"4304f62f-70b6-4b2d-8aa6-3683a0841d92","projectVersion":3,"calculationVersion":"cost-rub-v1","inputDataVersions":{},"snapshotDigest":"629cb8c3a823dcd0777ca8fe586efc18665f14615340e382f71bcbb7c6890cf3"}}
+{"name":"Ordinary workspace controls request explicit versions and render authoritative comparison"}
+{"name":"Current A8 does not mutate issued A7/B3 comparison","currentA":8,"pinnedA":7}
+{"name":"Zero/unknown preserve null semantics; same-project historical comparison works; foreign has no partial prices"}

@@ -1,0 +1,11 @@
+
+/Users/rr/Documents/Fortis/frontend/test/playwright/frc03-live.cjs
+  2:30  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  3:16  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  4:12  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  5:14  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  6:16  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+  7:26  error  A `require()` style import is forbidden  @typescript-eslint/no-require-imports
+
+✖ 6 problems (6 errors, 0 warnings)
+

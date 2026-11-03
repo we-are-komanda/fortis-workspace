@@ -1,0 +1,18 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "env",
+    "FORTIS_FRC04_TEST_DSN=host=127.0.0.1 port=55434 user=fortis_test dbname=postgres sslmode=disable",
+    "go",
+    "test",
+    "-run",
+    "TestFRC03(Postgres|Configuration)",
+    "./cmd/app",
+    "-count=1",
+    "-v",
+    "-timeout=3m"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/backend",
+  "exitCode": 0
+}

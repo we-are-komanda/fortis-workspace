@@ -1,0 +1,267 @@
+{
+  "enterpriseId": "97795b93-ceb3-46db-bff5-258dfe8b3cdf",
+  "a": {
+    "identity": {
+      "projectId": "f4678c07-8021-465c-b06d-2854f6b80473",
+      "projectVersion": 7,
+      "calculationVersion": "cost-rub-v1",
+      "inputDataVersions": {},
+      "snapshotDigest": "5073ea61a8384632b3655bcd925e201becc485264db1c385dc1d88743c2ce7ef"
+    },
+    "name": "Synthetic comparison A",
+    "updatedAt": "2026-09-21T10:42:40.065148Z",
+    "cost": {
+      "identity": {
+        "projectId": "f4678c07-8021-465c-b06d-2854f6b80473",
+        "projectVersion": 7,
+        "calculationVersion": "cost-rub-v1",
+        "inputDataVersions": {},
+        "snapshotDigest": "5073ea61a8384632b3655bcd925e201becc485264db1c385dc1d88743c2ce7ef"
+      },
+      "currency": "RUB",
+      "lines": [
+        {
+          "objectId": "obj-1",
+          "assetId": "asset-a",
+          "layerId": "layer-custom-a",
+          "category": "infrastructure",
+          "name": "Тестовый модуль А",
+          "quantity": 2,
+          "unitPriceMinor": "12500000",
+          "lineTotalMinor": "25000000",
+          "priceSource": "template",
+          "provenance": {
+            "sourceLabel": "Synthetic accounting fixture",
+            "sourceDocumentId": null,
+            "sourceUrl": null,
+            "sourceDate": "2026-09-20",
+            "recordedAt": "2026-09-20T00:00:00Z",
+            "recordedBy": "0616c1a7-b2fc-4814-8e4c-5ab6713105ce",
+            "quality": "estimated",
+            "revision": "1"
+          }
+        },
+        {
+          "objectId": "obj-2",
+          "assetId": "asset-b",
+          "layerId": "layer-custom-b",
+          "category": "infrastructure",
+          "name": "Тестовый модуль Б",
+          "quantity": 3,
+          "unitPriceMinor": "5000000",
+          "lineTotalMinor": "15000000",
+          "priceSource": "template",
+          "provenance": {
+            "sourceLabel": "Synthetic accounting fixture",
+            "sourceDocumentId": null,
+            "sourceUrl": null,
+            "sourceDate": "2026-09-20",
+            "recordedAt": "2026-09-20T00:00:00Z",
+            "recordedBy": "0616c1a7-b2fc-4814-8e4c-5ab6713105ce",
+            "quality": "estimated",
+            "revision": "1"
+          }
+        },
+        {
+          "objectId": "obj-3",
+          "assetId": "asset-a",
+          "layerId": "layer-custom-b",
+          "category": "infrastructure",
+          "name": "Тестовый модуль А",
+          "quantity": 1,
+          "unitPriceMinor": "7500000",
+          "lineTotalMinor": "7500000",
+          "priceSource": "instance_override",
+          "provenance": null
+        }
+      ],
+      "byLayer": [
+        {
+          "id": "layer-custom-a",
+          "name": "Пользовательская группа А",
+          "objectCount": 1,
+          "unitCount": 2,
+          "knownSubtotalMinor": "25000000",
+          "totalMinor": "25000000"
+        },
+        {
+          "id": "layer-custom-b",
+          "name": "Пользовательская группа Б",
+          "objectCount": 2,
+          "unitCount": 4,
+          "knownSubtotalMinor": "22500000",
+          "totalMinor": "22500000"
+        }
+      ],
+      "byType": [
+        {
+          "id": "infrastructure",
+          "name": "infrastructure",
+          "objectCount": 3,
+          "unitCount": 6,
+          "knownSubtotalMinor": "47500000",
+          "totalMinor": "47500000"
+        }
+      ],
+      "knownSubtotalMinor": "47500000",
+      "totalMinor": "47500000",
+      "isComplete": true,
+      "unknownPriceObjectIds": [],
+      "warnings": []
+    },
+    "budget": {
+      "identity": {
+        "projectId": "f4678c07-8021-465c-b06d-2854f6b80473",
+        "projectVersion": 7,
+        "calculationVersion": "cost-rub-v1",
+        "inputDataVersions": {},
+        "snapshotDigest": "5073ea61a8384632b3655bcd925e201becc485264db1c385dc1d88743c2ce7ef"
+      },
+      "config": {
+        "budgetMode": "limited",
+        "budgetLimitMinor": "50000000"
+      },
+      "spentMinor": "47500000",
+      "remainingMinor": "2500000",
+      "status": "within_limit"
+    }
+  },
+  "b": {
+    "identity": {
+      "projectId": "34787c9c-efcc-4d09-a424-56ef53a6ec5d",
+      "projectVersion": 3,
+      "calculationVersion": "cost-rub-v1",
+      "inputDataVersions": {},
+      "snapshotDigest": "f46a559155c982a34e90f4b1a1a833d4c517f25bb633a4485905d2f6b1a6434a"
+    },
+    "name": "Synthetic comparison B",
+    "updatedAt": "2026-09-21T10:42:40.130221Z",
+    "cost": {
+      "identity": {
+        "projectId": "34787c9c-efcc-4d09-a424-56ef53a6ec5d",
+        "projectVersion": 3,
+        "calculationVersion": "cost-rub-v1",
+        "inputDataVersions": {},
+        "snapshotDigest": "f46a559155c982a34e90f4b1a1a833d4c517f25bb633a4485905d2f6b1a6434a"
+      },
+      "currency": "RUB",
+      "lines": [
+        {
+          "objectId": "obj-1",
+          "assetId": "asset-a",
+          "layerId": "layer-custom-a",
+          "category": "infrastructure",
+          "name": "Тестовый модуль А",
+          "quantity": 3,
+          "unitPriceMinor": "12500000",
+          "lineTotalMinor": "37500000",
+          "priceSource": "template",
+          "provenance": {
+            "sourceLabel": "Synthetic accounting fixture",
+            "sourceDocumentId": null,
+            "sourceUrl": null,
+            "sourceDate": "2026-09-20",
+            "recordedAt": "2026-09-20T00:00:00Z",
+            "recordedBy": "0616c1a7-b2fc-4814-8e4c-5ab6713105ce",
+            "quality": "estimated",
+            "revision": "1"
+          }
+        },
+        {
+          "objectId": "obj-2",
+          "assetId": "asset-b",
+          "layerId": "layer-custom-b",
+          "category": "infrastructure",
+          "name": "Тестовый модуль Б",
+          "quantity": 2,
+          "unitPriceMinor": "5000000",
+          "lineTotalMinor": "10000000",
+          "priceSource": "template",
+          "provenance": {
+            "sourceLabel": "Synthetic accounting fixture",
+            "sourceDocumentId": null,
+            "sourceUrl": null,
+            "sourceDate": "2026-09-20",
+            "recordedAt": "2026-09-20T00:00:00Z",
+            "recordedBy": "0616c1a7-b2fc-4814-8e4c-5ab6713105ce",
+            "quality": "estimated",
+            "revision": "1"
+          }
+        },
+        {
+          "objectId": "obj-3",
+          "assetId": "asset-a",
+          "layerId": "layer-custom-b",
+          "category": "infrastructure",
+          "name": "Тестовый модуль А",
+          "quantity": 1,
+          "unitPriceMinor": "7500000",
+          "lineTotalMinor": "7500000",
+          "priceSource": "instance_override",
+          "provenance": null
+        }
+      ],
+      "byLayer": [
+        {
+          "id": "layer-custom-a",
+          "name": "Пользовательская группа А",
+          "objectCount": 1,
+          "unitCount": 3,
+          "knownSubtotalMinor": "37500000",
+          "totalMinor": "37500000"
+        },
+        {
+          "id": "layer-custom-b",
+          "name": "Пользовательская группа Б",
+          "objectCount": 2,
+          "unitCount": 3,
+          "knownSubtotalMinor": "17500000",
+          "totalMinor": "17500000"
+        }
+      ],
+      "byType": [
+        {
+          "id": "infrastructure",
+          "name": "infrastructure",
+          "objectCount": 3,
+          "unitCount": 6,
+          "knownSubtotalMinor": "55000000",
+          "totalMinor": "55000000"
+        }
+      ],
+      "knownSubtotalMinor": "55000000",
+      "totalMinor": "55000000",
+      "isComplete": true,
+      "unknownPriceObjectIds": [],
+      "warnings": []
+    },
+    "budget": {
+      "identity": {
+        "projectId": "34787c9c-efcc-4d09-a424-56ef53a6ec5d",
+        "projectVersion": 3,
+        "calculationVersion": "cost-rub-v1",
+        "inputDataVersions": {},
+        "snapshotDigest": "f46a559155c982a34e90f4b1a1a833d4c517f25bb633a4485905d2f6b1a6434a"
+      },
+      "config": {
+        "budgetMode": "unlimited",
+        "budgetLimitMinor": null
+      },
+      "spentMinor": "55000000",
+      "remainingMinor": null,
+      "status": "unlimited"
+    }
+  },
+  "differenceMinor": "7500000",
+  "differencePercent": "15.79",
+  "warnings": [
+    {
+      "code": "price_provenance_missing",
+      "severity": "warning",
+      "objectIds": [
+        "obj-3"
+      ],
+      "message": "Some priced objects have no recorded price provenance"
+    }
+  ]
+}

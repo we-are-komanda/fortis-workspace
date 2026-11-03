@@ -1,0 +1,536 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "seeded real project",
+      "projectId": "c1ff624a-2415-415f-9cf8-6b636981a299",
+      "enterpriseId": "96604e7a-0f2a-4966-81f1-9f2de2bb2990",
+      "version": 1
+    },
+    {
+      "name": "UI visibility change saved and survived reload",
+      "projectId": "c1ff624a-2415-415f-9cf8-6b636981a299",
+      "version": 2,
+      "visible": false
+    },
+    {
+      "name": "map calculator map preserves unsaved visibility and identity",
+      "projectId": "c1ff624a-2415-415f-9cf8-6b636981a299",
+      "serverVersion": 2
+    },
+    {
+      "name": "recovery is explicit and only Save writes recovered content",
+      "projectId": "c1ff624a-2415-415f-9cf8-6b636981a299",
+      "version": 3
+    },
+    {
+      "name": "409 retains draft; save-as-new creates independent version 1",
+      "originalId": "c1ff624a-2415-415f-9cf8-6b636981a299",
+      "originalVersion": 4,
+      "newId": "6fb03735-6e05-4fbf-a81b-a71917be8767",
+      "version": 1,
+      "url": "http://127.0.0.1:3111/prototype?projectId=6fb03735-6e05-4fbf-a81b-a71917be8767"
+    },
+    {
+      "name": "saved-as-new identity survives reload",
+      "projectId": "6fb03735-6e05-4fbf-a81b-a71917be8767",
+      "version": 1,
+      "variantLabel": "Сохранено · Synthetic FRC06 browser 25f8ecbd\n▾"
+    }
+  ],
+  "console": [
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: Н (1053)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: о (1086)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: в (1074)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: ы (1099)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: й (1081)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: б (1073)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: ъ (1098)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: е (1077)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: к (1082)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: т (1090)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: з (1079)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: а (1072)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: щ (1097)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: и (1080)"
+    },
+    {
+      "kind": "warning",
+      "message": "[.WebGL-0x10400489a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "kind": "warning",
+      "message": "[.WebGL-0x10400489a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "kind": "warning",
+      "message": "[.WebGL-0x10400489a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels"
+    },
+    {
+      "kind": "warning",
+      "message": "[.WebGL-0x10400489a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: Н (1053)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: о (1086)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: в (1074)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: ы (1099)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: й (1081)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: б (1073)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: ъ (1098)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: е (1077)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: к (1082)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: т (1090)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: з (1079)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: а (1072)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: щ (1097)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: и (1080)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: Н (1053)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: о (1086)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: в (1074)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: ы (1099)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: й (1081)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: б (1073)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: ъ (1098)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: е (1077)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: к (1082)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: т (1090)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: з (1079)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: а (1072)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: щ (1097)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: и (1080)"
+    },
+    {
+      "kind": "error",
+      "message": "Warning: [antd: Alert] `message` is deprecated. Please use `title` instead."
+    },
+    {
+      "kind": "error",
+      "message": "Failed to load resource: the server responded with a status of 409 (Conflict)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: Н (1053)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: о (1086)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: в (1074)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: ы (1099)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: й (1081)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: б (1073)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: ъ (1098)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: е (1077)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: к (1082)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: т (1090)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: з (1079)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: а (1072)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: щ (1097)"
+    },
+    {
+      "kind": "warning",
+      "message": "deck: Missing character: и (1080)"
+    }
+  ],
+  "knownDeckErrors": [],
+  "knownWarnings": [
+    {
+      "kind": "error",
+      "message": "Warning: [antd: Alert] `message` is deprecated. Please use `title` instead."
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "/api/runtime",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/enterprises",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/runtime",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects/c1ff624a-2415-415f-9cf8-6b636981a299",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/projects/cost",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/assets",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/enterprises",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "url": "/api/defense/projects/c1ff624a-2415-415f-9cf8-6b636981a299",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/projects/cost",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/runtime",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects/c1ff624a-2415-415f-9cf8-6b636981a299",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/projects/cost",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/assets",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/enterprises",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/runtime",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects/c1ff624a-2415-415f-9cf8-6b636981a299",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/projects/cost",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/enterprises",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/assets",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects/c1ff624a-2415-415f-9cf8-6b636981a299",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects/c1ff624a-2415-415f-9cf8-6b636981a299",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "url": "/api/defense/projects/c1ff624a-2415-415f-9cf8-6b636981a299",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/projects/cost",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "url": "/api/defense/projects/c1ff624a-2415-415f-9cf8-6b636981a299",
+      "status": 409
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects/c1ff624a-2415-415f-9cf8-6b636981a299",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "/api/defense/projects",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/projects/cost",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/runtime",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/defense/projects/6fb03735-6e05-4fbf-a81b-a71917be8767",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/projects/cost",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/assets",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "/api/v1/enterprises",
+      "status": 200
+    }
+  ],
+  "screenshots": "/private/tmp/frc06-live/final"
+}

@@ -1,0 +1,3 @@
+prototype-3d-placeholder-contract.test.mjs: scenario modeling prototype contract passed
+scene-contract.test.mjs: no eager /models/*.glb preloads in scene module
+defense-project-source-contract.test.ts: prototype source contract passed

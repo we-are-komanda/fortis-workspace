@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T11:30:25.069708+00:00",
+  "title": "Design System: Fortis SCN-01",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "map-overlay",
+        "value": "0 4px 16px #17233618",
+        "purpose": "Preparation and playback map overlays."
+      },
+      {
+        "name": "map-heading",
+        "value": "0 3px 12px #17233618",
+        "purpose": "Map title overlay."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "desktop",
+        "value": "1024px"
+      },
+      {
+        "name": "narrow-max",
+        "value": "639px"
+      },
+      {
+        "name": "short-desktop-max-height",
+        "value": "820px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Start playback or control transport.",
+      "html": "<button class=\"ds-control ds-primary\">Начать просмотр</button>",
+      "css": ".ds-control{min-height:2.75rem;border:1px solid #d7e2f0;border-radius:.375rem;padding:.45rem .65rem;background:#fff;color:#172b48;cursor:pointer;font-size:.875rem}.ds-control:hover:not(:disabled){background:color-mix(in srgb,#2563eb 9%,#fff)}.ds-control:focus-visible{outline:3px solid #2563eb;outline-offset:3px}.ds-control:disabled{opacity:.55;cursor:not-allowed}.ds-primary{background:#2563eb;color:#fff;border-color:#2563eb}.ds-primary:hover:not(:disabled){background:#1d4ed8}"
+    },
+    {
+      "name": "Secondary control",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined map and transport controls.",
+      "html": "<button class=\"ds-control\">2D</button>",
+      "css": ".ds-control{min-height:2.75rem;border:1px solid #d7e2f0;border-radius:.375rem;padding:.45rem .65rem;background:#fff;color:#172b48;cursor:pointer;font-size:.875rem}.ds-control:hover:not(:disabled){background:color-mix(in srgb,#2563eb 9%,#fff)}.ds-control:focus-visible{outline:3px solid #2563eb;outline-offset:3px}.ds-control:disabled{opacity:.55;cursor:not-allowed}"
+    },
+    {
+      "name": "Record selector",
+      "kind": "input",
+      "description": "Native select used for playback rate and comparison records.",
+      "html": "<select class=\"ds-control\" aria-label=\"Скорость просмотра\"><option>1×</option><option>2×</option><option>4×</option></select>",
+      "css": ".ds-control{min-height:2.75rem;border:1px solid #d7e2f0;border-radius:.375rem;padding:.45rem .65rem;background:#fff;color:#172b48;cursor:pointer;font-size:.875rem}.ds-control:hover:not(:disabled){background:color-mix(in srgb,#2563eb 9%,#fff)}.ds-control:focus-visible{outline:3px solid #2563eb;outline-offset:3px}.ds-control:disabled{opacity:.55;cursor:not-allowed}"
+    },
+    {
+      "name": "Stage tabs",
+      "kind": "nav",
+      "description": "Wrapping stage navigation with a pressed state.",
+      "html": "<nav class=\"ds-tabs\" aria-label=\"Этап учебного просмотра\"><button class=\"ds-control\" aria-pressed=\"true\">Подготовка</button><button class=\"ds-control\">Просмотр</button><button class=\"ds-control\">Сравнение</button></nav>",
+      "css": ".ds-control{min-height:2.75rem;border:1px solid #d7e2f0;border-radius:.375rem;padding:.45rem .65rem;background:#fff;color:#172b48;cursor:pointer;font-size:.875rem}.ds-control:hover:not(:disabled){background:color-mix(in srgb,#2563eb 9%,#fff)}.ds-control:focus-visible{outline:3px solid #2563eb;outline-offset:3px}.ds-control:disabled{opacity:.55;cursor:not-allowed}.ds-tabs{display:flex;flex-wrap:wrap;gap:.25rem}.ds-tabs button{border-color:transparent}.ds-tabs button[aria-pressed=\"true\"]{border-color:#2563eb;background:color-mix(in srgb,#2563eb 9%,#fff);color:#2563eb}"
+    },
+    {
+      "name": "Preparation overlay",
+      "kind": "card",
+      "description": "Raised map details with the existing primary action.",
+      "html": "<section class=\"ds-card\"><h2>А · Север</h2><p>Знакомство с площадкой и последовательностью учебных сообщений.</p><button class=\"ds-control ds-primary\">Начать просмотр</button></section>",
+      "css": ".ds-control{min-height:2.75rem;border:1px solid #d7e2f0;border-radius:.375rem;padding:.45rem .65rem;background:#fff;color:#172b48;cursor:pointer;font-size:.875rem}.ds-control:hover:not(:disabled){background:color-mix(in srgb,#2563eb 9%,#fff)}.ds-control:focus-visible{outline:3px solid #2563eb;outline-offset:3px}.ds-control:disabled{opacity:.55;cursor:not-allowed}.ds-card{width:16rem;border-radius:.5rem;background:#fff;color:#172b48;box-shadow:0 4px 16px #17233618;padding:.85rem;font-size:.875rem}.ds-card h2{margin:0;font-size:.95rem;font-weight:650}.ds-card p{color:#526782;line-height:1.6;margin:.4rem 0 0}.ds-card button{margin-top:.75rem;width:100%}.ds-primary{background:#2563eb;color:#fff;border-color:#2563eb}.ds-primary:hover:not(:disabled){background:#1d4ed8}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Synthetic campus atlas",
+    "overview": "The continuous pale green landscape follows the original mockup; the surrounding Fortis shell remains the incumbent workspace. This is a scoped visual record; product behavior and acceptance live in PRODUCT.md and README.md.",
+    "keyCharacteristics": [
+      "quiet map materials",
+      "fine cartographic detail",
+      "readable industrial volumes",
+      "compact task controls"
+    ],
+    "rules": [
+      {
+        "name": "The Clear Controls Rule",
+        "body": "With a preparation card present, zoom moves left on narrow screens, and to an 18rem right inset on desktops no taller than 820px. Preserve this exception so the card cannot cover zoom.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do keep terrain, grid, contours, river, irregular forest, detailed roofs, tanks, yard and driveways together as the scene's visual vocabulary.",
+      "Do retain the incumbent shell, readable controls, and the preparation/zoom clearance exception."
+    ],
+    "donts": [
+      "Don't substitute the previously rejected simplified renderer for the mockup's landscape and industrial detail.",
+      "Don't treat the synthetic site as real geography, or turn this visual record into a second product specification."
+    ]
+  }
+}

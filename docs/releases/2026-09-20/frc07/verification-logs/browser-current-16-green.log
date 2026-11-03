@@ -1,0 +1,24 @@
+✔ rendered shared edit gate preserves current content on one-minor excess and accepts exact equality (906.5455ms)
+✔ overage edits compare with the saved baseline and allow undo of an unsaved reduction (351.283417ms)
+✔ pending budget GET is visibly unverified and a pinned response supplies exact money (381.091834ms)
+✔ lowering the limit below saved spend commits a new version and exposes the overage (692.877333ms)
+✔ limited zero is submitted exactly and blocks a one-minor paid edit (542.990125ms)
+✔ unknown spend remains incomplete when explicitly switching to unlimited (443.682333ms)
+✔ GET failure offers explicit retry without displaying a fabricated budget (439.667458ms)
+✔ rejected budget PUT preserves entered money and unrelated unsaved project edits (431.900334ms)
+✔ late successful budget PUT advances the baseline without overwriting a newer edit (365.743917ms)
+✔ full-candidate preflight carries all local changes and does not save or reserve budget (336.677125ms)
+✔ late budget response cannot replace a newly selected project context (246.516708ms)
+✔ late budget response cannot replace a newly selected version context (307.462667ms)
+✔ late budget response cannot replace a newly selected identity context (313.277959ms)
+✔ wrong-version budget acknowledgement is rejected without a local-money fallback (290.070667ms)
+✔ a pending check for the previous project does not disable checking the newly opened project (482.6575ms)
+✔ recovering an uncertain budget update displays its frozen requested money before retry (274.126042ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7675.624084

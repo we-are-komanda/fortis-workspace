@@ -1,0 +1,59 @@
+project-map-adapter.test.ts: placed objects map adapter passed
+✔ src/modules/drone-defense/domain/project-map-adapter.test.ts (140.899167ms)
+✔ authoritative GET version cannot be replaced by an older cached list summary (20.332084ms)
+✔ quota does not discard an edit in memory and exposes recovery failure (2.448875ms)
+✔ business revision changes for edits but not UI selection; a reverted edit returns to baseline (0.982916ms)
+✔ pending save preserves business edit as dirty (2.018416ms)
+✔ pending save preserves UI selection as saved (0.439666ms)
+✔ lost update response verifies current server identity before any second write (0.977791ms)
+✔ create manual retry preserves exact body and idempotency key (7.036375ms)
+✔ create retry replays the frozen attempt even after a newer local edit (0.645834ms)
+✔ recovery candidate is exposed only after a fresh authorized project read (0.4235ms)
+✔ recovery is hidden when fresh project authorization fails (0.150208ms)
+✔ persisted layer visibility during PUT keeps the newer business revision dirty (0.459458ms)
+✔ persisted layer lock during PUT keeps the newer business revision dirty (0.305417ms)
+✔ unchanged server revision permits only an explicit retry of the frozen update after another verification (0.440291ms)
+✔ ambiguous update with divergent server content blocks another write (0.220375ms)
+✔ ambiguous update with divergent server project blocks another write (0.200792ms)
+✔ ambiguous update with divergent server enterprise blocks another write (0.158667ms)
+✔ 409 preserves the local draft and a new variant never writes the conflicted project (0.258ms)
+✔ 401 after a real dirty save does not retry or verify and blocks further writes (0.212542ms)
+✔ 403 after a real dirty save does not retry or verify and blocks further writes (0.156667ms)
+✔ 404 after a real dirty save does not retry or verify and blocks further writes (0.146875ms)
+✔ workspace startup and authorized recovery discovery leave the server project active until explicit restore (0.23875ms)
+✔ stored recovery with fresh 403 cannot replace the active server project (0.116084ms)
+✔ stored recovery with fresh 404 cannot replace the active server project (0.073541ms)
+✔ stored recovery with fresh 503 cannot replace the active server project (0.065417ms)
+✔ the next identity cannot discover or apply the previous identity recovery candidate (0.122417ms)
+✔ an already discovered draft cannot bypass a subsequently revoked project access (0.131625ms)
+✔ UI selection after server load cannot overwrite an undiscovered recovery draft (0.151ms)
+✔ access revalidation on return to the same project cannot implicitly replace unsaved business content (0.090625ms)
+✔ memory-only discard works when persistent drafts are disabled and storage is forbidden (0.127208ms)
+✔ a malformed save acknowledgement cannot move a project to another enterprise (0.168875ms)
+✔ a confirmed save permits leaving even when the subsequent project list refresh fails (0.198459ms)
+✔ a stale recovery candidate cannot replace another current project (0.067291ms)
+✔ a stale recovery candidate cannot replace another current enterprise (0.05825ms)
+✔ late ambiguous-save verification cannot restore the identity of a project that was left (0.173041ms)
+✔ authored terrain and curved outlines are finite, closed and reproducible (3.011625ms)
+✔ all authored movement segments clear the revised terrain and buildings (1.774375ms)
+✔ manifest asset fragments resolve to separately versioned local geometry (0.210292ms)
+✔ exact versions, times, finite coordinates, duplicates and isolated errors (1.433667ms)
+✔ monotonic time, pause, continuous rate changes, seek, end and replay (0.172708ms)
+✔ all pairs share one time, interpolation and event history are reversible (0.167ms)
+fetchVariants: OK
+saveAsNewVariant: OK
+loadVariant: OK
+deleteVariant: OK
+saveAsNewVariant failure: OK
+overwriteActiveVariant version: OK
+overwriteActiveVariant conflict: OK
+use-defense-variants-store.test.ts: variants store contracts passed
+✔ src/modules/drone-defense/domain/use-defense-variants-store.test.ts (181.33375ms)
+ℹ tests 42
+ℹ suites 0
+ℹ pass 42
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 222.967334

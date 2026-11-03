@@ -1,0 +1,39 @@
+{
+  "browser": "148.0.7778.96",
+  "cpu": "Apple M4",
+  "memoryGiB": 32,
+  "headless": false,
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M4, Unspecified Version)",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "samples": [
+    {
+      "mode": "playback",
+      "wallMs": 15001.699999997021,
+      "frames": 901,
+      "medianFrameMs": 16.69999999999891,
+      "p95FrameMs": 17.5,
+      "maxFrameMs": 18.331999997019693,
+      "over50ms": 0,
+      "timeMs": 14997.29999999404,
+      "status": "playing",
+      "hidden": false,
+      "view": "3d"
+    },
+    {
+      "mode": "comparison",
+      "wallMs": 15010.499999994041,
+      "frames": 901,
+      "medianFrameMs": 16.69999999999709,
+      "p95FrameMs": 17.299999999999272,
+      "maxFrameMs": 17.799999999999272,
+      "over50ms": 0,
+      "timeMs": 14997.2,
+      "status": "playing",
+      "hidden": false,
+      "view": "3d"
+    }
+  ]
+}

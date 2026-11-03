@@ -1,0 +1,57 @@
+✖ known denial of a selected project removes an already displayed comparison (5551.481375ms)
+✖ a pending comparison cannot reveal a selected project after another request confirms denial (5274.418ms)
+✔ denial of an unrelated active project does not suppress an authorized selected pair (300.873541ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11500.764458
+
+✖ failing tests:
+
+test at src/modules/defense-calculator/ui/configuration-comparison.browser.test.ts:24:28330
+✖ known denial of a selected project removes an already displayed comparison (5551.481375ms)
+  Error: expect(locator).not.toBeVisible() failed
+  
+  Locator:  getByRole('region', { name: 'Результат сравнения', exact: true })
+  Expected: not visible
+  Received: visible
+  Timeout:  5000ms
+  
+  Call log:
+    - Expect "to.be.visible" with timeout 5000ms
+    - waiting for getByRole('region', { name: 'Результат сравнения', exact: true })
+      14 × locator resolved to <section class="mt-5 space-y-5" aria-label="Результат сравнения">…</section>
+         - unexpected value "visible"
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeVisible (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/defense-calculator/ui/configuration-comparison.browser.test.ts:420:30) {
+    matcherResult: { message: `expect(locator).not.toBeVisible() failed\n\nLocator:  getByRole('region', { name: 'Результат сравнения', exact: true })\nExpected: not visible\nReceived: visible\nTimeout:  5000ms\n\nCall log:\n  - Expect "to.be.visible" with timeout 5000ms\n  - waiting for getByRole('region', { name: 'Результат сравнения', exact: true })\n    14 × locator resolved to <section class="mt-5 space-y-5" aria-label="Результат сравнения">…</section>\n       - unexpected value "visible"\n`, pass: true, actual: 'visible', name: 'toBeVisible', expected: 'visible', log: [ '  - Expect "to.be.visible" with timeout 5000ms', "  - waiting for getByRole('region', { name: 'Результат сравнения', exact: true })", '    14 × locator resolved to <section class="mt-5 space-y-5" aria-label="Результат сравнения">…</section>', '       - unexpected value "visible"' ], timeout: 5000, ariaSnapshot: '- region "Результат сравнения":\n  - paragraph: "Разница B − A: +75 000,00 ₽ · +15,79%"\n  - region "Вариант A"\n  - region "Вариант B"\n  - region "Сравнение по слоям"\n  - region "Сравнение по типам"\n  - region "Состав и цены"\n  - paragraph: Стоимость и состав не подтверждают эффективность, покрытие или достаточность защиты. Сравнение относится только к указанным сохранённым версиям.' }
+  }
+
+test at src/modules/defense-calculator/ui/configuration-comparison.browser.test.ts:24:28977
+✖ a pending comparison cannot reveal a selected project after another request confirms denial (5274.418ms)
+  Error: expect(locator).not.toBeVisible() failed
+  
+  Locator:  getByRole('region', { name: 'Результат сравнения', exact: true })
+  Expected: not visible
+  Received: visible
+  Timeout:  5000ms
+  
+  Call log:
+    - Expect "to.be.visible" with timeout 5000ms
+    - waiting for getByRole('region', { name: 'Результат сравнения', exact: true })
+      14 × locator resolved to <section class="mt-5 space-y-5" aria-label="Результат сравнения">…</section>
+         - unexpected value "visible"
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeVisible (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/defense-calculator/ui/configuration-comparison.browser.test.ts:435:96) {
+    matcherResult: { message: `expect(locator).not.toBeVisible() failed\n\nLocator:  getByRole('region', { name: 'Результат сравнения', exact: true })\nExpected: not visible\nReceived: visible\nTimeout:  5000ms\n\nCall log:\n  - Expect "to.be.visible" with timeout 5000ms\n  - waiting for getByRole('region', { name: 'Результат сравнения', exact: true })\n    14 × locator resolved to <section class="mt-5 space-y-5" aria-label="Результат сравнения">…</section>\n       - unexpected value "visible"\n`, pass: true, actual: 'visible', name: 'toBeVisible', expected: 'visible', log: [ '  - Expect "to.be.visible" with timeout 5000ms', "  - waiting for getByRole('region', { name: 'Результат сравнения', exact: true })", '    14 × locator resolved to <section class="mt-5 space-y-5" aria-label="Результат сравнения">…</section>', '       - unexpected value "visible"' ], timeout: 5000, ariaSnapshot: '- region "Результат сравнения":\n  - paragraph: "Разница B − A: +75 000,00 ₽ · +15,79%"\n  - region "Вариант A"\n  - region "Вариант B"\n  - region "Сравнение по слоям"\n  - region "Сравнение по типам"\n  - region "Состав и цены"\n  - paragraph: Стоимость и состав не подтверждают эффективность, покрытие или достаточность защиты. Сравнение относится только к указанным сохранённым версиям.' }
+  }

@@ -1,0 +1,19 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "src/shared/lib/identity-isolation.release.test.ts",
+    "src/shared/lib/project-runtime.release.test.ts",
+    "src/modules/drone-defense/domain/use-defense-variants-store.test.ts",
+    "src/shared/lib/use-defense-project-store.test.ts",
+    "src/shared/lib/project-roundtrip.release.test.ts",
+    "src/shared/lib/catalog-refresh.release.test.ts",
+    "src/modules/drone-defense/infra/catalog-provenance.release.test.ts"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 1
+}

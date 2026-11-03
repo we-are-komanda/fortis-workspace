@@ -1,0 +1,6 @@
+=== RUN   TestFRC03BrowserServer
+    frc03_browser_test.go:101: FRC03 browser fixture ready on 127.0.0.1:8092, database=frc03_browser_94c967fbbec84f70a073c9303073978e, initial enterprises/memberships/projects=0
+    frc03_browser_test.go:45: removed disposable database frc03_browser_94c967fbbec84f70a073c9303073978e
+--- PASS: TestFRC03BrowserServer (148.14s)
+PASS
+ok  	github.com/fortis/backend/cmd/app	148.827s

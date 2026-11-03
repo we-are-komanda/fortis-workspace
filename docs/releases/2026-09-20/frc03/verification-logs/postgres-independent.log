@@ -1,0 +1,20 @@
+=== RUN   TestFRC03ConfigurationNameHTTP
+--- PASS: TestFRC03ConfigurationNameHTTP (0.12s)
+=== RUN   TestFRC03PostgresProvision
+=== RUN   TestFRC03PostgresProvision/missing_user_rolls_back
+=== RUN   TestFRC03PostgresProvision/membership_failure_rolls_back_enterprise
+=== RUN   TestFRC03PostgresProvision/concurrent_exact_retries_create_one_pair
+=== RUN   TestFRC03PostgresProvision/successful_retry_does_not_change_data_or_log_input
+=== RUN   TestFRC03PostgresProvision/changed_details_or_recipient_conflict_without_mutations
+=== RUN   TestFRC03PostgresProvision/retry_cannot_restore_revoked_membership
+--- PASS: TestFRC03PostgresProvision (0.17s)
+    --- PASS: TestFRC03PostgresProvision/missing_user_rolls_back (0.00s)
+    --- PASS: TestFRC03PostgresProvision/membership_failure_rolls_back_enterprise (0.00s)
+    --- PASS: TestFRC03PostgresProvision/concurrent_exact_retries_create_one_pair (0.01s)
+    --- PASS: TestFRC03PostgresProvision/successful_retry_does_not_change_data_or_log_input (0.00s)
+    --- PASS: TestFRC03PostgresProvision/changed_details_or_recipient_conflict_without_mutations (0.00s)
+    --- PASS: TestFRC03PostgresProvision/retry_cannot_restore_revoked_membership (0.00s)
+=== RUN   TestFRC03PostgresConfigurationName
+--- PASS: TestFRC03PostgresConfigurationName (0.20s)
+PASS
+ok  	github.com/fortis/backend/cmd/app	0.879s

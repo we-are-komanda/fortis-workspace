@@ -1,0 +1,14 @@
+✔ authored terrain and curved outlines are finite, closed and reproducible (2.159333ms)
+✔ all authored movement segments clear the revised terrain and buildings (0.744958ms)
+✔ manifest asset fragments resolve to separately versioned local geometry (0.054083ms)
+✔ exact versions, times, finite coordinates, duplicates and isolated errors (1.023208ms)
+✔ monotonic time, pause, continuous rate changes, seek, end and replay (0.128958ms)
+✔ all pairs share one time, interpolation and event history are reversible (0.166709ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 155.825875

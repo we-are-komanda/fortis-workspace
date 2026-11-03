@@ -1,0 +1,16 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "src/shared/lib/project-save-state.test.ts",
+    "src/shared/lib/project-draft-storage.test.ts",
+    "src/modules/drone-defense/domain/project-save.release.test.ts"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0,
+  "sourceManifest": "final-source-manifest.json"
+}

@@ -1,0 +1,33 @@
+✖ a pending check for the previous project does not disable checking the newly opened project (6209.197375ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8327.424625
+
+✖ failing tests:
+
+test at src/modules/defense-calculator/ui/budget-gate.browser.test.ts:33:22739
+✖ a pending check for the previous project does not disable checking the newly opened project (6209.197375ms)
+  Error: expect(locator).toBeEnabled() failed
+  
+  Locator:  getByRole('region', { name: 'Бюджет проекта', exact: true }).getByRole('button', { name: 'Проверить текущий проект', exact: true })
+  Expected: enabled
+  Received: disabled
+  Timeout:  5000ms
+  
+  Call log:
+    - Expect "to.be.enabled" with timeout 5000ms
+    - waiting for getByRole('region', { name: 'Бюджет проекта', exact: true }).getByRole('button', { name: 'Проверить текущий проект', exact: true })
+      14 × locator resolved to <button disabled type="button" class="mt-3 min-h-11 rounded-md border border-slate-300 px-3 text-sm">Проверить текущий проект</button>
+         - unexpected value "disabled"
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeEnabled (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/defense-calculator/ui/budget-gate.browser.test.ts:356:96) {
+    matcherResult: { message: `expect(locator).toBeEnabled() failed\n\nLocator:  getByRole('region', { name: 'Бюджет проекта', exact: true }).getByRole('button', { name: 'Проверить текущий проект', exact: true })\nExpected: enabled\nReceived: disabled\nTimeout:  5000ms\n\nCall log:\n  - Expect "to.be.enabled" with timeout 5000ms\n  - waiting for getByRole('region', { name: 'Бюджет проекта', exact: true }).getByRole('button', { name: 'Проверить текущий проект', exact: true })\n    14 × locator resolved to <button disabled type="button" class="mt-3 min-h-11 rounded-md border border-slate-300 px-3 text-sm">Проверить текущий проект</button>\n       - unexpected value "disabled"\n`, pass: false, actual: 'disabled', name: 'toBeEnabled', expected: 'enabled', log: [ '  - Expect "to.be.enabled" with timeout 5000ms', "  - waiting for getByRole('region', { name: 'Бюджет проекта', exact: true }).getByRole('button', { name: 'Проверить текущий проект', exact: true })", '    14 × locator resolved to <button disabled type="button" class="mt-3 min-h-11 rounded-md border border-slate-300 px-3 text-sm">Проверить текущий проект</button>', '       - unexpected value "disabled"' ], timeout: 5000, ariaSnapshot: '- button "Проверить текущий проект" [disabled]' }
+  }

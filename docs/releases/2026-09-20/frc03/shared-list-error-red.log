@@ -1,0 +1,31 @@
+✖ shared variants modal renders a project list failure rather than an empty success (6278.870167ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6940.325083
+
+✖ failing tests:
+
+test at src/modules/workspace/ui/project-workspace.browser.test.ts:21:17264
+✖ shared variants modal renders a project list failure rather than an empty success (6278.870167ms)
+  Error: expect(locator).toBeVisible() failed
+  
+  Locator: getByRole('dialog', { name: 'Варианты конфигурации', exact: true }).getByText(/Project list unavailable/)
+  Expected: visible
+  Timeout: 5000ms
+  Error: element(s) not found
+  
+  Call log:
+    - Expect "to.be.visible" with timeout 5000ms
+    - waiting for getByRole('dialog', { name: 'Варианты конфигурации', exact: true }).getByText(/Project list unavailable/)
+  
+      at captureRawStack (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright-core@1.60.0/node_modules/playwright-core/lib/coreBundle.js:3130:17)
+      at callMatcherAsStep (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12873:57)
+      at Object.toBeVisible (/Users/rr/Documents/Fortis/frontend/node_modules/.pnpm/playwright@1.60.0/node_modules/playwright/lib/matchers/expect.js:12863:23)
+      at TestContext.<anonymous> (/Users/rr/Documents/Fortis/frontend/src/modules/workspace/ui/project-workspace.browser.test.ts:227:64) {
+    matcherResult: { message: `expect(locator).toBeVisible() failed\n\nLocator: getByRole('dialog', { name: 'Варианты конфигурации', exact: true }).getByText(/Project list unavailable/)\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect "to.be.visible" with timeout 5000ms\n  - waiting for getByRole('dialog', { name: 'Варианты конфигурации', exact: true }).getByText(/Project list unavailable/)\n`, pass: false, actual: undefined, name: 'toBeVisible', expected: 'visible', log: [ '  - Expect "to.be.visible" with timeout 5000ms', "  - waiting for getByRole('dialog', { name: 'Варианты конфигурации', exact: true }).getByText(/Project list unavailable/)" ], timeout: 5000, ariaSnapshot: '- text: Рабочая сессия\n- button "Выйти"\n- button "Сохранено · Project Existing" [expanded]\n- button "Сохранить"\n- button "Сохранить как…"\n- main:\n  - paragraph: Рабочая зона\n  - heading "Предприятие и конфигурация" [level=1]\n  - button "Обновить"\n  - heading "Предприятия" [level=2]\n  - button "Enterprise E1"\n  - button "Enterprise E2"\n  - heading "Новая конфигурация" [level=2]\n  - textbox "Название конфигурации": Новая конфигурация\n  - button "Создать"\n  - heading "Конфигурации" [level=2]\n  - text: "Всего: —"\n  - alert: Не удалось загрузить конфигурации. Project list unavailable Нажмите «Обновить», чтобы повторить попытку.\n  - heading "Сравнение конфигураций" [level=2]\n  - combobox "Первая конфигурация":\n    - option "Первая конфигурация" [selected]\n  - combobox "Вторая конфигурация":\n    - option "Вторая конфигурация" [selected]\n  - button "Сравнить" [disabled]\n- dialog "Варианты конфигурации":\n  - button "Close":\n    - img "close"\n  - text: Варианты конфигурации Пока нет сохранённых вариантов. Сохраните текущую карту как первый вариант ниже.\n  - strong: Сохранить текущую карту\n  - textbox "Имя нового варианта…"\n  - button "Сохранить как новый" [disabled]' }
+  }

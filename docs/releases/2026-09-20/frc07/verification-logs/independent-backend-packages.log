@@ -1,0 +1,10 @@
+ok  github.com/fortis/backend/internal/modules/budget/application 0.706s
+ok  github.com/fortis/backend/internal/modules/budget/document 0.624s
+ok  github.com/fortis/backend/internal/modules/budget/domain 1.015s
+?   github.com/fortis/backend/internal/modules/budget/infrastructure [no test files]
+ok  github.com/fortis/backend/internal/modules/budget/ui 0.409s
+ok  github.com/fortis/backend/internal/modules/defense_project/application 0.834s
+ok  github.com/fortis/backend/internal/modules/defense_project/document 2.185s
+ok  github.com/fortis/backend/internal/modules/defense_project/domain 1.743s
+ok  github.com/fortis/backend/internal/modules/defense_project/infrastructure 1.307s
+ok  github.com/fortis/backend/internal/modules/defense_project/ui 2.678s

@@ -1,0 +1,43 @@
+{
+  "cwd": "/private/var/folders/79/mmyd13f10px_4f6vb__s9b_w0000gn/T/frc06-build-final-0oobx55m",
+  "command": [
+    "rtk",
+    "proxy",
+    "pnpm",
+    "exec",
+    "eslint",
+    "src/modules/defense-calculator/domain/configuration-comparison.test.ts",
+    "src/modules/defense-calculator/domain/configuration-comparison.ts",
+    "src/modules/defense-calculator/infra/backend-project-api.ts",
+    "src/modules/defense-calculator/infra/compare-revisions.release.test.ts",
+    "src/modules/defense-calculator/ui/calculator-page.tsx",
+    "src/modules/defense-calculator/ui/configuration-comparison.browser.test.ts",
+    "src/modules/defense-calculator/ui/configuration-comparison.tsx",
+    "src/modules/drone-defense/infra/backend-integration-contract.test.ts",
+    "src/modules/workspace/ui/project-workspace-page.tsx",
+    "src/shared/config/product-capabilities.ts",
+    "src/shared/lib/identity.ts",
+    "src/shared/types/finance.ts",
+    "src/shared/ui/release-surface.test.tsx",
+    "test/playwright/frc08-live.cjs"
+  ],
+  "exitCode": 0,
+  "startedAt": "2026-09-21T10:49:11.886123+00:00",
+  "finishedAt": "2026-09-21T10:49:17.655563+00:00",
+  "files": [
+    "src/modules/defense-calculator/domain/configuration-comparison.test.ts",
+    "src/modules/defense-calculator/domain/configuration-comparison.ts",
+    "src/modules/defense-calculator/infra/backend-project-api.ts",
+    "src/modules/defense-calculator/infra/compare-revisions.release.test.ts",
+    "src/modules/defense-calculator/ui/calculator-page.tsx",
+    "src/modules/defense-calculator/ui/configuration-comparison.browser.test.ts",
+    "src/modules/defense-calculator/ui/configuration-comparison.tsx",
+    "src/modules/drone-defense/infra/backend-integration-contract.test.ts",
+    "src/modules/workspace/ui/project-workspace-page.tsx",
+    "src/shared/config/product-capabilities.ts",
+    "src/shared/lib/identity.ts",
+    "src/shared/types/finance.ts",
+    "src/shared/ui/release-surface.test.tsx",
+    "test/playwright/frc08-live.cjs"
+  ]
+}

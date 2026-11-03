@@ -1,0 +1,110 @@
+[
+  {
+    "probe": "frc06-review-recovery-overwrite.ts",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "/private/tmp/frc06-review-recovery-overwrite.ts"
+    ],
+    "cwd": "/Users/rr/Documents/Fortis/frontend",
+    "exitCode": 0,
+    "output": "{\"persistedName\":\"valuable unsaved work\",\"recoveryDraft\":{\"schemaVersion\":1,\"userId\":\"A\",\"enterpriseId\":\"E\",\"projectId\":\"P\",\"draft\":{\"schemaVersion\":1,\"projectId\":\"P\",\"projectName\":\"valuable unsaved work\",\"baseObject\":{\"id\":\"local-draft\",\"name\":\"Новый объект защиты\",\"center\":{\"lat\":55.1,\"lng\":37.1}},\"layers\":[],\"assetLibrary\":[],\"placedObjects\":[],\"mode\":\"view\",\"source\":\"backend\",\"updatedAt\":\"2026-09-21T08:20:34.397Z\",\"enterpriseId\":\"E\",\"version\":7},\"savedProject\":{\"schemaVersion\":1,\"projectId\":\"P\",\"projectName\":\"server\",\"baseObject\":{\"id\":\"local-draft\",\"name\":\"Новый объект защиты\",\"center\":{\"lat\":55.1,\"lng\":37.1}},\"layers\":[],\"assetLibrary\":[],\"placedObjects\":[],\"mode\":\"view\",\"source\":\"backend\",\"updatedAt\":\"2026-09-21T08:20:34.397Z\",\"enterpriseId\":\"E\",\"version\":7},\"businessRevision\":1,\"savedAt\":\"2026-09-21T10:00:00Z\"},\"syncStatus\":\"saved\"}\n"
+  },
+  {
+    "probe": "frc06-review-unverified-reload.ts",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "/private/tmp/frc06-review-unverified-reload.ts"
+    ],
+    "cwd": "/Users/rr/Documents/Fortis/frontend",
+    "exitCode": 0,
+    "output": "Before re-entering map unverified load? false\nAfter re-entering map unverified valuable unsaved work\n"
+  },
+  {
+    "probe": "frc06-review-disabled-storage-discard.ts",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "/private/tmp/frc06-review-disabled-storage-discard.ts"
+    ],
+    "cwd": "/Users/rr/Documents/Fortis/frontend",
+    "exitCode": 0,
+    "output": "{\"discarded\":true,\"name\":\"server\",\"status\":\"saved\",\"error\":null,\"localDraftsEnabled\":false}\n"
+  },
+  {
+    "probe": "frc06-review-foreign-enterprise-summary.ts",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "/private/tmp/frc06-review-foreign-enterprise-summary.ts"
+    ],
+    "cwd": "/Users/rr/Documents/Fortis/frontend",
+    "exitCode": 0,
+    "output": "{\"enterprise\":\"E\",\"status\":\"dirty\",\"savedEnterprise\":\"E\"}\n"
+  },
+  {
+    "probe": "frc06-review-workspace-init.ts",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "/private/tmp/frc06-review-workspace-init.ts"
+    ],
+    "cwd": "/Users/rr/Documents/Fortis/frontend",
+    "exitCode": 0,
+    "output": "{\"posts\":1,\"enterprise\":\"F\",\"active\":\"new\",\"status\":\"saved\",\"accessError\":null}\n"
+  },
+  {
+    "probe": "frc06-review-list-error-after-save.ts",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "--import",
+      "tsx",
+      "/private/tmp/frc06-review-list-error-after-save.ts"
+    ],
+    "cwd": "/Users/rr/Documents/Fortis/frontend",
+    "exitCode": 0,
+    "output": "{\"first\":true,\"retry\":true,\"calls\":[\"PUT /api/defense/projects/P\",\"GET /api/defense/projects\"],\"status\":\"saved\",\"version\":8,\"error\":\"List temporarily unavailable\",\"saveStatus\":\"idle\"}\n"
+  },
+  {
+    "probe": "frc06-review-url-sync.cjs",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "/private/tmp/frc06-review-url-sync.cjs"
+    ],
+    "cwd": "/Users/rr/Documents/Fortis/frontend",
+    "exitCode": 0,
+    "output": "{\"actualEffect\":true,\"saveAsNewReplacesId\":true,\"preservesOtherQuery\":true,\"removesLegacyProject\":true,\"noDuplicateOrNullOrInitialOverride\":true}\n"
+  },
+  {
+    "probe": "frc06-review-logout-identity.cjs",
+    "command": [
+      "rtk",
+      "proxy",
+      "node",
+      "/private/tmp/frc06-review-logout-identity.cjs"
+    ],
+    "cwd": "/Users/rr/Documents/Fortis/frontend",
+    "exitCode": 0,
+    "output": "{\"user\":\"B\",\"oldOwnerNameVisible\":false,\"logoutModalOpen\":false}\n"
+  }
+]

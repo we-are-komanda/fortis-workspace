@@ -1,0 +1,15 @@
+{
+  "command": [
+    "rtk",
+    "proxy",
+    "env",
+    "FRC03_BROWSER_TESTS=true",
+    "node",
+    "--import",
+    "tsx",
+    "--test",
+    "src/modules/workspace/ui/project-workspace.browser.test.ts"
+  ],
+  "cwd": "/Users/rr/Documents/Fortis/frontend",
+  "exitCode": 0
+}

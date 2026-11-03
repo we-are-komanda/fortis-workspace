@@ -1,0 +1,28 @@
+✔ finance A7/B3 comparison requests both pinned references and displays exact positive difference (521.457792ms)
+✔ zero baseline shows an exact absolute difference and no percentage (261.8805ms)
+✔ unknown total stays incomplete and prevents a numeric comparison delta (265.614542ms)
+✔ the same project can be compared at different revisions but identical refs never request (263.002083ms)
+✔ background saves and refreshed project summaries never move a selected revision (297.31275ms)
+✔ dirty comparison Cancel retains edits and performs neither save nor comparison (200.101875ms)
+✔ explicit last-saved comparison preserves all unsaved edits and selected refs (240.403625ms)
+✔ Save-and-compare waits for the confirmed save then pins the acknowledged version (249.408667ms)
+✔ a failed Save-and-compare keeps edits and never compares an unconfirmed revision (246.438834ms)
+✔ a revoked second side replaces prior success with an error and no partial prices (321.741375ms)
+✔ malformed nested snapshot identity fails closed before any comparison is shown (257.60975ms)
+✔ late response for the previous pair cannot replace a newly selected revision (264.780958ms)
+✔ switching enterprise clears a pending comparison and permits a new pair immediately (304.705209ms)
+✔ switching identity clears a pending comparison and permits a new pair immediately (315.192834ms)
+✔ matching names with different layer and asset IDs remain separate with source warnings (273.27625ms)
+✔ a newer edit during Save-and-compare remains dirty until the user explicitly chooses saved versions (743.002542ms)
+✔ saving the active revision repins only that operand and preserves a historical side of the same project (273.930292ms)
+✔ known denial of a selected project removes an already displayed comparison (277.4295ms)
+✔ a pending comparison cannot reveal a selected project after another request confirms denial (244.719834ms)
+✔ denial of an unrelated active project does not suppress an authorized selected pair (274.177958ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6396.95375

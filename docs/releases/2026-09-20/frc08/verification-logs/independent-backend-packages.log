@@ -1,0 +1,5 @@
+ok  github.com/fortis/backend/internal/modules/budget/application 0.434s
+ok  github.com/fortis/backend/internal/modules/budget/document 1.130s
+ok  github.com/fortis/backend/internal/modules/budget/domain 0.769s
+?   github.com/fortis/backend/internal/modules/budget/infrastructure [no test files]
+ok  github.com/fortis/backend/internal/modules/budget/ui 1.429s

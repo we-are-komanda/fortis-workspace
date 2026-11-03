@@ -1,0 +1,1 @@
+src/modules/defense-calculator/domain/report-projection.test.ts(14,55): error TS2353: Object literal may only specify known properties, and 'projectVersion' does not exist in type '{ hideCost?: boolean | undefined; }'.

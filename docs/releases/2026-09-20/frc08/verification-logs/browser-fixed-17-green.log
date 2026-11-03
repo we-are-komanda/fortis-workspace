@@ -1,0 +1,25 @@
+✔ finance A7/B3 comparison requests both pinned references and displays exact positive difference (789.016084ms)
+✔ zero baseline shows an exact absolute difference and no percentage (277.53425ms)
+✔ unknown total stays incomplete and prevents a numeric comparison delta (309.621792ms)
+✔ the same project can be compared at different revisions but identical refs never request (258.601084ms)
+✔ background saves and refreshed project summaries never move a selected revision (300.784375ms)
+✔ dirty comparison Cancel retains edits and performs neither save nor comparison (220.087042ms)
+✔ explicit last-saved comparison preserves all unsaved edits and selected refs (250.980875ms)
+✔ Save-and-compare waits for the confirmed save then pins the acknowledged version (251.901875ms)
+✔ a failed Save-and-compare keeps edits and never compares an unconfirmed revision (245.584959ms)
+✔ a revoked second side replaces prior success with an error and no partial prices (324.478666ms)
+✔ malformed nested snapshot identity fails closed before any comparison is shown (259.528292ms)
+✔ late response for the previous pair cannot replace a newly selected revision (276.971792ms)
+✔ switching enterprise clears a pending comparison and permits a new pair immediately (309.598459ms)
+✔ switching identity clears a pending comparison and permits a new pair immediately (411.320417ms)
+✔ matching names with different layer and asset IDs remain separate with source warnings (269.718875ms)
+✔ a newer edit during Save-and-compare remains dirty until the user explicitly chooses saved versions (645.137584ms)
+✔ saving the active revision repins only that operand and preserves a historical side of the same project (290.940667ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6054.188708
