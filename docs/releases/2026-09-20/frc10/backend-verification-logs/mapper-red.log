@@ -1,0 +1,18 @@
+Observed RED, before required-coordinate decoding:
+Command: go test ./internal/modules/report/ui -count=1
+--- FAIL: TestReportNeverInventsMalformedGeometry
+An error is expected but got nil.
+Input: {"type":"circle","center":{"lat":null,"lng":0},"radiusM":1}
+FAIL github.com/fortis/backend/internal/modules/report/ui
+Exit status: 1
+
+Observed RED, before rejecting missing point arrays:
+Command: go test ./internal/modules/report/ui -run TestReportNeverInventsMalformedGeometry -count=1
+--- FAIL: TestReportNeverInventsMalformedGeometry
+An error is expected but got nil.
+Input: {"type":"polygon"}
+FAIL github.com/fortis/backend/internal/modules/report/ui
+Exit status: 1
+
+This is a concise transcript of actual observed failures, not a full unfiltered log.
+Subsequent GREEN is retained in report-unit.log and go-test.log.

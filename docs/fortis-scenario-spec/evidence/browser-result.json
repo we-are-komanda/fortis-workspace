@@ -1,0 +1,434 @@
+{
+  "browser": "148.0.7778.96",
+  "platform": "darwin",
+  "arch": "arm64",
+  "cpu": "Apple M4",
+  "memoryGiB": 32,
+  "reducedMotion": true,
+  "headless": true,
+  "seconds": 1,
+  "acceptance": [
+    "A03",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09 (visibility event)",
+    "A10",
+    "A11",
+    "A12",
+    "A02",
+    "A13",
+    "A14"
+  ],
+  "initialWebGLFallback": "PASS: WebGL unavailable at initial entry, automatic 2D and enabled start",
+  "coldOpenMs": 1704,
+  "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+  "initialAssets": [
+    {
+      "url": "/_next/static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2",
+      "transferSize": 34860,
+      "encodedBodySize": 34560
+    },
+    {
+      "url": "/_next/static/media/99e609270109b47d-s.p.40sczeszzbjw1.woff2",
+      "transferSize": 10352,
+      "encodedBodySize": 10052
+    },
+    {
+      "url": "/_next/static/media/d3fe2f289711ac3f-s.p.1l2zhvq5eocqf.woff2",
+      "transferSize": 14844,
+      "encodedBodySize": 14544
+    },
+    {
+      "url": "/_next/static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2",
+      "transferSize": 24876,
+      "encodedBodySize": 24576
+    },
+    {
+      "url": "/_next/static/media/a7e15459c1805da0-s.p.3y9b8znjr2455.woff2",
+      "transferSize": 10428,
+      "encodedBodySize": 10128
+    },
+    {
+      "url": "/_next/static/media/effe91970fc4db64-s.p.0oace-s_gkfks.woff2",
+      "transferSize": 10360,
+      "encodedBodySize": 10060
+    },
+    {
+      "url": "/_next/static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
+      "transferSize": 27572,
+      "encodedBodySize": 27272
+    },
+    {
+      "url": "/_next/static/chunks/31w3zn6bmq7y9.css",
+      "transferSize": 2168,
+      "encodedBodySize": 1868
+    },
+    {
+      "url": "/_next/static/chunks/1ll071wlnn93d.js",
+      "transferSize": 2312,
+      "encodedBodySize": 2012
+    },
+    {
+      "url": "/_next/static/chunks/38esku5myb-ui.js",
+      "transferSize": 7561,
+      "encodedBodySize": 7261
+    },
+    {
+      "url": "/_next/static/chunks/3q9rny8-854j3.js",
+      "transferSize": 9392,
+      "encodedBodySize": 9092
+    },
+    {
+      "url": "/_next/static/chunks/0lo0spm2018uj.css",
+      "transferSize": 26762,
+      "encodedBodySize": 26462
+    },
+    {
+      "url": "/_next/static/chunks/1vt2ga5n40qoi.js",
+      "transferSize": 37825,
+      "encodedBodySize": 37525
+    },
+    {
+      "url": "/_next/static/chunks/00fkeh872fljy.js",
+      "transferSize": 9501,
+      "encodedBodySize": 9201
+    },
+    {
+      "url": "/_next/static/chunks/turbopack-226wcqdb2hzol.js",
+      "transferSize": 4486,
+      "encodedBodySize": 4186
+    },
+    {
+      "url": "/_next/static/chunks/06k0v6lmrhhqh.js",
+      "transferSize": 11072,
+      "encodedBodySize": 10772
+    },
+    {
+      "url": "/_next/static/chunks/3g-xvld8tdm1n.js",
+      "transferSize": 13235,
+      "encodedBodySize": 12935
+    },
+    {
+      "url": "/_next/static/chunks/0s9_2aaqzd6w6.js",
+      "transferSize": 17633,
+      "encodedBodySize": 17333
+    },
+    {
+      "url": "/_next/static/chunks/2oqc9s5xejhtt.js",
+      "transferSize": 64385,
+      "encodedBodySize": 64085
+    },
+    {
+      "url": "/_next/static/chunks/27ltagrqacbu6.js",
+      "transferSize": 7525,
+      "encodedBodySize": 7225
+    },
+    {
+      "url": "/_next/static/chunks/1f_yqid2uac3r.js",
+      "transferSize": 44132,
+      "encodedBodySize": 43832
+    },
+    {
+      "url": "/_next/static/chunks/2ti-xfp9bqm3s.js",
+      "transferSize": 23623,
+      "encodedBodySize": 23323
+    },
+    {
+      "url": "/_next/static/chunks/2eg4ep17-c89y.js",
+      "transferSize": 43982,
+      "encodedBodySize": 43682
+    },
+    {
+      "url": "/_next/static/chunks/2om7-yoydg3d8.js",
+      "transferSize": 40203,
+      "encodedBodySize": 39903
+    },
+    {
+      "url": "/_next/static/chunks/3abhkgbrkpz45.css",
+      "transferSize": 7899,
+      "encodedBodySize": 7599
+    },
+    {
+      "url": "/_next/static/chunks/2onuoye2b_g2z.css",
+      "transferSize": 10351,
+      "encodedBodySize": 10051
+    },
+    {
+      "url": "/_next/static/chunks/0xmw-c-7u6_ut.js",
+      "transferSize": 10098,
+      "encodedBodySize": 9798
+    },
+    {
+      "url": "/_next/static/chunks/06nl15ygmeool.js",
+      "transferSize": 8521,
+      "encodedBodySize": 8221
+    },
+    {
+      "url": "/_next/static/chunks/0zeh5gaw9voim.js",
+      "transferSize": 55136,
+      "encodedBodySize": 54836
+    },
+    {
+      "url": "/_next/static/chunks/372r3lcs6-w0p.js",
+      "transferSize": 284689,
+      "encodedBodySize": 284389
+    },
+    {
+      "url": "/_next/static/chunks/1gn9eqsjcksn9.js",
+      "transferSize": 10783,
+      "encodedBodySize": 10483
+    },
+    {
+      "url": "/_next/static/chunks/0m-ur1sawkpyt.css",
+      "transferSize": 2625,
+      "encodedBodySize": 2325
+    },
+    {
+      "url": "/_next/static/chunks/1uv1zc5vh0i3q.js",
+      "transferSize": 3882,
+      "encodedBodySize": 3582
+    },
+    {
+      "url": "/_next/static/chunks/1te1q322tq--s.js",
+      "transferSize": 246855,
+      "encodedBodySize": 246555
+    },
+    {
+      "url": "/_next/static/chunks/32_ajuoptrrmt.js",
+      "transferSize": 5722,
+      "encodedBodySize": 5422
+    },
+    {
+      "url": "/_next/static/chunks/32aroff6l8o5x.js",
+      "transferSize": 10121,
+      "encodedBodySize": 9821
+    }
+  ],
+  "resources": {
+    "contexts": 36,
+    "lost": 34,
+    "visibility": 0,
+    "frames": 1,
+    "activeContexts": 2
+  },
+  "performance": [
+    {
+      "mode": "playback",
+      "wallMs": 1045.6000000003696,
+      "frames": 7,
+      "medianFrameMs": 33.400000000001455,
+      "p95FrameMs": 316.6999999999971,
+      "maxFrameMs": 316.6999999999971,
+      "over50ms": 3
+    },
+    {
+      "mode": "comparison",
+      "wallMs": 1038.8000000005559,
+      "frames": 7,
+      "medianFrameMs": 50.900000000001455,
+      "p95FrameMs": 316.6999999999971,
+      "maxFrameMs": 316.6999999999971,
+      "over50ms": 4
+    }
+  ],
+  "requests": {
+    "businessWrites": [],
+    "ai": [],
+    "total": 228
+  },
+  "assets": [
+    {
+      "url": "/_next/static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2",
+      "transferSize": 34860,
+      "encodedBodySize": 34560
+    },
+    {
+      "url": "/_next/static/media/99e609270109b47d-s.p.40sczeszzbjw1.woff2",
+      "transferSize": 10352,
+      "encodedBodySize": 10052
+    },
+    {
+      "url": "/_next/static/media/d3fe2f289711ac3f-s.p.1l2zhvq5eocqf.woff2",
+      "transferSize": 14844,
+      "encodedBodySize": 14544
+    },
+    {
+      "url": "/_next/static/media/a343f882a40d2cc9-s.p.1sj6eobyi31rd.woff2",
+      "transferSize": 24876,
+      "encodedBodySize": 24576
+    },
+    {
+      "url": "/_next/static/media/a7e15459c1805da0-s.p.3y9b8znjr2455.woff2",
+      "transferSize": 10428,
+      "encodedBodySize": 10128
+    },
+    {
+      "url": "/_next/static/media/effe91970fc4db64-s.p.0oace-s_gkfks.woff2",
+      "transferSize": 10360,
+      "encodedBodySize": 10060
+    },
+    {
+      "url": "/_next/static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
+      "transferSize": 27572,
+      "encodedBodySize": 27272
+    },
+    {
+      "url": "/_next/static/chunks/31w3zn6bmq7y9.css",
+      "transferSize": 2168,
+      "encodedBodySize": 1868
+    },
+    {
+      "url": "/_next/static/chunks/1ll071wlnn93d.js",
+      "transferSize": 2312,
+      "encodedBodySize": 2012
+    },
+    {
+      "url": "/_next/static/chunks/38esku5myb-ui.js",
+      "transferSize": 7561,
+      "encodedBodySize": 7261
+    },
+    {
+      "url": "/_next/static/chunks/3q9rny8-854j3.js",
+      "transferSize": 9392,
+      "encodedBodySize": 9092
+    },
+    {
+      "url": "/_next/static/chunks/0lo0spm2018uj.css",
+      "transferSize": 26762,
+      "encodedBodySize": 26462
+    },
+    {
+      "url": "/_next/static/chunks/1vt2ga5n40qoi.js",
+      "transferSize": 37825,
+      "encodedBodySize": 37525
+    },
+    {
+      "url": "/_next/static/chunks/00fkeh872fljy.js",
+      "transferSize": 9501,
+      "encodedBodySize": 9201
+    },
+    {
+      "url": "/_next/static/chunks/turbopack-226wcqdb2hzol.js",
+      "transferSize": 4486,
+      "encodedBodySize": 4186
+    },
+    {
+      "url": "/_next/static/chunks/06k0v6lmrhhqh.js",
+      "transferSize": 11072,
+      "encodedBodySize": 10772
+    },
+    {
+      "url": "/_next/static/chunks/3g-xvld8tdm1n.js",
+      "transferSize": 13235,
+      "encodedBodySize": 12935
+    },
+    {
+      "url": "/_next/static/chunks/0s9_2aaqzd6w6.js",
+      "transferSize": 17633,
+      "encodedBodySize": 17333
+    },
+    {
+      "url": "/_next/static/chunks/2oqc9s5xejhtt.js",
+      "transferSize": 64385,
+      "encodedBodySize": 64085
+    },
+    {
+      "url": "/_next/static/chunks/27ltagrqacbu6.js",
+      "transferSize": 7525,
+      "encodedBodySize": 7225
+    },
+    {
+      "url": "/_next/static/chunks/1f_yqid2uac3r.js",
+      "transferSize": 44132,
+      "encodedBodySize": 43832
+    },
+    {
+      "url": "/_next/static/chunks/2ti-xfp9bqm3s.js",
+      "transferSize": 23623,
+      "encodedBodySize": 23323
+    },
+    {
+      "url": "/_next/static/chunks/2eg4ep17-c89y.js",
+      "transferSize": 43982,
+      "encodedBodySize": 43682
+    },
+    {
+      "url": "/_next/static/chunks/2om7-yoydg3d8.js",
+      "transferSize": 40203,
+      "encodedBodySize": 39903
+    },
+    {
+      "url": "/_next/static/chunks/3abhkgbrkpz45.css",
+      "transferSize": 7899,
+      "encodedBodySize": 7599
+    },
+    {
+      "url": "/_next/static/chunks/2onuoye2b_g2z.css",
+      "transferSize": 10351,
+      "encodedBodySize": 10051
+    },
+    {
+      "url": "/_next/static/chunks/0xmw-c-7u6_ut.js",
+      "transferSize": 10098,
+      "encodedBodySize": 9798
+    },
+    {
+      "url": "/_next/static/chunks/06nl15ygmeool.js",
+      "transferSize": 8521,
+      "encodedBodySize": 8221
+    },
+    {
+      "url": "/_next/static/chunks/0zeh5gaw9voim.js",
+      "transferSize": 55136,
+      "encodedBodySize": 54836
+    },
+    {
+      "url": "/_next/static/chunks/372r3lcs6-w0p.js",
+      "transferSize": 284689,
+      "encodedBodySize": 284389
+    },
+    {
+      "url": "/_next/static/chunks/1gn9eqsjcksn9.js",
+      "transferSize": 10783,
+      "encodedBodySize": 10483
+    },
+    {
+      "url": "/_next/static/chunks/0m-ur1sawkpyt.css",
+      "transferSize": 2625,
+      "encodedBodySize": 2325
+    },
+    {
+      "url": "/_next/static/chunks/1uv1zc5vh0i3q.js",
+      "transferSize": 3882,
+      "encodedBodySize": 3582
+    },
+    {
+      "url": "/_next/static/chunks/1te1q322tq--s.js",
+      "transferSize": 246855,
+      "encodedBodySize": 246555
+    },
+    {
+      "url": "/_next/static/chunks/32_ajuoptrrmt.js",
+      "transferSize": 5722,
+      "encodedBodySize": 5422
+    },
+    {
+      "url": "/_next/static/chunks/32aroff6l8o5x.js",
+      "transferSize": 10121,
+      "encodedBodySize": 9821
+    },
+    {
+      "url": "/_next/static/media/1a099d89ee94ee96-s.35a5cae5tspm2.woff2",
+      "transferSize": 21988,
+      "encodedBodySize": 21688
+    },
+    {
+      "url": "/_next/static/chunks/09_mos6ghbwuz.js",
+      "transferSize": 273598,
+      "encodedBodySize": 273298
+    }
+  ],
+  "pageErrors": []
+}

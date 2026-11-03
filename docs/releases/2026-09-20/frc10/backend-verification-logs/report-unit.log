@@ -1,0 +1,56 @@
+=== RUN   TestHiddenReportSkipsFinanceAndReopenSkipsProject
+--- PASS: TestHiddenReportSkipsFinanceAndReopenSkipsProject (0.00s)
+=== RUN   TestReportAuthorizesBeforeCacheAndFinance
+--- PASS: TestReportAuthorizesBeforeCacheAndFinance (0.00s)
+=== RUN   TestPricedIssuanceReusesStoredPayloadWithoutCalculator
+--- PASS: TestPricedIssuanceReusesStoredPayloadWithoutCalculator (0.00s)
+PASS
+ok  	github.com/fortis/backend/internal/modules/report/application	0.484s
+?   	github.com/fortis/backend/internal/modules/report/domain	[no test files]
+?   	github.com/fortis/backend/internal/modules/report/infrastructure	[no test files]
+=== RUN   TestReportQueryModes
+=== RUN   TestReportQueryModes/#00
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=false&hideCost=true
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=false&mapView=
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=false&mapView=other
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=false&reportId=338802cc-3c37-4fd5-b880-cbc31f586b02
+=== RUN   TestReportQueryModes/reportId=bad
+=== RUN   TestReportQueryModes/reportId=338802cc-3c37-4fd5-b880-cbc31f586b02&hideCost=false
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=false&x=1
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=0&hideCost=true
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=x&hideCost=true
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=1
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=TRUE
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=False
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=garbage
+=== RUN   TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=
+--- PASS: TestReportQueryModes (0.00s)
+    --- PASS: TestReportQueryModes/#00 (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02 (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1 (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=false&hideCost=true (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=false&mapView= (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=false&mapView=other (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=false&reportId=338802cc-3c37-4fd5-b880-cbc31f586b02 (0.00s)
+    --- PASS: TestReportQueryModes/reportId=bad (0.00s)
+    --- PASS: TestReportQueryModes/reportId=338802cc-3c37-4fd5-b880-cbc31f586b02&hideCost=false (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=false&x=1 (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=0&hideCost=true (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=x&hideCost=true (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=1 (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=TRUE (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=False (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost=garbage (0.00s)
+    --- PASS: TestReportQueryModes/id=338802cc-3c37-4fd5-b880-cbc31f586b02&projectVersion=1&hideCost= (0.00s)
+=== RUN   TestUnpricedReportAllowlistAndSavedVisibility
+--- PASS: TestUnpricedReportAllowlistAndSavedVisibility (0.00s)
+=== RUN   TestReportNeverInventsMalformedGeometry
+--- PASS: TestReportNeverInventsMalformedGeometry (0.00s)
+=== RUN   TestReportRejectsURLStyleAndPreservesEmptyGeometry
+--- PASS: TestReportRejectsURLStyleAndPreservesEmptyGeometry (0.00s)
+=== RUN   TestReportRetainsSafeRGBStyle
+--- PASS: TestReportRetainsSafeRGBStyle (0.00s)
+PASS
+ok  	github.com/fortis/backend/internal/modules/report/ui	0.815s

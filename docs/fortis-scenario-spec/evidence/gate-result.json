@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "checks": [
+    "workspace gate scenario-modeling",
+    "workspace gate view=3d",
+    "query and localStorage cannot enable demo"
+  ],
+  "identity": "disposable local stub, no real credentials"
+}

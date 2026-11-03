@@ -1,0 +1,186 @@
+<style>
+#fortis-study{--f-bg:light-dark(#fff,#18212e);--f-soft:light-dark(#f8fafc,#202c3c);--f-text:light-dark(#172336,#e5edf7);--f-muted:light-dark(#60738c,#a4b6cd);--f-line:light-dark(#dbe4ef,#344459);--f-blue:light-dark(#2563eb,#80aaff);--f-blue-soft:light-dark(#eff6ff,#243c60);--f-green:light-dark(#047857,#6cdbb2);--f-orange:light-dark(#b96916,#f4b66f);--f-purple:light-dark(#8456bd,#c3a0ef);--f-land:light-dark(#e7ecdf,#283b37);--f-hill:light-dark(#c6d6b7,#385248);--f-contour:light-dark(#aebda0,#587464);--f-forest:light-dark(#bdcfad,#385f50);--f-tree:light-dark(#94b18a,#4e7961);--f-water:light-dark(#b7dce3,#31576a);--f-road:light-dark(#faf9f1,#808a86);--f-road-edge:light-dark(#c8c7b5,#384440);--f-roof:light-dark(#eef1f4,#8b9bac);--f-wall:light-dark(#bcc9d6,#52667d);--f-wall-dark:light-dark(#8d9eaf,#3b4e66);--f-yard:light-dark(#d6dbd9,#3d494d);--f-white:light-dark(#ffffff,#172336);font:13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--f-text);width:100%;background:var(--f-bg);border:1px solid var(--f-line);border-radius:8px;overflow:hidden;isolation:isolate;container-type:inline-size}
+#fortis-study *{box-sizing:border-box}
+#fortis-study button,#fortis-study input,#fortis-study textarea{font:inherit;color:inherit}
+#fortis-study button{background:var(--f-bg);border:1px solid var(--f-line);border-radius:6px;padding:7px 10px;min-height:32px;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap}
+#fortis-study button:hover{background:var(--f-soft)}
+#fortis-study button:focus-visible,#fortis-study input:focus-visible,#fortis-study textarea:focus-visible{outline:2px solid var(--f-blue);outline-offset:3px}
+#fortis-study button[aria-pressed=true],#fortis-study button[aria-selected=true]{color:var(--f-blue);background:var(--f-blue-soft);border-color:var(--f-blue)}
+#fortis-study .f-primary{background:var(--f-blue);border-color:var(--f-blue);color:var(--f-bg);font-weight:600}
+#fortis-study .f-primary:hover{filter:brightness(.94)}
+#fortis-study .f-icon{padding:7px;width:32px;flex-shrink:0}
+#fortis-study svg.lucide{width:16px;height:16px;flex-shrink:0}
+#fortis-study .f-header{height:44px;display:flex;gap:12px;align-items:center;padding:0 16px;border-bottom:1px solid var(--f-line)}
+#fortis-study .f-wordmark{font-size:14px;font-weight:750;letter-spacing:.12em;color:var(--f-blue)}
+#fortis-study .f-divider{height:16px;width:1px;background:var(--f-line)}
+#fortis-study .f-spacer{flex:1}
+#fortis-study .f-meta{font-size:11px;color:var(--f-muted)}
+#fortis-study .f-chip{font-size:11px;padding:3px 7px;border-radius:4px;background:var(--f-soft);color:var(--f-muted);white-space:nowrap}
+#fortis-study .f-shell{display:grid;grid-template-columns:52px minmax(0,1fr)}
+#fortis-study .f-rail{display:flex;flex-direction:column;align-items:center;gap:14px;padding:16px 4px;border-right:1px solid var(--f-line);background:var(--f-bg)}
+#fortis-study .f-rail button{border:0;border-radius:8px;flex-direction:column;gap:5px;font-size:9px;padding:10px 3px;width:43px;min-height:48px}
+#fortis-study .f-rail button[aria-pressed=true]{background:var(--f-blue);color:var(--f-bg)}
+#fortis-study .f-rail-label{color:var(--f-muted);display:flex;flex-direction:column;align-items:center;gap:5px;font-size:9px;padding:8px 0}
+#fortis-study .f-workspace{display:flex;flex-direction:column;min-width:0}
+#fortis-study .f-toolbar{display:flex;align-items:center;gap:12px;padding:9px 14px;border-bottom:1px solid var(--f-line);flex-wrap:wrap;min-height:54px}
+#fortis-study .f-toolbar-title{font-size:14px;font-weight:650;white-space:nowrap}
+#fortis-study .f-tabs{display:flex;gap:3px;flex-wrap:wrap}
+#fortis-study .f-tabs button{border-color:transparent;padding:5px 9px;min-height:30px;font-size:12px}
+#fortis-study .f-content{display:grid;grid-template-columns:minmax(0,1fr);min-width:0}
+#fortis-study .f-sidebar{background:var(--f-bg);border-top:1px solid var(--f-line);order:2;min-width:0;display:flex;flex-direction:column}
+#fortis-study .f-project{display:flex;gap:9px;padding:15px 14px 13px;border-bottom:1px solid var(--f-line);align-items:center}
+#fortis-study .f-project-icon{width:32px;height:32px;background:var(--f-blue);color:var(--f-bg);border-radius:7px;display:grid;place-items:center}
+#fortis-study .f-project strong{font-size:14px;display:block}
+#fortis-study .f-side-section{padding:14px;border-bottom:1px solid var(--f-line)}
+#fortis-study .f-section-title{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;font-weight:600}
+#fortis-study .f-count{font-size:11px;color:var(--f-muted);font-weight:400}
+#fortis-study .f-scenario{display:flex;width:100%;text-align:left;margin:6px 0;gap:10px!important;justify-content:flex-start!important;white-space:normal!important;padding:12px 10px!important;border-color:transparent!important}
+#fortis-study .f-scenario[aria-pressed=true]{border-color:var(--f-blue)!important}
+#fortis-study .f-letter{width:24px;height:24px;flex-shrink:0;border-radius:5px;display:grid;place-items:center;font-size:12px;font-weight:650;background:var(--f-soft)}
+#fortis-study .f-scenario strong{display:block;font-size:13px;font-weight:600}
+#fortis-study .f-scenario small{display:block;font-size:11px;color:var(--f-muted);margin-top:3px}
+#fortis-study .f-blue{color:var(--f-blue)}#fortis-study .f-orange{color:var(--f-orange)}#fortis-study .f-purple{color:var(--f-purple)}
+#fortis-study .f-switch{display:flex;gap:9px;align-items:center;padding:6px 0;font-size:12px}
+#fortis-study input[type=checkbox]{width:15px;height:15px;accent-color:var(--f-blue);margin:0}
+#fortis-study .f-side-footer{padding:14px;margin-top:auto}
+#fortis-study .f-side-footer button{width:100%;justify-content:flex-start}
+#fortis-study .f-stage{position:relative;min-width:0;background:var(--f-land);order:1;display:flex;flex-direction:column}
+#fortis-study .f-map{position:relative;height:440px;min-width:0;overflow:hidden;flex-grow:1;flex-shrink:0}
+#fortis-study canvas{width:100%;height:100%;display:block}
+#fortis-study .f-map-heading{position:absolute;left:14px;top:14px;padding:10px 12px;border-radius:7px;background:var(--f-bg);box-shadow:0 3px 12px #17233618;max-width:calc(100% - 104px)}
+#fortis-study .f-map-heading strong{display:block;font-size:13px;margin-bottom:3px}
+#fortis-study .f-map-tools{position:absolute;top:14px;right:14px;display:flex;gap:4px;padding:3px;background:var(--f-bg);border-radius:7px;box-shadow:0 3px 12px #17233618}
+#fortis-study .f-map-tools button{border:0;min-height:29px;padding:5px 8px;font-size:11px}
+#fortis-study .f-map-zoom{position:absolute;right:14px;bottom:42px;display:flex;flex-direction:column;gap:4px}
+#fortis-study .f-compass{position:absolute;left:16px;bottom:39px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;font-weight:650;color:var(--f-muted)}
+#fortis-study .f-map-foot{position:absolute;bottom:10px;left:14px;right:14px;display:flex;justify-content:space-between;gap:8px;font-size:10px;color:var(--f-text)}
+#fortis-study .f-map-foot span{background:var(--f-bg);padding:3px 6px;border-radius:3px}
+#fortis-study .f-detail{padding:14px;background:var(--f-bg);border-top:1px solid var(--f-line)}
+#fortis-study .f-detail h3{font-size:13px;line-height:1.4;margin:0;font-weight:650}
+#fortis-study .f-detail-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+#fortis-study .f-detail p{font-size:12px;line-height:1.5;margin:8px 0;color:var(--f-muted)}
+#fortis-study .f-kv{display:flex;justify-content:space-between;gap:12px;font-size:11px;padding:7px 0;border-bottom:1px solid var(--f-line)}
+#fortis-study .f-kv span:first-child{color:var(--f-muted)}
+#fortis-study .f-detail-action{margin-top:12px;width:100%;white-space:normal}
+#fortis-study .f-event{display:flex;gap:8px;padding:9px 0;border-bottom:1px solid var(--f-line);font-size:11px}
+#fortis-study .f-event time{font-variant-numeric:tabular-nums;color:var(--f-blue);min-width:32px}
+#fortis-study .f-event.dim{opacity:.55}
+#fortis-study .f-ai-input{width:100%;border:1px solid var(--f-line);background:var(--f-soft);border-radius:6px;padding:9px;resize:vertical;min-height:86px;font-size:12px}
+#fortis-study .f-timeline{background:var(--f-bg);padding:12px 15px;border-top:1px solid var(--f-line)}
+#fortis-study .f-transport{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+#fortis-study .f-time{font-size:13px;font-variant-numeric:tabular-nums;white-space:nowrap}
+#fortis-study .f-time small{color:var(--f-muted);font-size:11px}
+#fortis-study .f-timeline-caption{color:var(--f-muted);font-size:11px;margin-left:auto}
+#fortis-study input[type=range]{width:100%;accent-color:var(--f-blue);display:block;margin:0;height:18px}
+#fortis-study .f-ticks{display:flex;justify-content:space-between;color:var(--f-muted);font-size:10px;margin-top:3px}
+#fortis-study .f-lanes{display:none;margin-top:10px}
+#fortis-study .f-lane{display:flex;align-items:center;gap:10px;margin-top:7px;font-size:11px}
+#fortis-study .f-lane-line{height:7px;background:var(--f-soft);flex:1;border-radius:3px;position:relative}
+#fortis-study .f-lane-line span{position:absolute;width:7px;height:7px;border-radius:50%;background:currentColor;top:0}
+#fortis-study .f-compare-table{border-collapse:collapse;width:100%;font-size:11px;margin-top:8px}
+#fortis-study .f-compare-table th{font-weight:500;text-align:left;color:var(--f-muted)}
+#fortis-study .f-compare-table th,#fortis-study .f-compare-table td{padding:9px 5px;border-bottom:1px solid var(--f-line)}
+#fortis-study .f-compare-table th:first-child,#fortis-study .f-compare-table td:first-child{padding-left:0}
+#fortis-study .f-statusbar{border-top:1px solid var(--f-line);padding:6px 14px;display:flex;gap:12px;justify-content:space-between;font-size:10px;color:var(--f-muted);background:var(--f-bg)}
+#fortis-study .f-note{font-size:10px;color:var(--f-muted);margin:8px 0 0}
+#fortis-study .f-green-dot{display:inline-block;width:6px;height:6px;background:var(--f-green);border-radius:50%;margin-right:5px}
+#fortis-study [hidden]{display:none!important}
+#fortis-study[data-mode=compare] .f-lanes{display:block}
+@container(min-width:760px){#fortis-study .f-content{grid-template-columns:214px minmax(0,1fr)}#fortis-study .f-sidebar{order:0;border-top:0;border-right:1px solid var(--f-line)}#fortis-study .f-map{height:492px}#fortis-study .f-detail{position:absolute;top:72px;right:14px;width:204px;border:0;border-radius:7px;box-shadow:0 4px 16px #17233618;z-index:2}#fortis-study[data-mode=setup] .f-detail{top:84px}#fortis-study .f-map-heading{max-width:calc(100% - 120px)}#fortis-study .f-detail .f-meta{font-size:10px}}
+@container(min-width:1200px){#fortis-study .f-content{grid-template-columns:260px minmax(0,1fr)}#fortis-study .f-map{height:580px}#fortis-study .f-detail{width:240px}#fortis-study .f-sidebar .f-side-section{padding:18px}#fortis-study .f-detail p{font-size:13px}}
+@container(min-width:760px){#fortis-study:is([data-mode=compare],[data-ai=true]) .f-stage{display:grid;grid-template-columns:minmax(0,1fr)204px;grid-template-rows:minmax(492px,1fr) auto;background:var(--f-bg)}#fortis-study:is([data-mode=compare],[data-ai=true]) .f-map{grid-column:1;grid-row:1;height:auto;min-height:492px}#fortis-study:is([data-mode=compare],[data-ai=true]) .f-detail{position:static;width:auto;grid-column:2;grid-row:1;border-left:1px solid var(--f-line);border-radius:0;box-shadow:none}#fortis-study:is([data-mode=compare],[data-ai=true]) .f-timeline{grid-column:1 / -1;grid-row:2}#fortis-study:is([data-mode=compare],[data-ai=true]) .f-map-zoom{top:64px;bottom:auto}}
+@container(max-width:520px){#fortis-study .f-shell{grid-template-columns:minmax(0,1fr)}#fortis-study .f-rail{display:none}#fortis-study .f-header{padding:0 10px;gap:8px}#fortis-study .f-header .f-session{display:none}#fortis-study .f-toolbar{padding:10px;gap:8px}#fortis-study .f-toolbar-title{width:100%}#fortis-study .f-toolbar .f-spacer{display:none}#fortis-study .f-toolbar>.f-primary{margin-left:auto}#fortis-study .f-tabs button{font-size:11px;padding:6px}#fortis-study .f-map{height:350px}#fortis-study .f-map-heading{left:10px;top:10px}#fortis-study .f-map-heading strong{font-size:12px}#fortis-study .f-map-tools{top:10px;right:10px}#fortis-study .f-map-foot{font-size:9px}#fortis-study .f-timeline-caption{width:100%;margin-left:0}#fortis-study .f-statusbar{flex-wrap:wrap;font-size:10px}#fortis-study .f-statusbar span:last-child{display:none}}
+@media(pointer:coarse){#fortis-study button{min-height:44px}#fortis-study .f-map-tools button{min-height:38px}#fortis-study input[type=range]{height:34px}}
+@media(prefers-reduced-motion:reduce){#fortis-study *{scroll-behavior:auto}}
+</style>
+<div id="fortis-study" data-mode="setup" aria-label="Fortis — макет учебных сценариев">
+  <header class="f-header"><span class="f-wordmark">FORTIS</span><span class="f-divider"></span><span class="f-session">Рабочая сессия</span><span class="f-spacer"></span><span class="f-chip">Учебный макет</span><span class="f-meta">Инструктор</span></header>
+  <div class="f-shell">
+    <nav class="f-rail" aria-label="Навигация Fortis"><button class="cursor-interaction" data-mode="setup" aria-label="Открыть карту"><i data-lucide="map-pin" aria-hidden="true"></i>Карта</button><button class="cursor-interaction" data-mode="setup" aria-pressed="true"><i data-lucide="route" aria-hidden="true"></i>Сценарии</button><span class="f-rail-label"><i data-lucide="calculator" aria-hidden="true"></i>Расчёт</span><span class="f-spacer"></span><span class="f-rail-label"><i data-lucide="save" aria-hidden="true"></i></span></nav>
+    <div class="f-workspace">
+      <div class="f-toolbar"><span class="f-toolbar-title">Учебные сценарии</span><div class="f-tabs" role="tablist" aria-label="Экраны макета"><button class="cursor-interaction" id="f-tab-setup" role="tab" aria-selected="true" aria-controls="f-screen" data-mode="setup">Подготовка</button><button class="cursor-interaction" id="f-tab-replay" role="tab" aria-selected="false" aria-controls="f-screen" data-mode="replay">Просмотр</button><button class="cursor-interaction" id="f-tab-compare" role="tab" aria-selected="false" aria-controls="f-screen" data-mode="compare">Сравнение</button></div><span class="f-spacer"></span><button class="f-primary cursor-interaction" id="f-launch"><i data-lucide="play" aria-hidden="true"></i>Запустить</button></div>
+      <div class="f-content" id="f-screen" role="tabpanel" aria-labelledby="f-tab-setup">
+        <aside class="f-sidebar" aria-label="Сценарии и слои">
+          <div class="f-project"><div class="f-project-icon"><i data-lucide="panels-top-left" aria-hidden="true"></i></div><div><strong>Моя карта</strong><div class="f-meta">Учебный полигон</div></div></div>
+          <div class="f-side-section"><div class="f-section-title">Сценарии <span class="f-count">3 варианта</span></div>
+            <button class="f-scenario cursor-interaction" data-track="0" aria-pressed="true"><span class="f-letter f-blue">А</span><span><strong>Север</strong><small>Базовый · 4 мин · 3 события</small></span></button>
+            <button class="f-scenario cursor-interaction" data-track="1" aria-pressed="false"><span class="f-letter f-orange">Б</span><span><strong>Восток</strong><small>Вариант · 4 мин · 3 события</small></span></button>
+            <button class="f-scenario cursor-interaction" data-track="2" aria-pressed="false"><span class="f-letter f-purple">В</span><span><strong>Юго-запад</strong><small>Вариант · 4 мин · 3 события</small></span></button>
+            <p class="f-note" id="f-selection-hint">Выберите сценарий для просмотра.</p>
+          </div>
+          <div class="f-side-section"><div class="f-section-title">Слои карты <span class="f-count">10 км</span></div><label class="f-switch"><input type="checkbox" data-layer="terrain" checked>Синтетический рельеф</label><label class="f-switch"><input type="checkbox" data-layer="plant" checked>3D-модель предприятия</label><label class="f-switch"><input type="checkbox" data-layer="paths" checked>Учебные траектории</label><label class="f-switch"><input type="checkbox" data-layer="radius" checked>Граница окружения</label></div>
+          <div class="f-side-footer"><button class="cursor-interaction" id="f-ai"><i data-lucide="sparkles" aria-hidden="true"></i>Подготовить с AI</button><p class="f-note"><span class="f-green-dot"></span>Сцена v1 · синтетические данные</p></div>
+        </aside>
+        <main class="f-stage" aria-label="Карта учебной площадки">
+          <div class="f-map"><canvas id="f-canvas" role="img" aria-label="Схематическая 3D-карта вымышленного предприятия, синтетический рельеф и три учебные дорожки">Синтетическая площадка с траекториями Север, Восток и Юго-запад.</canvas><div class="f-map-heading"><strong>Полигон «Северный»</strong><span class="f-meta" id="f-map-subtitle">Синтетический ландшафт · радиус 10 км</span></div><div class="f-map-tools" aria-label="Вид карты"><button class="cursor-interaction" data-view="2d" aria-pressed="false">2D</button><button class="cursor-interaction" data-view="3d" aria-pressed="true">3D</button></div><div class="f-map-zoom"><button class="f-icon cursor-interaction" id="f-zoom-in" aria-label="Приблизить"><i data-lucide="plus" aria-hidden="true"></i></button><button class="f-icon cursor-interaction" id="f-zoom-out" aria-label="Отдалить"><i data-lucide="minus" aria-hidden="true"></i></button><button class="f-icon cursor-interaction" id="f-fit" aria-label="Показать всю сцену"><i data-lucide="scan" aria-hidden="true"></i></button></div><div class="f-compass"><span>С</span><i data-lucide="navigation" aria-hidden="true"></i></div><div class="f-map-foot"><span>Схема · без геопривязки</span><span>Fortis · учебная сцена</span></div></div>
+          <aside class="f-detail" id="f-detail" aria-label="Параметры выбранного сценария"><div class="f-detail-head"><h3>А · Север</h3><span class="f-chip">Готов</span></div><p>Базовое упражнение для знакомства с площадкой.</p><div class="f-kv"><span>Дорожка</span><span>Синтетическая</span></div><div class="f-kv"><span>Длительность</span><span>04:00</span></div><div class="f-kv"><span>События</span><span>3 заданных</span></div><button class="f-detail-action cursor-interaction" data-action="preview"><i data-lucide="play" aria-hidden="true"></i>Предпросмотр</button></aside>
+          <section class="f-timeline" aria-label="Временная шкала"><div class="f-transport"><button class="f-icon f-primary cursor-interaction" id="f-play" aria-label="Воспроизвести"><i data-lucide="play" aria-hidden="true"></i></button><button class="f-icon cursor-interaction" id="f-restart" aria-label="Вернуться к началу"><i data-lucide="skip-back" aria-hidden="true"></i></button><span class="f-time"><span id="f-time">00:00</span> <small>/ 04:00</small></span><button class="cursor-interaction" id="f-speed" aria-label="Скорость воспроизведения">1×</button><span class="f-timeline-caption" id="f-timeline-caption">А · Север · учебная запись</span></div><label for="f-scrub" class="f-meta">Учебное время</label><input id="f-scrub" type="range" min="0" max="240" value="0" step="1" aria-valuetext="00:00"><div class="f-ticks"><span>00:00</span><span>01:00</span><span>02:00</span><span>03:00</span><span>04:00</span></div><div class="f-lanes"><div class="f-lane f-blue"><span>А · Север</span><div class="f-lane-line"><span style="left:12.5%"></span><span style="left:43.75%"></span><span style="left:96%"></span></div></div><div class="f-lane f-orange"><span>Б · Восток</span><div class="f-lane-line"><span style="left:12.5%"></span><span style="left:43.75%"></span><span style="left:96%"></span></div></div></div></section>
+        </main>
+      </div>
+      <footer class="f-statusbar"><span id="f-status" aria-live="polite">Макет · подготовка упражнения</span><span>Погода не учитывается · физический расчёт не выполняется</span></footer>
+    </div>
+  </div>
+</div>
+<script>
+(()=>{
+const root=document.getElementById('fortis-study');
+const $=s=>root.querySelector(s), $$=s=>[...root.querySelectorAll(s)];
+const state={mode:'setup',track:0,view:'3d',time:0,playing:false,speed:1,zoom:1,ai:false,terrain:true,plant:true,paths:true,radius:true};
+const names=['Север','Восток','Юго-запад'],letters=['А','Б','В'],colorKeys=['--f-blue','--f-orange','--f-purple'];
+const tracks=[[[.02,-.95],[-.04,-.65],[.07,-.37],[.06,-.12]],[[.91,.70],[.69,.50],[.40,.23],[.17,.03]],[[-.93,.77],[-.62,.53],[-.36,.27],[-.14,.12]]];
+const events=[{t:30,label:'Учебное оповещение'},{t:105,label:'Контрольный вопрос'},{t:240,label:'Завершение упражнения'}];
+const canvas=$('#f-canvas'),ctx=canvas.getContext('2d');
+let last=0,frame=0;
+const format=t=>String(Math.floor(t/60)).padStart(2,'0')+':'+String(Math.floor(t%60)).padStart(2,'0');
+function save(){if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{screen:state.mode,scenario:names[state.track]},privateContent:{view:state.view,time:Math.round(state.time),zoom:state.zoom}}).catch(()=>{});}
+function restore(value){const m=value?.modelContent,p=value?.privateContent;if(m&&['setup','replay','compare'].includes(m.screen))state.mode=m.screen;if(m&&names.includes(m.scenario))state.track=names.indexOf(m.scenario);if(p&&['2d','3d'].includes(p.view))state.view=p.view;if(Number.isFinite(p?.time))state.time=Math.max(0,Math.min(240,p.time));if(Number.isFinite(p?.zoom))state.zoom=Math.max(.7,Math.min(2,p.zoom));}
+restore(window.openai?.widgetState);
+window.addEventListener('openai:set_globals',e=>{if(e.detail?.globals?.widgetState){restore(e.detail.globals.widgetState);render();}});
+function icons(){if(globalThis.lucide)lucide.createIcons({attrs:{width:16,height:16}});}
+function detail(){
+ root.dataset.ai=String(state.ai);
+ const panel=$('#f-detail');
+ if(state.ai){panel.innerHTML='<div class="f-detail-head"><h3>Помощник сценария</h3><button class="f-icon cursor-interaction" data-action="close-ai" aria-label="Закрыть помощника"><i data-lucide="x" aria-hidden="true"></i></button></div><label class="f-meta" for="f-goal">Учебная задача</label><textarea id="f-goal" class="f-ai-input">Сравнить оповещение в сценариях с севера и востока.</textarea><button class="f-detail-action cursor-interaction" data-action="draft"><i data-lucide="sparkles" aria-hidden="true"></i>Показать пример</button><div id="f-draft" hidden><p><strong>Демонстрационный черновик</strong></p><p>Дорожки А и Б. Одинаковые сообщения и длительность. После просмотра — сравнить журнал действий.</p><button class="f-detail-action cursor-interaction" data-action="apply">Открыть сравнение</button></div><p class="f-note">Пример интерфейса AI. Ответ подготовлен для макета.</p>';return;}
+ if(state.mode==='compare'){panel.innerHTML='<div class="f-detail-head"><h3>Сравнение А / Б</h3><span class="f-chip">Пример</span></div><p>Разные направления. Одна сцена и общая временная шкала.</p><table class="f-compare-table"><thead><tr><th>Условие</th><th class="f-blue">А</th><th class="f-orange">Б</th></tr></thead><tbody><tr><td>Направление</td><td>Север</td><td>Восток</td></tr><tr><td>Длительность</td><td>4 мин</td><td>4 мин</td></tr><tr><td>События</td><td>3</td><td>3</td></tr></tbody></table><p class="f-note">Оценка готовности — следующий этап.</p>';return;}
+ if(state.mode==='replay'){panel.innerHTML='<div class="f-detail-head"><h3>Журнал упражнения</h3><span class="f-chip">'+letters[state.track]+'</span></div>'+events.map(e=>'<div class="f-event '+(state.time<e.t?'dim':'')+'"><time>'+format(e.t)+'</time><span>'+e.label+'</span></div>').join('')+'<p class="f-note">Заданные события · учебные данные</p>';return;}
+ panel.innerHTML='<div class="f-detail-head"><h3>'+letters[state.track]+' · '+names[state.track]+'</h3><span class="f-chip">Готов</span></div><p>'+(state.track===0?'Базовое упражнение для знакомства с площадкой.':'Другой ракурс той же учебной сцены и последовательности событий.')+'</p><div class="f-kv"><span>Дорожка</span><span>Синтетическая</span></div><div class="f-kv"><span>Длительность</span><span>04:00</span></div><div class="f-kv"><span>События</span><span>3 заданных</span></div><button class="f-detail-action cursor-interaction" data-action="preview"><i data-lucide="play" aria-hidden="true"></i>Предпросмотр</button>';
+}
+function render(){root.dataset.mode=state.mode;$$('.f-tabs button').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.mode===state.mode)));$('#f-screen').setAttribute('aria-labelledby','f-tab-'+state.mode);$$('[data-track]').forEach(b=>b.setAttribute('aria-pressed',String(state.mode==='compare'?Number(b.dataset.track)<2:Number(b.dataset.track)===state.track)));$$('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===state.view)));$('#f-selection-hint').textContent=state.mode==='compare'?'Для сравнения выбраны А и Б.':'Выберите сценарий для просмотра.';$('#f-timeline-caption').textContent=state.mode==='compare'?'А + Б · синхронное воспроизведение':letters[state.track]+' · '+names[state.track]+' · учебная запись';$('#f-status').textContent='Макет · '+({setup:'подготовка упражнения',replay:'просмотр учебной записи',compare:'сравнение двух вариантов'}[state.mode]);$('#f-launch').innerHTML=state.mode==='compare'?'<i data-lucide="play" aria-hidden="true"></i>Оба варианта':'<i data-lucide="play" aria-hidden="true"></i>Запустить';detail();transport();draw();icons();}
+function transport(){$('#f-time').textContent=format(state.time);$('#f-scrub').value=String(Math.floor(state.time));$('#f-scrub').setAttribute('aria-valuetext',format(state.time));$('#f-speed').textContent=state.speed+'×';$('#f-play').setAttribute('aria-label',state.playing?'Приостановить':'Воспроизвести');$('#f-play').innerHTML='<i data-lucide="'+(state.playing?'pause':'play')+'" aria-hidden="true"></i>';}
+function mode(m){state.mode=m;state.ai=false;state.playing=false;state.zoom=m==='replay'?1.3:1;if(m==='replay'&&state.time===0)state.time=75;render();save();}
+function animate(ts){if(!state.playing)return;if(last)state.time=Math.min(240,state.time+(ts-last)/1000*state.speed);last=ts;$('#f-time').textContent=format(state.time);$('#f-scrub').value=String(Math.floor(state.time));$('#f-scrub').setAttribute('aria-valuetext',format(state.time));if(state.mode==='replay'&&!state.ai)$$('.f-event').forEach((el,i)=>el.classList.toggle('dim',state.time<events[i].t));draw();if(state.time===240){state.playing=false;transport();icons();save();return;}frame=requestAnimationFrame(animate);}
+function togglePlay(){if(state.mode==='setup')state.mode='replay';state.playing=!state.playing;if(state.playing&&state.time===240)state.time=0;last=0;cancelAnimationFrame(frame);render();if(state.playing)frame=requestAnimationFrame(animate);save();}
+root.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;if(b.dataset.mode){mode(b.dataset.mode);return;}if(b.dataset.track!==undefined){state.track=Number(b.dataset.track);state.ai=false;if(state.mode==='compare')state.mode='setup';render();save();return;}if(b.dataset.view){state.view=b.dataset.view;render();save();return;}if(b.id==='f-play'||b.id==='f-launch'){togglePlay();return;}if(b.id==='f-restart'){state.time=0;render();save();return;}if(b.id==='f-speed'){state.speed=state.speed===1?2:state.speed===2?4:1;transport();icons();return;}if(b.id==='f-zoom-in'||b.id==='f-zoom-out'||b.id==='f-fit'){state.zoom=b.id==='f-fit'?1:Math.max(.7,Math.min(2,state.zoom+(b.id==='f-zoom-in'?.2:-.2)));draw();save();return;}if(b.id==='f-ai'){state.ai=!state.ai;detail();icons();return;}if(b.dataset.action==='close-ai'){state.ai=false;detail();icons();return;}if(b.dataset.action==='draft'){$('#f-draft').hidden=false;$('#f-goal').hidden=true;$('label[for=f-goal]').hidden=true;b.hidden=true;return;}if(b.dataset.action==='apply'){mode('compare');return;}if(b.dataset.action==='preview')mode('replay');});
+$('#f-scrub').addEventListener('input',e=>{state.time=Number(e.target.value);transport();if(state.mode==='replay'&&!state.ai)detail();draw();icons();});$('#f-scrub').addEventListener('change',save);
+$$('[data-layer]').forEach(el=>el.addEventListener('change',()=>{state[el.dataset.layer]=el.checked;draw();}));
+// ponytail: this canvas is a schematic mockup; replace it with the existing map renderer during implementation.
+function draw(){
+ const box=canvas.getBoundingClientRect(),w=box.width,h=box.height;if(!w||!h||!ctx)return;
+ const dpr=Math.min(devicePixelRatio||1,2);if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}ctx.setTransform(dpr,0,0,dpr,0,0);
+ const css=getComputedStyle(root);const C=k=>css.getPropertyValue(k).trim();
+ const probe=document.createElement('span');probe.style.display='none';root.appendChild(probe);const colors={};['land','hill','contour','forest','tree','water','road','road-edge','roof','wall','wall-dark','yard','text','muted','blue','orange','purple','bg','white'].forEach(k=>{probe.style.color=C('--f-'+k);colors[k]=getComputedStyle(probe).color;});probe.remove();
+ const iso=state.view==='3d',docked=state.mode==='compare'||state.ai,scale=Math.min(w*(docked?.42:.52),h*.64)*state.zoom,cx=w*(w>520?.46:.5),cy=h*.53;
+ function elev(x,y){return state.terrain?Math.max(0,Math.exp(-((x+.62)**2+(y+.38)**2)*8)*.24+Math.exp(-((x-.72)**2+(y-.65)**2)*9)*.18-.03):0;}
+ function P(x,y,z=0){return [cx+scale*(iso?x+y*.22:x),cy+scale*((iso?y*.68:y)-z*(iso?1:.05))];}
+ function poly(points,fill,stroke,width=1){ctx.beginPath();points.forEach((p,i)=>{const a=P(...p);i?ctx.lineTo(...a):ctx.moveTo(...a);});ctx.closePath();if(fill){ctx.fillStyle=fill;ctx.fill();}if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=width;ctx.stroke();}}
+ function line(points,color,width=1,dash=[]){ctx.beginPath();points.forEach((p,i)=>{const a=P(...p);i?ctx.lineTo(...a):ctx.moveTo(...a);});ctx.strokeStyle=color;ctx.lineWidth=width;ctx.lineJoin='round';ctx.lineCap='round';ctx.setLineDash(dash);ctx.stroke();ctx.setLineDash([]);}
+ function label(x,y,text,color=colors.muted){const p=P(x,y,elev(x,y));ctx.font='11px -apple-system,BlinkMacSystemFont,Segoe UI,sans-serif';ctx.fillStyle=color;ctx.textAlign='center';ctx.fillText(text,p[0],p[1]);}
+ ctx.fillStyle=colors.land;ctx.fillRect(0,0,w,h);
+ if(state.terrain){for(let j=-20;j<20;j++)for(let i=-24;i<24;i++){let x=i*.07,y=j*.07,z=elev(x,y);poly([[x,y,z],[x+.071,y,elev(x+.071,y)],[x+.071,y+.071,elev(x+.071,y+.071)],[x,y+.071,elev(x,y+.071)]],colors.hill);ctx.globalAlpha=.84-Math.min(.4,z*2);poly([[x,y,z],[x+.071,y,elev(x+.071,y)],[x+.071,y+.071,elev(x+.071,y+.071)],[x,y+.071,elev(x,y+.071)]],colors.land);ctx.globalAlpha=1;}
+ for(const hill of [[-.62,-.38],[.72,.65]])for(let r=.12;r<.65;r+=.09){const pts=Array.from({length:65},(_,i)=>{const a=i/64*Math.PI*2,x=hill[0]+Math.cos(a)*r*(1+.08*Math.sin(a*3)),y=hill[1]+Math.sin(a)*r*.72;return[x,y,elev(x,y)+.002];});line(pts,colors.contour,.65);}}
+ const water=Array.from({length:60},(_,i)=>{const y=-1.7+i*.06;return[.87+Math.sin(y*3)*.13,y,0];});line(water,colors.water,18*state.zoom);
+ const road=[[-1.4,.52],[-.75,.4],[-.36,.39],[.04,.38],[.48,.37],[.7,.3],[1.3,.35]];line(road,colors['road-edge'],10*state.zoom);line(road,colors.road,7*state.zoom);line([[-.22,-1.4],[-.2,-.8],[-.27,-.4],[-.24,.12],[-.22,.4],[-.08,.8],[.03,1.4]],colors['road-edge'],8*state.zoom);line([[-.22,-1.4],[-.2,-.8],[-.27,-.4],[-.24,.12],[-.22,.4],[-.08,.8],[.03,1.4]],colors.road,5*state.zoom);
+ if(state.terrain){for(let i=0;i<115;i++){const x=-1.1+(i*37%100)/100*.62,y=-.98+(i*61%100)/100*.87;if((x+.8)**2+(y+.55)**2>.25)continue;const a=P(x,y,elev(x,y));ctx.fillStyle=i%3?colors.forest:colors.tree;ctx.beginPath();ctx.ellipse(a[0],a[1],4*state.zoom,2.8*state.zoom,0,0,Math.PI*2);ctx.fill();}label(-.77,-.1,'Лесной массив');label(.58,.83,'Холмы');}
+ if(state.radius){const pts=Array.from({length:97},(_,i)=>{const a=i/96*Math.PI*2;return[Math.cos(a)*1.06,Math.sin(a)*1.06,.008];});line(pts,colors.muted,1,[5,5]);label(-.73,.96,'Окружение 10 км');}
+ if(state.plant){poly([[-.2,-.21],[.31,-.21],[.31,.28],[-.2,.28]],colors.yard,colors['wall-dark'],.8);for(let y=-.12;y<.24;y+=.12)line([[-.18,y],[.29,y]],colors.road,3*state.zoom);
+ function block(x,y,bw,bd,bh){const z=iso?bh:0;poly([[x,y+bd,0],[x+bw,y+bd,0],[x+bw,y+bd,z],[x,y+bd,z]],colors['wall-dark']);poly([[x+bw,y,0],[x+bw,y+bd,0],[x+bw,y+bd,z],[x+bw,y,z]],colors.wall);poly([[x,y,z],[x+bw,y,z],[x+bw,y+bd,z],[x,y+bd,z]],colors.roof,colors['wall-dark'],.6);if(iso)for(let q=.02;q<bw-.01;q+=.035)line([[x+q,y,z],[x+q,y+bd,z]],colors.wall,.6);}
+ block(-.16,-.16,.17,.10,.09);block(.07,-.16,.19,.11,.12);block(-.15,.01,.12,.15,.07);block(.02,.01,.1,.15,.09);block(.17,.13,.09,.09,.04);
+ for(let i=0;i<4;i++){const x=.17+(i%2)*.065,y=.015+Math.floor(i/2)*.065;const p=P(x,y,.06),b=P(x,y,0);ctx.fillStyle=colors.wall;ctx.fillRect(p[0]-7*state.zoom,p[1],14*state.zoom,b[1]-p[1]);ctx.beginPath();ctx.ellipse(p[0],p[1],7*state.zoom,4*state.zoom,0,0,Math.PI*2);ctx.fillStyle=colors.roof;ctx.fill();ctx.strokeStyle=colors['wall-dark'];ctx.lineWidth=.6;ctx.stroke();}
+ label(.04,.39,'Учебное предприятие',colors.text);}
+ if(state.paths){const active=state.mode==='compare'?[0,1]:state.mode==='setup'?[0,1,2]:[state.track];active.forEach(id=>{const data=tracks[id],color=colors[['blue','orange','purple'][id]],points=data.map(p=>[...p,.11]);ctx.globalAlpha=state.mode==='setup'&&id!==state.track?.45:1;line(points.map(p=>[p[0],p[1],0]),color,1,[3,5]);line(points,color,id===state.track?2.7:2.1);const start=P(...points[0]);ctx.fillStyle=colors.bg;ctx.strokeStyle=color;ctx.lineWidth=2;ctx.beginPath();ctx.arc(start[0],start[1],10,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.font='bold 11px -apple-system,sans-serif';ctx.textAlign='center';ctx.fillStyle=color;ctx.fillText(letters[id],start[0],start[1]+4);const t=Math.min(.999,state.time/240)*(data.length-1),idx=Math.floor(t),f=t-idx,a=points[idx],b=points[idx+1],pos=P(a[0]+(b[0]-a[0])*f,a[1]+(b[1]-a[1])*f,.11);ctx.beginPath();ctx.arc(pos[0],pos[1],5,0,Math.PI*2);ctx.fillStyle=color;ctx.fill();ctx.strokeStyle=colors.bg;ctx.lineWidth=2;ctx.stroke();ctx.globalAlpha=1;});}
+}
+new ResizeObserver(draw).observe(canvas);matchMedia('(prefers-color-scheme: dark)').addEventListener('change',draw);
+render();
+if(globalThis.Tweak){const design={showDetails:true};const tweak=new Tweak({container:root,onChange:()=>{$('#f-detail').hidden=!design.showDetails;}});tweak.addToggle(design,'showDetails',{label:'Показывать карточку над картой'});}
+})();
+</script>

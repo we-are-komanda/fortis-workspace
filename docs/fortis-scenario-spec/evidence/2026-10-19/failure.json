@@ -1,0 +1,15 @@
+{
+  "message": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator: locator('[data-scenario-workspace] [data-view]')\nExpected: \"2d\"\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"to.have.attribute.value\" with timeout 30000ms\n  - waiting for locator('[data-scenario-workspace] [data-view]')\n",
+  "errors": [],
+  "result": {
+    "browser": "148.0.7778.96",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M4",
+    "memoryGiB": 32,
+    "reducedMotion": true,
+    "headless": true,
+    "seconds": 10,
+    "acceptance": []
+  }
+}
